@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-satoshi: "Satoshi", Arial, sans-serif;
+  --font-birkenNue: "BirkenNue", Arial, sans-serif;
+
+  --primary: #6b1aff;
+  --color-primary-dark: #4a008c;
+  --color-primary-light: #b57aff;
+  --color-light-card-bg: #f2ebff;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-satoshi);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-birkenNue) !important;
+  font-weight: 500;
+}
+
+p {
+  font-size: 22px;
+}
+
+h1 {
+  font-size: 120px;
+}
+
+h2 {
+  font-size: 80px;
+}
+
+h3 {
+  font-size: 55px;
+}
+
+h4 {
+  font-size: 45px;
+}
+
+h5 {
+  font-size: 26px;
+}
+
+/* text colour  */
+
+.color-primary {
+  color: var(--primary);
+}
+
+.color-primary-dark {
+  color: var(--color-primary-dark);
+}
+
+.color-primary-light {
+  color: var(--color-primary-light);
+}
+
+.color-light-card-bg {
+  color: var(--color-primary-dark);
+}
+
+/* background colour  */
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-primary-dark {
+  background-color: var(--color-primary-dark);
+}
+
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+
+.bg-light-card-bg {
+  background-color: var(--color-primary-dark);
 }
