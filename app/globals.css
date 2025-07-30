@@ -8,11 +8,9 @@
   --color-primary-dark: #4a008c;
   --color-primary-light: #b57aff;
   --color-light-card-bg: #f2ebff;
-}
 
-@theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-dark-cards-bg: #292929;
+  --color-dark: #1b1b1b;
 }
 
 body {
@@ -56,6 +54,14 @@ h5 {
 
 /* text colour  */
 
+.color-dark {
+  color: var(--color-dark);
+}
+
+.color-dark-cards-bg {
+  color: var(--color-dark-cards-bg);
+}
+
 .color-primary {
   color: var(--primary);
 }
@@ -88,4 +94,22 @@ h5 {
 
 .bg-light-card-bg {
   background-color: var(--color-primary-dark);
+}
+
+.btn {
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
 }
