@@ -1,14 +1,63 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const satoshi = localFont({
+  src: [
+    {
+      path: "../public/assets/fonts/satoshi/Satoshi-Light.ttf",
+      weight: "300",
+      style: "light",
+    },
+    {
+      path: "../public/assets/fonts/satoshi/Satoshi-Regular.ttf",
+      weight: "400",
+      style: "regular",
+    },
+    {
+      path: "../public/assets/fonts/satoshi/Satoshi-Medium.ttf",
+      weight: "500",
+      style: "medium",
+    },
+    {
+      path: "../public/assets/fonts/satoshi/Satoshi-Bold.ttf",
+      weight: "600",
+      style: "semibold",
+    },
+  ],
+  variable: "--font-satoshi",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const birkenNue = localFont({
+  src: [
+    {
+      path: "../public/assets/fonts/birken-nue/BirkenNue-Light.ttf",
+      weight: "300",
+      style: "light",
+    },
+    {
+      path: "../public/assets/fonts/birken-nue/BirkenNue-Regular.ttf",
+      weight: "400",
+      style: "regular",
+    },
+    {
+      path: "../public/assets/fonts/birken-nue/BirkenNue-Medium.ttf",
+      weight: "500",
+      style: "medium",
+    },
+    {
+      path: "../public/assets/fonts/birken-nue/BirkenNue-SemiBold.ttf",
+      weight: "600",
+      style: "semibold",
+    },
+    {
+      path: "../public/assets/fonts/birken-nue/BirkenNue-Bold.ttf",
+      weight: "700",
+      style: "bold",
+    },
+  ],
+  variable: "--font-birkenNue",
+  display: "swap",
 });
 
 export const metadata = {
@@ -20,7 +69,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${satoshi.variable} ${birkenNue.variable}`}
       >
         {children}
       </body>
