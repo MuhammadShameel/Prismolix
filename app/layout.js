@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "./components/layout/Footer";
+import Header from "./components/layout/Header";
 
 const satoshi = localFont({
   src: [
@@ -68,10 +70,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${satoshi.variable} ${birkenNue.variable}`}
-      >
+      <body className={`${satoshi.variable} ${birkenNue.variable}`}>
+        {/* <Header /> */}
         {children}
+        <Footer />
       </body>
     </html>
   );
