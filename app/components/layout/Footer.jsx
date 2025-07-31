@@ -54,7 +54,7 @@ const Footer = () => {
   return (
     <footer className="bg-white text-black w-full">
       {/* Top Ticker/Marquee */}
-      <div className="w-full py-3 bg-light-purple color-dark overflow-hidden ">
+      <div className="w-full py-3 bg-light-purple color-dark overflow-hidden lg:px-5 md:px-4 px-3">
         <div className="flex animate-marquee whitespace-nowrap">
           {Array(10)
             .fill(marqueeContent)
@@ -70,9 +70,9 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Content */}
-      <div className="relative max-w-7xl mx-auto  py-16 lg:py-24">
+      <div className="relative container mx-auto  py-16 lg:py-24">
         {/* Giant Background Text */}
-        <div className="absolute top-[340px] inset-0 w-full h-auto flex items-center justify-center overflow-hidden z-100">
+        <div className="absolute top-[340px] inset-0 w-full h-auto flex items-center justify-center overflow-hidden z-50">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1320"
@@ -147,7 +147,7 @@ const Footer = () => {
             <Image
               src={FooterShape} // Using a placeholder that looks like abstract chrome
               alt="Abstract 3D Shape"
-              className="object-contain w-full h-auto"
+              className="object-contain w-full h-auto z-0"
             />
           </div>
 
@@ -188,7 +188,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto  py-6 border-t border-gray-200">
+      <div className="container mx-auto  py-6 border-t border-gray-200">
         <div className="color-dark-cards-bg flex text-[26px] justify-between items-center font-medium">
           <a href="#" className="hover:text-black">
             Terms & Conditions
