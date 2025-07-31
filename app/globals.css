@@ -427,3 +427,29 @@ h5 {
   animation: animate-svg-fill-9 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.6s
     both;
 }
+
+.peoblem-section .inner-wrapper {
+  background-image: url("/assets/images/problem-section-bg.png");
+  background-size: cover;
+}
+
+.gradient-line {
+  position: relative;
+}
+
+.gradient-line::before {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-repeat: no-repeat;
+}
