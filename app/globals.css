@@ -139,9 +139,43 @@ h5 {
   z-index: -1;
 }
 
-.py-100 {
-  padding-top: 100px !important;
-  padding-bottom: 100px !important;
+.my-lg {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.mb-lg {
+  margin-bottom: 100px;
+}
+
+.mb-md {
+  margin-bottom: 70px;
+}
+
+@media (max-width: 1023px) {
+  .my-lg {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .mb-lg {
+    margin-bottom: 80px;
+  }
+  .mb-md {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-lg {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .mb-lg {
+    margin-bottom: 50px;
+  }
+  .mb-md {
+    margin-bottom: 40px;
+  }
 }
 
 /* Footer Svg Animation */

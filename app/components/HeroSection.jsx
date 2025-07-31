@@ -5,7 +5,7 @@ import Shape from "../../public/assets/images/hero-shape.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full bg-gradient-to-r from-violet-50 to-white pb-[100px] pt-[295px] overflow-hidden">
+    <section className="relative pb-[100px] pt-[295px] overflow-hidden">
       {/* Container for the text content */}
       <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
         <div className="lg:w-4/6 flex flex-col items-start gap-5">
