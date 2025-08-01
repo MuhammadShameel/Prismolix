@@ -9,7 +9,7 @@ const backgroundImage = bgImg;
 const ProblemSolution = () => {
   return (
     <>
-      <section className="lg:px-5 md:px-4 px-3 ">
+      <section className="lg:px-5 md:px-4 px-3">
         <div className="container mx-auto">
           <div className="relative rounded-[30px] mb-[30px] overflow-hidden text-white">
             {/* Background Image */}

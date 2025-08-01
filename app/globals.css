@@ -114,6 +114,13 @@ h5 {
   transition: all 0.3s ease-in-out;
 }
 
+.btn-secondary {
+  background-color: white;
+  color: var(--primary) !important;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
 .btn-outline {
   background-color: transparent;
   border: 2px solid var(--color-dark-cards-bg, #292929);
@@ -453,3 +460,11 @@ h5 {
   height: 1px;
   background-repeat: no-repeat;
 }
+
+.service-price {
+  font-family: var(--font-satoshi) !important;
+}
+
+/* .testimonial-bg {
+  background-image: url();
+} */
