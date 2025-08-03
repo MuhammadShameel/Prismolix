@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
       <body className={`${satoshi.variable} ${birkenNue.variable}`}>
         <Header />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

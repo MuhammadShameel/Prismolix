@@ -464,3 +464,33 @@ h5 {
 .service-price {
   font-family: var(--font-satoshi) !important;
 }
+
+.nav-link:before {
+  content: "";
+  background-color: #6b1aff;
+  border-radius: 10px 10px 0 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  bottom: -4px;
+  left: auto;
+  right: 0;
+}
+
+.nav-link:hover:before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.nav-link {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.nav-link {
+  letter-spacing: -1px;
+  font-weight: 500;
+  position: relative;
+}

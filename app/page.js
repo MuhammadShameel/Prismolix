@@ -6,12 +6,12 @@ import Testimonial from "./components/Testimonial";
 
 export default function Home() {
   return (
-    <div>
-      <HeroSection />
+    <>
+      {/* <HeroSection />
       <ProblemSolution />
       <Services />
       <Testimonial />
-      <ContactSection />
-    </div>
+      <ContactSection /> */}
+    </>
   );
 }
