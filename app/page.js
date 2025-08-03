@@ -1,3 +1,4 @@
+import ContactSection from "./components/ContactSection";
 import HeroSection from "./components/HeroSection";
 import ProblemSolution from "./components/ProblemSolution";
 import Services from "./components/Services";
@@ -10,6 +11,7 @@ export default function Home() {
       <ProblemSolution />
       <Services />
       <Testimonial />
+      <ContactSection />
     </div>
   );
 }

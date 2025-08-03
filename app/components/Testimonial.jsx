@@ -11,7 +11,7 @@ const backgroundImage = bgImg;
 
 const Testimonial = () => {
   return (
-    <section>
+    <section className="lg:px-5 md:px-4 px-3">
       <div className="container mx-auto">
         <div class="testimonial-bg relative flex flex-col md:flex-row p-4">
           <div className="absolute inset-0 z-[-1]">
@@ -25,7 +25,7 @@ const Testimonial = () => {
           </div>
           <div class="md:w-1/4 p-10 flex">
             <Image src={Line} alt="" />
-            <span className="font-medium color-primary-dark">
+            <span className="font-medium text-[26px] color-primary-dark">
               [Testimonial]
             </span>
           </div>

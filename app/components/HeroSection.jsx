@@ -10,7 +10,9 @@ const HeroSection = () => {
       <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
         <div className="lg:w-4/6 flex flex-col items-start gap-5">
           {/* Pre-heading */}
-          <p className="font-medium color-primary-dark">[Prismolix Agency]</p>
+          <p className="font-medium text-[26px] color-primary-dark">
+            [Prismolix Agency]
+          </p>
 
           {/* Main Heading with Highlighted Text */}
           <h1 className="font-bold tracking-tighter leading-[100%]">
