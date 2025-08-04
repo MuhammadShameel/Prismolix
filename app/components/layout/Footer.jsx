@@ -1,27 +1,80 @@
 // components/Footer.jsx
 
 import React from "react";
-import { Youtube, Linkedin, Instagram, Facebook, Command } from "lucide-react";
 import Image from "next/image";
 
 import FooterShape from "../../../public/assets/images/footer-shape.png";
 import LogoIcon from "../../../public/assets/images/logo-icon.svg";
 
 // You can create a simple SVG component for the TikTok icon or find one.
-const TikTokIcon = (props) => (
+const Youtube = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
+    width="34"
+    height="34"
+    viewBox="0 0 34 34"
     fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    {...props}
   >
-    <path d="M12 12a4 4 0 1 0 4 4V8a8 8 0 1 1-8-8" />
+    <path
+      d="M24.0833 5.6665H9.91665C5.66665 5.6665 2.83331 8.49984 2.83331 12.7498V21.2498C2.83331 25.4998 5.66665 28.3332 9.91665 28.3332H24.0833C28.3333 28.3332 31.1666 25.4998 31.1666 21.2498V12.7498C31.1666 8.49984 28.3333 5.6665 24.0833 5.6665ZM19.6775 18.459L16.1783 20.5557C14.7616 21.4057 13.5999 20.754 13.5999 19.0965V14.889C13.5999 13.2315 14.7616 12.5799 16.1783 13.4299L19.6775 15.5265C21.0233 16.3482 21.0233 17.6515 19.6775 18.459Z"
+      fill="black"
+    />
+  </svg>
+);
+const TikTokIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="34"
+    height="34"
+    viewBox="0 0 34 34"
+    fill="none"
+  >
+    <path
+      d="M23.5113 8.245C22.5429 7.13946 22.0093 5.7197 22.0097 4.25H17.6322V21.8167C17.5984 22.7673 17.1971 23.6677 16.5127 24.3283C15.8283 24.9889 14.9142 25.3582 13.963 25.3583C11.9513 25.3583 10.2797 23.715 10.2797 21.675C10.2797 19.2383 12.6313 17.4108 15.0538 18.1617V13.685C10.1663 13.0333 5.888 16.83 5.888 21.675C5.888 26.3925 9.798 29.75 13.9488 29.75C18.3972 29.75 22.0097 26.1375 22.0097 21.675V12.7642C23.7847 14.039 25.9159 14.7229 28.1013 14.7192V10.3417C28.1013 10.3417 25.438 10.4692 23.5113 8.245Z"
+      fill="black"
+    />
+  </svg>
+);
+const Linkedin = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="34"
+    height="34"
+    viewBox="0 0 34 34"
+    fill="none"
+  >
+    <path
+      d="M26.9167 4.25C27.6681 4.25 28.3888 4.54851 28.9201 5.07986C29.4515 5.61122 29.75 6.33189 29.75 7.08333V26.9167C29.75 27.6681 29.4515 28.3888 28.9201 28.9201C28.3888 29.4515 27.6681 29.75 26.9167 29.75H7.08333C6.33189 29.75 5.61122 29.4515 5.07986 28.9201C4.54851 28.3888 4.25 27.6681 4.25 26.9167V7.08333C4.25 6.33189 4.54851 5.61122 5.07986 5.07986C5.61122 4.54851 6.33189 4.25 7.08333 4.25H26.9167ZM26.2083 26.2083V18.7C26.2083 17.4751 25.7218 16.3005 24.8557 15.4343C23.9895 14.5682 22.8149 14.0817 21.59 14.0817C20.3858 14.0817 18.9833 14.8183 18.3033 15.9233V14.3508H14.3508V26.2083H18.3033V19.2242C18.3033 18.1333 19.1817 17.2408 20.2725 17.2408C20.7985 17.2408 21.303 17.4498 21.6749 17.8217C22.0469 18.1937 22.2558 18.6982 22.2558 19.2242V26.2083H26.2083ZM9.74667 12.1267C10.3779 12.1267 10.9832 11.8759 11.4296 11.4296C11.8759 10.9832 12.1267 10.3779 12.1267 9.74667C12.1267 8.42917 11.0642 7.3525 9.74667 7.3525C9.11169 7.3525 8.50273 7.60474 8.05374 8.05374C7.60474 8.50273 7.3525 9.11169 7.3525 9.74667C7.3525 11.0642 8.42917 12.1267 9.74667 12.1267ZM11.7158 26.2083V14.3508H7.79167V26.2083H11.7158Z"
+      fill="black"
+    />
+  </svg>
+);
+const Instagram = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="34"
+    height="34"
+    viewBox="0 0 34 34"
+    fill="none"
+  >
+    <path
+      d="M18.4571 2.83524C19.4909 2.83127 20.5247 2.84166 21.5582 2.86641L21.833 2.87632C22.1504 2.88766 22.4635 2.90182 22.8417 2.91882C24.349 2.98966 25.3775 3.22766 26.28 3.57757C27.215 3.93741 28.0026 4.42474 28.7903 5.21241C29.5105 5.92018 30.0679 6.77633 30.4237 7.72132C30.7736 8.62374 31.0116 9.65366 31.0825 11.161C31.0995 11.5378 31.1136 11.8523 31.125 12.1697L31.1335 12.4445C31.1586 13.4775 31.1695 14.5108 31.166 15.5442L31.1675 16.601V18.4568C31.171 19.4906 31.1601 20.5244 31.1349 21.5579L31.1264 21.8327C31.115 22.1501 31.1009 22.4632 31.0839 22.8414C31.013 24.3487 30.7722 25.3772 30.4237 26.2797C30.069 27.2257 29.5115 28.0825 28.7903 28.79C28.0819 29.5101 27.2253 30.0675 26.28 30.4234C25.3775 30.7733 24.349 31.0113 22.8417 31.0822C22.4635 31.0992 22.1504 31.1133 21.833 31.1247L21.5582 31.1332C20.5247 31.1583 19.4909 31.1692 18.4571 31.1657L17.4003 31.1672H15.5459C14.5121 31.1706 13.4783 31.1598 12.4448 31.1346L12.17 31.1261C11.8337 31.1139 11.4974 31.0997 11.1613 31.0836C9.65396 31.0127 8.62546 30.7719 7.72163 30.4234C6.77627 30.0683 5.91997 29.5108 5.21271 28.79C4.49169 28.0821 3.93378 27.2254 3.57788 26.2797C3.22796 25.3772 2.98996 24.3487 2.91913 22.8414C2.90335 22.5053 2.88919 22.169 2.87663 21.8327L2.86955 21.5579C2.84343 20.5244 2.83162 19.4906 2.83413 18.4568V15.5442C2.83018 14.5108 2.84057 13.4775 2.8653 12.4445L2.87521 12.1697C2.88655 11.8523 2.90071 11.5378 2.91771 11.161C2.98855 9.65224 3.22655 8.62516 3.57646 7.72132C3.93257 6.77587 4.49158 5.91995 5.21413 5.21382C5.9209 4.49239 6.77666 3.93397 7.72163 3.57757C8.62546 3.22766 9.65255 2.98966 11.1613 2.91882L12.17 2.87632L12.4448 2.86924C13.4778 2.84313 14.5111 2.83133 15.5445 2.83382L18.4571 2.83524ZM17.0008 9.91857C16.0623 9.9053 15.1305 10.0787 14.2595 10.4287C13.3886 10.7786 12.5959 11.2982 11.9275 11.9572C11.2591 12.6162 10.7284 13.4015 10.3661 14.2674C10.0038 15.1333 9.81729 16.0626 9.81729 17.0012C9.81729 17.9398 10.0038 18.8691 10.3661 19.735C10.7284 20.6009 11.2591 21.3862 11.9275 22.0452C12.5959 22.7042 13.3886 23.2237 14.2595 23.5737C15.1305 23.9237 16.0623 24.0971 17.0008 24.0838C18.8794 24.0838 20.6811 23.3375 22.0095 22.0092C23.3379 20.6808 24.0841 18.8791 24.0841 17.0005C24.0841 15.1219 23.3379 13.3202 22.0095 11.9918C20.6811 10.6634 18.8794 9.91857 17.0008 9.91857ZM17.0008 12.7519C17.5653 12.7415 18.1263 12.8437 18.6509 13.0525C19.1755 13.2614 19.6533 13.5726 20.0562 13.9682C20.4592 14.3637 20.7793 14.8356 20.9978 15.3562C21.2164 15.8769 21.329 16.4358 21.3291 17.0005C21.3292 17.5651 21.2168 18.1241 20.9984 18.6448C20.78 19.1656 20.4601 19.6375 20.0572 20.0332C19.6544 20.4289 19.1768 20.7403 18.6522 20.9493C18.1277 21.1583 17.5668 21.2607 17.0022 21.2505C15.875 21.2505 14.794 20.8027 13.997 20.0057C13.2 19.2087 12.7522 18.1277 12.7522 17.0005C12.7522 15.8733 13.2 14.7923 13.997 13.9953C14.794 13.1983 15.875 12.7505 17.0022 12.7505L17.0008 12.7519ZM24.4383 7.79357C23.9813 7.81186 23.549 8.00629 23.2322 8.33611C22.9153 8.66594 22.7383 9.1056 22.7383 9.56299C22.7383 10.0204 22.9153 10.46 23.2322 10.7899C23.549 11.1197 23.9813 11.3141 24.4383 11.3324C24.908 11.3324 25.3584 11.1458 25.6905 10.8137C26.0226 10.4816 26.2091 10.0312 26.2091 9.56157C26.2091 9.09192 26.0226 8.6415 25.6905 8.3094C25.3584 7.97731 24.908 7.79074 24.4383 7.79074V7.79357Z"
+      fill="black"
+    />
+  </svg>
+);
+const Facebook = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="34"
+    height="34"
+    viewBox="0 0 34 34"
+    fill="none"
+  >
+    <path
+      d="M31.1666 22.936C31.1666 28.0927 28.0925 31.1668 22.9358 31.1668H21.25C20.4708 31.1668 19.8333 30.5293 19.8333 29.7502V21.576C19.8333 21.1935 20.145 20.8677 20.5275 20.8677L23.0208 20.8252C23.2191 20.811 23.3892 20.6693 23.4317 20.471L23.9275 17.7652C23.97 17.5102 23.7716 17.2693 23.5025 17.2693L20.485 17.3118C20.0883 17.3118 19.7767 17.0002 19.7625 16.6177L19.7058 13.1468C19.7058 12.9202 19.89 12.7218 20.1308 12.7218L23.5308 12.6652C23.7716 12.6652 23.9558 12.481 23.9558 12.2402L23.8991 8.84015C23.8991 8.59932 23.715 8.41517 23.4742 8.41517L19.6491 8.47184C17.2975 8.51434 15.4275 10.441 15.47 12.7927L15.5408 16.6885C15.555 17.0852 15.2433 17.3968 14.8467 17.411L13.1466 17.4393C12.9058 17.4393 12.7217 17.6235 12.7217 17.8643L12.7642 20.556C12.7642 20.7968 12.9483 20.981 13.1891 20.981L14.8892 20.9527C15.2858 20.9527 15.5975 21.2643 15.6116 21.6468L15.7391 29.7218C15.7533 30.5152 15.1158 31.1668 14.3225 31.1668H11.0641C5.90748 31.1668 2.83331 28.0927 2.83331 22.9218V11.0643C2.83331 5.90766 5.90748 2.8335 11.0641 2.8335H22.9358C28.0925 2.8335 31.1666 5.90766 31.1666 11.0643V22.936Z"
+      fill="black"
+    />
   </svg>
 );
 
@@ -49,153 +102,168 @@ const socialLinks = [
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const marqueeContent = `© ${currentYear} Prismolix`;
+  const marqueeText = `© ${currentYear} Prismolix`;
+
+  // Create a reusable component for the marquee content to keep JSX clean
+  const MarqueeContent = () => (
+    <>
+      {Array(5)
+        .fill(marqueeText)
+        .map((item, index) => (
+          <span
+            key={index}
+            className="mx-5 text-[26px] font-medium flex items-center"
+          >
+            {item}
+          </span>
+        ))}
+    </>
+  );
 
   return (
-    <footer className="bg-white text-black w-full">
+    <footer className="bg-white text-black w-full ">
       {/* Top Ticker/Marquee */}
-      <div className="w-full py-3 bg-light-purple color-dark overflow-hidden lg:px-5 md:px-4 px-3">
+      <div className="footer-marquee w-full py-3 bg-light-purple color-dark overflow-hidden lg:px-5 md:px-4 px-3">
+        {/* The container that scrolls */}
         <div className="flex animate-marquee whitespace-nowrap">
-          {Array(10)
-            .fill(marqueeContent)
-            .map((item, index) => (
-              <span
-                key={index}
-                className="mx-5 text-[26px] font-medium flex items-center"
-              >
-                {item}
-              </span>
-            ))}
+          {/* Render the content block */}
+          <MarqueeContent />
+          {/* Render the exact same content block again for a seamless loop */}
+          <MarqueeContent />
         </div>
       </div>
 
-      {/* Main Footer Content */}
-      <div className="relative container mx-auto  py-16 lg:py-24">
-        {/* Giant Background Text */}
-        <div className="absolute top-[340px] inset-0 w-full h-auto flex items-center justify-center overflow-hidden z-50">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1320"
-            height="180"
-            viewBox="0 0 1320 180"
-            fill="none"
-          >
-            <path
-              d="M0 178.759V1.24138H68.4208C102.867 1.24138 120.09 17.0897 120.09 48.7862C120.09 83.2965 96.5363 104.359 49.4282 111.972L44.9454 92.6069C79.5491 87.2276 96.8509 72.9517 96.8509 49.7793C96.8509 30.0828 86.7057 20.2345 66.4154 20.2345H21.8239V178.759H0Z"
-              fill="#292929"
-            />
-            <path
-              d="M153.424 178.759V1.24138H225.384C257.471 1.24138 273.515 15.4345 273.515 43.8207C273.515 66.9103 257.825 84 226.446 95.0897L284.368 178.759H255.584L201.909 98.9379V83.9172C234.153 78.5379 250.275 65.5034 250.275 44.8138C250.275 28.4276 241.31 20.2345 223.379 20.2345H175.248V178.759H153.424Z"
-              fill="#292929"
-            />
-            <path
-              d="M337.166 1.24138V178.759H315.343V1.24138H337.166Z"
-              fill="#292929"
-            />
-            <path
-              d="M382.887 172.552V151.448C400.582 158.069 419.693 161.379 440.219 161.379C469.239 161.379 483.749 150.207 483.749 127.862C483.749 108.828 473.053 99.3103 451.662 99.3103H429.956C394.644 99.3103 376.989 83.1724 376.989 50.8965C376.989 16.9655 399.599 0 444.82 0C464.481 0 482.766 2.48276 499.674 7.44828V28.5517C482.766 21.931 464.481 18.6207 444.82 18.6207C414.148 18.6207 398.813 29.3793 398.813 50.8965C398.813 69.931 409.194 79.4483 429.956 79.4483H451.662C487.602 79.4483 505.573 95.5862 505.573 127.862C505.573 162.621 483.788 180 440.219 180C419.693 180 400.582 177.517 382.887 172.552Z"
-              fill="#292929"
-            />
-            <path
-              d="M541.738 178.759V1.24138H569.46L631.393 149.338L692.146 1.24138H718.689V178.759H699.224V33.1448L639.297 178.759H622.074L561.203 33.1448V178.759H541.738Z"
-              fill="#292929"
-            />
-            <path
-              d="M780.217 89.5034C780.217 137.421 800.782 161.379 841.913 161.379C882.18 161.379 902.313 137.421 902.313 89.5034C902.313 42.2483 882.18 18.6207 841.913 18.6207C800.782 18.6207 780.217 42.2483 780.217 89.5034ZM757.213 90.2483C757.213 30.0828 785.447 0 841.913 0C897.515 0 925.316 30.0828 925.316 90.2483C925.316 150.083 897.515 180 841.913 180C785.447 180 757.213 150.083 757.213 90.2483Z"
-              fill="#292929"
-            />
-            <path
-              d="M985.783 1.24138V160.138H1074.02V178.759H963.959V1.24138H985.783Z"
-              fill="#292929"
-            />
-            <path
-              d="M1129.77 1.24138V178.759H1107.95V1.24138H1129.77Z"
-              fill="#292929"
-            />
-            <path
-              d="M1227.16 90L1160.74 1.24138H1187.29L1240.37 72.2483L1293.46 1.24138H1320L1253.7 90L1320 178.759H1293.46L1240.37 107.752L1187.29 178.759H1160.74L1227.16 90Z"
-              fill="#292929"
-            />
-          </svg>
+      <div className="lg:px-5 md:px-4 px-3">
+        {/* Main Footer Content */}
+        <div className="relative container mx-auto py-16 lg:py-24">
+          {/* Giant Background Text */}
+          <div className="absolute top-[340px] inset-0 w-full h-auto flex items-center justify-center overflow-hidden z-50">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1320"
+              height="180"
+              viewBox="0 0 1320 180"
+              fill="none"
+            >
+              {/* ... SVG paths remain unchanged ... */}
+              <path
+                d="M0 178.759V1.24138H68.4208C102.867 1.24138 120.09 17.0897 120.09 48.7862C120.09 83.2965 96.5363 104.359 49.4282 111.972L44.9454 92.6069C79.5491 87.2276 96.8509 72.9517 96.8509 49.7793C96.8509 30.0828 86.7057 20.2345 66.4154 20.2345H21.8239V178.759H0Z"
+                fill="#292929"
+              />
+              <path
+                d="M153.424 178.759V1.24138H225.384C257.471 1.24138 273.515 15.4345 273.515 43.8207C273.515 66.9103 257.825 84 226.446 95.0897L284.368 178.759H255.584L201.909 98.9379V83.9172C234.153 78.5379 250.275 65.5034 250.275 44.8138C250.275 28.4276 241.31 20.2345 223.379 20.2345H175.248V178.759H153.424Z"
+                fill="#292929"
+              />
+              <path
+                d="M337.166 1.24138V178.759H315.343V1.24138H337.166Z"
+                fill="#292929"
+              />
+              <path
+                d="M382.887 172.552V151.448C400.582 158.069 419.693 161.379 440.219 161.379C469.239 161.379 483.749 150.207 483.749 127.862C483.749 108.828 473.053 99.3103 451.662 99.3103H429.956C394.644 99.3103 376.989 83.1724 376.989 50.8965C376.989 16.9655 399.599 0 444.82 0C464.481 0 482.766 2.48276 499.674 7.44828V28.5517C482.766 21.931 464.481 18.6207 444.82 18.6207C414.148 18.6207 398.813 29.3793 398.813 50.8965C398.813 69.931 409.194 79.4483 429.956 79.4483H451.662C487.602 79.4483 505.573 95.5862 505.573 127.862C505.573 162.621 483.788 180 440.219 180C419.693 180 400.582 177.517 382.887 172.552Z"
+                fill="#292929"
+              />
+              <path
+                d="M541.738 178.759V1.24138H569.46L631.393 149.338L692.146 1.24138H718.689V178.759H699.224V33.1448L639.297 178.759H622.074L561.203 33.1448V178.759H541.738Z"
+                fill="#292929"
+              />
+              <path
+                d="M780.217 89.5034C780.217 137.421 800.782 161.379 841.913 161.379C882.18 161.379 902.313 137.421 902.313 89.5034C902.313 42.2483 882.18 18.6207 841.913 18.6207C800.782 18.6207 780.217 42.2483 780.217 89.5034ZM757.213 90.2483C757.213 30.0828 785.447 0 841.913 0C897.515 0 925.316 30.0828 925.316 90.2483C925.316 150.083 897.515 180 841.913 180C785.447 180 757.213 150.083 757.213 90.2483Z"
+                fill="#292929"
+              />
+              <path
+                d="M985.783 1.24138V160.138H1074.02V178.759H963.959V1.24138H985.783Z"
+                fill="#292929"
+              />
+              <path
+                d="M1129.77 1.24138V178.759H1107.95V1.24138H1129.77Z"
+                fill="#292929"
+              />
+              <path
+                d="M1227.16 90L1160.74 1.24138H1187.29L1240.37 72.2483L1293.46 1.24138H1320L1253.7 90L1320 178.759H1293.46L1240.37 107.752L1187.29 178.759H1160.74L1227.16 90Z"
+                fill="#292929"
+              />
+            </svg>
+          </div>
+
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+            {/* Left Section: Logo, text, and socials */}
+            <div className="lg:col-span-4 flex flex-col gap-6">
+              <div className="flex flex-col items-start">
+                <Image src={LogoIcon} alt="" />
+              </div>
+              <p className="color-dark-cards-bg leading-normal max-w-sm">
+                Your time should be spent closing deals — not designing pages.
+                We handle execution so you can focus on growth.
+              </p>
+              <div className="flex gap-3">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    className="border border-gray-300 rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-black transition-colors"
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Middle Section: 3D Art Placeholder */}
+            <div className="lg:col-span-4 flex items-center justify-center">
+              <Image
+                src={FooterShape}
+                alt="Abstract 3D Shape"
+                className="object-contain w-full h-auto z-0"
+              />
+            </div>
+
+            {/* Right Section: Links */}
+            {/* MODIFICATION HERE: Changed grid classes and margins for responsiveness */}
+            <div className="lg:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:gap-8 gap-3 mt-12 lg:mt-[70px]">
+              <div>
+                <ul className="space-y-3">
+                  {footerLinks.column1.map((link) => (
+                    <li key={link.name}>
+                      <a
+                        href={link.href}
+                        className="lg:text-[26px] md:text-[22px] sm:text-[18px] text-[16px] hover:text-black font-medium flex items-center gap-2"
+                      >
+                        <span className="text-gray-400">&gt;</span>
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <ul className="space-y-3">
+                  {footerLinks.column2.map((link) => (
+                    <li key={link.name}>
+                      <a
+                        href={link.href}
+                        className="lg:text-[26px] md:text-[22px] sm:text-[18px] text-[16px] hover:text-black font-medium flex items-center gap-2"
+                      >
+                        <span className="text-gray-400">&gt;</span>
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
-          {/* Left Section: Logo, text, and socials */}
-          <div className="lg:col-span-4 flex flex-col gap-6">
-            <div className="flex flex-col items-start">
-              <Image src={LogoIcon} alt="" />
-            </div>
-            <p className="color-dark-cards-bg leading-normal max-w-sm">
-              Your time should be spent closing deals — not designing pages. We
-              handle execution so you can focus on growth.
-            </p>
-            <div className="flex gap-3">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="border border-gray-300 rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-black transition-colors"
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
+        {/* Bottom Bar */}
+        <div className="container mx-auto py-6 border-t border-gray-200">
+          <div className="color-dark-cards-bg flex justify-between items-center font-medium lg:text-[26px] md:text-[22px] sm:text-[18px] text-[16px]">
+            <a href="#" className="hover:text-black">
+              Terms & Conditions
+            </a>
+            <a href="#" className="hover:text-black">
+              Privacy Policy
+            </a>
           </div>
-
-          {/* Middle Section: 3D Art Placeholder */}
-          <div className="lg:col-span-4 flex items-center justify-center">
-            <Image
-              src={FooterShape} // Using a placeholder that looks like abstract chrome
-              alt="Abstract 3D Shape"
-              className="object-contain w-full h-auto z-0"
-            />
-          </div>
-
-          {/* Right Section: Links */}
-          <div className="lg:col-span-4 grid grid-cols-2 gap-2 mt-[70px]">
-            <div>
-              <ul className="space-y-3">
-                {footerLinks.column1.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-[26px] text-gray-700 hover:text-black font-medium flex items-center gap-2"
-                    >
-                      <span className="text-gray-400">&gt;</span>
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <ul className="space-y-3">
-                {footerLinks.column2.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-[26px] text-gray-700 hover:text-black font-medium flex items-center gap-2"
-                    >
-                      <span className="text-gray-400">&gt;</span>
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="container mx-auto  py-6 border-t border-gray-200">
-        <div className="color-dark-cards-bg flex text-[26px] justify-between items-center font-medium">
-          <a href="#" className="hover:text-black">
-            Terms & Conditions
-          </a>
-          <a href="#" className="hover:text-black">
-            Privacy Policy
-          </a>
         </div>
       </div>
     </footer>

@@ -11,7 +11,7 @@ module.exports = {
     extend: {
       // Add this animation configuration
       animation: {
-        marquee: "marquee 25s linear infinite",
+        marquee: "marquee 40s linear infinite",
       },
       keyframes: {
         marquee: {

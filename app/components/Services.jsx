@@ -55,7 +55,7 @@ const Services = () => {
               className="relative flex flex-col bg-light-purple rounded-[30px] p-8 overflow-hidden h-[450px]"
             >
               {/* Giant background number */}
-              <p className="absolute top-0 right-8 !text-[160px] font-black text-white z-0 select-none leading-tight">
+              <p className="absolute top-0 right-8 lg:!text-[150px] md:text-[140px] sm:text-[130px] text-[120px] font-black text-white z-0 select-none leading-tight">
                 {service.number}
                 <span className="color-primary-light">.</span>
               </p>
