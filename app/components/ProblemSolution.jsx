@@ -30,11 +30,11 @@ const ProblemSolution = () => {
             <div className="relative z-20 flex flex-col items-start gap-6 p-10 md:p-12 lg:p-16">
               <p className="font-medium text-[#C4B5FD]">[Problem & Solution]</p>
 
-              <h2 className="leading-20 tracking-tight max-w-4xl">
+              <h2 className="lg:leading-20 md:leading-18 sm:leading-16 leading-12 tracking-tight max-w-4xl">
                 Agency Growth Shouldn't Mean Burnout
               </h2>
 
-              <div className="space-y-4 text-[#A5A5AF] mt-80  max-w-6xl">
+              <div className="space-y-4 text-[#A5A5AF] lg:mt-80 md:mt-60 sm:mt-40 mt-36  max-w-6xl">
                 <p>
                   As your agency wins more clients, expectations pile up. Design
                   timelines stretch. Dev work gets complex. Quality starts
