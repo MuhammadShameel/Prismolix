@@ -7,8 +7,8 @@ import Testimonial from "./components/Testimonial";
 export default function Home() {
   return (
     <>
-      {/* <HeroSection />
-      <ProblemSolution />
+      <HeroSection />
+      {/* <ProblemSolution />
       <Services />
       <Testimonial />
       <ContactSection /> */}

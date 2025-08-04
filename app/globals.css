@@ -101,6 +101,7 @@ h5 {
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .btn:hover {
@@ -117,7 +118,6 @@ h5 {
 .btn-secondary {
   background-color: white;
   color: var(--primary) !important;
-  font-weight: 500;
   transition: all 0.3s ease-in-out;
 }
 
@@ -125,7 +125,6 @@ h5 {
   background-color: transparent;
   border: 2px solid var(--color-dark-cards-bg, #292929);
   color: var(--color-dark-cards-bg);
-  font-weight: 500;
   transition: all 0.3s ease-in-out;
 }
 
@@ -574,7 +573,18 @@ h5 {
   h4 {
     font-size: 25px;
   }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 343px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }

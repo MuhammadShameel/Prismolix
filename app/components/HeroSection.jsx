@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="relative pb-[100px] pt-[295px] overflow-hidden">
       {/* Container for the text content */}
       <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
-        <div className="lg:w-4/6 flex flex-col items-start gap-5">
+        <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
           {/* Pre-heading */}
           <p className="font-medium text-[26px] color-primary-dark">
             [Prismolix Agency]
