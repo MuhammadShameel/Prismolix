@@ -8,11 +8,11 @@ import CallSchedule from "./components/CallSchedule";
 export default function Home() {
   return (
     <>
-      {/* <HeroSection /> */}
-      {/* <ProblemSolution /> */}
-      {/* <Services /> */}
-      <Testimonial />
-      {/* <ContactSection /> */}
+      {/* <HeroSection />
+      <ProblemSolution />
+      <Services />
+      <Testimonial /> */}
+      <ContactSection />
       {/* <CallSchedule /> */}
     </>
   );

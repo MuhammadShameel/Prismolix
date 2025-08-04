@@ -6,7 +6,7 @@ import { Phone, MapPin, Mail } from "lucide-react";
 const ContactSection = () => {
   // Common style for all form inputs
   const inputStyle =
-    "w-full bg-[#EAE3F5] px-[30px] py-5 text-sm border-2 border-transparent focus:border-violet-500 focus:outline-none transition-colors";
+    "w-full bg-[#EAE3F5] px-[30px] rounded-[6px] py-5 text-sm border-2 border-transparent focus:border-violet-500 focus:outline-none transition-colors";
 
   return (
     <section className="lg:px-5 md:px-4 px-3 my-lg">
@@ -21,7 +21,7 @@ const ContactSection = () => {
                   [Let's Work Together]
                 </span>
               </div>
-              <div>
+              <div className="lg:mb-0 mb-12">
                 {" "}
                 <h2 className="text-4xl sm:text-5xl font-bold text-gray-900">
                   Contact Me!
@@ -33,7 +33,7 @@ const ContactSection = () => {
                 <div className="mt-12 space-y-4">
                   <a
                     href="tel:+12312341234"
-                    className="flex items-center gap-3 text-gray-800 hover:text-violet-600"
+                    className="flex items-center gap-3  hover:text-violet-600"
                   >
                     {/* <Phone size={20} className="text-violet-500" /> */}
                     <svg
@@ -53,11 +53,9 @@ const ContactSection = () => {
                         fill="#4A008C"
                       />
                     </svg>
-                    <span className="text-[26px] font-medium">
-                      +123 1234 1234
-                    </span>
+                    <p className="lg:text-[26px] font-medium">+123 1234 1234</p>
                   </a>
-                  <div className="flex items-center gap-3 text-gray-800">
+                  <div className="flex items-center gap-3 ">
                     {/* <MapPin size={20} className="text-violet-500" /> */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -76,13 +74,13 @@ const ContactSection = () => {
                         fill="#4A008C"
                       />
                     </svg>
-                    <span className="text-[26px] font-medium">
+                    <p className="lg:text-[26px] font-medium">
                       Bahria Town, Phase 8, Rawalpindi
-                    </span>
+                    </p>
                   </div>
                   <a
                     href="mailto:username@example.com"
-                    className="flex items-center gap-3 text-gray-800 hover:text-violet-600"
+                    className="flex items-center gap-3  hover:text-violet-600"
                   >
                     {/* <Mail size={20} className="text-violet-500" /> */}
                     <svg
@@ -102,9 +100,9 @@ const ContactSection = () => {
                         fill="#4A008C"
                       />
                     </svg>
-                    <span className="text-[26px] font-medium">
+                    <p className="lg:text-[26px] font-medium">
                       username@example.com
-                    </span>
+                    </p>
                   </a>
                 </div>
               </div>
