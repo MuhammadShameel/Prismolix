@@ -4,6 +4,7 @@ import ProblemSolution from "./components/ProblemSolution";
 import Services from "./components/Services";
 import Testimonial from "./components/Testimonial";
 import CallSchedule from "./components/CallSchedule";
+import Blog from "./components/Blog.jsx";
 
 export default function Home() {
   return (
@@ -11,9 +12,10 @@ export default function Home() {
       {/* <HeroSection />
       <ProblemSolution />
       <Services />
-      <Testimonial /> */}
+      <Testimonial />
       <ContactSection />
-      {/* <CallSchedule /> */}
+      <CallSchedule /> */}
+      <Blog />
     </>
   );
 }

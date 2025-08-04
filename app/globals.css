@@ -130,6 +130,7 @@ h5 {
 
 .text-overlay {
   position: relative;
+  display: inline-block;
 }
 
 .text-overlay::before {
