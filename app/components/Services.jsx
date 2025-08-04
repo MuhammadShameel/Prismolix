@@ -52,16 +52,16 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.number}
-              className="relative flex flex-col bg-light-purple rounded-[30px] p-8 overflow-hidden h-[450px]"
+              className="relative flex flex-col bg-light-purple rounded-[30px] p-8 overflow-hidden"
             >
               {/* Giant background number */}
-              <p className="absolute top-0 right-8 lg:!text-[150px] md:text-[140px] sm:text-[130px] text-[120px] font-black text-white z-0 select-none leading-tight">
+              <p className="absolute top-0 right-8 !lg:text-[150px] !md:text-[140px] !sm:text-[130px] !text-[120px] font-black text-white z-0 select-none leading-tight">
                 {service.number}
                 <span className="color-primary-light">.</span>
               </p>
 
               {/* Card Content */}
-              <div className="relative z-10 flex flex-col h-full">
+              <div className="relative z-10 flex flex-col h-full mt-36">
                 {/* Price section pushed to the bottom */}
                 <div className="mt-auto">
                   <div className="gradient-line pb-5">
@@ -85,9 +85,10 @@ const Services = () => {
           ))}
 
           {/* "Each Service Includes" Card */}
-          <div className="flex flex-col bg-primary rounded-3xl p-8 text-white h-[450px]">
+          <div className="flex flex-col bg-primary rounded-3xl p-8 text-white">
             <h3 className="text-3xl font-bold">Each Service includes:</h3>
-            <ul className="list-disc list-inside space-y-3 mt-6 text-base text-purple-100 flex-grow">
+            {/* MODIFICATION HERE: Changed list-inside to list-outside and added padding */}
+            <ul className="list-disc list-outside space-y-3 mt-6 text-base text-purple-100 flex-grow sm:text-lg md:text-xl lg:text-[22px] pl-5">
               <li>1 dedicated point of contact</li>
               <li>Weekly sprints with milestones</li>
               <li>Shared boards for progress tracking</li>
