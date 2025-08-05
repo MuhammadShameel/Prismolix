@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, Pagination } from "swiper/modules";
 // import Swiper and modules styles
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -57,7 +57,7 @@ const Testimonial = () => {
           {/* MODIFICATION HERE: This section now takes full width on mobile */}
           <Swiper
             onSwiper={setSwiper}
-            modules={[Navigation, Autoplay]}
+            modules={[Navigation, Autoplay, Pagination]}
             autoHeight={true}
             slidesPerView={1}
             // loop={true}
@@ -67,6 +67,9 @@ const Testimonial = () => {
               delay: 5000,
               disableOnInteraction: false,
             }}
+            // pagination={{
+            //   type: "fraction",
+            // }}
           >
             <SwiperSlide>
               <div className="w-full md:w-4/4 flex flex-col gap-12">
