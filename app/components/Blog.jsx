@@ -1,7 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Shape from "../../public/assets/images/image-7.png";
+import featureImg from "../../public/assets/images/blog-img.png";
 import sectionShape from "../../public/assets/images/section-shape.png";
+
+import Testimonial from "../components/Testimonial.jsx";
+import ContactSection from "../components/ContactSection.jsx";
+import CallSchedule from "../components/CallSchedule.jsx";
 
 const Blog = () => {
   return (
@@ -52,24 +57,108 @@ const Blog = () => {
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
           <div className="rounded-[30px] bg-light-purple px-[30px] py-[50px]">
-            <div className="flex lg:flex">
-              <div className="w-3/8">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Inventore rerum dolorem, saepe ea, officia perferendis
-                consequatur, voluptates maxime laboriosam consectetur
-                voluptatibus laudantium reprehenderit. Aliquam dicta dolorem,
-                autem repudiandae maiores nisi.
+            <div className="flex lg:flex-row flex-col gap-10">
+              <div className="lg:w-3/8 w-8/8">
+                <div className="img-wrapper">
+                  <Image className="w-full" src={featureImg} alt="" />
+                </div>
+                <div className="lg:block hidden mt-14">
+                  <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+                    Services Provided:
+                  </span>
+
+                  {/* Add flex, flex-wrap, and a gap to the parent container */}
+                  <div className="flex flex-wrap justify-start gap-1.5 mt-1.5">
+                    <span className="bg-white px-5 py-2.5 rounded-full">
+                      <p>UI/UX</p>
+                    </span>
+                    <span className="bg-white px-5 py-2.5 rounded-full">
+                      <p> Design System</p>
+                    </span>
+                    <span className="bg-white px-5 py-2.5 rounded-full">
+                      <p> Landing Pages</p>
+                    </span>
+
+                    {/* Add as many tags as you need */}
+                  </div>
+                </div>
               </div>
-              <div className="w-5/8">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                possimus perspiciatis non itaque tempore voluptatum voluptas,
-                iure numquam reprehenderit ad, nisi fuga ducimus alias debitis
-                pariatur facere beatae. Adipisci, dolores?
+              <div className="lg:w-5/8 w-8/8 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
+                {/* Pre-heading */}
+                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] color-primary-dark">
+                  [Case Study - 01]
+                </span>
+
+                {/* Main Heading with Highlighted Text */}
+                <h2 className="font-bold tracking-[-1px] leading-[102%]">
+                  Scaling a Creative Studio Without Hiring
+                </h2>
+
+                {/* Subheading */}
+                <div>
+                  <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+                    Client Type:
+                  </span>
+
+                  <p className="text-base max-w-3xl">
+                    NYC-based creative agency
+                  </p>
+                </div>
+                <div>
+                  <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+                    Services Provided:
+                  </span>
+
+                  <p className="text-base max-w-3xl">
+                    UI/UX Design, Dev (Headless WordPress)
+                  </p>
+                </div>
+                <div>
+                  <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+                    Challenge:
+                  </span>
+
+                  <p className="text-base max-w-3xl">
+                    Agency struggling to keep up with demand — high-volume
+                    landing pages, inconsistent freelance help, and slipping
+                    deadlines
+                  </p>
+                </div>
+                <div className="lg:hidden block ">
+                  <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+                    Services Provided:
+                  </span>
+
+                  {/* Add flex, flex-wrap, and a gap to the parent container */}
+                  <div className="flex flex-wrap justify-start gap-1.5 mt-1.5">
+                    <span className="bg-white px-5 py-2.5 rounded-full">
+                      <p>UI/UX</p>
+                    </span>
+                    <span className="bg-white px-5 py-2.5 rounded-full">
+                      <p> Design System</p>
+                    </span>
+                    <span className="bg-white px-5 py-2.5 rounded-full">
+                      <p> Landing Pages</p>
+                    </span>
+
+                    {/* Add as many tags as you need */}
+                  </div>
+                </div>
+                {/* Button Group */}
+                <div className="flex items-center gap-4 mt-4">
+                  <button className="btn btn-primary">
+                    View Full Case Study
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <Testimonial />
+      <ContactSection />
+      <CallSchedule />
 
       {/* <section className="w-full my-lg lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
