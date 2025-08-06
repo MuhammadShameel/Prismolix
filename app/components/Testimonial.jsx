@@ -2,11 +2,12 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
+
 // import Swiper and modules styles
+import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 

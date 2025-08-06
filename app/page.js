@@ -16,8 +16,8 @@ export default function Home() {
       {/* <Testimonial /> */}
       {/* <ContactSection /> */}
       {/* <CallSchedule /> */}
-      <Blog />
-      {/* <BlogDetail /> */}
+      {/* <Blog /> */}
+      <BlogDetail />
     </>
   );
 }
