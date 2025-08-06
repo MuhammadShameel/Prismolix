@@ -12,6 +12,31 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+const services = [
+  {
+    number: "01",
+    title: "Design System Creation",
+    content:
+      "Built reusable components, buttons, forms, headers, and layouts in Figma",
+  },
+  {
+    number: "02",
+    title: "Landing Page Design",
+    content: "10 landing pages designed and dev-ready within 8 weeks",
+  },
+  {
+    number: "03",
+    title: "Headless WordPress Dev",
+    content: "Developed frontend using Next.js + WP backend, mobile-optimized",
+  },
+  {
+    number: "04",
+    title: "Workflow Integration",
+    content:
+      "Shared tracking board, async review process, Slack updates, weekly syncs",
+  },
+];
+
 const page = () => {
   const [swiper, setSwiper] = useState(null);
 
@@ -404,6 +429,39 @@ const page = () => {
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="container mx-auto my-lg">
+        <div className="service-content flex flex-col items-center gap-5">
+          <span className="font-medium text-[26px] color-primary-dark">
+            [The Process]
+          </span>
+          <h2 className="leading-20 tracking-tight max-w-4xl">What We Did</h2>
+        </div>
+        <div className="service-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+          {/* Service Cards - Generated from the array */}
+          {services.map((service) => (
+            <div
+              key={service.number}
+              className="relative flex flex-col bg-light-purple rounded-[30px] p-8 overflow-hidden"
+            >
+              {/* Giant background number */}
+              <p className="absolute top-0 right-8 !lg:text-[150px] !md:text-[140px] !sm:text-[130px] !text-[120px] font-black text-white z-0 select-none leading-tight">
+                {service.number}
+                <span className="color-primary-light">.</span>
+              </p>
+
+              {/* Card Content */}
+              <div className="relative z-10 flex flex-col h-full mt-36">
+                {/* Price section pushed to the bottom */}
+                <div className="mt-auto">
+                  <h4 className="mt-2">{service.title}</h4>
+
+                  <p className="text-sm ">{service.content}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
