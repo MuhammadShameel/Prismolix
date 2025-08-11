@@ -464,6 +464,16 @@ const page = () => {
           ))}
         </div>
       </div>
+      <div className="container mx-auto my-lg">
+        <div className="service-content flex flex-col items-center gap-5">
+          <span className="font-medium text-[26px] color-primary-dark">
+            [Tools]
+          </span>
+          <h2 className="leading-20 tracking-tight max-w-2xl text-center">
+            Tools & Platforms We Use
+          </h2>
+        </div>
+      </div>
     </section>
   );
 };
