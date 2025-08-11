@@ -56,7 +56,88 @@ export const extractBlogData = (portfolio) => {
   // Use ACF fields if available, otherwise fallback to content parsing
   const clientType = acf.client_type || "Creative Agency";
   const servicesProvided = acf.services_provided || "UI/UX Design, Dev (Headless WordPress)";
-  const challenge = acf.challenge || "Agency struggling to keep up with demand — high-volume landing pages, inconsistent freelance help, and slipping deadlines";
+  // Challenge description (supports alternate ACF keys)
+  const portfolioChallengesRaw = acf.portfolio_challanges || acf.portfolio_challenges || null;
+  let challenge = acf.challenge || "";
+  let challengePoints = [];
+  if (!challenge && portfolioChallengesRaw) {
+    if (typeof portfolioChallengesRaw === 'string') {
+      challenge = portfolioChallengesRaw;
+    } else if (Array.isArray(portfolioChallengesRaw)) {
+      // If it's an array, assume it's a list of points
+      challengePoints = portfolioChallengesRaw
+        .map((item) => (typeof item === 'string' ? item : item?.point || item?.title || item?.text))
+        .filter(Boolean);
+    } else if (typeof portfolioChallengesRaw === 'object') {
+      // Try common shapes
+      challenge = portfolioChallengesRaw.description || portfolioChallengesRaw.text || challenge;
+      const pts =
+        portfolioChallengesRaw.points ||
+        portfolioChallengesRaw.key_points ||
+        portfolioChallengesRaw.items ||
+        [];
+      if (Array.isArray(pts)) {
+        challengePoints = pts
+          .map((p) => (typeof p === 'string' ? p : p?.point || p?.title || p?.text))
+          .filter(Boolean);
+      }
+    }
+  }
+  if (!challenge) {
+    challenge = "Agency struggling to keep up with demand — high-volume landing pages, inconsistent freelance help, and slipping deadlines";
+  }
+  const industry = acf.industry || (categories[0]?.name ?? "Case Study");
+  const startDate = acf.start_date || null;
+  const endDate = acf.end_date || null;
+
+  // Gallery: normalize to array of items with type image|video and url/thumbnail
+  const gallery = Array.isArray(acf.gallery)
+    ? acf.gallery.map((item) => {
+        const mime = item?.mime_type || item?.type;
+        const isVideo = (mime || "").includes("video");
+        const url = item?.url || item?.sizes?.medium_large || item?.sizes?.large;
+        const thumb = item?.sizes?.thumbnail || url;
+        return {
+          type: isVideo ? "video" : "image",
+          url: typeof url === 'string' ? url.replace('http://', 'https://') : url,
+          thumbnail: typeof thumb === 'string' ? thumb.replace('http://', 'https://') : thumb,
+          width: item?.width,
+          height: item?.height,
+          title: item?.title || "",
+        };
+      })
+    : [];
+
+  // Technologies used: { name, imageUrl }
+  const technologiesUsed = Array.isArray(acf.technologies_used)
+    ? acf.technologies_used.map((tech) => ({
+        name: tech?.technologies_name || "",
+        imageUrl: tech?.technologies_image?.url
+          ? tech.technologies_image.url.replace('http://', 'https://')
+          : null,
+        width: tech?.technologies_image?.width || 24,
+        height: tech?.technologies_image?.height || 24,
+      }))
+    : [];
+
+  // Methods used: array of strings
+  const methodsUsed = Array.isArray(acf.methods_used)
+    ? acf.methods_used.map((m) => m?.method_used).filter(Boolean)
+    : [];
+
+  // Process: array of { number, title, description }
+  const process = Array.isArray(acf.process)
+    ? acf.process.map((p, idx) => ({
+        number: String(idx + 1).padStart(2, '0'),
+        title: p?.title || "",
+        description: p?.description || "",
+      }))
+    : [];
+
+  const description = acf.description || "";
+  const keyPoints = Array.isArray(acf.key_points)
+    ? acf.key_points.map((kp) => kp?.point).filter(Boolean)
+    : [];
   
   return {
     id: portfolio.id,
@@ -67,9 +148,19 @@ export const extractBlogData = (portfolio) => {
     featuredImage: portfolio._embedded?.['wp:featuredmedia']?.[0]?.source_url,
     clientType,
     challenge,
+    challengePoints,
     servicesProvided,
     tags: tags.map(tag => tag.name),
     categories: categories.map(cat => cat.name),
-    date: portfolio.date
+    date: portfolio.date,
+    industry,
+    startDate,
+    endDate,
+    gallery,
+    technologiesUsed,
+    methodsUsed,
+    process,
+    description,
+    keyPoints,
   };
 };
