@@ -11,6 +11,7 @@ import bgImg from "../../public/assets/images/blog-detail-bg.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import VideoSlider from "./VideoSlider";
 
 const services = [
   {
@@ -83,7 +84,7 @@ const page = () => {
             </p>
           </div>
         </div>
-        <Swiper
+        {/* <Swiper
           onSwiper={setSwiper}
           modules={[Navigation, Autoplay, Pagination]}
           autoHeight={true}
@@ -132,7 +133,14 @@ const page = () => {
               />
             </div>
           </SwiperSlide>
-        </Swiper>
+        </Swiper> */}
+        <VideoSlider
+          videos={[
+            "/assets/images/slider-video.mp4",
+            "/assets/images/slider-video.mp4",
+            "/assets/images/slider-video.mp4",
+          ]}
+        />
 
         <div className="flex flex-col gap-5">
           <div className="flex gap-1.5 mt-5 flex-wrap">
