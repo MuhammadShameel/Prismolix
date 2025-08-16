@@ -6,6 +6,7 @@ import Testimonial from "./components/Testimonial";
 import CallSchedule from "./components/CallSchedule";
 import Blog from "./components/Blog";
 import BlogDetail from "./components/BlogDetail";
+import About from "./components/About";
 
 export default function Home() {
   return (
@@ -16,8 +17,9 @@ export default function Home() {
       {/* <Testimonial /> */}
       {/* <ContactSection /> */}
       {/* <CallSchedule /> */}
-      {/* <Blog /> */}
-      <BlogDetail />
+      {/* <Blog />   */}
+      {/* <BlogDetail /> */}
+      <About />
     </>
   );
 }
