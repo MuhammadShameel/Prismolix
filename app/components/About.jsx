@@ -144,6 +144,409 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <section className="lg:px-5 md:px-4 px-3 my-lg">
+        <div className="container mx-auto">
+          <div className="service-content flex flex-col items-center gap-5">
+            <span className="font-medium text-[26px] color-primary-dark">
+              [The Difference]
+            </span>
+            <h2 className="leading-20 tracking-tight text-center max-w-4xl">
+              What We Deliver
+            </h2>
+          </div>
+          <div className="flex lg:flex-row flex-col gap-5 mt-5">
+            <div className="bg-light-purple lg:w-1/2 w-full px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
+              <h4 className="text-xl font-bold text-gray-800">
+                1. Design Discovery
+              </h4>
+              <p className="font-medium text-gray-600">
+                We start with a deep dive into your client's goals, users, and
+                product.
+              </p>
+              <ul className="flex flex-col mt-5">
+                <li className="flex items-center gap-2.5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Stakeholder input
+                </li>
+                <hr className="w-full my-4 border-gray-300" />
+                <li className="flex items-center gap-2.5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Competitive analysis
+                </li>
+                <hr className="w-full my-4 border-gray-300" />
+                <li className="flex items-center gap-2.5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  UX audits (if redesign)
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-light-purple lg:w-1/2 w-full px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
+              <h4 className="text-xl font-bold text-gray-800">
+                2. Wireframes & Flows
+              </h4>
+              <p className="font-medium text-gray-600">
+                Low-fidelity wireframes that define structure, logic, and
+                interaction.
+              </p>
+              <ul className="flex flex-col mt-5">
+                <li className="flex items-center gap-2.5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  User flows
+                </li>
+                <hr className="w-full my-4 border-gray-300" />
+                <li className="flex items-center gap-2.5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Mobile/web wireframes
+                </li>
+                <hr className="w-full my-4 border-gray-300" />
+                <li className="flex items-center gap-2.5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Iterative feedback
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex lg:flex-row flex-col gap-5 mt-5">
+            <div className="bg-light-purple lg:w-1/2 w-full px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
+              <h4 className="text-xl font-bold text-gray-800">
+                3. UI Design & Systemization
+              </h4>
+              <p className="font-medium text-gray-600">
+                We create modular, consistent, high-fidelity designs in Figma.
+              </p>
+              <ul className="flex flex-col mt-5">
+                <li className="flex items-center gap-2.5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Color, typography, components
+                </li>
+                <hr className="w-full my-4 border-gray-300" />
+                <li className="flex items-center gap-2.5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Page templates and design libraries
+                </li>
+                <hr className="w-full my-4 border-gray-300" />
+                <li className="flex items-center gap-2.5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Auto-layout + responsive principles
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-light-purple lg:w-1/2 w-full px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
+              <h4 className="text-xl font-bold text-gray-800">
+                4. Developer Handoff
+              </h4>
+              <p className="font-medium text-gray-600">
+                We prep files with dev-friendly annotations and specs for a ease
+              </p>
+              <ul className="flex flex-col mt-5">
+                <li className="flex items-center gap-2.5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Figma developer mode
+                </li>
+                <hr className="w-full my-4 border-gray-300" />
+                <li className="flex items-center gap-2.5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Component naming standards
+                </li>
+                <hr className="w-full my-4 border-gray-300" />
+                <li className="flex items-center gap-2.5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Optional Loom walkthroughs
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/* <div className="flex lg:flex-row flex-col gap-5">
+            <div className="bg-light-purple lg:w-1/2 w-2/2 px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
+              <h4>1. Design Discovery</h4>
+              <p className="font-medium">
+                We start with a deep dive into your client's goals, users, and
+                product.
+              </p>
+              <ul className="flex flex-col mt-5">
+                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Stakeholder input
+                </li>
+                <hr className="w-full my-5 bg-black opacity-20" />
+                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Competitive analysis
+                </li>
+                <hr className="w-full my-5 bg-black opacity-20" />
+                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  UX audits (if redesign)
+                </li>
+              </ul>
+            </div>
+            <div className="bg-light-purple lg:w-1/2 w-2/2 px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
+              <h4>1. Design Discovery</h4>
+              <p className="font-medium">
+                We start with a deep dive into your client's goals, users, and
+                product.
+              </p>
+              <ul className="flex flex-col mt-5">
+                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Stakeholder input
+                </li>
+                <hr className="w-full my-5 bg-black opacity-20" />
+                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Competitive analysis
+                </li>
+                <hr className="w-full my-5 bg-black opacity-20" />
+                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  UX audits (if redesign)
+                </li>
+              </ul>
+            </div>
+            <div className="bg-light-purple lg:w-1/2 w-2/2 px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
+              <h4>1. Design Discovery</h4>
+              <p className="font-medium">
+                We start with a deep dive into your client's goals, users, and
+                product.
+              </p>
+              <ul className="flex flex-col mt-5">
+                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Stakeholder input
+                </li>
+                <hr className="w-full my-5 bg-black opacity-20" />
+                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Competitive analysis
+                </li>
+                <hr className="w-full my-5 bg-black opacity-20" />
+                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  UX audits (if redesign)
+                </li>
+              </ul>
+            </div>
+            <div className="bg-light-purple lg:w-1/2 w-2/2 px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
+              <h4>1. Design Discovery</h4>
+              <p className="font-medium">
+                We start with a deep dive into your client's goals, users, and
+                product.
+              </p>
+              <ul className="flex flex-col mt-5">
+                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Stakeholder input
+                </li>
+                <hr className="w-full my-5 bg-black opacity-20" />
+                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  Competitive analysis
+                </li>
+                <hr className="w-full my-5 bg-black opacity-20" />
+                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                  >
+                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                  </svg>
+                  UX audits (if redesign)
+                </li>
+              </ul>
+            </div>
+          </div> */}
+        </div>
+      </section>
     </>
   );
 };
