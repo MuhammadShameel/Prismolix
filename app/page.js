@@ -7,19 +7,21 @@ import CallSchedule from "./components/CallSchedule";
 import Blog from "./components/Blog";
 import BlogDetail from "./components/BlogDetail";
 import About from "./components/About";
+import HowItWorks from "./components/HowItWorks";
 
 export default function Home() {
   return (
     <>
       {/* <HeroSection /> */}
       {/* <ProblemSolution /> */}
-      <Services />
+      {/* <Services /> */}
       {/* <Testimonial /> */}
       {/* <ContactSection /> */}
       {/* <CallSchedule /> */}
       {/* <Blog />   */}
       {/* <BlogDetail /> */}
       {/* <About /> */}
+      <HowItWorks />
     </>
   );
 }
