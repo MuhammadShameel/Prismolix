@@ -6,6 +6,7 @@ import ContactSection from "../../../app/components/ContactSection";
 import Testimonial from "../../../app/components/Testimonial";
 import CallSchedule from "../../../app/components/CallSchedule";
 import ToolsMarquee from "../../../app/components/ToolsMarquee";
+import OfferSection from "../../../app/components/OfferSection";
 
 const data = {
   process: [
@@ -109,7 +110,7 @@ const Page = () => {
                 </p>
 
                 <button className="btn btn-primary w-60 bg-brand-purple text-white font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 focus:ring-offset-light-purple">
-                  Let's Talk Design
+                  Let's Talk Scalability
                 </button>
               </div>
             </div>
@@ -553,6 +554,8 @@ const Page = () => {
       </section>
 
       <ToolsMarquee />
+
+      <OfferSection />
 
       <ContactSection />
 
