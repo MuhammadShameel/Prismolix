@@ -618,3 +618,41 @@ h6 {
     cursor: pointer;
   }
 }
+
+.navbar {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  top: 16px;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: none;
+}
+
+.navbar.scrolled {
+  top: 0;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.2) 100%
+    ),
+    rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(15px);
+}
+
+.navbar .container {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.2) 100%
+    ),
+    rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(15px);
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.navbar.scrolled .container {
+  background: transparent;
+  backdrop-filter: none;
+}

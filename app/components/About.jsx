@@ -5,6 +5,21 @@ import Shape from "../../public/assets/images/blogShape.png";
 import Marquee from "../components/Marquee";
 import CallSchedule from "./CallSchedule";
 
+const services = [
+  {
+    number: "01",
+    title: "Not a freelancer pool. Everyone’s vetted and trained.",
+  },
+  {
+    number: "02",
+    title: "Not a productized service. We adapt to your workflow.",
+  },
+  {
+    number: "03",
+    title: "Not bloated with overhead. We stay lean so you stay profitable.",
+  },
+];
+
 const About = () => {
   // const [data, setData] = useState(null);
 
@@ -143,6 +158,41 @@ const About = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="lg:px-5 md:px-4 px-3 my-lg">
+        <div className="container mx-auto">
+          <div className="service-content flex flex-col items-center gap-5">
+            <span className="font-medium text-[26px] color-primary-dark">
+              [The Difference]
+            </span>
+            <h2 className="leading-20 tracking-tight max-w-3xl text-center">
+              What makes us different
+            </h2>
+          </div>
+          <div className="service-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+            {/* Service Cards - Generated from the array */}
+            {services.map((service) => (
+              <div
+                key={service.number}
+                className="relative flex flex-col bg-light-purple rounded-[30px] p-8 overflow-hidden"
+              >
+                {/* Giant background number */}
+                <p className="absolute top-0 right-8 !lg:text-[150px] !md:text-[140px] !sm:text-[130px] !text-[120px] font-black text-white z-0 select-none leading-tight">
+                  {service.number}
+                  <span className="color-primary-light">.</span>
+                </p>
+
+                {/* Card Content */}
+                <div className="relative z-10 flex flex-col h-full mt-36">
+                  {/* Price section pushed to the bottom */}
+                  <div className="mt-auto">
+                    <h4 className="lg:mt-20">{service.title}</h4>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
