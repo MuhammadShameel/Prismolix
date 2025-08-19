@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Shape from "../../public/assets/images/blogShape.png";
 import Marquee from "../components/Marquee";
+import CallSchedule from "./CallSchedule";
 
 const About = () => {
   // const [data, setData] = useState(null);
@@ -145,6 +146,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      <CallSchedule />
     </>
   );
 };
