@@ -1,489 +1,143 @@
-// "use client";
-
-// import React, { useState } from "react";
-// import Image from "next/image";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation, Autoplay, Pagination } from "swiper/modules";
-
-// import featureImg from "../../../public/assets/images/blog-detail-feature.png";
-// import bgImg from "../../../public/assets/images/blog-detail-bg.png";
-
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-
-// const page = () => {
-//   const [swiper, setSwiper] = useState(null);
-
-//   const handlePrev = () => {
-//     if (swiper) {
-//       swiper.slidePrev();
-//     }
-//   };
-
-//   const handleNext = () => {
-//     if (swiper) {
-//       swiper.slideNext();
-//     }
-//   };
-
-//   return (
-//     <section className="lg:px-5 md:px-4 px-3 my-lg">
-//       <div className="container mx-auto">
-//         <div className="testimonial-bg relative flex flex-col md:flex-row p-4 justify-center">
-//           <div className="absolute inset-0 z-[-1]">
-//             <Image
-//               src={bgImg}
-//               alt="A modern turntable playing a record"
-//               layout="fill"
-//               objectFit="cover"
-//               quality={90}
-//             />
-//           </div>
-
-//           {/* MODIFICATION HERE: This section is now hidden on mobile */}
-//           <div className="flex flex-col items-center justify-center gap-5 max-w-6xl my-lg">
-//             <span className="font-medium text-[26px]  color-primary-dark">
-//               [Case Study - 01]
-//             </span>
-//             <h1 className="text-center leading-[95%]">
-//               Scaling a Creative Studio Without Hiring
-//             </h1>
-//             <p className="text-center">
-//               A fast-growing NYC creative agency partnered with Prismolix to
-//               scale their landing page delivery without hiring in-house. We
-//               built a modular design system and shipped 10+ white-labeled
-//               landing pages in just 8 weeks — helping them meet client demand,
-//               improve turnaround, and retain quality without the overhead.
-//             </p>
-//           </div>
-//         </div>
-//         <Swiper
-//           onSwiper={setSwiper}
-//           modules={[Navigation, Autoplay, Pagination]}
-//           autoHeight={true}
-//           slidesPerView={1}
-//           // loop={true}
-//           navigation
-//           // scrollbar={{ draggable: true }}
-//           autoplay={{
-//             delay: 5000,
-//             disableOnInteraction: false,
-//           }}
-//           // pagination={{
-//           //   type: "fraction",
-//           // }}
-//         >
-//           <SwiperSlide>
-//             <div className="slider">
-//               <Image
-//                 src={featureImg}
-//                 className="w-full rounded-[10px]"
-//                 quality={95}
-//                 unoptimized={true}
-//                 alt=""
-//               />
-//             </div>
-//           </SwiperSlide>
-//           <SwiperSlide>
-//             <div className="slider">
-//               <Image
-//                 src={featureImg}
-//                 className="w-full rounded-[10px]"
-//                 quality={95}
-//                 unoptimized={true}
-//                 alt=""
-//               />
-//             </div>
-//           </SwiperSlide>
-//           <SwiperSlide>
-//             <div className="slider">
-//               <Image
-//                 src={featureImg}
-//                 className="w-full rounded-[10px]"
-//                 quality={95}
-//                 unoptimized={true}
-//                 alt=""
-//               />
-//             </div>
-//           </SwiperSlide>
-//         </Swiper>
-
-//         <div className="flex flex-col gap-5">
-//           <div className="flex gap-1.5 mt-5">
-//             <span className="bg-light-purple px-5 py-2.5 rounded-full">
-//               UI/UX
-//             </span>
-//             <span className="bg-light-purple px-5 py-2.5 rounded-full">
-//               Design System
-//             </span>
-//             <span className="bg-light-purple px-5 py-2.5 rounded-full">
-//               Landing Pages
-//             </span>
-//           </div>
-//         </div>
-//         <div className="bg-light-purple flex lg:flex-row flex-col gap-7 px-10 py-6 rounded-[20px]">
-//           <div>
-//             <span>Category</span>
-//             <p>E-commerce</p>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default page;
-
-"use client";
-
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
 import Image from "next/image";
-import { useParams } from "next/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay, Pagination } from "swiper/modules";
-import {
-  fetchBlogBySlug,
-  extractBlogData,
-} from "../../../services/blog.service.js";
-
-import featureImg from "../../../public/assets/images/blog-detail-feature.png";
+import Link from "next/link";
 import bgImg from "../../../public/assets/images/blog-detail-bg.png";
+import CallSchedule from "../../../app/components/CallSchedule";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
-const formatMonthYear = (input) => {
-  if (!input) return "—";
-  // Supports dd/mm/yyyy and ISO
-  const normalized = input.includes("/")
-    ? input.split("/").reverse().join("-")
-    : input;
-  const date = new Date(normalized);
-  if (isNaN(date)) return input;
-  return date.toLocaleDateString(undefined, { month: "long", year: "numeric" });
+const blogPost = {
+  title: "Let's inspire the future with a free online academy",
+  imageUrl: "/assets/images/blogDetail.png", // Replace with your image path in the /public folder
+  tableOfContents: [
+    { id: "#section-1", title: "The Foundation of Modern Learning" },
+    { id: "#section-2", title: "Structuring the Curriculum" },
+    { id: "#section-3", title: "Engaging Students with Technology" },
+    { id: "#section-4", title: "Measuring Success and Iterating" },
+    { id: "#section-5", title: "The Path Forward" },
+  ],
+  content: [
+    {
+      id: "section-1",
+      title: "The Foundation of Modern Learning",
+      paragraphs: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non enim quaero quid verum, sed quid cuique dicendum sit. Duo Reges: constructio interrete. Atqui reperies, inquit, in hoc quidem pertinacem; Quae cum dixisset, finem ille.",
+        "Comprehensionem, inquit, physicis, si optandum sit, malim, quidquid intersit, quid quidquid. Igitur ne dolorem quidem. Quod equidem non opono, sit sane, inquam. Cur post Tarentum ad Archytam? Deinde prima illa, quae in congressu.",
+      ],
+    },
+    {
+      id: "section-2",
+      title: "Structuring the Curriculum",
+      paragraphs: [
+        "Aenean id et, et id omittantur. Nec enim, omnes avaritias si aeque avaritias esse dixerimus, sequetur ut etiam aequas esse dicamus. Videamus animi partes, ne similiter hominis, cum appetitum laudibus.",
+        "Est autem officium, quod ita factum est, ut eius facti probabilis ratio reddi possit. Quodsi ipsam honestatem undique per se laudabiliter.",
+      ],
+    },
+    {
+      id: "section-3",
+      title: "Engaging Students with Technology",
+      paragraphs: [
+        "Curabitur et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem.",
+      ],
+    },
+    // Add more sections as needed to match the ToC
+  ],
 };
 
-const diffInMonths = (start, end) => {
-  if (!start || !end) return "—";
-  const s = new Date(
-    start.includes("/") ? start.split("/").reverse().join("-") : start
-  );
-  const e = new Date(
-    end.includes("/") ? end.split("/").reverse().join("-") : end
-  );
-  if (isNaN(s) || isNaN(e)) return "—";
-  const months =
-    (e.getFullYear() - s.getFullYear()) * 12 + (e.getMonth() - s.getMonth());
-  if (months <= 0) return "< 1 Month";
-  return months === 1 ? "1 Month" : `${months} Months`;
-};
-
-const Page = () => {
-  const params = useParams();
-  const slug = Array.isArray(params?.id) ? params.id[0] : params?.id;
-
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-  const [data, setData] = useState(null);
-  const [swiper, setSwiper] = useState(null);
-
-  useEffect(() => {
-    let isMounted = true;
-    const run = async () => {
-      setLoading(true);
-      setError("");
-      try {
-        const portfolio = await fetchBlogBySlug(slug);
-        if (!portfolio) throw new Error("Not found");
-        const extracted = extractBlogData(portfolio);
-        if (isMounted) setData(extracted);
-      } catch (err) {
-        if (isMounted) setError("Failed to load");
-      } finally {
-        if (isMounted) setLoading(false);
-      }
-    };
-    if (slug) run();
-    return () => {
-      isMounted = false;
-    };
-  }, [slug]);
-
-  const galleryItems = useMemo(() => {
-    if (data?.gallery?.length) return data.gallery;
-    const fallbackUrl = data?.featuredImage || featureImg;
-    return [
-      {
-        type: "image",
-        url: typeof fallbackUrl === "string" ? fallbackUrl : featureImg,
-        thumbnail: typeof fallbackUrl === "string" ? fallbackUrl : featureImg,
-      },
-    ];
-  }, [data]);
-
+const page = () => {
   return (
-    <section className="lg:px-5 md:px-4 px-3 my-lg">
-      <div className="container mx-auto">
-        <div className="testimonial-bg relative flex flex-col md:flex-row p-4 justify-center">
-          <div className="absolute inset-0 z-[-1]">
-            <Image
-              src={bgImg}
-              alt="A modern turntable playing a record"
-              layout="fill"
-              objectFit="cover"
-              quality={90}
-            />
-          </div>
+    <div>
+      <section className="lg:px-5 md:px-4 px-3 my-lg">
+        <div className="container mx-auto">
+          <div className="testimonial-bg relative flex flex-col md:flex-row p-4 justify-center">
+            <div className="absolute inset-0 z-[-1]">
+              <Image
+                src={bgImg}
+                alt="A modern turntable playing a record"
+                layout="fill"
+                objectFit="cover"
+                quality={90}
+              />
+            </div>
 
-          <div className="flex flex-col items-center justify-center gap-5 max-w-6xl my-lg">
-            <span className="font-medium text-[26px]  color-primary-dark">
-              [Case Study]
-            </span>
-            <h1 className="text-center leading-[95%]">
-              {loading ? "Loading..." : data?.title || "—"}
-            </h1>
-            <p className="text-center">
-              {loading ? (
-                ""
-              ) : (
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: data?.excerpt || data?.content || "",
-                  }}
-                />
-              )}
-            </p>
+            <div className="flex flex-col items-center justify-center gap-5 max-w-6xl my-lg">
+              <span className="font-medium text-[26px]  color-primary-dark">
+                [Blog Detail]
+              </span>
+              <h1 className="text-center leading-[95%] max-w-5xl">
+                Creative Insights & Smart Solutions
+              </h1>
+              <p className="text-center max-w-4xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                non ex rhoncus, fringilla felis quis, malesuada ante. Aenean id
+                efficitur leo, vel lobortis massa. Sed non nisl at neque finibus
+                luctus in eu justo. Curabitur et ligula feugiat, consectetur
+                felis id, tempus justo. Proin consequat libero ante, eu pharetra
+                tortor consequat a. Duis eget dictum nulla.
+              </p>
+            </div>
           </div>
         </div>
+      </section>
+      <main className="container mx-auto lg:px-5 md:px-4 px-3 my-lg">
+        {/* Blog Post Hero Image */}
+        <div className="mb-8 md:mb-12">
+          <Image
+            src={blogPost.imageUrl}
+            alt="Blog post hero image"
+            width={1200}
+            height={600}
+            unoptimized={true}
+            className="w-full max-h-[800px] h-auto object-cover rounded-xl shadow-lg"
+          />
+        </div>
 
-        <Swiper
-          onSwiper={setSwiper}
-          modules={[Navigation, Autoplay, Pagination]}
-          autoHeight={true}
-          slidesPerView={1}
-          navigation
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-        >
-          {galleryItems.map((item, idx) => (
-            <SwiperSlide key={idx}>
-              <div className="slider">
-                {item.type === "video" ? (
-                  <video className="w-full rounded-[10px]" controls>
-                    <source src={item.url} type="video/mp4" />
-                  </video>
-                ) : (
-                  <Image
-                    src={item.url || featureImg}
-                    className="w-full rounded-[10px]"
-                    quality={95}
-                    width={item.width || 1200}
-                    height={item.height || 675}
-                    alt={data?.title || "Case Study"}
-                  />
-                )}
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        {/* Main Layout: Table of Contents + Article */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12">
+          {/* Table of Contents (Sticky Sidebar) */}
+          <aside className="lg:col-span-3 lg:sticky lg:top-24 h-fit mb-8 lg:mb-0">
+            <h4 className="text-xl font-bold  mb-4">Table of Content</h4>
+            <nav>
+              <ul className="space-y-2 lg:border-r border-gray-300 pr-4 lg:h-100">
+                {blogPost.tableOfContents.map((item) => (
+                  <li
+                    key={item.id}
+                    className="border-b last:border-b-0 border-gray-300 pb-2"
+                  >
+                    <Link
+                      href={item.id}
+                      className="block font-medium hover:text-purple-700 transition-colors duration-200 border-l-2 border-transparent hover:border-purple-600 pl-4"
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </aside>
 
-        <div className="flex flex-col gap-5">
-          <div className="flex gap-1.5 mt-5 flex-wrap">
-            {loading ? (
-              <span className="bg-light-purple px-5 py-2.5 rounded-full">
-                Loading...
-              </span>
-            ) : data?.tags?.length ? (
-              data.tags.map((tag, i) => (
-                <span
-                  key={i}
-                  className="bg-light-purple px-5 py-2.5 rounded-full"
+          {/* Blog Article Content */}
+          <article className="lg:col-span-9">
+            <div className="prose prose-lg max-w-none prose-indigo">
+              {/* <h1>{blogPost.title}</h1> */}
+
+              {blogPost.content.map((section) => (
+                <section
+                  key={section.id}
+                  id={section.id.substring(1)}
+                  className="scroll-mt-24 lg:mb-0 mb-5"
                 >
-                  {tag}
-                </span>
-              ))
-            ) : (
-              <span className="bg-light-purple px-5 py-2.5 rounded-full">
-                Case Study
-              </span>
-            )}
-          </div>
-
-          <div className="bg-light-purple flex lg:flex-row flex-col lg:gap-7 gap-4 px-10 py-6 rounded-[20px]">
-            <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                Category
-              </span>
-              <p>
-                {loading ? "—" : data?.industry || data?.categories?.[0] || "—"}
-              </p>
-            </div>
-            <div className="border-r-1 bg-black opacity-20"></div>
-            <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                Time Taken
-              </span>
-              <p>
-                {loading ? "—" : diffInMonths(data?.startDate, data?.endDate)}
-              </p>
-            </div>
-            <div className="border-r-1 bg-black opacity-20"></div>
-            <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                Start Date
-              </span>
-              <p>{loading ? "—" : formatMonthYear(data?.startDate)}</p>
-            </div>
-            <div className="border-r-1 bg-black opacity-20"></div>
-            <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                Completed Date
-              </span>
-              <p>{loading ? "—" : formatMonthYear(data?.endDate)}</p>
-            </div>
-          </div>
-
-          <div className="bg-light-purple flex lg:flex-row flex-col lg:items-center px-10 py-6 rounded-[20px] lg:gap-10 gap-3">
-            <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-              Technologies Used
-            </span>
-            <ul className="flex lg:gap-10 gap-2.5">
-              {(data?.technologiesUsed && data.technologiesUsed.length > 0
-                ? data.technologiesUsed
-                : [{ imageUrl: null }]
-              ).map((tech, idx) => (
-                <li
-                  key={idx}
-                  className="border-black/25 border p-4 rounded-full"
-                >
-                  {tech.imageUrl ? (
-                    <Image
-                      src={tech.imageUrl}
-                      alt={tech.name || "Tech"}
-                      width={20}
-                      height={20}
-                    />
-                  ) : (
-                    <span className="block w-5 h-5 bg-black/40 rounded" />
-                  )}
-                </li>
+                  <h4>{section.title}</h4>
+                  {section.paragraphs.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
+                </section>
               ))}
-            </ul>
-          </div>
-
-          <div className="bg-light-purple flex flex-col px-10 py-6 rounded-[20px] gap-12">
-            <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-              Methods Used
-            </span>
-            <div className="flex lg:flex-row flex-col lg:gap-[30px] gap-[20px]">
-              {(data?.methodsUsed?.length ? data.methodsUsed : ["—"]).map(
-                (method, idx) => (
-                  <div key={idx} className="lg:w-4/12 w-12/12">
-                    <p className="font-medium w-full text-center py-2.5 scroll-px-24 rounded-full bg-[#C4B5FD] ">
-                      {method}
-                    </p>
-                  </div>
-                )
-              )}
             </div>
-          </div>
-
-          <div className="flex lg:flex-row flex-col gap-5">
-            <div className="bg-light-purple lg:w-1/2 w-2/2 px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
-              <h4>The Challenge</h4>
-              <p className="font-medium">
-                {loading ? "" : data?.description || "—"}
-              </p>
-              <ul className="flex flex-col">
-                {(data?.keyPoints || []).map((kp, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] "
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="10"
-                      height="11"
-                      viewBox="0 0 10 11"
-                      fill="none"
-                    >
-                      <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                    </svg>
-                    {kp}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-light-purple lg:w-1/2 w-2/2 px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
-              <h4>Our Solution</h4>
-              <p className="font-medium">
-                {loading ? "" : data?.description || "—"}
-              </p>
-              <ul className="flex flex-col">
-                {(data?.keyPoints || []).map((kp, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] "
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="10"
-                      height="11"
-                      viewBox="0 0 10 11"
-                      fill="none"
-                    >
-                      <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                    </svg>
-                    {kp}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          </article>
         </div>
-      </div>
-
-      <div className="container mx-auto my-lg">
-        <div className="service-content flex flex-col items-center gap-5">
-          <span className="font-medium text-[26px] color-primary-dark">
-            [The Process]
-          </span>
-          <h2 className="leading-20 tracking-tight max-w-4xl">What We Did</h2>
-        </div>
-        <div className="service-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-          {(data?.process?.length ? data.process : []).map((step) => (
-            <div
-              key={step.number + step.title}
-              className="relative flex flex-col bg-light-purple rounded-[30px] p-8 overflow-hidden"
-            >
-              <p className="absolute top-0 right-8 !lg:text-[150px] !md:text-[140px] !sm:text-[130px] !text-[120px] font-black text-white z-0 select-none leading-tight">
-                {step.number}
-                <span className="color-primary-light">.</span>
-              </p>
-              <div className="relative z-10 flex flex-col h-full mt-36">
-                <div className="mt-auto">
-                  <h4 className="mt-2">{step.title}</h4>
-                  <p className="text-sm ">{step.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="container mx-auto my-lg">
-        <div className="service-content flex flex-col items-center gap-5">
-          <span className="font-medium text-[26px] color-primary-dark">
-            [Tools]
-          </span>
-          <h2 className="leading-20 tracking-tight max-w-2xl text-center">
-            Tools & Platforms We Use
-          </h2>
-        </div>
-      </div>
-    </section>
+      </main>
+      <CallSchedule />
+    </div>
   );
 };
 
-export default Page;
+export default page;
