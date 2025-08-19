@@ -1,51 +1,86 @@
 import React from "react";
 import Image from "next/image";
-import Shape from "../../public/assets/images/image-7.png";
-import featureImg from "../../public/assets/images/blog-img.png";
-import sectionShape from "../../public/assets/images/section-shape.png";
-import { fetchAllBlogs, extractBlogData } from "../../services/blog.service.js";
 
-import Testimonial from "../components/Testimonial.jsx";
-import ContactSection from "../components/ContactSection.jsx";
-import CallSchedule from "../components/CallSchedule.jsx";
+import Shape from "../../public/assets/images/blogShape.png";
+import CallSchedule from "../components/CallSchedule";
+import Link from "next/link";
 
-// Helper function to get image URL
-const getImageUrl = (portfolio) => {
-  const featuredImageUrl = portfolio._embedded?.['wp:featuredmedia']?.[0]?.source_url;
-  if (featuredImageUrl) {
-    // Convert HTTP to HTTPS if needed
-    return featuredImageUrl.replace('http://', 'https://');
-  }
-  return featureImg;
-};
+const blogs = [
+  {
+    id: 1,
+    featureImage: "/assets/images/blogFeature.png",
+    date: "12-12-2024",
+    title: "Systems, retention strategies, and scaling insights.",
+    excerpt:
+      "Lorem ipsum di set. cosoi kasjp noic condpa akw. poap lkaoko . . .",
+  },
+  {
+    id: 2,
+    featureImage: "/assets/images/blogFeature.png",
+    date: "12-12-2024",
+    title: "Systems, retention strategies, and scaling insights.",
+    excerpt:
+      "Lorem ipsum di set. cosoi kasjp noic condpa akw. poap lkaoko . . .",
+  },
+  {
+    id: 3,
+    featureImage: "/assets/images/blogFeature.png",
+    date: "12-12-2024",
+    title: "Systems, retention strategies, and scaling insights.",
+    excerpt:
+      "Lorem ipsum di set. cosoi kasjp noic condpa akw. poap lkaoko . . .",
+  },
+  {
+    id: 4,
+    featureImage: "/assets/images/blogFeature.png",
+    date: "12-12-2024",
+    title: "Systems, retention strategies, and scaling insights.",
+    excerpt:
+      "Lorem ipsum di set. cosoi kasjp noic condpa akw. poap lkaoko . . .",
+  },
+  {
+    id: 5,
+    featureImage: "/assets/images/blogFeature.png",
+    date: "12-12-2024",
+    title: "Systems, retention strategies, and scaling insights.",
+    excerpt:
+      "Lorem ipsum di set. cosoi kasjp noic condpa akw. poap lkaoko . . .",
+  },
+  {
+    id: 6,
+    featureImage: "/assets/images/blogFeature.png",
+    date: "12-12-2024",
+    title: "Systems, retention strategies, and scaling insights.",
+    excerpt:
+      "Lorem ipsum di set. cosoi kasjp noic condpa akw. poap lkaoko . . .",
+  },
+];
 
-const page = async () => {
-  // Fetch portfolio items from API
-  const portfolioItems = await fetchAllBlogs();
-
+const page = () => {
   return (
-    <>
-      <section className="relative pb-[100px] pt-[295px] overflow-hidden lg:px-5 md:px-4 px-3">
+    <div>
+      <section className="relative pt-[295px] overflow-hidden">
         {/* Container for the text content */}
-        <div className="container mx-auto relative z-10">
+        <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
             {/* Pre-heading */}
             <p className="font-medium text-[26px] color-primary-dark">
-              [Case Studies]
+              [Our Blog]
             </p>
 
             {/* Main Heading with Highlighted Text */}
             <h1 className="font-bold tracking-tighter leading-[100%]">
-              Quietly Powering
-              <span className="text-overlay  text-white px-2">Agency</span>{" "}
-              Success
+              Insights That Power
+              <span className="text-overlay text-white px-2">
+                Agencies
+              </span>{" "}
             </h1>
 
             {/* Subheading */}
             <p className="text-base max-w-3xl">
-              Prismolix works behind the scenes to help top agencies ship
-              faster, scale smarter, and deliver beautiful results — without
-              adding headcount.
+              We don’t just build for agencies — we share what we learn along
+              the way. From scaling delivery systems to mastering design
+              workflows, our blog is your playbook for growing without burnout.
             </p>
 
             {/* Button Group */}
@@ -57,7 +92,7 @@ const page = async () => {
         </div>
 
         {/* The Image (positioned absolutely) */}
-        <div className="absolute top-[45%] right-0 -translate-y-1/2 w-1/2 lg:w-2/5 h-full z-0 hidden lg:block">
+        <div className="absolute top-72 right-0 -translate-y-1/2 w-1/2 lg:w-[670px] h-[670px] z-0 hidden lg:block">
           <Image
             src={Shape}
             alt="Abstract 3D hero image"
@@ -67,171 +102,101 @@ const page = async () => {
           />
         </div>
       </section>
-
-      {/* Dynamic Portfolio Sections */}
-      {portfolioItems.map((portfolio, index) => {
-        const portfolioData = extractBlogData(portfolio);
-        
-        return (
-          <section key={portfolio.id} className="lg:px-5 md:px-4 px-3 my-lg">
-            <div className="container mx-auto">
-              <div className="rounded-[30px] bg-light-purple px-[30px] py-[50px]">
-                <div className="flex lg:flex-row flex-col gap-10">
-                  <div className="lg:w-3/8 w-8/8">
-                    <div className="img-wrapper">
-                      <Image 
-                        className="w-full" 
-                        src={getImageUrl(portfolio)}
-                        alt={portfolioData.title || "Portfolio Image"}
-                        width={500}
-                        height={300}
-                      />
-                    </div>
-                    <div className="lg:block hidden mt-14">
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                        Services Provided:
-                      </span>
-
-                      {/* Dynamic tags from API */}
-                      <div className="flex flex-wrap justify-start gap-1.5 mt-1.5">
-                        {portfolioData.tags.length > 0 ? (
-                          portfolioData.tags.slice(0, 3).map((tag, tagIndex) => (
-                            <span key={tagIndex} className="bg-white px-5 py-2.5 rounded-full">
-                              <p>{tag}</p>
-                            </span>
-                          ))
-                        ) : (
-                          // Show message if no tags available
-                          <span className="bg-white px-5 py-2.5 rounded-full">
-                            <p>Case Study</p>
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lg:w-5/8 w-8/8 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
-                    {/* Pre-heading */}
-                    <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] color-primary-dark">
-                      [Case Study - {String(index + 1).padStart(2, '0')}]
-                    </span>
-
-                    {/* Main Heading with Highlighted Text */}
-                    <h2 className="font-bold tracking-[-1px] leading-[102%]">
-                      {portfolioData.title}
-                    </h2>
-
-                    {/* Subheading */}
-                    <div>
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                        Client Type:
-                      </span>
-
-                      <p className="text-base max-w-3xl">
-                        {portfolioData.clientType}
-                      </p>
-                    </div>
-                    <div>
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                        Services Provided:
-                      </span>
-
-                      <p className="text-base max-w-3xl">
-                        {portfolioData.servicesProvided}
-                      </p>
-                    </div>
-                    <div>
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                        Challenge:
-                      </span>
-
-                      <p className="text-base max-w-3xl">
-                        {portfolioData.challenge}
-                      </p>
-                    </div>
-                    <div className="lg:hidden block ">
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                        Services Provided:
-                      </span>
-
-                      {/* Dynamic tags from API for mobile */}
-                      <div className="flex flex-wrap justify-start gap-1.5 mt-1.5">
-                        {portfolioData.tags.length > 0 ? (
-                          portfolioData.tags.slice(0, 3).map((tag, tagIndex) => (
-                            <span key={tagIndex} className="bg-white px-5 py-2.5 rounded-full">
-                              <p>{tag}</p>
-                            </span>
-                          ))
-                        ) : (
-                          // Show message if no tags available
-                          <span className="bg-white px-5 py-2.5 rounded-full">
-                            <p>Case Study</p>
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                    {/* Button Group */}
-                    <div className="flex items-center gap-4 mt-4">
-                      <a href={`/blogs/${portfolioData.slug}`} className="btn btn-primary">
-                        View Full Case Study
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        );
-      })}
-
-      <Testimonial />
-      <ContactSection />
-      <CallSchedule />
-
-      {/* <section className="w-full my-lg lg:px-5 md:px-4 px-3 my-lg">
+      <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
-          <div className="bg-light-purple rounded-3xl p-8 md:p-12 lg:p-16">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              <div className="w-full lg:w-1/2">
+          <div className="relative bg-light-purple rounded-3xl p-8 md:p-12 lg:p-16">
+            <div className="flex items-center gap-12">
+              <div className=" w-full lg:w-1/2">
                 <Image
                   src="/assets/images/section-shape.png"
                   alt="Abstract 3D shape"
-                  width={500}
-                  height={500}
-                  className="w-full h-auto object-contain rounded-2xl"
+                  width={200}
+                  height={200}
+                  unoptimized={true}
+                  className="absolute top w-[590.646px] top-0 left-0 h-auto object-contain rounded-2xl"
                 />
               </div>
 
-              <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
-                <span className="text-brand-purple font-semibold uppercase tracking-wider text-sm mb-4">
-                  Service Detail
+              <div className="w-full lg:w-3/4 flex flex-col -icon">
+                <span className="font-medium text-[26px]  color-primary-dark">
+                  [Prismolix Blog]
                 </span>
 
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                  Scalable, Systematic, and Pixel-Perfect - Designed for
-                  Agencies
+                <h2 className="font-bold text-gray-900 leading-[82px] mb-6">
+                  Ideas, Systems, and Stories That Drive Growth
                 </h2>
 
                 <p className="text-gray-700 text-lg mb-4">
-                  Vlmea yuac dfnreie napset viorld slsan daisgn. Stixnotir
-                  qutuig eitibiea. Visae oltir vetip- lrted tihdllt
-                  slkognrvjlcono titae nottes acth pon sgonay — uitlo nigra
-                  roaliy te aox eni imedaisd oopects.
+                  The Prismolix Blog is where agency owners, creative directors,
+                  and growth teams find practical advice on scaling design and
+                  development. We cover white-label execution strategies, UX/UI
+                  best practices, tech stack deep-dives, and leadership lessons
+                  — all written with one goal: to help you focus on growth while
+                  we handle the heavy lifting.
                 </p>
 
-                <p className="text-gray-600 text-base mb-8">
-                  Emen paotuer qiotrin ta tuk-seda doign vofume, vei tvop yau
-                  thip issiur vritoa saeshtimg ogtdy.
-                </p>
-
-                <button className="bg-brand-purple text-white font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 focus:ring-offset-light-purple">
-                  Let's Talk Design
+                <button className="btn btn-primary w-60 bg-brand-purple text-white font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 focus:ring-offset-light-purple">
+                  Let's Talk Scalability
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </section> */}
-    </>
+      </section>
+      <section className="lg:px-5 md:px-4 px-3 my-lg">
+        <div className="container mx-auto">
+          <div className="service-content flex flex-col items-center gap-5">
+            <span className="font-medium text-[26px] color-primary-dark">
+              [Blogs]
+            </span>
+            <h2 className="leading-20 tracking-tight max-w-2xl text-center">
+              From the Prismolix Journal
+            </h2>
+          </div>
+          <div className="service-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+            {/* Service Cards - Generated from the array */}
+            {blogs.map((blog) => (
+              <div
+                key={blog.id}
+                className="relative flex flex-col bg-light-purple rounded-[30px] p-8 overflow-hidden"
+              >
+                <Image
+                  src={blog.featureImage}
+                  width={100}
+                  height={100}
+                  unoptimized={true}
+                  className="w-full h-60  object-cover mb-6 rounded-[20px]"
+                  alt=""
+                />
+
+                {/* Card Content */}
+                <div className="relative z-10 flex flex-col ">
+                  {/* Price section pushed to the bottom */}
+                  <div className="mt-auto">
+                    <div className="pb-5">
+                      <p className="">
+                        <span className="bg-white px-2.5 py-[7px] rounded-full">
+                          {blog.date}
+                        </span>
+                      </p>
+                      <h4 className="mt-2">{blog.title}</h4>
+                      <p>{blog.excerpt}</p>
+                    </div>
+
+                    <div className="pt-5">
+                      <Link href={"/"} className="color-primary-dark">
+                        <p> Continue Reading</p>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <CallSchedule />
+    </div>
   );
 };
 
