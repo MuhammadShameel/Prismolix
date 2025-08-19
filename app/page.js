@@ -8,6 +8,7 @@ import Blog from "./components/Blog";
 import BlogDetail from "./components/BlogDetail";
 import About from "./components/About";
 import HowItWorks from "./components/HowItWorks";
+import ContactUs from "./components/ContactUs";
 
 export default function Home() {
   return (
@@ -21,7 +22,8 @@ export default function Home() {
       {/* <Blog />   */}
       {/* <BlogDetail /> */}
       {/* <About /> */}
-      <HowItWorks />
+      {/* <HowItWorks /> */}
+      <ContactUs />
     </>
   );
 }
