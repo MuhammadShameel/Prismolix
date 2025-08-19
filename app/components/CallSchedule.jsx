@@ -8,7 +8,7 @@ const CallSchedule = () => {
       <div className="container mx-auto">
         <div className="flex lg:flex-row flex-col gap-5">
           {/* Left Side: Text Content */}
-          <div className="lg:w-7/10 w-full bg-primary p-8 rounded-2xl text-white">
+          <div className="relative overflow-hidden lg:w-7/10 w-full bg-primary p-8 rounded-2xl text-white">
             <div className="max-w-xl">
               <h2 className="leading-[87%] tracking-[-1px]">
                 Ready to Scale Without Hiring?
@@ -24,6 +24,13 @@ const CallSchedule = () => {
                 Schedule My Call
               </button>
             </div>
+            <Image
+              className="absolute -bottom-16 left-0 w-[440px] h-[440px]"
+              src={"/assets/images/callScheduleIcon.svg"}
+              width={100}
+              height={100}
+              alt=""
+            />
           </div>
 
           {/* Right Side: Image */}
