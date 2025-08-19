@@ -45,7 +45,7 @@ const blogPost = {
 const page = () => {
   return (
     <div>
-      <section className="lg:px-5 md:px-4 px-3 my-lg">
+      <section className="lg:px-5 md:px-4 px-3 my-lg !mb-0">
         <div className="container mx-auto">
           <div className="testimonial-bg relative flex flex-col md:flex-row p-4 justify-center">
             <div className="absolute inset-0 z-[-1]">
@@ -77,7 +77,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <main className="container mx-auto lg:px-5 md:px-4 px-3 my-lg">
+      <main className="container mx-auto lg:px-5 md:px-4 px-3 ">
         {/* Blog Post Hero Image */}
         <div className="mb-8 md:mb-12">
           <Image

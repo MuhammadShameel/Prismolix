@@ -21,9 +21,9 @@ export default function Home() {
       {/* <CallSchedule /> */}
       {/* <Blog />   */}
       {/* <BlogDetail /> */}
-      {/* <About /> */}
+      <About />
       {/* <HowItWorks /> */}
-      <ContactUs />
+      {/* <ContactUs /> */}
     </>
   );
 }
