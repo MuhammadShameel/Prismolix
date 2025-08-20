@@ -29,7 +29,7 @@ const Home = () => {
       <Services />
       <Testimonial />
       <ContactSection />
-      {/* <CallSchedule />  */}
+      <CallSchedule />
     </div>
   );
 };
