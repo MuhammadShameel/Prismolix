@@ -7,6 +7,8 @@ import Testimonial from "./Testimonial";
 import ContactSection from "./ContactSection";
 import CallSchedule from "./CallSchedule";
 
+import Shape from "../../public/assets/images/hero-shape.png";
+
 const Home = () => {
   return (
     <div className="relative">
@@ -17,11 +19,16 @@ const Home = () => {
         height={100}
         alt=""
       />
+      <Image
+        src={Shape}
+        alt="Abstract 3D hero image"
+        className="absolute right-0"
+      />
       <HeroSection />
       {/* <ProblemSolution />
-      <Services />
+      <Services /> */}
       <Testimonial />
-      <ContactSection />
+      {/* <ContactSection />
       <CallSchedule /> */}
     </div>
   );

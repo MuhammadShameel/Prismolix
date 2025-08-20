@@ -35,15 +35,15 @@ const HeroSection = () => {
       </div>
 
       {/* The Image (positioned absolutely) */}
-      <div className="absolute top-[45%] right-0 -translate-y-1/2 w-1/2 lg:w-2/5 h-full z-0 hidden lg:block">
+      {/* <div className="absolute top-[45%] right-0 -translate-y-1/2 w-1/2 lg:w-2/5 h-full z-0 hidden lg:block ">
         <Image
           src={Shape}
           alt="Abstract 3D hero image"
           layout="fill"
           // objectFit="contain"
-          className="object-right"
+          className="object-right w-full h-auto "
         />
-      </div>
+      </div> */}
     </section>
   );
 };
