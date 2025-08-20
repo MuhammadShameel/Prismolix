@@ -25,11 +25,11 @@ const Home = () => {
         className="absolute right-0"
       />
       <HeroSection />
-      {/* <ProblemSolution />
-      <Services /> */}
+      <ProblemSolution />
+      <Services />
       <Testimonial />
-      {/* <ContactSection />
-      <CallSchedule /> */}
+      <ContactSection />
+      {/* <CallSchedule />  */}
     </div>
   );
 };

@@ -133,17 +133,65 @@ const ContactSection = () => {
                 className={inputStyle}
               />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <select className={inputStyle}>
-                  <option>Service You're looking for</option>
-                  <option>UI/UX Design</option>
-                  <option>Web Development</option>
-                  <option>App Development</option>
-                </select>
-                <input
-                  type="text"
-                  placeholder="Your Budget"
-                  className={inputStyle}
-                />
+                {/* --- Custom Select Dropdown --- */}
+                <div className="relative">
+                  <select
+                    // Add appearance-none to hide the default arrow and pr-12 to make space for our icon
+                    className={`${inputStyle} appearance-none pr-12`}
+                  >
+                    <option>Service You're looking for</option>
+                    <option>UI/UX Design</option>
+                    <option>Web Development</option>
+                    <option>App Development</option>
+                  </select>
+
+                  {/* Your Custom SVG Icon */}
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="11"
+                      viewBox="0 0 18 11"
+                      fill="none"
+                    >
+                      <path
+                        d="M9.01472 6.75734L15.8029 0.302944L17.5 2L9.01472 10.4853L0.529434 2L2.22649 0.302945L9.01472 6.75734Z"
+                        fill="#364153"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* The budget input remains the same */}
+                <div className="relative">
+                  <select
+                    // Add appearance-none to hide the default arrow and pr-12 to make space for our icon
+                    className={`${inputStyle} appearance-none pr-12`}
+                  >
+                    <option>Your Budget</option>
+                    <option>2000</option>
+                    <option>3000</option>
+                    <option>5000</option>
+                  </select>
+
+                  {/* Your Custom SVG Icon */}
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                    <span className="font-semibold text-gray-700">USD</span>
+                    <svg
+                      className="ml-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="11"
+                      viewBox="0 0 18 11"
+                      fill="none"
+                    >
+                      <path
+                        d="M9.01472 6.75734L15.8029 0.302944L17.5 2L9.01472 10.4853L0.529434 2L2.22649 0.302945L9.01472 6.75734Z"
+                        fill="#364153"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
               <textarea
                 placeholder="Your message here *"
