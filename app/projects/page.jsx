@@ -89,6 +89,7 @@ const page = async () => {
                         src={getImageUrl(portfolio)}
                         alt={portfolioData.title || "Portfolio Image"}
                         width={500}
+                        unoptimized={true}
                         height={300}
                       />
                     </div>
