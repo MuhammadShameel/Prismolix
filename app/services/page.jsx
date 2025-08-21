@@ -110,7 +110,7 @@ const page = () => {
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
           <div className="overflow-hidden rounded-3xl bg-light-purple">
-            <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12">
+            <div className="flex flex-col items-center gap-0 lg:flex-row lg:gap-12">
               <div className=" w-full lg:w-2/6 lg:flex-shrink-0">
                 <Image
                   src="/assets/images/section-shape.png"
@@ -132,14 +132,14 @@ const page = () => {
                   Agencies
                 </h2>
 
-                <p className="mb-4 text-base text-gray-700 md:text-lg">
+                <p className="mb-4 text-base  md:text-lg">
                   Vlmea yuac dfnreie napset viorld slsan daisgn. Stixnotir
                   qutuig eitibiea. Visae oltir vetip- lrted tihdllt
                   slkognrvjlcono titae nottes acth pon sgonay — uitlo nigra
                   roaliy te aox eni imedaisd oopects.
                 </p>
 
-                <p className="mb-6 text-base text-gray-700 md:text-lg">
+                <p className="mb-6 text-base  md:text-lg">
                   Emen paotuer qiotrin ta tuk-seda doign vofume, vei tvop yau
                   thip issiur vritoa saeshtimg ogtdy.
                 </p>

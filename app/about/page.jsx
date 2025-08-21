@@ -73,7 +73,7 @@ const About = () => {
         <div className="container mx-auto">
           <div className=" overflow-hidden rounded-3xl bg-light-purple">
             {/* Main flex container: column on mobile, row on large screens */}
-            <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12">
+            <div className="flex flex-col items-center gap-0 lg:flex-row lg:gap-12">
               {/* Image Column */}
               <div className="w-full lg:w-2/6 lg:flex-shrink-0">
                 <Image
@@ -95,14 +95,14 @@ const About = () => {
                   Agency Growth Shouldn't Mean Burnout
                 </h2>
 
-                <p className="mb-4 text-base text-gray-700 md:text-lg">
+                <p className="mb-4 text-base md:text-lg">
                   At Prismolix, we don’t chase the spotlight — we power those
                   who do. We’re the behind-the-scenes partner helping agencies
                   scale effortlessly by delivering world-class design and
                   development — under your brand, inside your workflow, and with
                   zero management overhead.
                 </p>
-                <p className="mb-6 text-base text-gray-700 md:text-lg">
+                <p className="mb-6 text-base md:text-lg">
                   We were built for agencies who are growing fast but tired of
                   bottlenecks — sourcing freelancers, managing inconsistent
                   delivery, or sacrificing quality under pressure. Prismolix
