@@ -137,7 +137,7 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="relative container mx-auto py-16 lg:py-24">
           {/* Giant Background Text */}
-          <div className="absolute top-[340px] inset-0 w-full h-auto flex items-center justify-center overflow-hidden z-50">
+          <div className="absolute lg:top-[340px] md:top-[160px] top-[340px] inset-0 w-full h-auto flex items-center justify-center overflow-hidden z-20">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1320"
