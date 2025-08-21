@@ -10,7 +10,7 @@ const WhyPrismolix = () => {
             [Why Prismolix]
           </span>
           <div className="flex xl:flex-row flex-col justify-between lg:items-center item-start mt-5 lg:gap-0 gap-2.5">
-            <h2 className="xl:max-w-2xl lg:max-w-3xl lg:leading-20 leading-12">
+            <h2 className="xl:max-w-2xl lg:max-w-3xl lg:leading-20 leading-10">
               Why Agencies Trust Prismolix
             </h2>
             <p className="lg:max-w-3xl md:max-w-2xl max-w-5xl">

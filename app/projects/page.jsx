@@ -11,10 +11,11 @@ import CallSchedule from "../components/CallSchedule.jsx";
 
 // Helper function to get image URL
 const getImageUrl = (portfolio) => {
-  const featuredImageUrl = portfolio._embedded?.['wp:featuredmedia']?.[0]?.source_url;
+  const featuredImageUrl =
+    portfolio._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
   if (featuredImageUrl) {
     // Convert HTTP to HTTPS if needed
-    return featuredImageUrl.replace('http://', 'https://');
+    return featuredImageUrl.replace("http://", "https://");
   }
   return featureImg;
 };
@@ -24,7 +25,20 @@ const page = async () => {
   const portfolioItems = await fetchAllBlogs();
 
   return (
-    <>
+    <div className="relative">
+      <Image
+        className="absolute w-full h-auto top-0 left-0 z-0"
+        src={"/assets/images/Shade.png"}
+        width={100}
+        height={100}
+        alt=""
+      />
+      <Image
+        src={Shape}
+        alt="Abstract 3D hero image"
+        // objectFit="contain"
+        className="absolute top-0 right-0"
+      />
       <section className="relative pb-[100px] pt-[295px] overflow-hidden lg:px-5 md:px-4 px-3">
         {/* Container for the text content */}
         <div className="container mx-auto relative z-10">
@@ -57,21 +71,12 @@ const page = async () => {
         </div>
 
         {/* The Image (positioned absolutely) */}
-        <div className="absolute top-[45%] right-0 -translate-y-1/2 w-1/2 lg:w-2/5 h-full z-0 hidden lg:block">
-          <Image
-            src={Shape}
-            alt="Abstract 3D hero image"
-            layout="fill"
-            // objectFit="contain"
-            className="object-right"
-          />
-        </div>
       </section>
 
       {/* Dynamic Portfolio Sections */}
       {portfolioItems.map((portfolio, index) => {
         const portfolioData = extractBlogData(portfolio);
-        
+
         return (
           <section key={portfolio.id} className="lg:px-5 md:px-4 px-3 my-lg">
             <div className="container mx-auto">
@@ -79,8 +84,8 @@ const page = async () => {
                 <div className="flex lg:flex-row flex-col gap-10">
                   <div className="lg:w-3/8 w-8/8">
                     <div className="img-wrapper">
-                      <Image 
-                        className="w-full" 
+                      <Image
+                        className="w-full"
                         src={getImageUrl(portfolio)}
                         alt={portfolioData.title || "Portfolio Image"}
                         width={500}
@@ -95,11 +100,16 @@ const page = async () => {
                       {/* Dynamic tags from API */}
                       <div className="flex flex-wrap justify-start gap-1.5 mt-1.5">
                         {portfolioData.tags.length > 0 ? (
-                          portfolioData.tags.slice(0, 3).map((tag, tagIndex) => (
-                            <span key={tagIndex} className="bg-white px-5 py-2.5 rounded-full">
-                              <p>{tag}</p>
-                            </span>
-                          ))
+                          portfolioData.tags
+                            .slice(0, 3)
+                            .map((tag, tagIndex) => (
+                              <span
+                                key={tagIndex}
+                                className="bg-white px-5 py-2.5 rounded-full"
+                              >
+                                <p>{tag}</p>
+                              </span>
+                            ))
                         ) : (
                           // Show message if no tags available
                           <span className="bg-white px-5 py-2.5 rounded-full">
@@ -112,7 +122,7 @@ const page = async () => {
                   <div className="lg:w-5/8 w-8/8 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
                     {/* Pre-heading */}
                     <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] color-primary-dark">
-                      [Case Study - {String(index + 1).padStart(2, '0')}]
+                      [Case Study - {String(index + 1).padStart(2, "0")}]
                     </span>
 
                     {/* Main Heading with Highlighted Text */}
@@ -156,11 +166,16 @@ const page = async () => {
                       {/* Dynamic tags from API for mobile */}
                       <div className="flex flex-wrap justify-start gap-1.5 mt-1.5">
                         {portfolioData.tags.length > 0 ? (
-                          portfolioData.tags.slice(0, 3).map((tag, tagIndex) => (
-                            <span key={tagIndex} className="bg-white px-5 py-2.5 rounded-full">
-                              <p>{tag}</p>
-                            </span>
-                          ))
+                          portfolioData.tags
+                            .slice(0, 3)
+                            .map((tag, tagIndex) => (
+                              <span
+                                key={tagIndex}
+                                className="bg-white px-5 py-2.5 rounded-full"
+                              >
+                                <p>{tag}</p>
+                              </span>
+                            ))
                         ) : (
                           // Show message if no tags available
                           <span className="bg-white px-5 py-2.5 rounded-full">
@@ -171,7 +186,10 @@ const page = async () => {
                     </div>
                     {/* Button Group */}
                     <div className="flex items-center gap-4 mt-4">
-                      <a href={`/blogs/${portfolioData.slug}`} className="btn btn-primary">
+                      <a
+                        href={`/blogs/${portfolioData.slug}`}
+                        className="btn btn-primary"
+                      >
                         View Full Case Study
                       </a>
                     </div>
@@ -231,7 +249,7 @@ const page = async () => {
           </div>
         </div>
       </section> */}
-    </>
+    </div>
   );
 };
 

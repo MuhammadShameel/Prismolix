@@ -7,14 +7,28 @@ import CallIcon from "../../public/assets/images/call-icon.svg";
 import PlugIcon from "../../public/assets/images/plug-icon.svg";
 import CodeIcon from "../../public/assets/images/code-icon.png";
 import GraphlIcon from "../../public/assets/images/graph-icon.png";
-import ToolsMarquee from "./ToolsMarquee";
-import OfferSection from "./OfferSection";
-import ContactSection from "./ContactSection";
-import CallSchedule from "./CallSchedule";
+import ToolsMarquee from "../components/ToolsMarquee";
+import OfferSection from "../components/OfferSection";
+import ContactSection from "../components/ContactSection";
+import CallSchedule from "../components/CallSchedule";
 
 const HowItWorks = () => {
   return (
-    <div>
+    <div className="relative">
+      <Image
+        className="absolute w-full h-auto top-0 left-0 z-0"
+        src={"/assets/images/Shade.png"}
+        width={100}
+        height={100}
+        alt=""
+      />
+      <Image
+        src={Shape}
+        alt="Abstract 3D hero image"
+        // objectFit="contain"
+        className="absolute top-0 right-0"
+      />
+
       <section className="relative pt-[295px] overflow-hidden">
         {/* Container for the text content */}
         <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
@@ -45,15 +59,6 @@ const HowItWorks = () => {
         </div>
 
         {/* The Image (positioned absolutely) */}
-        <div className="absolute top-80 right-0 -translate-y-1/2 w-1/2 lg:w-[515.758px] h-[513px] z-0 hidden lg:block">
-          <Image
-            src={Shape}
-            alt="Abstract 3D hero image"
-            layout="fill"
-            // objectFit="contain"
-            className="object-right"
-          />
-        </div>
       </section>
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">

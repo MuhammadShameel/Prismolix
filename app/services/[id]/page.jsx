@@ -124,7 +124,7 @@ const Page = () => {
             <span className="font-medium text-[26px] color-primary-dark">
               [The Difference]
             </span>
-            <h2 className="leading-20 tracking-tight text-center max-w-4xl">
+            <h2 className="lg:leading-20 leading-10 tracking-tight text-center max-w-4xl">
               Why Agencies Choose Our UI/UX Team
             </h2>
           </div>
@@ -156,7 +156,7 @@ const Page = () => {
             <span className="font-medium text-[26px] color-primary-dark">
               [The Difference]
             </span>
-            <h2 className="leading-20 tracking-tight text-center max-w-4xl">
+            <h2 className="lg:leading-20 leading-10 tracking-tight text-center max-w-4xl">
               What We Deliver
             </h2>
           </div>

@@ -91,7 +91,7 @@ const ToolsMarquee = () => {
             <span className="font-medium text-[26px] color-primary-dark">
               [Tools]
             </span>
-            <h2 className="leading-20 tracking-tight text-center max-w-2xl">
+            <h2 className="lg:leading-20 leading-10 tracking-tight text-center max-w-2xl">
               Tools & Platforms We Use
             </h2>
           </div>

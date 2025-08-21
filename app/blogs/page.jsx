@@ -58,8 +58,21 @@ const blogs = [
 
 const page = () => {
   return (
-    <div>
-      <section className="relative pt-[295px] overflow-hidden">
+    <div className="relative">
+      <Image
+        className="absolute w-full h-auto top-0 left-0 z-0"
+        src={"/assets/images/Shade.png"}
+        width={100}
+        height={100}
+        alt=""
+      />
+      <Image
+        src={Shape}
+        alt="Abstract 3D hero image"
+        // objectFit="contain"
+        className="absolute right-0 top-0"
+      />
+      <section className="relative lg:pt-[295px] pt-[350px] overflow-hidden">
         {/* Container for the text content */}
         <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
@@ -89,17 +102,6 @@ const page = () => {
               <button className="btn btn-outline">How it Works</button>
             </div>
           </div>
-        </div>
-
-        {/* The Image (positioned absolutely) */}
-        <div className="absolute top-72 right-0 -translate-y-1/2 w-1/2 lg:w-[670px] h-[670px] z-0 hidden lg:block">
-          <Image
-            src={Shape}
-            alt="Abstract 3D hero image"
-            layout="fill"
-            // objectFit="contain"
-            className="object-right"
-          />
         </div>
       </section>
       <section className="lg:px-5 md:px-4 px-3 my-lg">
@@ -149,7 +151,7 @@ const page = () => {
             <span className="font-medium text-[26px] color-primary-dark">
               [Blogs]
             </span>
-            <h2 className="leading-20 tracking-tight max-w-2xl text-center">
+            <h2 className="lg:leading-20 leading-10 tracking-tight max-w-2xl text-center">
               From the Prismolix Journal
             </h2>
           </div>

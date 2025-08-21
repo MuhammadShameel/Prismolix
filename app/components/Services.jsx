@@ -41,7 +41,9 @@ const Services = () => {
           <span className="font-medium text-[26px] color-primary-dark">
             [Services]
           </span>
-          <h2 className="leading-20 tracking-tight max-w-4xl">What We Build</h2>
+          <h2 className="lg:leading-20 leading-10 tracking-tight max-w-4xl">
+            What We Build
+          </h2>
           <p className="color-dark-cards-bg max-w-2xl text-center">
             Whether it’s a landing page sprint, a headless eCommerce build, or
             full-stack app design — we’ve got you covered.

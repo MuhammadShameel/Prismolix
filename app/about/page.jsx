@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Shape from "../../public/assets/images/blogShape.png";
 import Marquee from "../components/Marquee";
-import CallSchedule from "./CallSchedule";
+import CallSchedule from "../components/CallSchedule";
 
 const services = [
   {
@@ -24,7 +24,20 @@ const About = () => {
   // const [data, setData] = useState(null);
 
   return (
-    <>
+    <div id="about-us" className="relative">
+      <Image
+        className="absolute w-full h-auto top-0 left-0 z-0"
+        src={"/assets/images/Shade.png"}
+        width={100}
+        height={100}
+        alt=""
+      />
+      <Image
+        src={Shape}
+        alt="Abstract 3D hero image"
+        // objectFit="contain"
+        className="absolute top-0 right-0"
+      />
       <section className="relative pt-[295px] overflow-hidden">
         {/* Container for the text content */}
         <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
@@ -55,49 +68,41 @@ const About = () => {
         </div>
 
         {/* The Image (positioned absolutely) */}
-        <div className="absolute top-72 right-0 -translate-y-1/2 w-1/2 lg:w-[670px] h-[670px] z-0 hidden lg:block">
-          <Image
-            src={Shape}
-            alt="Abstract 3D hero image"
-            layout="fill"
-            // objectFit="contain"
-            className="object-right"
-          />
-        </div>
       </section>
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
-          <div className="relative bg-light-purple rounded-3xl p-8 md:p-12 lg:p-16">
-            <div className="flex items-center gap-12">
-              <div className=" w-full lg:w-1/2">
+          <div className="relative overflow-hidden rounded-2xl bg-light-purple lg:rounded-3xl ">
+            {/* Main flex container: column on mobile, row on large screens */}
+            <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12">
+              {/* Image Column */}
+              <div className="w-full lg:w-2/6 lg:flex-shrink-0">
                 <Image
                   src="/assets/images/section-shape.png"
                   alt="Abstract 3D shape"
-                  width={200}
-                  height={200}
-                  unoptimized={true}
-                  className="absolute top w-[590.646px] top-0 left-0 h-auto object-contain rounded-2xl"
+                  width={590}
+                  height={590} // Use dimensions for a 1:1 aspect ratio
+                  className="h-auto w-full max-w-md lg:max-w-none"
                 />
               </div>
 
-              <div className="w-full lg:w-3/4 flex flex-col -icon">
-                <span className="font-medium text-[26px]  color-primary-dark">
+              {/* Text Content Column */}
+              <div className="flex w-full flex-col lg:w-4/6  p-6 sm:p-8 md:p-12 lg:p-16">
+                <span className="font-medium color-primary-dark text-lg md:text-xl">
                   [About Company]
                 </span>
 
-                <h2 className="font-bold text-gray-900 leading-[82px] mb-6">
+                <h2 className="mt-2 mb-4 font-bold text-3xl leading-tight ">
                   Agency Growth Shouldn't Mean Burnout
                 </h2>
 
-                <p className="text-gray-700 text-lg mb-4">
+                <p className="mb-4 text-base text-gray-700 md:text-lg">
                   At Prismolix, we don’t chase the spotlight — we power those
                   who do. We’re the behind-the-scenes partner helping agencies
                   scale effortlessly by delivering world-class design and
                   development — under your brand, inside your workflow, and with
                   zero management overhead.
                 </p>
-                <p className="text-gray-700 text-lg mb-4">
-                  {" "}
+                <p className="mb-6 text-base text-gray-700 md:text-lg">
                   We were built for agencies who are growing fast but tired of
                   bottlenecks — sourcing freelancers, managing inconsistent
                   delivery, or sacrificing quality under pressure. Prismolix
@@ -105,7 +110,7 @@ const About = () => {
                   seamlessly, works in your tools, and moves at your speed.
                 </p>
 
-                <button className="btn btn-primary w-60 bg-brand-purple text-white font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 focus:ring-offset-light-purple">
+                <button className="btn btn-primary mt-2 w-full rounded-lg bg-purple-600 px-8 py-3 font-semibold text-white transition-colors hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 sm:w-auto sm:self-start">
                   Let's Talk Scalability
                 </button>
               </div>
@@ -167,7 +172,7 @@ const About = () => {
             <span className="font-medium text-[26px] color-primary-dark">
               [The Difference]
             </span>
-            <h2 className="leading-20 tracking-tight max-w-3xl text-center">
+            <h2 className="lg:leading-20 leading-10 tracking-tight max-w-3xl text-center">
               What makes us different
             </h2>
           </div>
@@ -197,7 +202,7 @@ const About = () => {
         </div>
       </section>
       <CallSchedule />
-    </>
+    </div>
   );
 };
 

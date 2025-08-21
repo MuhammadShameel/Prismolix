@@ -449,7 +449,9 @@ const Page = () => {
           <span className="font-medium text-[26px] color-primary-dark">
             [The Process]
           </span>
-          <h2 className="leading-20 tracking-tight max-w-4xl">What We Did</h2>
+          <h2 className="lg:leading-20 leading-10 tracking-tight max-w-4xl">
+            What We Did
+          </h2>
         </div>
         <div className="service-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
           {(data?.process?.length ? data.process : []).map((step) => (
@@ -477,7 +479,7 @@ const Page = () => {
           <span className="font-medium text-[26px] color-primary-dark">
             [Tools]
           </span>
-          <h2 className="leading-20 tracking-tight max-w-2xl text-center">
+          <h2 className="lg:leading-20 leading-10 tracking-tight max-w-2xl text-center">
             Tools & Platforms We Use
           </h2>
         </div>

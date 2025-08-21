@@ -10,11 +10,12 @@ import { Menu, X } from "lucide-react";
 import Logo from "../../../public/assets/images/logo.svg"; // Adjust the path as necessary
 
 const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "About Us", href: "#" },
-  { name: "Services", href: "#" },
-  { name: "Case Study", href: "#" },
-  { name: "How It Works", href: "#" },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Case Study", href: "/projects" },
+  { name: "Blogs", href: "/blogs" },
+  { name: "How It Works", href: "/howItWorks" },
 ];
 
 const Header = () => {
@@ -66,12 +67,12 @@ const Header = () => {
                 <ul className="flex items-center lg:gap-10 md:gap-5">
                   {navLinks.map((link) => (
                     <li key={link.name}>
-                      <a
+                      <Link
                         href={link.href}
                         className="nav-link font-medium hover:text-black transition-colors lg:text-xl md:text-md"
                       >
                         {link.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -114,13 +115,13 @@ const Header = () => {
                 <ul className="flex flex-col items-center gap-6">
                   {navLinks.map((link) => (
                     <li key={link.name}>
-                      <a
+                      <Link
                         href={link.href}
                         className="nav-link text-gray-800 font-medium text-lg"
                         onClick={() => setIsOpen(false)}
                       >
                         {link.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                   <li>
