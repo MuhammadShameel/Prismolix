@@ -71,7 +71,7 @@ const About = () => {
       </section>
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
-          <div className="relative overflow-hidden rounded-2xl bg-light-purple lg:rounded-3xl ">
+          <div className=" overflow-hidden rounded-3xl bg-light-purple">
             {/* Main flex container: column on mobile, row on large screens */}
             <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12">
               {/* Image Column */}

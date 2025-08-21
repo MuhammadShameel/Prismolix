@@ -109,36 +109,37 @@ const page = () => {
       </section>
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
-          <div className="relative bg-light-purple rounded-3xl p-8 md:p-12 lg:p-16">
-            <div className="flex items-center gap-12">
-              <div className=" w-full lg:w-1/2">
+          <div className="overflow-hidden rounded-3xl bg-light-purple">
+            <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12">
+              <div className=" w-full lg:w-2/6 lg:flex-shrink-0">
                 <Image
                   src="/assets/images/section-shape.png"
                   alt="Abstract 3D shape"
                   width={200}
                   height={200}
-                  className="absolute top w-[590.646px] top-0 left-0 h-auto object-contain rounded-2xl"
+                  unoptimized={true}
+                  className="h-auto w-full max-w-md lg:max-w-none"
                 />
               </div>
 
-              <div className="w-full lg:w-3/4 flex flex-col -icon">
-                <span className="font-medium text-[26px]  color-primary-dark">
+              <div className="flex w-full flex-col lg:w-4/6  p-6 sm:p-8 md:p-12 lg:p-16">
+                <span className="font-medium color-primary-dark text-lg md:text-xl">
                   [Service Detail]
                 </span>
 
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                <h2 className="mt-2 mb-4 font-bold text-3xl leading-tight">
                   Scalable, Systematic, and Pixel-Perfect - Designed for
                   Agencies
                 </h2>
 
-                <p className="text-gray-700 text-lg mb-4">
+                <p className="mb-4 text-base text-gray-700 md:text-lg">
                   Vlmea yuac dfnreie napset viorld slsan daisgn. Stixnotir
                   qutuig eitibiea. Visae oltir vetip- lrted tihdllt
                   slkognrvjlcono titae nottes acth pon sgonay — uitlo nigra
                   roaliy te aox eni imedaisd oopects.
                 </p>
 
-                <p className="text-gray-600 text-base mb-8">
+                <p className="mb-6 text-base text-gray-700 md:text-lg">
                   Emen paotuer qiotrin ta tuk-seda doign vofume, vei tvop yau
                   thip issiur vritoa saeshtimg ogtdy.
                 </p>
