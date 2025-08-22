@@ -16,7 +16,7 @@ const HowItWorks = () => {
   return (
     <div className="relative">
       <Image
-        className="absolute w-full h-auto top-0 left-0 z-0"
+        className="absolute w-full h-auto top-0 right-0 z-0"
         src={"/assets/images/Shade.png"}
         width={100}
         height={100}

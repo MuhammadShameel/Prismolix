@@ -266,24 +266,6 @@ const Testimonial = () => {
     <section className="px-3 py-12 md:px-4 lg:px-5 md:py-20">
       <div className="container mx-auto">
         <div className="relative flex flex-col rounded-2xl md:flex-row md:items-center">
-          {/* Background Image */}
-          {/* <div className="absolute inset-0 z-[-1] overflow-hidden rounded-2xl">
-            <Image
-              src={bgImg}
-              alt="Abstract background"
-              fill
-              className="object-cover"
-              quality={90}
-            />
-          </div>
-
-          <div className="hidden shrink-0 flex-col items-center justify-center p-6 md:flex md:w-1/3 lg:w-1/4">
-            <Image src={Line} alt="Decorative line" className="h-16 w-auto" />
-            <span className="mt-4 text-center font-medium text-primary-dark md:text-xl lg:text-2xl">
-              [Testimonial]
-            </span>
-          </div> */}
-
           <div className="absolute inset-0 z-[-1]">
             <Image
               src={bgImg}

@@ -263,7 +263,7 @@ const Page = () => {
           modules={[Navigation, Autoplay, Pagination]}
           autoHeight={true}
           slidesPerView={1}
-          navigation
+          navigation={true}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
         >
           {galleryItems.map((item, idx) => (
@@ -276,11 +276,12 @@ const Page = () => {
                 ) : (
                   <Image
                     src={item.url || featureImg}
-                    className="w-full rounded-[10px]"
+                    className="w-full rounded-[10px] lg:h-[674px] md-[530px] h-[330px] object-cover"
                     quality={95}
                     width={item.width || 1200}
                     height={item.height || 675}
                     alt={data?.title || "Case Study"}
+                    unoptimized={true}
                   />
                 )}
               </div>

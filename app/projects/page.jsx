@@ -27,7 +27,7 @@ const page = async () => {
   return (
     <div className="relative">
       <Image
-        className="absolute w-full h-auto top-0 left-0 z-0"
+        className="absolute w-full h-auto top-0 left-0 z-[-1]"
         src={"/assets/images/Shade.png"}
         width={100}
         height={100}
@@ -188,7 +188,7 @@ const page = async () => {
                     {/* Button Group */}
                     <div className="flex items-center gap-4 mt-4">
                       <a
-                        href={`/blogs/${portfolioData.slug}`}
+                        href={`/projects/${portfolioData.slug}`}
                         className="btn btn-primary"
                       >
                         View Full Case Study
