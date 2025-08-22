@@ -303,7 +303,7 @@ const Testimonial = () => {
           </div>
 
           {/* Right Column: Swiper */}
-          <div className="relative w-full overflow-hidden p-6 sm:p-8 lg:w-3/4">
+          <div className="relative w-full overflow-hidden lg:w-3/4">
             <Swiper
               onSwiper={setSwiper}
               onSlideChange={(s) => setActiveIndex(s.realIndex)}

@@ -39,7 +39,7 @@ const page = async () => {
         // objectFit="contain"
         className="absolute top-0 right-0"
       />
-      <section className="relative pb-[100px] pt-[295px] overflow-hidden lg:px-5 md:px-4 px-3">
+      <section className="relative  pt-[295px] overflow-hidden lg:px-5 md:px-4 px-3">
         {/* Container for the text content */}
         <div className="container mx-auto relative z-10">
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
