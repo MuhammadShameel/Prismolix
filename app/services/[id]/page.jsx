@@ -41,6 +41,50 @@ const data = {
   ],
 };
 
+// Data for the deliverables section
+const deliverablesData = [
+  {
+    id: 1,
+    title: "1. Design Discovery",
+    description:
+      "We start with a deep dive into your client's goals, users, and product.",
+    features: [
+      "Stakeholder input",
+      "Competitive analysis",
+      "UX audits (if redesign)",
+    ],
+  },
+  {
+    id: 2,
+    title: "2. Wireframes & Flows",
+    description:
+      "Low-fidelity wireframes that define structure, logic, and interaction.",
+    features: ["User flows", "Mobile/web wireframes", "Iterative feedback"],
+  },
+  {
+    id: 3,
+    title: "3. UI Design & Systemization",
+    description:
+      "We create modular, consistent, high-fidelity designs in Figma.",
+    features: [
+      "Color, typography, components",
+      "Page templates and design libraries",
+      "Auto-layout + responsive principles",
+    ],
+  },
+  {
+    id: 4,
+    title: "4. Developer Handoff",
+    description:
+      "We prep files with dev-friendly annotations and specs for ease.",
+    features: [
+      "Figma developer mode",
+      "Component naming standards",
+      "Optional Loom walkthroughs",
+    ],
+  },
+];
+
 const Page = () => {
   // const [data, setData] = useState(null);
 
@@ -48,7 +92,7 @@ const Page = () => {
     <>
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
-          <div className="testimonial-bg relative flex flex-col md:flex-row p-4 justify-center">
+          <div className="testimonial-bg relative flex flex-col md:flex-row justify-center">
             <div className="absolute inset-0 z-[-1]">
               <Image
                 src={bgImg}
@@ -72,22 +116,20 @@ const Page = () => {
               </p>
             </div>
           </div>
-        </div>
 
-        <div className="container mx-auto">
-          <div className="relative bg-light-purple rounded-3xl p-8 md:p-12 lg:p-16">
-            <div className="flex items-center gap-12">
-              <div className=" w-full lg:w-1/2">
+          <div className="overflow-hidden rounded-3xl bg-light-purple">
+            <div className="flex flex-col items-center gap-0 lg:flex-row lg:gap-12">
+              <div className="w-full lg:w-2/6 lg:flex-shrink-0">
                 <Image
                   src="/assets/images/section-shape.png"
                   alt="Abstract 3D shape"
-                  width={200}
-                  height={200}
-                  className="absolute top w-[590.646px] top-0 left-0 h-auto object-contain rounded-2xl"
+                  width={590}
+                  height={590} // Use dimensions for a 1:1 aspect ratio
+                  className="h-auto w-full max-w-md lg:max-w-none"
                 />
               </div>
 
-              <div className="w-full lg:w-3/4 flex flex-col -icon">
+              <div className="flex w-full flex-col lg:w-4/6  p-6 sm:p-8 md:p-12 lg:p-16">
                 <span className="font-medium text-[26px]  color-primary-dark">
                   [Service Detail]
                 </span>
@@ -150,7 +192,7 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="lg:px-5 md:px-4 px-3 my-lg">
+      {/* <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
           <div className="service-content flex flex-col items-center gap-5">
             <span className="font-medium text-[26px] color-primary-dark">
@@ -360,196 +402,58 @@ const Page = () => {
               </ul>
             </div>
           </div>
-          {/* <div className="flex lg:flex-row flex-col gap-5">
-            <div className="bg-light-purple lg:w-1/2 w-2/2 px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
-              <h4>1. Design Discovery</h4>
-              <p className="font-medium">
-                We start with a deep dive into your client's goals, users, and
-                product.
-              </p>
-              <ul className="flex flex-col mt-5">
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="11"
-                    viewBox="0 0 10 11"
-                    fill="none"
-                  >
-                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                  </svg>
-                  Stakeholder input
-                </li>
-                <hr className="w-full my-5 bg-black opacity-20" />
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="11"
-                    viewBox="0 0 10 11"
-                    fill="none"
-                  >
-                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                  </svg>
-                  Competitive analysis
-                </li>
-                <hr className="w-full my-5 bg-black opacity-20" />
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="11"
-                    viewBox="0 0 10 11"
-                    fill="none"
-                  >
-                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                  </svg>
-                  UX audits (if redesign)
-                </li>
-              </ul>
-            </div>
-            <div className="bg-light-purple lg:w-1/2 w-2/2 px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
-              <h4>1. Design Discovery</h4>
-              <p className="font-medium">
-                We start with a deep dive into your client's goals, users, and
-                product.
-              </p>
-              <ul className="flex flex-col mt-5">
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="11"
-                    viewBox="0 0 10 11"
-                    fill="none"
-                  >
-                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                  </svg>
-                  Stakeholder input
-                </li>
-                <hr className="w-full my-5 bg-black opacity-20" />
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="11"
-                    viewBox="0 0 10 11"
-                    fill="none"
-                  >
-                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                  </svg>
-                  Competitive analysis
-                </li>
-                <hr className="w-full my-5 bg-black opacity-20" />
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="11"
-                    viewBox="0 0 10 11"
-                    fill="none"
-                  >
-                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                  </svg>
-                  UX audits (if redesign)
-                </li>
-              </ul>
-            </div>
-            <div className="bg-light-purple lg:w-1/2 w-2/2 px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
-              <h4>1. Design Discovery</h4>
-              <p className="font-medium">
-                We start with a deep dive into your client's goals, users, and
-                product.
-              </p>
-              <ul className="flex flex-col mt-5">
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="11"
-                    viewBox="0 0 10 11"
-                    fill="none"
-                  >
-                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                  </svg>
-                  Stakeholder input
-                </li>
-                <hr className="w-full my-5 bg-black opacity-20" />
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="11"
-                    viewBox="0 0 10 11"
-                    fill="none"
-                  >
-                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                  </svg>
-                  Competitive analysis
-                </li>
-                <hr className="w-full my-5 bg-black opacity-20" />
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="11"
-                    viewBox="0 0 10 11"
-                    fill="none"
-                  >
-                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                  </svg>
-                  UX audits (if redesign)
-                </li>
-              </ul>
-            </div>
-            <div className="bg-light-purple lg:w-1/2 w-2/2 px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
-              <h4>1. Design Discovery</h4>
-              <p className="font-medium">
-                We start with a deep dive into your client's goals, users, and
-                product.
-              </p>
-              <ul className="flex flex-col mt-5">
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="11"
-                    viewBox="0 0 10 11"
-                    fill="none"
-                  >
-                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                  </svg>
-                  Stakeholder input
-                </li>
-                <hr className="w-full my-5 bg-black opacity-20" />
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="11"
-                    viewBox="0 0 10 11"
-                    fill="none"
-                  >
-                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                  </svg>
-                  Competitive analysis
-                </li>
-                <hr className="w-full my-5 bg-black opacity-20" />
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="11"
-                    viewBox="0 0 10 11"
-                    fill="none"
-                  >
-                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                  </svg>
-                  UX audits (if redesign)
-                </li>
-              </ul>
-            </div>
-          </div> */}
+        </div>
+      </section> */}
+      <section className="my-12 px-3 md:px-4 lg:my-24 lg:px-5">
+        <div className="container mx-auto">
+          {/* Section Header */}
+          <div className="service-content mb-8 flex flex-col items-center gap-3 text-center md:mb-12">
+            <span className="font-medium color-primary-dark text-lg md:text-xl">
+              [The Difference]
+            </span>
+            <h2 className="max-w-4xl text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              What We Deliver
+            </h2>
+          </div>
+
+          {/* Responsive Grid Container */}
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-8">
+            {deliverablesData.map((item) => (
+              <div
+                key={item.id}
+                className="flex flex-col gap-2.5 rounded-2xl bg-light-purple p-6 md:p-8 lg:p-10"
+              >
+                <h4 className="text-xl font-bold text-gray-800 md:text-2xl">
+                  {item.title}
+                </h4>
+                <p className="font-medium text-gray-600">{item.description}</p>
+
+                <ul className="mt-5 flex flex-col">
+                  {item.features.map((feature, index) => (
+                    <React.Fragment key={index}>
+                      <li className="flex items-center gap-2.5 font-medium text-gray-700 text-base sm:text-lg md:text-xl">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="11"
+                          viewBox="0 0 10 11"
+                          fill="none"
+                          className="h-2.5 w-2.5 flex-shrink-0"
+                        >
+                          <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                        </svg>
+                        {feature}
+                      </li>
+                      {/* Conditionally render the divider */}
+                      {index < item.features.length - 1 && (
+                        <hr className="my-4 w-full border-gray-300" />
+                      )}
+                    </React.Fragment>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

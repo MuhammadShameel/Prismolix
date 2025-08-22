@@ -12,13 +12,19 @@ const listItems = [
 
 const OfferSection = () => {
   return (
-    <section className="relative lg:px-5 md:px-4 px-3 my-lg">
-      <div className="absolute img-wrapper">
-        {/* <Image className=" right-0 top-0" src={SideShape} alt="" /> */}
-      </div>
+    <section className="relative lg:px-5 md:px-4 px-3 my-lg ">
+      <Image
+        src={"/assets/images/shape-offer.png"}
+        width={100}
+        height={100}
+        className="absolute lg:block hidden right-0 top-0 z-[-1] lg:w-[1149.531px] lg:h-[1149.531px] w-full h-auto"
+        unoptimized="true"
+        alt=""
+      />
+
       <div className="container mx-auto ">
         <div className="flex lg:flex-row flex-col gap-5 mt-5">
-          <div className="lg:w-1/2 w-full px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
+          <div className="lg:w-1/2 w-full rounded-[20px] flex flex-col gap-2.5">
             <span className="font-medium text-[26px] color-primary-dark">
               [What We Offer]
             </span>
@@ -46,6 +52,16 @@ const OfferSection = () => {
                 </li>
               ))}
             </ul>
+          </div>
+          <div className="lg:hidden lg:w-1/2 w-full flex lg:mb-0 mb-[-150px]">
+            <Image
+              src={"/assets/images/what-we-offer-shape.png"}
+              width={100}
+              height={100}
+              className=" z-[-1] lg:w-[800px] lg:h-[800px] w-full h-auto"
+              unoptimized="true"
+              alt=""
+            />
           </div>
         </div>
       </div>
