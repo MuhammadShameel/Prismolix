@@ -185,7 +185,10 @@ const page = () => {
                     </div>
 
                     <div className="pt-5">
-                      <Link href={"/"} className="color-primary-dark">
+                      <Link
+                        href={`blogs/${blog.id}`}
+                        className="color-primary-dark"
+                      >
                         <p> Continue Reading</p>
                       </Link>
                     </div>
