@@ -106,29 +106,28 @@ const page = () => {
       </section>
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
-          <div className="relative bg-light-purple rounded-3xl p-8 md:p-12 lg:p-16">
-            <div className="flex items-center gap-12">
-              <div className=" w-full lg:w-1/2">
+          <div className="overflow-hidden rounded-3xl bg-light-purple">
+            <div className="flex flex-col items-center gap-0 lg:flex-row lg:gap-12">
+              <div className="w-full lg:w-2/6 lg:flex-shrink-0">
                 <Image
                   src="/assets/images/section-shape.png"
                   alt="Abstract 3D shape"
-                  width={200}
-                  height={200}
-                  unoptimized={true}
-                  className="absolute top w-[590.646px] top-0 left-0 h-auto object-contain rounded-2xl"
+                  width={590}
+                  height={590} // Use dimensions for a 1:1 aspect ratio
+                  className="h-auto w-full max-w-md lg:max-w-none"
                 />
               </div>
 
-              <div className="w-full lg:w-3/4 flex flex-col -icon">
-                <span className="font-medium text-[26px]  color-primary-dark">
+              <div className="flex w-full flex-col lg:w-4/6  p-6 sm:p-8 md:p-12 lg:p-16">
+                <span className="font-medium color-primary-dark text-lg md:text-xl">
                   [Prismolix Blog]
                 </span>
 
-                <h2 className="font-bold text-gray-900 leading-[82px] mb-6">
+                <h2 className="mt-2 mb-4 font-bold text-3xl leading-tight">
                   Ideas, Systems, and Stories That Drive Growth
                 </h2>
 
-                <p className="text-gray-700 text-lg mb-4">
+                <p className="mb-4 text-base md:text-lg">
                   The Prismolix Blog is where agency owners, creative directors,
                   and growth teams find practical advice on scaling design and
                   development. We cover white-label execution strategies, UX/UI
@@ -137,7 +136,7 @@ const page = () => {
                   we handle the heavy lifting.
                 </p>
 
-                <button className="btn btn-primary w-60 bg-brand-purple text-white font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 focus:ring-offset-light-purple">
+                <button className="btn btn-primary mt-2 w-full sm:w-auto sm:self-start">
                   Let's Talk Scalability
                 </button>
               </div>

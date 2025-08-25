@@ -110,7 +110,7 @@ const About = () => {
                   seamlessly, works in your tools, and moves at your speed.
                 </p>
 
-                <button className="btn btn-primary mt-2 w-full rounded-lg bg-purple-600 px-8 py-3 font-semibold text-white transition-colors hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 sm:w-auto sm:self-start">
+                <button className="btn btn-primary mt-2 w-full sm:w-auto sm:self-start">
                   Let's Talk Scalability
                 </button>
               </div>
