@@ -63,11 +63,11 @@ const HowItWorks = () => {
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
           <div className="rounded-[30px] bg-light-purple px-[30px] py-[50px]">
-            <div className="flex lg:flex-row flex-col gap-10 items-center">
+            <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 items-center">
               <div className="lg:w-2/10 w-10/10">
-                <div className="img-wrapper flex justify-center">
+                <div className="img-wrapper flex lg:justify-center">
                   <Image
-                    className=""
+                    className="lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] sm:w-[120px] sm:h-[120px] w-[100px] h-[100px]"
                     src={CallIcon}
                     alt={"Portfolio Image"}
                     width={200}
@@ -104,11 +104,11 @@ const HowItWorks = () => {
             </div>
           </div>
           <div className="mt-5 rounded-[30px] bg-light-purple px-[30px] py-[50px]">
-            <div className="flex lg:flex-row flex-col gap-10 items-center">
+            <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 items-center">
               <div className="lg:w-2/10 w-10/10">
-                <div className="img-wrapper flex justify-center">
+                <div className="img-wrapper flex lg:justify-center">
                   <Image
-                    className=""
+                    className="lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] sm:w-[120px] sm:h-[120px] w-[100px] h-[100px]"
                     src={PlugIcon}
                     alt={"Portfolio Image"}
                     width={200}
@@ -138,11 +138,11 @@ const HowItWorks = () => {
             </div>
           </div>
           <div className="mt-5 rounded-[30px] bg-light-purple px-[30px] py-[50px]">
-            <div className="flex lg:flex-row flex-col gap-10 items-center">
+            <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 items-center">
               <div className="lg:w-2/10 w-10/10">
-                <div className="img-wrapper flex justify-center">
+                <div className="img-wrapper flex lg:justify-center">
                   <Image
-                    className=""
+                    className="lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] sm:w-[120px] sm:h-[120px] w-[100px] h-[100px]"
                     src={CodeIcon}
                     alt={"Portfolio Image"}
                     width={200}
@@ -172,11 +172,11 @@ const HowItWorks = () => {
             </div>
           </div>
           <div className="mt-5 rounded-[30px] bg-light-purple px-[30px] py-[50px]">
-            <div className="flex lg:flex-row flex-col gap-10 items-center">
+            <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 items-center">
               <div className="lg:w-2/10 w-10/10">
-                <div className="img-wrapper flex justify-center">
+                <div className="img-wrapper flex lg:justify-center">
                   <Image
-                    className=""
+                    className="lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] sm:w-[120px] sm:h-[120px] w-[100px] h-[100px]"
                     src={GraphlIcon}
                     alt={"Portfolio Image"}
                     width={200}

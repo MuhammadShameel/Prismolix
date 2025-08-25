@@ -6,12 +6,12 @@ import { Phone, MapPin, Mail } from "lucide-react";
 const ContactSection = () => {
   // Common style for all form inputs
   const inputStyle =
-    "w-full bg-[#EAE3F5] px-[30px] rounded-[6px] py-5 text-sm border-2 border-transparent focus:border-violet-500 focus:outline-none transition-colors";
+    "w-full bg-[#EAE3F5] lg:px-[30px] px-3 rounded-[6px] py-5 text-sm border-2 border-transparent focus:border-violet-500 focus:outline-none transition-colors";
 
   return (
     <section className="lg:px-5 md:px-4 px-3 my-lg">
       <div className="container mx-auto">
-        <div className="rounded-2xl bg-light-purple p-10 sm:p-12">
+        <div className="rounded-2xl bg-light-purple lg:p-10 md:p-8 sm:p-5 p-2.5">
           {/* Grid Container */}
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
             {/* Left Column: Contact Info */}
