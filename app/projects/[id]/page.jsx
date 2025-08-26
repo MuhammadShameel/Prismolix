@@ -145,7 +145,7 @@ import { Navigation, Autoplay, Pagination } from "swiper/modules";
 import {
   fetchBlogBySlug,
   extractBlogData,
-} from "../../../services/blog.service.js";
+} from "../../../services/projects.service.js";
 
 import featureImg from "../../../public/assets/images/blog-detail-feature.png";
 import bgImg from "../../../public/assets/images/blog-detail-bg.png";

@@ -3,7 +3,10 @@ import Image from "next/image";
 import Shape from "../../public/assets/images/image-7.png";
 import featureImg from "../../public/assets/images/blog-img.png";
 import sectionShape from "../../public/assets/images/section-shape.png";
-import { fetchAllBlogs, extractBlogData } from "../../services/blog.service.js";
+import {
+  fetchAllBlogs,
+  extractBlogData,
+} from "../../services/projects.service.js";
 
 import Testimonial from "../components/Testimonial.jsx";
 import ContactSection from "../components/ContactSection.jsx";

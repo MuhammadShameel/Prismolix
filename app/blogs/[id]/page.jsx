@@ -3,46 +3,88 @@ import Image from "next/image";
 import Link from "next/link";
 import bgImg from "../../../public/assets/images/blog-detail-bg.png";
 import CallSchedule from "../../../app/components/CallSchedule";
+import { fetchPostById, extractPostData } from "../../../services/blog.service"; // // <-- UPDATED IMPORT
+import * as cheerio from "cheerio";
+import "../../styles/content.css";
 
-const blogPost = {
-  title: "Let's inspire the future with a free online academy",
-  imageUrl: "/assets/images/blogDetail.png", // Replace with your image path in the /public folder
-  tableOfContents: [
-    { id: "#section-1", title: "The Foundation of Modern Learning" },
-    { id: "#section-2", title: "Structuring the Curriculum" },
-    { id: "#section-3", title: "Engaging Students with Technology" },
-    { id: "#section-4", title: "Measuring Success and Iterating" },
-    { id: "#section-5", title: "The Path Forward" },
-  ],
-  content: [
-    {
-      id: "section-1",
-      title: "The Foundation of Modern Learning",
-      paragraphs: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non enim quaero quid verum, sed quid cuique dicendum sit. Duo Reges: constructio interrete. Atqui reperies, inquit, in hoc quidem pertinacem; Quae cum dixisset, finem ille.",
-        "Comprehensionem, inquit, physicis, si optandum sit, malim, quidquid intersit, quid quidquid. Igitur ne dolorem quidem. Quod equidem non opono, sit sane, inquam. Cur post Tarentum ad Archytam? Deinde prima illa, quae in congressu.",
-      ],
-    },
-    {
-      id: "section-2",
-      title: "Structuring the Curriculum",
-      paragraphs: [
-        "Aenean id et, et id omittantur. Nec enim, omnes avaritias si aeque avaritias esse dixerimus, sequetur ut etiam aequas esse dicamus. Videamus animi partes, ne similiter hominis, cum appetitum laudibus.",
-        "Est autem officium, quod ita factum est, ut eius facti probabilis ratio reddi possit. Quodsi ipsam honestatem undique per se laudabiliter.",
-      ],
-    },
-    {
-      id: "section-3",
-      title: "Engaging Students with Technology",
-      paragraphs: [
-        "Curabitur et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem.",
-      ],
-    },
-    // Add more sections as needed to match the ToC
-  ],
+// const blogPost = {
+//   title: "Let's inspire the future with a free online academy",
+//   imageUrl: "/assets/images/blogDetail.png", // Replace with your image path in the /public folder
+//   tableOfContents: [
+//     { id: "#section-1", title: "The Foundation of Modern Learning" },
+//     { id: "#section-2", title: "Structuring the Curriculum" },
+//     { id: "#section-3", title: "Engaging Students with Technology" },
+//     { id: "#section-4", title: "Measuring Success and Iterating" },
+//     { id: "#section-5", title: "The Path Forward" },
+//   ],
+//   content: [
+//     {
+//       id: "section-1",
+//       title: "The Foundation of Modern Learning",
+//       paragraphs: [
+//         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non enim quaero quid verum, sed quid cuique dicendum sit. Duo Reges: constructio interrete. Atqui reperies, inquit, in hoc quidem pertinacem; Quae cum dixisset, finem ille.",
+//         "Comprehensionem, inquit, physicis, si optandum sit, malim, quidquid intersit, quid quidquid. Igitur ne dolorem quidem. Quod equidem non opono, sit sane, inquam. Cur post Tarentum ad Archytam? Deinde prima illa, quae in congressu.",
+//       ],
+//     },
+//     {
+//       id: "section-2",
+//       title: "Structuring the Curriculum",
+//       paragraphs: [
+//         "Aenean id et, et id omittantur. Nec enim, omnes avaritias si aeque avaritias esse dixerimus, sequetur ut etiam aequas esse dicamus. Videamus animi partes, ne similiter hominis, cum appetitum laudibus.",
+//         "Est autem officium, quod ita factum est, ut eius facti probabilis ratio reddi possit. Quodsi ipsam honestatem undique per se laudabiliter.",
+//       ],
+//     },
+//     {
+//       id: "section-3",
+//       title: "Engaging Students with Technology",
+//       paragraphs: [
+//         "Curabitur et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem.",
+//       ],
+//     },
+//     // Add more sections as needed to match the ToC
+//   ],
+// };
+
+const generateTOCAndContent = (htmlContent) => {
+  if (!htmlContent) {
+    return { toc: [], content: "" };
+  }
+  const $ = cheerio.load(htmlContent);
+  const toc = [];
+
+  $("h2, h3").each((_, element) => {
+    const title = $(element).text();
+    const id = title
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^\w-]+/g, "");
+    $(element).attr("id", id);
+    toc.push({
+      id: `#${id}`,
+      title: title,
+      tag: element.tagName,
+    });
+  });
+
+  return { toc, content: $.html() };
 };
 
-const page = () => {
+const page = async ({ params }) => {
+  const id = params.id || params.slug; // Get slug from URL
+  if (!id) notFound();
+
+  // Fetch the specific post by its slug
+  const post = await fetchPostById(id);
+  if (!post) {
+    notFound(); // Show 404 page if post doesn't exist
+  }
+
+  // Extract the data
+  const blogData = extractPostData(post);
+
+  // Generate ToC and get the modified content with IDs
+  const { toc, content } = generateTOCAndContent(blogData.content);
+
   return (
     <div>
       <section className="lg:px-5 md:px-4 px-3 my-lg !mb-0">
@@ -62,17 +104,15 @@ const page = () => {
               <span className="font-medium text-[26px]  color-primary-dark">
                 [Blog Detail]
               </span>
-              <h1 className="text-center leading-[95%] max-w-5xl">
-                Creative Insights & Smart Solutions
-              </h1>
-              <p className="text-center max-w-4xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                non ex rhoncus, fringilla felis quis, malesuada ante. Aenean id
-                efficitur leo, vel lobortis massa. Sed non nisl at neque finibus
-                luctus in eu justo. Curabitur et ligula feugiat, consectetur
-                felis id, tempus justo. Proin consequat libero ante, eu pharetra
-                tortor consequat a. Duis eget dictum nulla.
-              </p>
+              <h1
+                className="text-center leading-[95%] max-w-5xl"
+                dangerouslySetInnerHTML={{ __html: blogData.title }}
+              />
+
+              <p
+                className="text-center max-w-4xl"
+                dangerouslySetInnerHTML={{ __html: blogData.excerpt }}
+              />
             </div>
           </div>
         </div>
@@ -81,8 +121,8 @@ const page = () => {
         {/* Blog Post Hero Image */}
         <div className="mb-8 md:mb-12">
           <Image
-            src={blogPost.imageUrl}
-            alt="Blog post hero image"
+            src={blogData.featuredImage || "/assets/images/blogDetail.png"}
+            alt={blogData.title}
             width={1200}
             height={600}
             unoptimized={true}
@@ -97,7 +137,7 @@ const page = () => {
             <h4 className="text-xl font-bold  mb-4">Table of Content</h4>
             <nav>
               <ul className="space-y-2 lg:border-r border-gray-300 pr-4 lg:h-100">
-                {blogPost.tableOfContents.map((item) => (
+                {toc.map((item) => (
                   <li
                     key={item.id}
                     className="border-b last:border-b-0 border-gray-300 pb-2"
@@ -119,18 +159,18 @@ const page = () => {
             <div className="prose prose-lg max-w-none prose-indigo">
               {/* <h1>{blogPost.title}</h1> */}
 
-              {blogPost.content.map((section) => (
-                <section
-                  key={section.id}
-                  id={section.id.substring(1)}
-                  className="scroll-mt-24 lg:mb-0 mb-5"
-                >
-                  <h4>{section.title}</h4>
-                  {section.paragraphs.map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                  ))}
-                </section>
-              ))}
+              <section
+                // key={section.id}
+                // id={section.id.substring(1)}
+                className="scroll-mt-24 lg:mb-0 mb-5"
+              >
+                <div
+                  className="article-content prose prose-lg max-w-none prose-h2:scroll-mt-24 prose-h3:scroll-mt-24"
+                  dangerouslySetInnerHTML={{ __html: content }}
+                />
+                {/* <h4>{section.title}</h4>
+                <p key={index}>{paragraph}</p> */}
+              </section>
             </div>
           </article>
         </div>
