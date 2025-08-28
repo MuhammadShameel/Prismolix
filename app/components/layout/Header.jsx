@@ -77,9 +77,12 @@ const Header = () => {
                   ))}
                 </ul>
               </nav>
-              <button className="btn btn-primary bg-purple-600 text-white px-6 py-2 rounded-lg text-lg font-medium">
+              <Link
+                href={"/contact"}
+                className="btn btn-primary bg-purple-600 text-white px-6 py-2 rounded-lg text-lg font-medium"
+              >
                 Contact Us
-              </button>
+              </Link>
             </div>
 
             {/* Mobile Menu Toggle Button */}
@@ -125,9 +128,12 @@ const Header = () => {
                     </li>
                   ))}
                   <li>
-                    <button className="btn btn-primary w-full bg-purple-600 text-white px-8 py-3 rounded-lg text-lg font-medium">
+                    <Link
+                      href="/contact"
+                      className="btn btn-primary w-full bg-purple-600 text-white px-8 py-3 rounded-lg text-lg font-medium"
+                    >
                       Contact Us
-                    </button>
+                    </Link>
                   </li>
                 </ul>
               </nav>

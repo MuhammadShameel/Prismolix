@@ -1,12 +1,74 @@
 // components/ContactSection.jsx
-
-import React from "react";
-import { Phone, MapPin, Mail } from "lucide-react";
+"use client";
+import React, { useState } from "react";
 
 const ContactSection = () => {
   // Common style for all form inputs
   const inputStyle =
     "w-full bg-[#EAE3F5] lg:px-[30px] px-3 rounded-[6px] py-5 text-sm border-2 border-transparent focus:border-violet-500 focus:outline-none transition-colors";
+
+  // 2. Add state for all form inputs and submission status
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [service, setService] = useState("");
+  const [budget, setBudget] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [status, setStatus] = useState("idle"); // 'idle', 'submitting', 'success', 'error'
+  const [responseMessage, setResponseMessage] = useState("");
+
+  // 3. The form submission handler
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus("submitting");
+    setResponseMessage("");
+
+    // --- IMPORTANT: UPDATE THESE VALUES ---
+
+    const formData = new FormData();
+    // These keys must match the names in your Contact Form 7 shortcodes
+    formData.append("firstName", firstName);
+    formData.append("lastName", lastName);
+    formData.append("email", email);
+    formData.append("phone", phone);
+    formData.append("service", service);
+    formData.append("budget", budget);
+    formData.append("message", message);
+    formData.append("_wpcf7_unit_tag", "d507871");
+
+    try {
+      const response = await fetch(
+        `https://prismolix.wasmer.app/wp-json/contact-form-7/v1/contact-forms/88/feedback`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.status === "mail_sent") {
+        setStatus("success");
+        setResponseMessage(data.message);
+        // Reset form fields on success
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhone("");
+        setService("");
+        setBudget("");
+        setMessage("");
+      } else {
+        setStatus("error");
+        setResponseMessage(data.message || "An error occurred.");
+      }
+    } catch (error) {
+      setStatus("error");
+      setResponseMessage("An error occurred while submitting the form.");
+    }
+  };
 
   return (
     <section className="lg:px-5 md:px-4 px-3 my-lg">
@@ -113,36 +175,54 @@ const ContactSection = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
                   type="text"
+                  name="firstName"
                   placeholder="First name *"
                   className={inputStyle}
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  required
                 />
                 <input
                   type="text"
+                  name="lastName"
                   placeholder="Last Name *"
                   className={inputStyle}
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  required
                 />
               </div>
               <input
                 type="email"
+                name="email"
                 placeholder="Enter your email *"
                 className={inputStyle}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
               <input
                 type="tel"
+                name="phone"
                 placeholder="Enter your Phone Number"
                 className={inputStyle}
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
               />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* --- Custom Select Dropdown --- */}
                 <div className="relative">
                   <select
+                    name="service"
                     // Add appearance-none to hide the default arrow and pr-12 to make space for our icon
                     className={`${inputStyle} appearance-none pr-12`}
+                    value={service}
+                    onChange={(e) => setService(e.target.value)}
                   >
-                    <option>Service You're looking for</option>
-                    <option>UI/UX Design</option>
-                    <option>Web Development</option>
-                    <option>App Development</option>
+                    <option value="">Service You're looking for</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="App Development">App Development</option>
                   </select>
 
                   {/* Your Custom SVG Icon */}
@@ -165,13 +245,16 @@ const ContactSection = () => {
                 {/* The budget input remains the same */}
                 <div className="relative">
                   <select
+                    name="budget"
                     // Add appearance-none to hide the default arrow and pr-12 to make space for our icon
                     className={`${inputStyle} appearance-none pr-12`}
+                    value={budget}
+                    onChange={(e) => setBudget(e.target.value)}
                   >
-                    <option>Your Budget</option>
-                    <option>2000</option>
-                    <option>3000</option>
-                    <option>5000</option>
+                    <option value="">Your Budget</option>
+                    <option value="2000 USD">2000 USD</option>
+                    <option value="3000 USD">3000 USD</option>
+                    <option value="5000 USD">5000 USD</option>
                   </select>
 
                   {/* Your Custom SVG Icon */}
@@ -194,15 +277,36 @@ const ContactSection = () => {
                 </div>
               </div>
               <textarea
+                name="message"
                 placeholder="Your message here *"
                 rows={5}
                 className={`${inputStyle} resize-none`}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
               ></textarea>
               <div className="flex justify-end">
-                <button type="submit" className="btn btn-primary">
-                  Submit now
+                <button
+                  onClick={handleSubmit}
+                  type="submit"
+                  className="btn btn-primary"
+                  disabled={status === "submitting"}
+                >
+                  {status === "submitting" ? "Submitting..." : "Submit now"}
                 </button>
               </div>
+              {/* Submission Status Message */}
+              {responseMessage && (
+                <div
+                  className={`mt-4 rounded-md p-3 text-center ${
+                    status === "success"
+                      ? "bg-green-100 text-green-800"
+                      : "bg-red-100 text-red-800"
+                  }`}
+                >
+                  {responseMessage}
+                </div>
+              )}
             </form>
           </div>
         </div>

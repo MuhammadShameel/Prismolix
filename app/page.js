@@ -8,7 +8,7 @@ import Blog from "./components/Blog";
 import BlogDetail from "./components/BlogDetail";
 import About from "./about/page";
 import HowItWorks from "./howItWorks/page";
-import ContactUs from "./components/ContactUs";
+import ContactUs from "./contact/page";
 import Landing from "./components/Landing";
 import WhyPrismolix from "./components/WhyPrismolix";
 
