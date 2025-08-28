@@ -1,140 +1,3 @@
-// "use client";
-
-// import React, { useState } from "react";
-// import Image from "next/image";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation, Autoplay, Pagination } from "swiper/modules";
-
-// import featureImg from "../../../public/assets/images/blog-detail-feature.png";
-// import bgImg from "../../../public/assets/images/blog-detail-bg.png";
-
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-
-// const page = () => {
-//   const [swiper, setSwiper] = useState(null);
-
-//   const handlePrev = () => {
-//     if (swiper) {
-//       swiper.slidePrev();
-//     }
-//   };
-
-//   const handleNext = () => {
-//     if (swiper) {
-//       swiper.slideNext();
-//     }
-//   };
-
-//   return (
-//     <section className="lg:px-5 md:px-4 px-3 my-lg">
-//       <div className="container mx-auto">
-//         <div className="testimonial-bg relative flex flex-col md:flex-row p-4 justify-center">
-//           <div className="absolute inset-0 z-[-1]">
-//             <Image
-//               src={bgImg}
-//               alt="A modern turntable playing a record"
-//               layout="fill"
-//               objectFit="cover"
-//               quality={90}
-//             />
-//           </div>
-
-//           {/* MODIFICATION HERE: This section is now hidden on mobile */}
-//           <div className="flex flex-col items-center justify-center gap-5 max-w-6xl my-lg">
-//             <span className="font-medium text-[26px]  color-primary-dark">
-//               [Case Study - 01]
-//             </span>
-//             <h1 className="text-center leading-[95%]">
-//               Scaling a Creative Studio Without Hiring
-//             </h1>
-//             <p className="text-center">
-//               A fast-growing NYC creative agency partnered with Prismolix to
-//               scale their landing page delivery without hiring in-house. We
-//               built a modular design system and shipped 10+ white-labeled
-//               landing pages in just 8 weeks — helping them meet client demand,
-//               improve turnaround, and retain quality without the overhead.
-//             </p>
-//           </div>
-//         </div>
-//         <Swiper
-//           onSwiper={setSwiper}
-//           modules={[Navigation, Autoplay, Pagination]}
-//           autoHeight={true}
-//           slidesPerView={1}
-//           // loop={true}
-//           navigation
-//           // scrollbar={{ draggable: true }}
-//           autoplay={{
-//             delay: 5000,
-//             disableOnInteraction: false,
-//           }}
-//           // pagination={{
-//           //   type: "fraction",
-//           // }}
-//         >
-//           <SwiperSlide>
-//             <div className="slider">
-//               <Image
-//                 src={featureImg}
-//                 className="w-full rounded-[10px]"
-//                 quality={95}
-//                 unoptimized={true}
-//                 alt=""
-//               />
-//             </div>
-//           </SwiperSlide>
-//           <SwiperSlide>
-//             <div className="slider">
-//               <Image
-//                 src={featureImg}
-//                 className="w-full rounded-[10px]"
-//                 quality={95}
-//                 unoptimized={true}
-//                 alt=""
-//               />
-//             </div>
-//           </SwiperSlide>
-//           <SwiperSlide>
-//             <div className="slider">
-//               <Image
-//                 src={featureImg}
-//                 className="w-full rounded-[10px]"
-//                 quality={95}
-//                 unoptimized={true}
-//                 alt=""
-//               />
-//             </div>
-//           </SwiperSlide>
-//         </Swiper>
-
-//         <div className="flex flex-col gap-5">
-//           <div className="flex gap-1.5 mt-5">
-//             <span className="bg-light-purple px-5 py-2.5 rounded-full">
-//               UI/UX
-//             </span>
-//             <span className="bg-light-purple px-5 py-2.5 rounded-full">
-//               Design System
-//             </span>
-//             <span className="bg-light-purple px-5 py-2.5 rounded-full">
-//               Landing Pages
-//             </span>
-//           </div>
-//         </div>
-//         <div className="bg-light-purple flex lg:flex-row flex-col gap-7 px-10 py-6 rounded-[20px]">
-//           <div>
-//             <span>Category</span>
-//             <p>E-commerce</p>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default page;
-
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
@@ -211,6 +74,9 @@ const Page = () => {
     };
   }, [slug]);
 
+  const handlePrev = () => swiper?.slidePrev();
+  const handleNext = () => swiper?.slideNext();
+
   const galleryItems = useMemo(() => {
     if (data?.gallery?.length) return data.gallery;
     const fallbackUrl = data?.featuredImage || featureImg;
@@ -258,38 +124,109 @@ const Page = () => {
           </div>
         </div>
 
-        <Swiper
-          onSwiper={setSwiper}
-          modules={[Navigation, Autoplay, Pagination]}
-          autoHeight={true}
-          slidesPerView={1}
-          navigation={true}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-        >
-          {galleryItems.map((item, idx) => (
-            <SwiperSlide key={idx}>
-              <div className="slider">
-                {item.type === "video" ? (
-                  <video className="w-full rounded-[10px]" controls>
-                    <source src={item.url} type="video/mp4" />
-                  </video>
-                ) : (
-                  <Image
-                    src={item.url || featureImg}
-                    className="w-full rounded-[10px] lg:h-[674px] md-[530px] h-[330px] object-cover"
-                    quality={95}
-                    width={item.width || 1200}
-                    height={item.height || 675}
-                    alt={data?.title || "Case Study"}
-                    unoptimized={true}
-                  />
-                )}
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="relative">
+          <Swiper
+            onSwiper={setSwiper}
+            modules={[Navigation, Autoplay, Pagination]}
+            autoHeight={true}
+            slidesPerView={1}
+            // navigation={true}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            pagination={{
+              el: ".swiper-pagination", // Target the container element
+              clickable: true,
+            }}
+          >
+            {galleryItems.map((item, idx) => (
+              <SwiperSlide key={idx}>
+                <div className="slider">
+                  {item.type === "video" ? (
+                    <video className="w-full rounded-[10px]" controls>
+                      <source src={item.url} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <Image
+                      src={item.url || featureImg}
+                      className="w-full rounded-[10px] lg:h-[674px] md-[530px] h-[330px] object-cover"
+                      quality={95}
+                      width={item.width || 1200}
+                      height={item.height || 675}
+                      alt={data?.title || "Case Study"}
+                      unoptimized={true}
+                    />
+                  )}
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="absolute top-1/2 z-10 hidden w-full -translate-y-1/2 items-center justify-between px-4 md:flex">
+            {/* Previous Button */}
+            <button
+              onClick={handlePrev}
+              aria-label="Previous slide"
+              className="flex h-14 w-14 p-3 items-center justify-center rounded-full bg-white/80 text-gray-800 shadow-md backdrop-blur-sm transition hover:bg-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                fill="none"
+              >
+                <path
+                  d="M19.9375 12.354L7.29167 24.9998L19.9375 37.6457"
+                  stroke="#292929"
+                  strokeWidth="2.5"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M42.7084 25H7.64588"
+                  stroke="#292929"
+                  strokeWidth="2.5"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+            {/* Next Button */}
+            <button
+              onClick={handleNext}
+              aria-label="Next slide"
+              className="flex h-14 w-14 p-3 items-center justify-center rounded-full bg-violet-600 text-white shadow-md transition hover:bg-violet-700"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                fill="none"
+              >
+                <path
+                  d="M30.0625 12.354L42.7083 24.9998L30.0625 37.6457"
+                  stroke="white"
+                  strokeWidth="2.5"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M7.29163 25H42.3541"
+                  stroke="white"
+                  strokeWidth="2.5"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div className="swiper-pagination"></div>
+        </div>
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 mt-2.5">
           <div className="flex gap-1.5 mt-5 flex-wrap">
             {loading ? (
               <span className="bg-light-purple px-5 py-2.5 rounded-full">
@@ -299,7 +236,7 @@ const Page = () => {
               data.tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="bg-light-purple px-5 py-2.5 rounded-full"
+                  className="bg-light-purple lg:px-5 md:px-4 px-3 py-2.5 rounded-full "
                 >
                   {tag}
                 </span>
@@ -311,7 +248,7 @@ const Page = () => {
             )}
           </div>
 
-          <div className="bg-light-purple flex lg:flex-row flex-col lg:gap-7 gap-4 px-10 py-6 rounded-[20px]">
+          <div className="bg-light-purple flex lg:flex-row flex-col lg:gap-7 gap-4 lg:px-10 md:px-7 px-5 py-6 rounded-[20px]">
             <div className="lg:w-3/12 w-12/12">
               <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
                 Category
@@ -345,7 +282,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="bg-light-purple flex lg:flex-row flex-col lg:items-center px-10 py-6 rounded-[20px] lg:gap-10 gap-3">
+          <div className="bg-light-purple flex lg:flex-row flex-col lg:items-center lg:px-10 md:px-7 px-5 py-6 rounded-[20px] lg:gap-10 gap-3">
             <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
               Technologies Used
             </span>
@@ -373,7 +310,7 @@ const Page = () => {
             </ul>
           </div>
 
-          <div className="bg-light-purple flex flex-col px-10 py-6 rounded-[20px] gap-12">
+          <div className="bg-light-purple flex flex-col lg:px-10 md:px-7 px-5 py-6 rounded-[20px] gap-12">
             <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
               Methods Used
             </span>
@@ -391,16 +328,16 @@ const Page = () => {
           </div>
 
           <div className="flex lg:flex-row flex-col gap-5">
-            <div className="bg-light-purple lg:w-1/2 w-2/2 px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
+            <div className="bg-light-purple lg:w-1/2 w-2/2 lg:px-10 md:px-7 px-5 py-6 rounded-[20px] flex flex-col gap-2.5">
               <h4>The Challenge</h4>
               <p className="font-medium">
                 {loading ? "" : data?.description || "—"}
               </p>
-              <ul className="flex flex-col">
+              <ul className="flex flex-col mt-5">
                 {(data?.keyPoints || []).map((kp, idx) => (
                   <li
                     key={idx}
-                    className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] "
+                    className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[16px] "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -416,16 +353,16 @@ const Page = () => {
                 ))}
               </ul>
             </div>
-            <div className="bg-light-purple lg:w-1/2 w-2/2 px-10 py-6 rounded-[20px] flex flex-col gap-2.5">
+            <div className="bg-light-purple lg:w-1/2 w-2/2 lg:px-10 md:px-7 px-5 py-6 rounded-[20px] flex flex-col gap-2.5">
               <h4>Our Solution</h4>
               <p className="font-medium">
                 {loading ? "" : data?.description || "—"}
               </p>
-              <ul className="flex flex-col">
+              <ul className="flex flex-col mt-5">
                 {(data?.keyPoints || []).map((kp, idx) => (
                   <li
                     key={idx}
-                    className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] "
+                    className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[16px] "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -458,7 +395,7 @@ const Page = () => {
           {(data?.process?.length ? data.process : []).map((step) => (
             <div
               key={step.number + step.title}
-              className="relative flex flex-col bg-light-purple rounded-[30px] p-8 overflow-hidden"
+              className="relative flex flex-col bg-light-purple rounded-[30px] lg:p-8  p-5 overflow-hidden"
             >
               <p className="absolute top-0 right-8 !lg:text-[150px] !md:text-[140px] !sm:text-[130px] !text-[120px] font-black text-white z-0 select-none leading-tight">
                 {step.number}

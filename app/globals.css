@@ -661,3 +661,46 @@ h6 {
   background: transparent;
   backdrop-filter: none;
 }
+
+/* Custom Swiper Pagination Styles */
+
+/* 1. Default (Mobile-First) styles: Center the pagination */
+.swiper-pagination {
+  position: absolute !important;
+  bottom: -15px !important;
+  left: 50% !important; /* Position the left edge at the center */
+  transform: translateX(
+    -50%
+  ); /* Shift it back by half its width to be perfectly centered */
+  width: auto !important;
+  display: flex;
+  gap: 5px;
+}
+
+/* 2. Desktop styles: Move pagination to the right on medium screens and up */
+@media (min-width: 768px) {
+  /* This is the 'md' breakpoint in Tailwind */
+  .swiper-pagination {
+    left: auto !important; /* Reset the left property */
+    right: 0px !important; /* Position it to the right */
+    transform: none; /* Reset the transform */
+  }
+}
+
+/* 3. Style the default (inactive) dots (no changes needed here) */
+.swiper-pagination .swiper-pagination-bullet {
+  width: 15px;
+  height: 8px;
+  background-color: #d1d5db; /* Light Gray */
+  opacity: 0.8;
+  border-radius: 5px; /* Use 5px to match the active one */
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* 4. Style the ACTIVE dot (no changes needed here) */
+.swiper-pagination .swiper-pagination-bullet-active {
+  width: 51px; /* Make the active dot longer */
+  background-color: #374151; /* Dark Gray */
+  border-radius: 5px; /* Give it rounded ends like a pill */
+  opacity: 1;
+}
