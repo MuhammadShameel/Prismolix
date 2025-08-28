@@ -173,7 +173,11 @@ const ContactSection = () => {
             {/* Right Column: Contact Form */}
             <form className="flex flex-col gap-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <label htmlFor="firstName" className="sr-only">
+                  First Name*
+                </label>
                 <input
+                  id="firstName"
                   type="text"
                   name="firstName"
                   placeholder="First name *"
@@ -182,7 +186,11 @@ const ContactSection = () => {
                   onChange={(e) => setFirstName(e.target.value)}
                   required
                 />
+                <label htmlFor="lastName" className="sr-only">
+                  Last Name*
+                </label>
                 <input
+                  id="lastName"
                   type="text"
                   name="lastName"
                   placeholder="Last Name *"
@@ -192,7 +200,11 @@ const ContactSection = () => {
                   required
                 />
               </div>
+              <label htmlFor="email" className="sr-only">
+                Email Address*
+              </label>
               <input
+                id="email"
                 type="email"
                 name="email"
                 placeholder="Enter your email *"
@@ -201,7 +213,11 @@ const ContactSection = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
+              <label htmlFor="phone" className="sr-only">
+                Enter your Phone Number
+              </label>
               <input
+                id="phone"
                 type="tel"
                 name="phone"
                 placeholder="Enter your Phone Number"
@@ -212,7 +228,11 @@ const ContactSection = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* --- Custom Select Dropdown --- */}
                 <div className="relative">
+                  <label htmlFor="service" className="sr-only">
+                    Service you're looking for
+                  </label>
                   <select
+                    id="service"
                     name="service"
                     // Add appearance-none to hide the default arrow and pr-12 to make space for our icon
                     className={`${inputStyle} appearance-none pr-12`}
@@ -244,7 +264,11 @@ const ContactSection = () => {
 
                 {/* The budget input remains the same */}
                 <div className="relative">
+                  <label htmlFor="budget" className="sr-only">
+                    Your Budget
+                  </label>
                   <select
+                    id="budget"
                     name="budget"
                     // Add appearance-none to hide the default arrow and pr-12 to make space for our icon
                     className={`${inputStyle} appearance-none pr-12`}
@@ -276,7 +300,11 @@ const ContactSection = () => {
                   </div>
                 </div>
               </div>
+              <label htmlFor="message" className="sr-only">
+                Your message here
+              </label>
               <textarea
+                id="message"
                 name="message"
                 placeholder="Your message here *"
                 rows={5}
