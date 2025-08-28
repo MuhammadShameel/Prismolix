@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import FooterShape from "../../../public/assets/images/footer-shape.png";
 import LogoIcon from "../../../public/assets/images/logo-icon.svg";
@@ -93,11 +94,11 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: <Youtube size={20} />, href: "#" },
-  { icon: <TikTokIcon size={20} />, href: "#" },
-  { icon: <Linkedin size={20} />, href: "#" },
-  { icon: <Instagram size={20} />, href: "#" },
-  { icon: <Facebook size={20} />, href: "#" },
+  { name: "YouTube", icon: <Youtube size={20} />, href: "#" },
+  { name: "TikTok", icon: <TikTokIcon size={20} />, href: "#" },
+  { name: "LinkedIn", icon: <Linkedin size={20} />, href: "#" },
+  { name: "Instagram", icon: <Instagram size={20} />, href: "#" },
+  { name: "Facebook", icon: <Facebook size={20} />, href: "#" },
 ];
 
 const Footer = () => {
@@ -197,13 +198,14 @@ const Footer = () => {
               </p>
               <div className="flex gap-3">
                 {socialLinks.map((social, index) => (
-                  <a
+                  <Link
                     key={index}
                     href={social.href}
+                    aria-label={social.name}
                     className="border border-gray-300 rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-black transition-colors"
                   >
                     {social.icon}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

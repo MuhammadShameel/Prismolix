@@ -226,6 +226,9 @@ const ContactUs = () => {
               {/* First Name and Last Name */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
+                  <label htmlFor="firstName" className="sr-only">
+                    First Name*
+                  </label>
                   <input
                     type="text"
                     id="firstName"
@@ -238,6 +241,9 @@ const ContactUs = () => {
                   />
                 </div>
                 <div>
+                  <label htmlFor="lastName" className="sr-only">
+                    Last Name*
+                  </label>
                   <input
                     type="text"
                     id="lastName"
@@ -254,6 +260,9 @@ const ContactUs = () => {
               {/* Email and Phone Number */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
+                  <label htmlFor="email" className="sr-only">
+                    Email Address*
+                  </label>
                   <input
                     type="email"
                     id="email"
@@ -266,6 +275,9 @@ const ContactUs = () => {
                   />
                 </div>
                 <div>
+                  <label htmlFor="phone" className="sr-only">
+                    Enter your Phone Number
+                  </label>
                   <input
                     type="tel"
                     id="phone"
@@ -282,6 +294,9 @@ const ContactUs = () => {
               {/* Service and Budget */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
+                  <label htmlFor="service" className="sr-only">
+                    Service you're looking for
+                  </label>
                   <select
                     id="service"
                     name="service"
@@ -298,6 +313,9 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <div className="flex">
+                    <label htmlFor="budget" className="sr-only">
+                      Your Budget
+                    </label>
                     <input
                       type="number"
                       id="budget"
@@ -329,6 +347,9 @@ const ContactUs = () => {
 
               {/* Message */}
               <div>
+                <label htmlFor="message" className="sr-only">
+                  Your message here
+                </label>
                 <textarea
                   id="message"
                   name="message"
