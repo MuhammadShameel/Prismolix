@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.1",
     "cheerio": "^1.1.2",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.534.0",
@@ -16,7 +17,9 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-fast-marquee": "^1.6.5",
-    "swiper": "^11.2.10"
+    "react-hook-form": "^7.62.0",
+    "swiper": "^11.2.10",
+    "yup": "^1.7.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
