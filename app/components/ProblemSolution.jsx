@@ -27,12 +27,16 @@ const ProblemSolution = () => {
             <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
 
             {/* Content */}
-            <div className="relative z-20 flex flex-col items-start gap-6 p-5 md:p-10 lg:p-16">
-              <p className="font-medium text-[#C4B5FD]">[Problem & Solution]</p>
+            <div className="relative z-20  p-5 md:p-8 lg:p-10">
+              <div className="max-w-4xl">
+                <p className="font-medium fs-26 text-[#C4B5FD]">
+                  [Problem & Solution]
+                </p>
 
-              <h2 className="lg:leading-20 leading-10 md:leading-18 sm:leading-16 tracking-tight max-w-4xl">
-                Agency Growth Shouldn't Mean Burnout
-              </h2>
+                <h2 className="lg:leading-20 leading-10 md:leading-18 sm:leading-16 tracking-tight lg:mt-4 md:mt-3 mt-2">
+                  Agency Growth Shouldn't Mean Burnout
+                </h2>
+              </div>
 
               <div className="space-y-4 text-[#A5A5AF] lg:mt-80 md:mt-60 sm:mt-40 mt-36  max-w-6xl">
                 <p>
@@ -48,11 +52,10 @@ const ProblemSolution = () => {
                   managing freelancers. You stay client-facing. We quietly
                   deliver.
                 </p>
+                <button className="mt-7 btn btn-primary">
+                  Let's Talk Scalability
+                </button>
               </div>
-
-              <button className="mt-4 btn btn-primary">
-                Let's Talk Scalability
-              </button>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import Shape from "../../public/assets/images/hero-shape.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative pb-[100px] pt-[295px] ">
+    <section className="relative pb-[100px] pt-[295px] lg:px-5 md:px-4 px-3">
       <Image
         className="absolute w-full h-auto top-0 right-0 z-0"
         src={"/assets/images/Shade.png"}
@@ -19,15 +19,13 @@ const HeroSection = () => {
         className="absolute right-0 top-0"
       />
       {/* Container for the text content */}
-      <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
-        <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
+      <div className="container mx-auto relative z-10">
+        <div className="lg:w-4/6">
           {/* Pre-heading */}
-          <p className="font-medium text-[26px] color-primary-dark">
-            [Prismolix Agency]
-          </p>
+          <p className="fs-26 color-primary-dark">[Prismolix Agency]</p>
 
           {/* Main Heading with Highlighted Text */}
-          <h1 className="font-bold tracking-tighter leading-[100%]">
+          <h1 className="font-bold tracking-tighter leading-[100%] lg:my-5 md:my-4 sm:my-3 my-2">
             The <span className="text-overlay text-white px-2">Agency</span>{" "}
             Behind Top Agencies
           </h1>
@@ -39,7 +37,7 @@ const HeroSection = () => {
           </p>
 
           {/* Button Group */}
-          <div className="flex items-center gap-4 mt-4">
+          <div className="flex items-center gap-4 lg:mt-9 mt-8">
             <button className="btn btn-primary">Book a Call</button>
             <button className="btn btn-outline">How it Works</button>
           </div>

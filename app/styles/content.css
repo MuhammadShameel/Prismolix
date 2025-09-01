@@ -23,10 +23,6 @@
   text-transform: uppercase;
 }
 
-.article-content p {
-  /* color: #ffff; */
-}
-
 .article-content a {
   text-decoration: underline;
 }

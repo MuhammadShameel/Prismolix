@@ -88,7 +88,7 @@ const images = [
 
 export default function SwiperMarquee() {
   return (
-    <div className="gradient-line marquee w-full py-10">
+    <section className="gradient-line marquee w-full py-10">
       <Swiper
         // Swiper modules
         modules={[Autoplay]}
@@ -116,19 +116,19 @@ export default function SwiperMarquee() {
       >
         {images.map((imageSrc, index) => (
           <SwiperSlide key={index} style={{ width: "auto" }}>
-            <div className="flex-shrink-0 mx-7">
+            <div className="img-wrapper h-[27px] flex-shrink-0 mx-7">
               <Image
                 src={imageSrc}
                 alt={`marquee-image-${index}`}
                 width={120}
                 height={80}
-                className="rounded-md object-contain"
+                className="rounded-md object-contain w-full h-full"
                 unoptimized={true} // Add if using external URLs that aren't configured in next.config.js
               />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 }

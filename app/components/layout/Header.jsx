@@ -53,11 +53,14 @@ const Header = () => {
         <div className="container mx-auto">
           <div className="flex items-center justify-between pl-[30px] pr-2.5 py-[10px]  ">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0">
+            <Link
+              href="/"
+              className="flex-shrink-0 logo-wrapper lg:h-[60px] md:h-[50px] h-[40px] w-auto"
+            >
               <Image
                 src={Logo}
                 alt="Prismolix Logo"
-                className="lg:w-full md:w-[75%] sm:w-[75%] w-[75%] !h-[50%]"
+                className="w-full h-full object-contain"
               />
             </Link>
 
@@ -69,7 +72,7 @@ const Header = () => {
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className="nav-link font-medium hover:text-black transition-colors lg:text-xl md:text-md"
+                        className="nav-link transition-colors"
                       >
                         {link.name}
                       </Link>
@@ -77,10 +80,7 @@ const Header = () => {
                   ))}
                 </ul>
               </nav>
-              <Link
-                href={"/contact"}
-                className="btn btn-primary bg-purple-600 text-white px-6 py-2 rounded-lg text-lg font-medium"
-              >
+              <Link href={"/contact"} className="btn btn-primary">
                 Contact Us
               </Link>
             </div>
