@@ -24,21 +24,22 @@ const ServicesPage = async () => {
   );
 
   return (
-    <div className="relative">
+    <>
       {/* --- This top section remains static as it's the introduction to the page --- */}
-      <Image
-        className="absolute top-0 right-0 z-0 h-auto w-full"
-        src={"/assets/images/Shade.png"}
-        width={100}
-        height={100}
-        alt=""
-      />
-      <Image
-        src={Shape}
-        alt="Abstract 3D hero image"
-        className="absolute top-0 right-0"
-      />
-      <section className="relative pt-[295px] overflow-hidden">
+
+      <section className="relative pt-[295px]">
+        <Image
+          className="absolute top-0 right-0 z-0 h-auto w-full"
+          src={"/assets/images/Shade.png"}
+          width={100}
+          height={100}
+          alt=""
+        />
+        <Image
+          src={Shape}
+          alt="Abstract 3D hero image"
+          className="absolute top-0 right-0"
+        />
         <div className="container relative z-10 mx-auto px-3 md:px-4 lg:px-5">
           <div className="flex flex-col items-start gap-2 sm:gap-3 md:gap-4 lg:w-4/6 lg:gap-5">
             <p className="text-[26px] font-medium color-primary-dark">
@@ -139,7 +140,7 @@ const ServicesPage = async () => {
       <OfferSection />
       <ContactSection />
       <CallSchedule />
-    </div>
+    </>
   );
 };
 

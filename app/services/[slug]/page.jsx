@@ -137,7 +137,7 @@ const ServiceDetailPage = async ({ params }) => {
             {serviceData.deliverables.map((item) => (
               <div
                 key={item.title}
-                className="flex flex-col gap-2.5 rounded-2xl bg-light-purple p-8"
+                className="flex flex-col gap-2.5 rounded-2xl bg-light-purple lg:p-8 md:p-7 p-5"
               >
                 <h4 className="text-2xl font-bold text-gray-800">
                   {item.title}
@@ -146,13 +146,13 @@ const ServiceDetailPage = async ({ params }) => {
                 <ul className="mt-5 flex flex-col">
                   {item.keyPoints.map((point, idx) => (
                     <React.Fragment key={idx}>
-                      <li className="flex items-center gap-2.5 text-xl font-medium text-gray-700">
+                      <li className="flex lg:items-center gap-2.5 text-xl font-medium text-gray-700">
                         <svg
                           width="10"
                           height="11"
                           viewBox="0 0 10 11"
                           fill="none"
-                          className="h-2.5 w-2.5 flex-shrink-0"
+                          className="mt-2 flex-shrink-0"
                         >
                           <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
                         </svg>

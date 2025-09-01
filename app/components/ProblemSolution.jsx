@@ -27,7 +27,7 @@ const ProblemSolution = () => {
             <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
 
             {/* Content */}
-            <div className="relative z-20 flex flex-col items-start gap-6 p-10 md:p-12 lg:p-16">
+            <div className="relative z-20 flex flex-col items-start gap-6 p-5 md:p-10 lg:p-16">
               <p className="font-medium text-[#C4B5FD]">[Problem & Solution]</p>
 
               <h2 className="lg:leading-20 leading-10 md:leading-18 sm:leading-16 tracking-tight max-w-4xl">

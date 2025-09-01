@@ -8,7 +8,7 @@ const CallSchedule = () => {
       <div className="container mx-auto">
         <div className="flex lg:flex-row flex-col gap-5">
           {/* Left Side: Text Content */}
-          <div className="relative overflow-hidden lg:w-7/10 w-full bg-primary p-8 rounded-2xl text-white z-[-2]">
+          <div className="relative overflow-hidden lg:w-7/10 w-full bg-primary lg:p-8 md:p-7 p-5 rounded-2xl text-white z-[-2]">
             <div className="max-w-xl">
               <h2 className="leading-[87%] tracking-[-1px]">
                 Ready to Scale Without Hiring?

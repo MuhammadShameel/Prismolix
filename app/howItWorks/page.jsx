@@ -62,7 +62,7 @@ const HowItWorks = () => {
       </section>
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
-          <div className="rounded-[30px] bg-light-purple px-[30px] py-[50px]">
+          <div className="rounded-[30px] bg-light-purple lg:px-[30px] lg:py-[50px] md:px-[25px] md:py-[40px]  px-[20px] py-[20px]">
             <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 items-center">
               <div className="lg:w-2/10 w-10/10">
                 <div className="img-wrapper flex lg:justify-center">
@@ -103,7 +103,7 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
-          <div className="mt-5 rounded-[30px] bg-light-purple px-[30px] py-[50px]">
+          <div className="mt-5 rounded-[30px] bg-light-purple lg:px-[30px] lg:py-[50px] md:px-[25px] md:py-[40px] px-[20px] py-[20px]">
             <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 items-center">
               <div className="lg:w-2/10 w-10/10">
                 <div className="img-wrapper flex lg:justify-center">
@@ -137,7 +137,7 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
-          <div className="mt-5 rounded-[30px] bg-light-purple px-[30px] py-[50px]">
+          <div className="mt-5 rounded-[30px] bg-light-purple lg:px-[30px] lg:py-[50px] md:px-[25px] md:py-[40px] px-[20px] py-[20px]">
             <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 items-center">
               <div className="lg:w-2/10 w-10/10">
                 <div className="img-wrapper flex lg:justify-center">
@@ -171,7 +171,7 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
-          <div className="mt-5 rounded-[30px] bg-light-purple px-[30px] py-[50px]">
+          <div className="mt-5 rounded-[30px] bg-light-purple lg:px-[30px] lg:py-[50px] md:px-[25px] md:py-[40px] px-[20px] py-[20px]">
             <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 items-center">
               <div className="lg:w-2/10 w-10/10">
                 <div className="img-wrapper flex lg:justify-center">

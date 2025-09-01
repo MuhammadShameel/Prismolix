@@ -73,7 +73,7 @@ const ContactSection = () => {
   return (
     <section className="lg:px-5 md:px-4 px-3 my-lg">
       <div className="container mx-auto">
-        <div className="rounded-2xl bg-light-purple lg:p-10 md:p-8 sm:p-5 p-2.5">
+        <div className="rounded-2xl bg-light-purple lg:p-10 md:p-8  p-5">
           {/* Grid Container */}
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
             {/* Left Column: Contact Info */}

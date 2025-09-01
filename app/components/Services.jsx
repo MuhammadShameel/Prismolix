@@ -54,7 +54,7 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.number}
-              className="relative flex flex-col bg-light-purple rounded-[30px] p-8 overflow-hidden"
+              className="relative flex flex-col bg-light-purple rounded-[30px] lg:p-8 md:p-7 p-5 overflow-hidden"
             >
               {/* Giant background number */}
               <p className="absolute top-0 right-8 !lg:text-[150px] !md:text-[140px] !sm:text-[130px] !text-[120px] font-black text-white z-0 select-none leading-tight">
@@ -87,7 +87,7 @@ const Services = () => {
           ))}
 
           {/* "Each Service Includes" Card */}
-          <div className="flex flex-col bg-primary rounded-3xl p-8 text-white">
+          <div className="flex flex-col bg-primary rounded-3xl lg:p-8 md:p-7 p-5 text-white">
             <h3 className="text-3xl font-bold">Each Service includes:</h3>
             {/* MODIFICATION HERE: Changed list-inside to list-outside and added padding */}
             <ul className="list-disc list-outside space-y-3 mt-6 text-base text-purple-100 flex-grow sm:text-lg md:text-xl lg:text-[22px] pl-5">

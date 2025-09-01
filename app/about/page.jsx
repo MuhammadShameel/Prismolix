@@ -24,21 +24,21 @@ const About = () => {
   // const [data, setData] = useState(null);
 
   return (
-    <div id="about-us" className="relative">
-      <Image
-        className="absolute w-full h-auto top-0 right-0 z-0"
-        src={"/assets/images/Shade.png"}
-        width={100}
-        height={100}
-        alt=""
-      />
-      <Image
-        src={Shape}
-        alt="Abstract 3D hero image"
-        // objectFit="contain"
-        className="absolute top-0 right-0"
-      />
-      <section className="relative pt-[295px] overflow-hidden">
+    <>
+      <section className="relative pt-[295px]">
+        <Image
+          className="absolute w-full h-auto top-0 right-0 z-0"
+          src={"/assets/images/Shade.png"}
+          width={100}
+          height={100}
+          alt=""
+        />
+        <Image
+          src={Shape}
+          alt="Abstract 3D hero image"
+          // objectFit="contain"
+          className="absolute top-0 right-0"
+        />
         {/* Container for the text content */}
         <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
           <div className="lg:w-6/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
@@ -86,7 +86,7 @@ const About = () => {
               </div>
 
               {/* Text Content Column */}
-              <div className="flex w-full flex-col lg:w-4/6  p-6 sm:p-8 md:p-12 lg:p-16">
+              <div className="flex w-full flex-col lg:w-4/6  p-5 sm:p-8 md:p-12 lg:p-16">
                 <span className="font-medium color-primary-dark text-lg md:text-xl">
                   [About Company]
                 </span>
@@ -181,7 +181,7 @@ const About = () => {
             {services.map((service) => (
               <div
                 key={service.number}
-                className="relative flex flex-col bg-light-purple rounded-[30px] p-8 overflow-hidden"
+                className="relative flex flex-col bg-light-purple rounded-[30px] lg:p-8 md:p-7 p-5 overflow-hidden"
               >
                 {/* Giant background number */}
                 <p className="absolute top-0 right-8 !lg:text-[150px] !md:text-[140px] !sm:text-[130px] !text-[120px] font-black text-white z-0 select-none leading-tight">
@@ -202,7 +202,7 @@ const About = () => {
         </div>
       </section>
       <CallSchedule />
-    </div>
+    </>
   );
 };
 

@@ -704,3 +704,8 @@ h6 {
   border-radius: 5px; /* Give it rounded ends like a pill */
   opacity: 1;
 }
+
+/* This makes the Swiper animation perfectly linear for a smooth marquee effect */
+.swiper-wrapper-linear {
+  transition-timing-function: linear !important;
+}

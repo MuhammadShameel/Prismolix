@@ -337,17 +337,20 @@ const Page = () => {
                 {(data?.keyPoints || []).map((kp, idx) => (
                   <li
                     key={idx}
-                    className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[16px] "
+                    className="flex lg:items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[16px] "
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="10"
-                      height="11"
-                      viewBox="0 0 10 11"
-                      fill="none"
-                    >
-                      <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                    </svg>
+                    <div>
+                      <svg
+                        className="mt-1.5 w-2.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="11"
+                        viewBox="0 0 10 11"
+                        fill="none"
+                      >
+                        <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                      </svg>
+                    </div>
                     {kp}
                   </li>
                 ))}
@@ -362,17 +365,20 @@ const Page = () => {
                 {(data?.keyPoints || []).map((kp, idx) => (
                   <li
                     key={idx}
-                    className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[16px] "
+                    className="flex lg:items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[16px] "
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="10"
-                      height="11"
-                      viewBox="0 0 10 11"
-                      fill="none"
-                    >
-                      <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                    </svg>
+                    <div>
+                      <svg
+                        className="mt-1.5 w-2.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="11"
+                        viewBox="0 0 10 11"
+                        fill="none"
+                      >
+                        <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                      </svg>
+                    </div>
                     {kp}
                   </li>
                 ))}

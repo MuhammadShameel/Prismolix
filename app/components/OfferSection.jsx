@@ -37,17 +37,20 @@ const OfferSection = () => {
               {listItems.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-2.5 py-5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] border-b border-b-gray-300 last:border-b-0"
+                  className="flex lg:items-center gap-2.5 py-5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] border-b border-b-gray-300 last:border-b-0"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="11"
-                    viewBox="0 0 10 11"
-                    fill="none"
-                  >
-                    <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                  </svg>
+                  <div>
+                    <svg
+                      className="mt-2 w-2.5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="11"
+                      viewBox="0 0 10 11"
+                      fill="none"
+                    >
+                      <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                    </svg>
+                  </div>
                   {item}
                 </li>
               ))}

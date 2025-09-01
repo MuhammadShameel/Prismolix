@@ -5,7 +5,19 @@ import Shape from "../../public/assets/images/hero-shape.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative pb-[100px] pt-[295px] overflow-hidden">
+    <section className="relative pb-[100px] pt-[295px] ">
+      <Image
+        className="absolute w-full h-auto top-0 right-0 z-0"
+        src={"/assets/images/Shade.png"}
+        width={100}
+        height={100}
+        alt=""
+      />
+      <Image
+        src={Shape}
+        alt="Abstract 3D hero image"
+        className="absolute right-0 top-0"
+      />
       {/* Container for the text content */}
       <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
         <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">

@@ -28,21 +28,21 @@ const page = async () => {
   const portfolioItems = await fetchAllBlogs();
 
   return (
-    <div className="relative">
-      <Image
-        className="absolute w-full h-auto top-0 left-0 z-[-1]"
-        src={"/assets/images/Shade.png"}
-        width={100}
-        height={100}
-        alt=""
-      />
-      <Image
-        src={Shape}
-        alt="Abstract 3D hero image"
-        // objectFit="contain"
-        className="absolute top-0 right-0"
-      />
-      <section className="relative  pt-[295px] overflow-hidden lg:px-5 md:px-4 px-3">
+    <>
+      <section className="relative  pt-[295px] lg:px-5 md:px-4 px-3">
+        <Image
+          className="absolute w-full h-auto top-0 left-0 z-[-1]"
+          src={"/assets/images/Shade.png"}
+          width={100}
+          height={100}
+          alt=""
+        />
+        <Image
+          src={Shape}
+          alt="Abstract 3D hero image"
+          // objectFit="contain"
+          className="absolute top-0 right-0"
+        />
         {/* Container for the text content */}
         <div className="container mx-auto relative z-10">
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
@@ -83,7 +83,7 @@ const page = async () => {
         return (
           <section key={portfolio.id} className="lg:px-5 md:px-4 px-3 my-lg">
             <div className="container mx-auto">
-              <div className="rounded-[30px] bg-light-purple px-[30px] py-[50px]">
+              <div className="lg:rounded-[30px]  rounded-[20px] bg-light-purple lg:px-[30px] lg:py-[50px] md:px-[25px] md:py-[40px] px-[15px] py-[15px]">
                 <div className="flex lg:flex-row flex-col gap-10">
                   <div className="lg:w-3/8 w-8/8">
                     <div className="img-wrapper">
@@ -253,7 +253,7 @@ const page = async () => {
           </div>
         </div>
       </section> */}
-    </div>
+    </>
   );
 };
 
