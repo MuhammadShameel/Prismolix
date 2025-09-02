@@ -122,7 +122,7 @@ const MarqueeContent = () => {
     // SSR-safe fallback
     return (
       <div className="flex w-full overflow-hidden">
-        <span className="mx-5 flex items-center whitespace-nowrap text-[26px] font-medium">
+        <span className="mx-5 flex items-center whitespace-nowrap fs-26">
           {marqueeText}
         </span>
       </div>
@@ -146,7 +146,7 @@ const MarqueeContent = () => {
         .fill(marqueeText)
         .map((item, index) => (
           <SwiperSlide key={index} className="!w-auto">
-            <span className="mx-5 flex items-center whitespace-nowrap text-[26px] font-medium">
+            <span className="mx-5 flex items-center whitespace-nowrap fs-26">
               {item}
             </span>
           </SwiperSlide>
@@ -211,7 +211,7 @@ const Footer = () => {
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className="flex items-center gap-2 text-[16px] font-medium hover:text-black sm:text-[18px] md:text-[22px] lg:text-[26px]"
+                        className="flex items-center gap-2 font-medium hover:text-black fs-26"
                       >
                         <span className="text-gray-400">&gt;</span>
                         {link.name}
@@ -226,7 +226,7 @@ const Footer = () => {
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className="flex items-center gap-2 text-[16px] font-medium hover:text-black sm:text-[18px] md:text-[22px] lg:text-[26px]"
+                        className="flex items-center gap-2 font-medium hover:text-black fs-26"
                       >
                         <span className="text-gray-400">&gt;</span>
                         {link.name}
@@ -241,7 +241,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="container mx-auto py-6 border-t border-gray-200">
-          <div className="color-dark-cards-bg flex justify-between items-center font-medium lg:text-[26px] md:text-[22px] sm:text-[18px] text-[16px]">
+          <div className="color-dark-cards-bg flex justify-between items-center font-medium fs-26">
             <a href="#" className="hover:text-black">
               Terms & Conditions
             </a>

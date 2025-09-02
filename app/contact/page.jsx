@@ -134,7 +134,7 @@ const ContactUs = () => {
           ></iframe>
           <div className="flex justify-between mt-5 items-center">
             <div>
-              <p className="lg:text-[26px] md:text-[22px] sm:text-[18px] text-[16px] lg:max-w-sm max-w-4xl font-medium">
+              <p className="fs-26 lg:max-w-sm max-w-4xl font-medium">
                 ABC building, ABC - Street, Bahria Town, Phase 8, Rawalpindi
               </p>
             </div>
@@ -239,7 +239,7 @@ const ContactUs = () => {
       </section>
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto my-lg lg:px-5 md:px-4 px-3">
-          <span className="font-medium text-[26px] color-primary-dark">
+          <span className="fs-26 color-primary-dark">
             [Let's Work Together]
           </span>
           <div className="flex flex-col  mt-2.5">

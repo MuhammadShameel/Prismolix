@@ -76,7 +76,7 @@ const ContactSection = () => {
         <div className="flex rounded-2xl bg-light-purple lg:p-10 md:p-8  p-5">
           {/* Grid Container */}
           {/* Left Column: Contact Info */}
-          <div className="w-4/10 flex flex-col justify-start">
+          <div className="w-4/10 flex flex-col justify-start lg:!pr-20">
             <div className="lg:mb-[123px] ">
               <span className="fs-26 color-primary-dark">
                 [Let's Work Together]
@@ -85,7 +85,7 @@ const ContactSection = () => {
             <div className="lg:mb-0 mb-12">
               {" "}
               <h2>Contact Me!</h2>
-              <p className="mt-2.5 lg:!pr-20">
+              <p className="mt-2.5 ">
                 Let's create something amazing together! Reach out, I'd love to
                 hear about your project and ideas.
               </p>
@@ -133,7 +133,7 @@ const ContactSection = () => {
                       fill="#4A008C"
                     />
                   </svg>
-                  <p className="lg:text-[26px] font-medium">
+                  <p className="fs-26 font-medium">
                     Bahria Town, Phase 8, Rawalpindi
                   </p>
                 </div>
@@ -159,9 +159,7 @@ const ContactSection = () => {
                       fill="#4A008C"
                     />
                   </svg>
-                  <p className="lg:text-[26px] font-medium">
-                    username@example.com
-                  </p>
+                  <p className="fs-26 font-medium">username@example.com</p>
                 </a>
               </div>
             </div>

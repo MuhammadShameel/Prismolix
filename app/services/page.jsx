@@ -101,7 +101,7 @@ const ServicesPage = async () => {
                     <ul className="mt-5 flex flex-col">
                       {service.keyPoints.map((point, idx) => (
                         <React.Fragment key={idx}>
-                          <li className="flex gap-2.5 text-[18px] font-medium text-gray-700 sm:text-[20px] md:text-[24px] lg:text-[26px]">
+                          <li className="flex gap-2.5 font-medium text-gray-700 fs-26">
                             <svg
                               className="mt-2.5 w-3 h-3"
                               width="10"

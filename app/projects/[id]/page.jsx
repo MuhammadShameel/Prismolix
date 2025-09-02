@@ -104,9 +104,7 @@ const Page = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center gap-5 max-w-6xl my-lg">
-            <span className=fs-26  color-primary-dark">
-              [Case Study]
-            </span>
+            <span className="fs-26  color-primary-dark">[Case Study]</span>
             <h1 className="text-center leading-[95%]">
               {loading ? "Loading..." : data?.title || "—"}
             </h1>
@@ -250,42 +248,32 @@ const Page = () => {
 
           <div className="bg-light-purple flex lg:flex-row flex-col lg:gap-7 gap-4 lg:px-10 md:px-7 px-5 py-6 rounded-[20px]">
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium fs-26">
-                Category
-              </span>
+              <span className="font-medium fs-26">Category</span>
               <p>
                 {loading ? "—" : data?.industry || data?.categories?.[0] || "—"}
               </p>
             </div>
             <div className="border-r-1 bg-black opacity-20"></div>
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium fs-26">
-                Time Taken
-              </span>
+              <span className="font-medium fs-26">Time Taken</span>
               <p>
                 {loading ? "—" : diffInMonths(data?.startDate, data?.endDate)}
               </p>
             </div>
             <div className="border-r-1 bg-black opacity-20"></div>
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium fs-26">
-                Start Date
-              </span>
+              <span className="font-medium fs-26">Start Date</span>
               <p>{loading ? "—" : formatMonthYear(data?.startDate)}</p>
             </div>
             <div className="border-r-1 bg-black opacity-20"></div>
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium fs-26">
-                Completed Date
-              </span>
+              <span className="font-medium fs-26">Completed Date</span>
               <p>{loading ? "—" : formatMonthYear(data?.endDate)}</p>
             </div>
           </div>
 
           <div className="bg-light-purple flex lg:flex-row flex-col lg:items-center lg:px-10 md:px-7 px-5 py-6 rounded-[20px] lg:gap-10 gap-3">
-            <span className="font-medium fs-26 ">
-              Technologies Used
-            </span>
+            <span className="font-medium fs-26 ">Technologies Used</span>
             <ul className="flex lg:gap-10 gap-2.5">
               {(data?.technologiesUsed && data.technologiesUsed.length > 0
                 ? data.technologiesUsed
@@ -311,9 +299,7 @@ const Page = () => {
           </div>
 
           <div className="bg-light-purple flex flex-col lg:px-10 md:px-7 px-5 py-6 rounded-[20px] gap-12">
-            <span className="font-medium fs-26 ">
-              Methods Used
-            </span>
+            <span className="font-medium fs-26 ">Methods Used</span>
             <div className="flex lg:flex-row flex-col lg:gap-[30px] gap-[20px]">
               {(data?.methodsUsed?.length ? data.methodsUsed : ["—"]).map(
                 (method, idx) => (
@@ -337,7 +323,7 @@ const Page = () => {
                 {(data?.keyPoints || []).map((kp, idx) => (
                   <li
                     key={idx}
-                    className="flex lg:items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[16px] "
+                    className="flex lg:items-center gap-2.5 font-medium fs-26 "
                   >
                     <div>
                       <svg
@@ -365,7 +351,7 @@ const Page = () => {
                 {(data?.keyPoints || []).map((kp, idx) => (
                   <li
                     key={idx}
-                    className="flex lg:items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[16px] "
+                    className="flex lg:items-center gap-2.5 font-medium fs-26 "
                   >
                     <div>
                       <svg
@@ -390,9 +376,7 @@ const Page = () => {
 
       <div className="container mx-auto my-lg">
         <div className="service-content flex flex-col items-center gap-5">
-          <span className="font-medium text-[26px] color-primary-dark">
-            [The Process]
-          </span>
+          <span className="fs-26 color-primary-dark">[The Process]</span>
           <h2 className="lg:leading-20 leading-10 tracking-tight max-w-4xl">
             What We Did
           </h2>
@@ -420,9 +404,7 @@ const Page = () => {
 
       <div className="container mx-auto my-lg">
         <div className="service-content flex flex-col items-center gap-5">
-          <span className="font-medium text-[26px] color-primary-dark">
-            [Tools]
-          </span>
+          <span className="fs-26 color-primary-dark">[Tools]</span>
           <h2 className="lg:leading-20 leading-10 tracking-tight max-w-2xl text-center">
             Tools & Platforms We Use
           </h2>
