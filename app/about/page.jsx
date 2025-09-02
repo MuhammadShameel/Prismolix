@@ -41,14 +41,12 @@ const About = () => {
         />
         {/* Container for the text content */}
         <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
-          <div className="lg:w-6/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
+          <div className="lg:w-6/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2 max-w-6xl">
             {/* Pre-heading */}
-            <p className="font-medium text-[26px] color-primary-dark">
-              [Our Blog]
-            </p>
+            <p className="fs-26px color-primary-dark">[Our Blog]</p>
 
             {/* Main Heading with Highlighted Text */}
-            <h1 className="font-bold tracking-tighter leading-[100%] max-w-6xl">
+            <h1 className="font-bold tracking-tighter leading-[100%]">
               The Silent Engine Powering Top {""}
               <span className="text-overlay text-white px-2">Agencies</span>
             </h1>
@@ -168,11 +166,11 @@ const About = () => {
       </section>
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
-          <div className="service-content flex flex-col items-center gap-5">
+          <div className="service-content flex flex-col items-center gap-5 max-w-3xl mx-auto">
             <span className="font-medium text-[26px] color-primary-dark">
               [The Difference]
             </span>
-            <h2 className="lg:leading-20 leading-10 tracking-tight max-w-3xl text-center">
+            <h2 className="lg:leading-20 leading-10 tracking-tight text-center">
               What makes us different
             </h2>
           </div>
@@ -184,16 +182,16 @@ const About = () => {
                 className="relative flex flex-col bg-light-purple rounded-[30px] lg:p-8 md:p-7 p-5 overflow-hidden"
               >
                 {/* Giant background number */}
-                <p className="absolute top-0 right-8 !lg:text-[150px] !md:text-[140px] !sm:text-[130px] !text-[120px] font-black text-white z-0 select-none leading-tight">
+                <p className="self-end !lg:text-[150px] !md:text-[140px] !sm:text-[130px] !text-[120px] font-black text-white z-0 select-none leading-tight">
                   {service.number}
                   <span className="color-primary-light">.</span>
                 </p>
 
                 {/* Card Content */}
-                <div className="relative z-10 flex flex-col h-full mt-36">
+                <div className="flex flex-col mt-36">
                   {/* Price section pushed to the bottom */}
-                  <div className="mt-auto">
-                    <h4 className="lg:mt-20">{service.title}</h4>
+                  <div>
+                    <h4>{service.title}</h4>
                   </div>
                 </div>
               </div>

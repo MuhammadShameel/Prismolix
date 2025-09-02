@@ -42,9 +42,7 @@ const ServicesPage = async () => {
         />
         <div className="container relative z-10 mx-auto px-3 md:px-4 lg:px-5">
           <div className="flex flex-col items-start gap-2 sm:gap-3 md:gap-4 lg:w-4/6 lg:gap-5">
-            <p className="text-[26px] font-medium color-primary-dark">
-              [Services]
-            </p>
+            <p className="fs-26 color-primary-dark">[Services]</p>
             <h1 className="font-bold leading-[100%] tracking-tighter">
               <span className="text-overlay px-2 text-white">Scalable</span>{" "}
               Design & Development
@@ -64,14 +62,12 @@ const ServicesPage = async () => {
       {/* --- This section now uses the dynamically fetched data --- */}
       <section className="my-12 px-3 md:px-4 lg:my-24 lg:px-5">
         <div className="container mx-auto">
-          <div className="service-content flex flex-col items-center gap-5">
-            <span className="text-[26px] font-medium color-primary-dark">
-              [Services]
-            </span>
-            <h2 className="max-w-4xl text-center leading-10 tracking-tight lg:leading-20">
+          <div className="service-content flex flex-col items-center gap-5 max-w-4xl">
+            <span className="fs-26 color-primary-dark">[Services]</span>
+            <h2 className=" text-center leading-10 tracking-tight lg:leading-20">
               What We Build
             </h2>
-            <p className="max-w-2xl text-center color-dark-cards-bg">
+            <p className=" text-center color-dark-cards-bg">
               Whether it’s a landing page sprint, a headless eCommerce build, or
               full-stack app design — we’ve got you covered.
             </p>

@@ -65,7 +65,7 @@ const Services = () => {
                 {/* Price section pushed to the bottom */}
                 <div className="mt-auto">
                   <div className="gradient-line pb-5">
-                    <span className="bg-white px-2.5 py-[7px] rounded-full">
+                    <span className="bg-white px-2.5 py-[7px] rounded-full inline-block">
                       {service.timeframe}
                     </span>
                     <h4 className="mt-2.5 leading-[45px]">{service.title}</h4>

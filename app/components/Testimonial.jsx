@@ -104,11 +104,13 @@ const Testimonial = () => {
                     </div>
 
                     <div className="flex items-center gap-4 lg:mt-10">
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="h-16 w-16 rounded-full object-cover sm:h-20 sm:w-20"
-                      />
+                      <div className="img-wrapper h-[104px] w-[104px]">
+                        <Image
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="h-full w-full rounded-full object-cover"
+                        />
+                      </div>
                       <div className="flex flex-col justify-center">
                         <h3 className="font-bold text-dark-cards-bg text-lg sm:text-xl">
                           {testimonial.name}
