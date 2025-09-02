@@ -78,7 +78,7 @@ const ContactSection = () => {
           {/* Left Column: Contact Info */}
           <div className="w-4/10 flex flex-col justify-start">
             <div className="lg:mb-[123px] ">
-              <span className="font-medium text-[26px] color-primary-dark">
+              <span className="fs-26 color-primary-dark">
                 [Let's Work Together]
               </span>
             </div>
@@ -112,7 +112,7 @@ const ContactSection = () => {
                       fill="#4A008C"
                     />
                   </svg>
-                  <p className="lg:text-[26px] font-medium">+123 1234 1234</p>
+                  <p className="fs-26 font-medium">+123 1234 1234</p>
                 </a>
                 <div className="flex items-center gap-3 ">
                   {/* <MapPin size={20} className="text-violet-500" /> */}

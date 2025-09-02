@@ -121,9 +121,7 @@ const About = () => {
         <div className="container mx-auto">
           <div className="flex lg:flex-row flex-col lg:gap-24 gap-5">
             <div className="lg:w-2/10 w-10/10 ">
-              <span className="font-medium text-[26px]  color-primary-dark">
-                [About Company]
-              </span>
+              <span className="fs-26  color-primary-dark">[About Company]</span>
               <div className="img-wrapper lg:block hidden mt-12 h-auto rounded-[10px]">
                 <Image
                   src={"/assets/images/founder.png"}
@@ -167,9 +165,7 @@ const About = () => {
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
           <div className="service-content flex flex-col items-center gap-5 max-w-3xl mx-auto">
-            <span className="font-medium text-[26px] color-primary-dark">
-              [The Difference]
-            </span>
+            <span className="fs-26 color-primary-dark">[The Difference]</span>
             <h2 className="lg:leading-20 leading-10 tracking-tight text-center">
               What makes us different
             </h2>

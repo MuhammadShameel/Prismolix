@@ -63,9 +63,7 @@ const Testimonial = () => {
           {/* MODIFICATION HERE: This section is now hidden on mobile */}
           <div className="lg:flex  hidden md:w-1/4 p-10">
             <Image src={Line} alt="" />
-            <span className="font-medium text-[26px] color-primary-dark">
-              [Testimonial]
-            </span>
+            <span className="fs-26 color-primary-dark">[Testimonial]</span>
           </div>
 
           {/* Right Column: Swiper */}

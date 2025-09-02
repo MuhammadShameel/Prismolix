@@ -35,9 +35,9 @@ const BlogsPage = async () => {
       <section className="relative lg:pt-[295px] pt-[350px] overflow-hidden">
         <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
-            <p className="font-medium text-[26px] color-primary-dark">
+            <span className="fs-26 color-primary-dark">
               [Our Blog]
-            </p>
+            </span>
             <h1 className="font-bold tracking-tighter leading-[100%]">
               Insights That Power{" "}
               <span className="text-overlay text-white px-2">Agencies</span>
@@ -54,9 +54,7 @@ const BlogsPage = async () => {
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
           <div className="service-content flex flex-col items-center gap-5">
-            <span className="font-medium text-[26px] color-primary-dark">
-              [Blogs]
-            </span>
+            <span className="fs-26 color-primary-dark">[Blogs]</span>
             <h2 className="lg:leading-20 leading-10 tracking-tight max-w-2xl text-center">
               From the Prismolix Journal
             </h2>

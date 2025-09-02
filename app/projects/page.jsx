@@ -47,7 +47,7 @@ const page = async () => {
         <div className="container mx-auto relative z-10">
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
             {/* Pre-heading */}
-            <p className="font-medium text-[26px] color-primary-dark">
+            <span className="fs-26 color-primary-dark">
               [Case Studies]
             </p>
 
@@ -97,7 +97,7 @@ const page = async () => {
                       />
                     </div>
                     <div className="lg:block hidden mt-14">
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+                      <span className="font-medium fs-26">
                         Services Provided:
                       </span>
 
@@ -125,7 +125,7 @@ const page = async () => {
                   </div>
                   <div className="lg:w-5/8 w-8/8 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
                     {/* Pre-heading */}
-                    <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] color-primary-dark">
+                    <span className="font-medium fs-26 color-primary-dark">
                       [Case Study - {String(index + 1).padStart(2, "0")}]
                     </span>
 
@@ -136,7 +136,7 @@ const page = async () => {
 
                     {/* Subheading */}
                     <div>
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+                      <span className="font-medium fs-26">
                         Client Type:
                       </span>
 
@@ -145,7 +145,7 @@ const page = async () => {
                       </p>
                     </div>
                     <div>
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+                      <span className="font-medium fs-26">
                         Services Provided:
                       </span>
 
@@ -154,7 +154,7 @@ const page = async () => {
                       </p>
                     </div>
                     <div>
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+                      <span className="font-medium fs-26">
                         Challenge:
                       </span>
 
@@ -163,7 +163,7 @@ const page = async () => {
                       </p>
                     </div>
                     <div className="lg:hidden block ">
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+                      <span className="font-medium fs-26">
                         Services Provided:
                       </span>
 

@@ -69,9 +69,7 @@ const page = () => {
 
           {/* MODIFICATION HERE: This section is now hidden on mobile */}
           <div className="flex flex-col items-center justify-center gap-5 max-w-6xl my-lg">
-            <span className="font-medium text-[26px]  color-primary-dark">
-              [Case Study - 01]
-            </span>
+            <span className="fs-26  color-primary-dark">[Case Study - 01]</span>
             <h1 className="text-center leading-[95%]">
               Scaling a Creative Studio Without Hiring
             </h1>
@@ -156,39 +154,29 @@ const page = () => {
           </div>
           <div className="bg-light-purple flex lg:flex-row flex-col lg:gap-7 gap-4 px-10 py-6 rounded-[20px]">
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                Category
-              </span>
+              <span className="font-medium fs-26">Category</span>
               <p>E-commerce</p>
             </div>
             <div className="border-r-1 bg-black opacity-20"></div>
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                Time Taken
-              </span>
+              <span className="font-medium fs-26">Time Taken</span>
               <p>2 Months</p>
             </div>
             <div className="border-r-1 bg-black opacity-20"></div>
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                Start Date
-              </span>
+              <span className="font-medium fs-26">Start Date</span>
               <p>26 November 2024</p>
             </div>
             <div className="border-r-1 bg-black opacity-20"></div>
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                Completed Date
-              </span>
+              <span className="font-medium fs-26">Completed Date</span>
               <p>26 December 2024</p>
             </div>
           </div>
           <div className="bg-light-purple flex lg:flex-row flex-col lg:items-center px-10 py-6 rounded-[20px] lg:gap-10 gap-3">
-            <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-              Technologies Used
-            </span>
+            <span className="font-medium fs-26 ">Technologies Used</span>
             <ul className="flex lg:gap-10 gap-2.5">
-              {/* <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] flex items-center">
+              {/* <span className="font-medium fs-26 flex items-center">
                 Technologies Used
               </span> */}
               <li className="border-black/25 border p-4 rounded-full">
@@ -314,9 +302,7 @@ const page = () => {
             </ul>
           </div>
           <div className="bg-light-purple flex flex-col px-10 py-6 rounded-[20px] gap-12">
-            <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-              Methods Used
-            </span>
+            <span className="font-medium fs-26 ">Methods Used</span>
             <div className="flex lg:flex-row flex-col lg:gap-[30px] gap-[20px]">
               <div className="lg:w-4/12 w-12/12">
                 <button className="font-medium w-full text-center py-2.5 scroll-px-24 rounded-full bg-[#C4B5FD] ">
@@ -346,7 +332,7 @@ const page = () => {
                 they faced:
               </p>
               <ul className="flex flex-col">
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                <li className="flex items-center gap-2.5 font-medium fs-26 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="10"
@@ -359,7 +345,7 @@ const page = () => {
                   Project backlogs and late deliveries
                 </li>
                 <hr className="w-full my-5 bg-black opacity-20" />
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                <li className="flex items-center gap-2.5 font-medium fs-26 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="10"
@@ -373,7 +359,7 @@ const page = () => {
                 </li>
                 <hr className="w-full my-5 bg-black opacity-20" />
 
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                <li className="flex items-center gap-2.5 font-medium fs-26 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="10"
@@ -395,7 +381,7 @@ const page = () => {
                 Our mission:
               </p>
               <ul className="flex flex-col">
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                <li className="flex items-center gap-2.5 font-medium fs-26 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="10"
@@ -408,7 +394,7 @@ const page = () => {
                   Build a modular design system in Figma
                 </li>
                 <hr className="w-full my-5 bg-black opacity-20" />
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                <li className="flex items-center gap-2.5 font-medium fs-26 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="10"
@@ -422,7 +408,7 @@ const page = () => {
                 </li>
                 <hr className="w-full my-5 bg-black opacity-20" />
 
-                <li className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+                <li className="flex items-center gap-2.5 font-medium fs-26 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="10"

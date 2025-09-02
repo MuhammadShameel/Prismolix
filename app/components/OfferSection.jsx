@@ -25,9 +25,7 @@ const OfferSection = () => {
       <div className="container mx-auto ">
         <div className="flex lg:flex-row flex-col gap-5 mt-5">
           <div className="lg:w-1/2 w-full rounded-[20px] flex flex-col gap-2.5">
-            <span className="font-medium text-[26px] color-primary-dark">
-              [What We Offer]
-            </span>
+            <span className="fs-26 color-primary-dark">[What We Offer]</span>
 
             <h2 className="text-xl font-bold text-gray-800 leading-20">
               What’s Included in Every Retainer
@@ -37,7 +35,7 @@ const OfferSection = () => {
               {listItems.map((item, index) => (
                 <li
                   key={index}
-                  className="flex lg:items-center gap-2.5 py-5 font-medium text-gray-700 lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] border-b border-b-gray-300 last:border-b-0"
+                  className="flex lg:items-center gap-2.5 py-5 font-medium text-gray-700 fs-26 border-b border-b-gray-300 last:border-b-0"
                 >
                   <div>
                     <svg

@@ -101,7 +101,7 @@ const page = async ({ params }) => {
             </div>
 
             <div className="flex flex-col items-center justify-center gap-5 max-w-6xl my-lg">
-              <span className="font-medium text-[26px]  color-primary-dark">
+              <span className=fs-26  color-primary-dark">
                 [Blog Detail]
               </span>
               <h1

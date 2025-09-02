@@ -34,9 +34,7 @@ const HowItWorks = () => {
         <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
             {/* Pre-heading */}
-            <span className="font-medium text-[26px] color-primary-dark">
-              [How it Works]
-            </span>
+            <span className="fs-26 color-primary-dark">[How it Works]</span>
 
             {/* Main Heading with Highlighted Text */}
             <h1 className="font-bold tracking-tighter leading-[100%]">
@@ -77,7 +75,7 @@ const HowItWorks = () => {
               </div>
               <div className="lg:w-8/10 w-10/10 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
                 {/* Pre-heading */}
-                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] color-primary-dark">
+                <span className="font-medium fs-26 color-primary-dark">
                   [Step 01]
                 </span>
 
@@ -118,7 +116,7 @@ const HowItWorks = () => {
               </div>
               <div className="lg:w-8/10 w-10/10 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
                 {/* Pre-heading */}
-                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] color-primary-dark">
+                <span className="font-medium fs-26 color-primary-dark">
                   [Step 02]
                 </span>
 
@@ -152,7 +150,7 @@ const HowItWorks = () => {
               </div>
               <div className="lg:w-8/10 w-10/10 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
                 {/* Pre-heading */}
-                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] color-primary-dark">
+                <span className="font-medium fs-26 color-primary-dark">
                   [Step 03]
                 </span>
 
@@ -186,7 +184,7 @@ const HowItWorks = () => {
               </div>
               <div className="lg:w-8/10 w-10/10 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
                 {/* Pre-heading */}
-                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] color-primary-dark">
+                <span className="font-medium fs-26 color-primary-dark">
                   [Step 04]
                 </span>
 

@@ -104,7 +104,7 @@ const Page = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center gap-5 max-w-6xl my-lg">
-            <span className="font-medium text-[26px]  color-primary-dark">
+            <span className=fs-26  color-primary-dark">
               [Case Study]
             </span>
             <h1 className="text-center leading-[95%]">
@@ -250,7 +250,7 @@ const Page = () => {
 
           <div className="bg-light-purple flex lg:flex-row flex-col lg:gap-7 gap-4 lg:px-10 md:px-7 px-5 py-6 rounded-[20px]">
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+              <span className="font-medium fs-26">
                 Category
               </span>
               <p>
@@ -259,7 +259,7 @@ const Page = () => {
             </div>
             <div className="border-r-1 bg-black opacity-20"></div>
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+              <span className="font-medium fs-26">
                 Time Taken
               </span>
               <p>
@@ -268,14 +268,14 @@ const Page = () => {
             </div>
             <div className="border-r-1 bg-black opacity-20"></div>
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+              <span className="font-medium fs-26">
                 Start Date
               </span>
               <p>{loading ? "—" : formatMonthYear(data?.startDate)}</p>
             </div>
             <div className="border-r-1 bg-black opacity-20"></div>
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+              <span className="font-medium fs-26">
                 Completed Date
               </span>
               <p>{loading ? "—" : formatMonthYear(data?.endDate)}</p>
@@ -283,7 +283,7 @@ const Page = () => {
           </div>
 
           <div className="bg-light-purple flex lg:flex-row flex-col lg:items-center lg:px-10 md:px-7 px-5 py-6 rounded-[20px] lg:gap-10 gap-3">
-            <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+            <span className="font-medium fs-26 ">
               Technologies Used
             </span>
             <ul className="flex lg:gap-10 gap-2.5">
@@ -311,7 +311,7 @@ const Page = () => {
           </div>
 
           <div className="bg-light-purple flex flex-col lg:px-10 md:px-7 px-5 py-6 rounded-[20px] gap-12">
-            <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
+            <span className="font-medium fs-26 ">
               Methods Used
             </span>
             <div className="flex lg:flex-row flex-col lg:gap-[30px] gap-[20px]">

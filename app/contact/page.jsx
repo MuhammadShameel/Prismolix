@@ -92,9 +92,7 @@ const ContactUs = () => {
         <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
             {/* Pre-heading */}
-            <span className="font-medium text-[26px] color-primary-dark">
-              [Contact Us]
-            </span>
+            <span className="fs-26 color-primary-dark">[Contact Us]</span>
 
             {/* Main Heading with Highlighted Text */}
             <h1 className="font-bold tracking-tighter leading-[100%]">
@@ -190,9 +188,7 @@ const ContactUs = () => {
                     fill="#4A008C"
                   />
                 </svg>
-                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                  Phone Number:{" "}
-                </span>
+                <span className="font-medium fs-26">Phone Number: </span>
                 <p>+123 1234 1234 1234</p>
               </div>
               <div className="lg:w-4/12 w-12/12 border-l-[#8C8C8C] border-r-[#8C8C8C] border-t-[#8C8C8C] border-b-[#8C8C8C] lg:border-l lg:border-r lg:border-t-0 lg:border-b-0 border-t border-b lg:pl-5 lg:py-0 py-5 ">
@@ -213,9 +209,7 @@ const ContactUs = () => {
                     fill="#4A008C"
                   />
                 </svg>
-                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                  Location:
-                </span>
+                <span className="font-medium fs-26">Location:</span>
                 <p>Bahria Town, Phase 8, Rawalpindi</p>
               </div>
               <div className="lg:w-4/12 w-12/12">
@@ -236,9 +230,7 @@ const ContactUs = () => {
                     fill="#4A008C"
                   />
                 </svg>
-                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                  Email:
-                </span>
+                <span className="font-medium fs-26">Email:</span>
                 <p>username@example.com</p>
               </div>
             </div>
