@@ -112,15 +112,19 @@ const Footer = () => {
       {/* Top Ticker/Marquee */}
       <div className="container mx-auto">
         {/* Main Footer Content */}
-        <div className="flex">
-          <div className=" relative mx-auto py-16 lg:py-24">
+        <div className="flex flex-col">
+          <div className="relative py-16 lg:py-24">
             {/* ... Your giant background SVG can remain here ... */}
 
             <div className="relative z-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-12 lg:gap-12">
               {/* Left Section */}
               <div className="flex flex-col gap-6 lg:col-span-4">
-                <div className="flex flex-col items-start">
-                  <Image src={LogoIcon} alt="Prismolix Icon" />
+                <div className="logo-wrapper lg:w-[153.561px] lg:h-[60px] w-[77px] h-[30px] flex flex-col items-start">
+                  <Image
+                    src={LogoIcon}
+                    alt="Prismolix Icon"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <p className="max-w-sm leading-normal color-dark-cards-bg">
                   Your time should be spent closing deals — not designing pages.
@@ -145,7 +149,7 @@ const Footer = () => {
                 <Image
                   src={FooterShape}
                   alt="Abstract 3D Shape"
-                  className="z-0 h-auto w-full object-contain"
+                  className="z-0 h-auto"
                 />
               </div>
 
@@ -186,7 +190,7 @@ const Footer = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className=" mx-auto py-6 border-t border-gray-200">
+          <div className="py-6 border-t border-gray-200">
             <div className="color-dark-cards-bg flex justify-between items-center font-medium fs-26">
               <a href="#" className="hover:text-black">
                 Terms & Conditions

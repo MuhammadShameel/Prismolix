@@ -48,7 +48,9 @@ const Header = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         // Conditionally apply classes for the sticky/floating header
-        className={`navbar  ${isScrolled ? "scrolled" : " "}`}
+        className={`navbar lg:px-5 md:px-4 px-3  ${
+          isScrolled ? "scrolled" : " "
+        }`}
       >
         <div className="container mx-auto">
           <div className="flex items-center justify-between pl-[30px] pr-2.5 py-[10px]  ">
@@ -63,23 +65,22 @@ const Header = () => {
                 className="w-full h-full object-contain"
               />
             </Link>
-
+            <nav className="hidden lg:flex md:flex items-center lg:gap-10 md:gap-5">
+              <ul className="flex items-center xl:gap-10 lg:gap-8 md:gap-5">
+                {navLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="nav-link transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center lg:gap-10 md:gap-5">
-              <nav>
-                <ul className="flex items-center lg:gap-10 md:gap-5">
-                  {navLinks.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="nav-link transition-colors"
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
               <Link href={"/contact"} className="btn btn-primary">
                 Contact Us
               </Link>
