@@ -38,7 +38,7 @@ const ProblemSolution = () => {
                 </h2>
               </div>
 
-              <div className="space-y-4 text-[#A5A5AF] lg:mt-80 md:mt-60 sm:mt-40 mt-36  max-w-6xl">
+              <div className="space-y-4 text-[#A5A5AF] xl:mt-80 lg:mt-70 md:mt-60 sm:mt-40 mt-36  max-w-6xl">
                 <p>
                   As your agency wins more clients, expectations pile up. Design
                   timelines stretch. Dev work gets complex. Quality starts
