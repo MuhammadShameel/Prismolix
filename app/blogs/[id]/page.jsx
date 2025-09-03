@@ -6,6 +6,7 @@ import CallSchedule from "../../../app/components/CallSchedule";
 import { fetchPostById, extractPostData } from "../../../services/blog.service"; // // <-- UPDATED IMPORT
 import * as cheerio from "cheerio";
 import "../../styles/content.css";
+import FooterMarquee from "@/app/components/FooterMarquee";
 
 // const blogPost = {
 //   title: "Let's inspire the future with a free online academy",
@@ -101,9 +102,7 @@ const page = async ({ params }) => {
             </div>
 
             <div className="flex flex-col items-center justify-center gap-5 max-w-6xl my-lg">
-              <span className=fs-26  color-primary-dark">
-                [Blog Detail]
-              </span>
+              <span className="fs-26  color-primary-dark">[Blog Detail]</span>
               <h1
                 className="text-center leading-[95%] max-w-5xl"
                 dangerouslySetInnerHTML={{ __html: blogData.title }}
@@ -176,6 +175,7 @@ const page = async ({ params }) => {
         </div>
       </main>
       <CallSchedule />
+      <FooterMarquee />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import Shape from "../../public/assets/images/contactShape.png";
+import FooterMarquee from "../components/FooterMarquee";
 
 const ContactUs = () => {
   // 2. Add state for all form inputs and submission status
@@ -437,6 +438,7 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
+      <FooterMarquee />
     </div>
   );
 };

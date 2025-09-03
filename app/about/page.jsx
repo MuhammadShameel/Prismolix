@@ -4,6 +4,7 @@ import Image from "next/image";
 import Shape from "../../public/assets/images/blogShape.png";
 import Marquee from "../components/Marquee";
 import CallSchedule from "../components/CallSchedule";
+import FooterMarquee from "../components/FooterMarquee";
 
 const services = [
   {
@@ -196,6 +197,7 @@ const About = () => {
         </div>
       </section>
       <CallSchedule />
+      <FooterMarquee />
     </>
   );
 };

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Shape from "../../public/assets/images/blogShape.png";
 import CallSchedule from "../components/CallSchedule";
 import { fetchAllPosts } from "../../services/blog.service"; // <-- UPDATED IMPORT
+import FooterMarquee from "../components/FooterMarquee";
 
 // Helper function to format the date
 const formatDate = (dateString) => {
@@ -35,9 +36,7 @@ const BlogsPage = async () => {
       <section className="relative lg:pt-[295px] pt-[350px] overflow-hidden">
         <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
-            <span className="fs-26 color-primary-dark">
-              [Our Blog]
-            </span>
+            <span className="fs-26 color-primary-dark">[Our Blog]</span>
             <h1 className="font-bold tracking-tighter leading-[100%]">
               Insights That Power{" "}
               <span className="text-overlay text-white px-2">Agencies</span>
@@ -114,6 +113,7 @@ const BlogsPage = async () => {
       </section>
 
       <CallSchedule />
+      <FooterMarquee />
     </div>
   );
 };

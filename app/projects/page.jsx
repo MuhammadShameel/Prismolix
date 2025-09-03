@@ -11,6 +11,7 @@ import {
 import Testimonial from "../components/Testimonial.jsx";
 import ContactSection from "../components/ContactSection.jsx";
 import CallSchedule from "../components/CallSchedule.jsx";
+import FooterMarquee from "../components/FooterMarquee";
 
 // Helper function to get image URL
 const getImageUrl = (portfolio) => {
@@ -202,51 +203,7 @@ const page = async () => {
       <Testimonial />
       <ContactSection />
       <CallSchedule />
-
-      {/* <section className="w-full my-lg lg:px-5 md:px-4 px-3 my-lg">
-        <div className="container mx-auto">
-          <div className="bg-light-purple rounded-3xl p-8 md:p-12 lg:p-16">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              <div className="w-full lg:w-1/2">
-                <Image
-                  src="/assets/images/section-shape.png"
-                  alt="Abstract 3D shape"
-                  width={500}
-                  height={500}
-                  className="w-full h-auto object-contain rounded-2xl"
-                />
-              </div>
-
-              <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
-                <span className="text-brand-purple font-semibold uppercase tracking-wider text-sm mb-4">
-                  Service Detail
-                </span>
-
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                  Scalable, Systematic, and Pixel-Perfect - Designed for
-                  Agencies
-                </h2>
-
-                <p className="text-gray-700 text-lg mb-4">
-                  Vlmea yuac dfnreie napset viorld slsan daisgn. Stixnotir
-                  qutuig eitibiea. Visae oltir vetip- lrted tihdllt
-                  slkognrvjlcono titae nottes acth pon sgonay — uitlo nigra
-                  roaliy te aox eni imedaisd oopects.
-                </p>
-
-                <p className="text-gray-600 text-base mb-8">
-                  Emen paotuer qiotrin ta tuk-seda doign vofume, vei tvop yau
-                  thip issiur vritoa saeshtimg ogtdy.
-                </p>
-
-                <button className="bg-brand-purple text-white font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 focus:ring-offset-light-purple">
-                  Let's Talk Design
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+      <FooterMarquee />
     </>
   );
 };

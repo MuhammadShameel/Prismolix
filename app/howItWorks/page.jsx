@@ -11,6 +11,7 @@ import ToolsMarquee from "../components/ToolsMarquee";
 import OfferSection from "../components/OfferSection";
 import ContactSection from "../components/ContactSection";
 import CallSchedule from "../components/CallSchedule";
+import FooterMarquee from "../components/FooterMarquee";
 
 const HowItWorks = () => {
   return (
@@ -210,6 +211,7 @@ const HowItWorks = () => {
       <OfferSection />
       <ContactSection />
       <CallSchedule />
+      <FooterMarquee />
     </div>
   );
 };

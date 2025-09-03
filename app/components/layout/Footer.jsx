@@ -1,11 +1,8 @@
 // components/Footer.jsx
-"use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
 
 import FooterShape from "../../../public/assets/images/footer-shape.png";
 import LogoIcon from "../../../public/assets/images/logo-icon.svg";
@@ -107,64 +104,12 @@ const socialLinks = [
   { name: "Facebook", icon: <Facebook size={20} />, href: "#" },
 ];
 
-// Reusable Marquee Component
-const MarqueeContent = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const currentYear = new Date().getFullYear();
-  const marqueeText = `© ${currentYear} Prismolix`;
-
-  if (!mounted) {
-    // SSR-safe fallback
-    return (
-      <div className="flex w-full overflow-hidden">
-        <span className="mx-5 flex items-center whitespace-nowrap fs-26">
-          {marqueeText}
-        </span>
-      </div>
-    );
-  }
-
-  return (
-    <Swiper
-      modules={[Autoplay]}
-      loop={true}
-      speed={5000}
-      autoplay={{
-        delay: 0,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: false,
-      }}
-      slidesPerView="auto"
-      className="w-full"
-    >
-      {Array(10)
-        .fill(marqueeText)
-        .map((item, index) => (
-          <SwiperSlide key={index} className="!w-auto">
-            <span className="mx-5 flex items-center whitespace-nowrap fs-26">
-              {item}
-            </span>
-          </SwiperSlide>
-        ))}
-    </Swiper>
-  );
-};
-
 // --- 2. THE MAIN FOOTER COMPONENT IS NOW CLEAN AND SIMPLE ---
 
 const Footer = () => {
   return (
     <footer className="w-full bg-white text-black">
       {/* Top Ticker/Marquee */}
-      <div className="footer-marquee w-full overflow-hidden bg-light-purple py-3 px-3 color-dark md:px-4 lg:px-5">
-        <MarqueeContent />
-      </div>
-
       <div className="px-3 md:px-4 lg:px-5">
         {/* Main Footer Content */}
         <div className="container relative mx-auto py-16 lg:py-24">

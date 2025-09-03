@@ -6,6 +6,7 @@ import Services from "./Services";
 import Testimonial from "./Testimonial";
 import ContactSection from "./ContactSection";
 import CallSchedule from "./CallSchedule";
+import FooterMarquee from "../components/FooterMarquee";
 
 import Shape from "../../public/assets/images/hero-shape.png";
 
@@ -18,6 +19,7 @@ const Home = () => {
       <Testimonial />
       <ContactSection />
       <CallSchedule />
+      <FooterMarquee />
     </>
   );
 };

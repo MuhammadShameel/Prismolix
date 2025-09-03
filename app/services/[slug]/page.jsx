@@ -14,6 +14,7 @@ import Testimonial from "../../components/Testimonial";
 import CallSchedule from "../../components/CallSchedule";
 import OfferSection from "../../components/OfferSection";
 import ToolsMarquee from "../../components/ToolsMarquee";
+import FooterMarquee from "../../components/FooterMarquee";
 
 const ServiceDetailPage = async ({ params }) => {
   const slug = params.slug;
@@ -173,6 +174,7 @@ const ServiceDetailPage = async ({ params }) => {
       <ContactSection />
       <Testimonial />
       <CallSchedule />
+      <FooterMarquee />
     </>
   );
 };

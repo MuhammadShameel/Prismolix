@@ -12,6 +12,7 @@ import Shape from "../../public/assets/images/circleShape.svg";
 import OfferSection from "../components/OfferSection";
 import ContactSection from "../components/ContactSection";
 import CallSchedule from "../components/CallSchedule";
+import FooterMarquee from "../components/FooterMarquee";
 
 // Convert the component to an async Server Component
 const ServicesPage = async () => {
@@ -136,6 +137,7 @@ const ServicesPage = async () => {
       <OfferSection />
       <ContactSection />
       <CallSchedule />
+      <FooterMarquee />
     </>
   );
 };

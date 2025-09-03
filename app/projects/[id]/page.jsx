@@ -16,6 +16,7 @@ import bgImg from "../../../public/assets/images/blog-detail-bg.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import FooterMarquee from "@/app/components/FooterMarquee.jsx";
 
 const formatMonthYear = (input) => {
   if (!input) return "—";
@@ -410,6 +411,7 @@ const Page = () => {
           </h2>
         </div>
       </div>
+      <FooterMarquee />
     </section>
   );
 };
