@@ -69,7 +69,7 @@ const BlogsPage = async () => {
               return (
                 <div
                   key={post.id}
-                  className="relative flex flex-col bg-light-purple rounded-[30px] lg:p-8 md:p-7 overflow-hidden"
+                  className="relative flex flex-col bg-light-purple rounded-[30px] lg:p-8 md:p-7 p-5 overflow-hidden"
                 >
                   <Image
                     src={featuredImage}

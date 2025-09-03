@@ -37,7 +37,7 @@ const Services = () => {
   return (
     <section className="lg:px-5 md:px-4 px-3 my-lg">
       <div className="container mx-auto">
-        <div className="service-content flex flex-col items-center mx-auto gap-5 max-w-4xl">
+        <div className="service-content flex flex-col items-center mx-auto gap-5 max-w-2xl">
           <span className="fs-26 color-primary-dark">[Services]</span>
           <h2 className="lg:leading-20 leading-10 tracking-tight">
             What We Build

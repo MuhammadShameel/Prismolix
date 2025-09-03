@@ -6,45 +6,7 @@ import CallSchedule from "../../../app/components/CallSchedule";
 import { fetchPostById, extractPostData } from "../../../services/blog.service"; // // <-- UPDATED IMPORT
 import * as cheerio from "cheerio";
 import "../../styles/content.css";
-import FooterMarquee from "@/app/components/FooterMarquee";
-
-// const blogPost = {
-//   title: "Let's inspire the future with a free online academy",
-//   imageUrl: "/assets/images/blogDetail.png", // Replace with your image path in the /public folder
-//   tableOfContents: [
-//     { id: "#section-1", title: "The Foundation of Modern Learning" },
-//     { id: "#section-2", title: "Structuring the Curriculum" },
-//     { id: "#section-3", title: "Engaging Students with Technology" },
-//     { id: "#section-4", title: "Measuring Success and Iterating" },
-//     { id: "#section-5", title: "The Path Forward" },
-//   ],
-//   content: [
-//     {
-//       id: "section-1",
-//       title: "The Foundation of Modern Learning",
-//       paragraphs: [
-//         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non enim quaero quid verum, sed quid cuique dicendum sit. Duo Reges: constructio interrete. Atqui reperies, inquit, in hoc quidem pertinacem; Quae cum dixisset, finem ille.",
-//         "Comprehensionem, inquit, physicis, si optandum sit, malim, quidquid intersit, quid quidquid. Igitur ne dolorem quidem. Quod equidem non opono, sit sane, inquam. Cur post Tarentum ad Archytam? Deinde prima illa, quae in congressu.",
-//       ],
-//     },
-//     {
-//       id: "section-2",
-//       title: "Structuring the Curriculum",
-//       paragraphs: [
-//         "Aenean id et, et id omittantur. Nec enim, omnes avaritias si aeque avaritias esse dixerimus, sequetur ut etiam aequas esse dicamus. Videamus animi partes, ne similiter hominis, cum appetitum laudibus.",
-//         "Est autem officium, quod ita factum est, ut eius facti probabilis ratio reddi possit. Quodsi ipsam honestatem undique per se laudabiliter.",
-//       ],
-//     },
-//     {
-//       id: "section-3",
-//       title: "Engaging Students with Technology",
-//       paragraphs: [
-//         "Curabitur et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem.",
-//       ],
-//     },
-//     // Add more sections as needed to match the ToC
-//   ],
-// };
+import FooterMarquee from "../../components/FooterMarquee";
 
 const generateTOCAndContent = (htmlContent) => {
   if (!htmlContent) {

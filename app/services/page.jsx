@@ -63,7 +63,7 @@ const ServicesPage = async () => {
       {/* --- This section now uses the dynamically fetched data --- */}
       <section className="my-12 px-3 md:px-4 lg:my-24 lg:px-5">
         <div className="container mx-auto">
-          <div className="service-content flex flex-col items-center gap-5 max-w-4xl mx-auto">
+          <div className="service-content flex flex-col items-center gap-5 max-w-2xl mx-auto">
             <span className="fs-26 color-primary-dark">[Services]</span>
             <h2 className=" text-center leading-10 tracking-tight lg:leading-20">
               What We Build
@@ -74,7 +74,7 @@ const ServicesPage = async () => {
             </p>
           </div>
 
-          <div className="service-cards mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="service-cards mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
             {/* 3. Map over the fetched and processed services data */}
             {services.map((service, index) => (
               <Link

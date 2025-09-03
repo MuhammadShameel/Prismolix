@@ -378,7 +378,7 @@ const Page = () => {
       <div className="container mx-auto my-lg">
         <div className="service-content flex flex-col items-center gap-5">
           <span className="fs-26 color-primary-dark">[The Process]</span>
-          <h2 className="lg:leading-20 leading-10 tracking-tight max-w-4xl">
+          <h2 className="lg:leading-20 leading-10 tracking-tight max-w-2xl">
             What We Did
           </h2>
         </div>
