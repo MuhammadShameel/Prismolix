@@ -62,7 +62,7 @@ const ServicesPage = async () => {
       {/* --- This section now uses the dynamically fetched data --- */}
       <section className="my-12 px-3 md:px-4 lg:my-24 lg:px-5">
         <div className="container mx-auto">
-          <div className="service-content flex flex-col items-center gap-5 max-w-4xl">
+          <div className="service-content flex flex-col items-center gap-5 max-w-4xl mx-auto">
             <span className="fs-26 color-primary-dark">[Services]</span>
             <h2 className=" text-center leading-10 tracking-tight lg:leading-20">
               What We Build

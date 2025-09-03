@@ -42,10 +42,8 @@ const ServiceDetailPage = async ({ params }) => {
             </div>
 
             <div className="flex flex-col items-center justify-center gap-5 max-w-6xl my-lg">
-              <span className=fs-26  color-primary-dark">
-                [Service]
-              </span>
-              <div className="max-w-3xl text-center">
+              <span className="fs-26  color-primary-dark">[Service]</span>
+              <div className="max-w-3xl">
                 <h1
                   className="text-center leading-[95%]"
                   dangerouslySetInnerHTML={{ __html: serviceData.title }}
@@ -74,7 +72,7 @@ const ServiceDetailPage = async ({ params }) => {
               </div>
 
               <div className="flex w-full flex-col lg:w-4/6  p-6 sm:p-8 md:p-12 lg:p-16">
-                <span className=fs-26  color-primary-dark">
+                <span className="fs-26  color-primary-dark">
                   [Service Detail]
                 </span>
 

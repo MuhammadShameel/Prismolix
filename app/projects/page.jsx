@@ -47,9 +47,7 @@ const page = async () => {
         <div className="container mx-auto relative z-10">
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
             {/* Pre-heading */}
-            <span className="fs-26 color-primary-dark">
-              [Case Studies]
-            </p>
+            <span className="fs-26 color-primary-dark">[Case Studies]</span>
 
             {/* Main Heading with Highlighted Text */}
             <h1 className="font-bold tracking-tighter leading-[100%]">
@@ -136,9 +134,7 @@ const page = async () => {
 
                     {/* Subheading */}
                     <div>
-                      <span className="font-medium fs-26">
-                        Client Type:
-                      </span>
+                      <span className="font-medium fs-26">Client Type:</span>
 
                       <p className="text-base max-w-3xl">
                         {portfolioData.clientType}
@@ -154,9 +150,7 @@ const page = async () => {
                       </p>
                     </div>
                     <div>
-                      <span className="font-medium fs-26">
-                        Challenge:
-                      </span>
+                      <span className="font-medium fs-26">Challenge:</span>
 
                       <p className="text-base max-w-3xl">
                         {portfolioData.challenge}
