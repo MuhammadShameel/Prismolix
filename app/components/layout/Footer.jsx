@@ -108,91 +108,93 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white text-black">
+    <footer className=" px-3 md:px-4 lg:px-5">
       {/* Top Ticker/Marquee */}
-      <div className="px-3 md:px-4 lg:px-5">
+      <div className="container mx-auto">
         {/* Main Footer Content */}
-        <div className="container relative mx-auto py-16 lg:py-24">
-          {/* ... Your giant background SVG can remain here ... */}
+        <div className="flex">
+          <div className=" relative mx-auto py-16 lg:py-24">
+            {/* ... Your giant background SVG can remain here ... */}
 
-          <div className="relative z-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-12 lg:gap-12">
-            {/* Left Section */}
-            <div className="flex flex-col gap-6 lg:col-span-4">
-              <div className="flex flex-col items-start">
-                <Image src={LogoIcon} alt="Prismolix Icon" />
-              </div>
-              <p className="max-w-sm leading-normal color-dark-cards-bg">
-                Your time should be spent closing deals — not designing pages.
-                We handle execution so you can focus on growth.
-              </p>
-              <div className="flex gap-3">
-                {socialLinks.map((social, index) => (
-                  <Link
-                    key={index}
-                    href={social.href}
-                    aria-label={social.name}
-                    className="rounded-full border border-gray-300 p-2 text-gray-600 transition-colors hover:bg-gray-100 hover:text-black"
-                  >
-                    {social.icon}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Middle Section */}
-            <div className="flex items-center justify-center lg:col-span-4">
-              <Image
-                src={FooterShape}
-                alt="Abstract 3D Shape"
-                className="z-0 h-auto w-full object-contain"
-              />
-            </div>
-
-            {/* Right Section */}
-            <div className="mt-12 grid grid-cols-1 gap-3 md:grid-cols-2 lg:col-span-4 lg:mt-[70px] lg:gap-8">
-              <div>
-                <ul className="space-y-3">
-                  {footerLinks.column1.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="flex items-center gap-2 font-medium hover:text-black fs-26"
-                      >
-                        <span className="text-gray-400">&gt;</span>
-                        {link.name}
-                      </Link>
-                    </li>
+            <div className="relative z-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-12 lg:gap-12">
+              {/* Left Section */}
+              <div className="flex flex-col gap-6 lg:col-span-4">
+                <div className="flex flex-col items-start">
+                  <Image src={LogoIcon} alt="Prismolix Icon" />
+                </div>
+                <p className="max-w-sm leading-normal color-dark-cards-bg">
+                  Your time should be spent closing deals — not designing pages.
+                  We handle execution so you can focus on growth.
+                </p>
+                <div className="flex gap-3">
+                  {socialLinks.map((social, index) => (
+                    <Link
+                      key={index}
+                      href={social.href}
+                      aria-label={social.name}
+                      className="rounded-full border border-gray-300 p-2 text-gray-600 transition-colors hover:bg-gray-100 hover:text-black"
+                    >
+                      {social.icon}
+                    </Link>
                   ))}
-                </ul>
+                </div>
               </div>
-              <div>
-                <ul className="space-y-3">
-                  {footerLinks.column2.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="flex items-center gap-2 font-medium hover:text-black fs-26"
-                      >
-                        <span className="text-gray-400">&gt;</span>
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+
+              {/* Middle Section */}
+              <div className="flex items-center justify-center lg:col-span-4">
+                <Image
+                  src={FooterShape}
+                  alt="Abstract 3D Shape"
+                  className="z-0 h-auto w-full object-contain"
+                />
+              </div>
+
+              {/* Right Section */}
+              <div className="mt-12 grid grid-cols-1 gap-3 md:grid-cols-2 lg:col-span-4 lg:mt-[70px] lg:gap-8">
+                <div>
+                  <ul className="space-y-3">
+                    {footerLinks.column1.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="flex items-center gap-2 font-medium hover:text-black fs-26"
+                        >
+                          <span className="text-gray-400">&gt;</span>
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <ul className="space-y-3">
+                    {footerLinks.column2.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="flex items-center gap-2 font-medium hover:text-black fs-26"
+                        >
+                          <span className="text-gray-400">&gt;</span>
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Bottom Bar */}
-        <div className="container mx-auto py-6 border-t border-gray-200">
-          <div className="color-dark-cards-bg flex justify-between items-center font-medium fs-26">
-            <a href="#" className="hover:text-black">
-              Terms & Conditions
-            </a>
-            <a href="#" className="hover:text-black">
-              Privacy Policy
-            </a>
+          {/* Bottom Bar */}
+          <div className=" mx-auto py-6 border-t border-gray-200">
+            <div className="color-dark-cards-bg flex justify-between items-center font-medium fs-26">
+              <a href="#" className="hover:text-black">
+                Terms & Conditions
+              </a>
+              <a href="#" className="hover:text-black">
+                Privacy Policy
+              </a>
+            </div>
           </div>
         </div>
       </div>
