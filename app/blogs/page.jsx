@@ -49,6 +49,49 @@ const BlogsPage = async () => {
         </div>
       </section>
 
+      <section className="lg:px-5 md:px-4 px-3 my-lg !mb-0">
+        <div className="container mx-auto">
+          {/* Main flex container: column on mobile, row on large screens */}
+          <div className="overflow-hidden rounded-3xl bg-light-purple flex flex-col lg:items-center gap-0 lg:flex-row lg:gap-12">
+            {/* Image Column */}
+            <div className="lg:w-2/6">
+              <Image
+                src="/assets/images/section-shape.png"
+                alt="Abstract 3D shape"
+                width={590}
+                height={590} // Use dimensions for a 1:1 aspect ratio
+                className="h-auto w-full max-w-md lg:max-w-none"
+              />
+            </div>
+
+            {/* Text Content Column */}
+            <div className="w-full lg:w-4/6 p-5 sm:p-8 md:p-12 lg:p-16">
+              <span className="font-medium color-primary-dark fs-26 md:text-xl">
+                [Prismolix Blog]
+              </span>
+
+              <h2 className="mt-2 mb-4 font-bold leading-tight ">
+                Ideas, Systems, and Stories That Drive Growth Agency Growth
+                Shouldn't Mean Burnout
+              </h2>
+
+              <p className="mb-4 md:text-lg">
+                The Prismolix Blog is where agency owners, creative directors,
+                and growth teams find practical advice on scaling design and
+                development. We cover white-label execution strategies, UX/UI
+                best practices, tech stack deep-dives, and leadership lessons —
+                all written with one goal: to help you focus on growth while we
+                handle the heavy lifting.
+              </p>
+
+              <button className="btn btn-primary mt-2 w-full sm:w-auto sm:self-start">
+                Let's Talk Scalability
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Blog Cards Section */}
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">

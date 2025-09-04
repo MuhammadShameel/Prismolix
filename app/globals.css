@@ -49,6 +49,7 @@ h3 {
 
 h4 {
   font-size: 45px;
+  line-height: 45px !important;
 }
 
 h5 {
@@ -748,4 +749,10 @@ h6 {
 
 .hero-section {
   padding-top: 295px;
+}
+
+/* globals.css */
+
+.big-number {
+  @apply text-[120px] sm:text-[130px] md:text-[140px] lg:text-[150px];
 }

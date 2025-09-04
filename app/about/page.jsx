@@ -85,7 +85,7 @@ const About = () => {
 
             {/* Text Content Column */}
             <div className="w-full lg:w-4/6 p-5 sm:p-8 md:p-12 lg:p-16">
-              <span className="font-medium color-primary-dark fs-26 md:text-xl">
+              <span className="font-medium color-primary-dark fs-26">
                 [About Company]
               </span>
 
@@ -93,14 +93,14 @@ const About = () => {
                 Agency Growth Shouldn't Mean Burnout
               </h2>
 
-              <p className="mb-4 md:text-lg">
+              <p className="mb-4">
                 At Prismolix, we don’t chase the spotlight — we power those who
                 do. We’re the behind-the-scenes partner helping agencies scale
                 effortlessly by delivering world-class design and development —
                 under your brand, inside your workflow, and with zero management
                 overhead.
               </p>
-              <p className="mb-6 text-base md:text-lg">
+              <p className="mb-6 text-base">
                 We were built for agencies who are growing fast but tired of
                 bottlenecks — sourcing freelancers, managing inconsistent
                 delivery, or sacrificing quality under pressure. Prismolix gives
@@ -163,7 +163,7 @@ const About = () => {
       </section>
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
-          <div className="service-content flex flex-col items-center gap-5 max-w-3xl mx-auto">
+          <div className="service-content flex flex-col items-center gap-5 max-w-2xl mx-auto">
             <span className="fs-26 color-primary-dark">[The Difference]</span>
             <h2 className="lg:leading-20 leading-10 tracking-tight text-center">
               What makes us different
@@ -174,10 +174,10 @@ const About = () => {
             {services.map((service) => (
               <div
                 key={service.number}
-                className="relative flex flex-col bg-light-purple rounded-[30px] lg:p-8 md:p-7 p-5 overflow-hidden"
+                className="relative justify-between flex flex-col bg-light-purple rounded-[30px] lg:p-8 md:p-7 p-5 overflow-hidden"
               >
                 {/* Giant background number */}
-                <p className="self-end !lg:text-[150px] !md:text-[140px] !sm:text-[130px] !text-[120px] font-black text-white z-0 select-none leading-tight">
+                <p className="self-end big-number font-black text-white z-0 select-none leading-tight">
                   {service.number}
                   <span className="color-primary-light">.</span>
                 </p>

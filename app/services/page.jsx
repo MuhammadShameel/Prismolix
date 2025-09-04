@@ -30,7 +30,8 @@ const ServicesPage = async () => {
 
       <section className="relative hero-section">
         <Image
-          className="absolute top-0 right-0 z-0 h-auto w-full"
+          className="absolute top-0 right-0 h-auto w-full -z-1
+"
           src={"/assets/images/Shade.png"}
           width={100}
           height={100}
@@ -60,13 +61,60 @@ const ServicesPage = async () => {
         </div>
       </section>
 
+      <section className="lg:px-5 md:px-4 px-3 my-lg !mb-0">
+        <div className="container mx-auto">
+          {/* Main flex container: column on mobile, row on large screens */}
+          <div className="overflow-hidden rounded-3xl bg-light-purple flex flex-col lg:items-center gap-0 lg:flex-row lg:gap-12">
+            {/* Image Column */}
+            <div className="lg:w-2/6">
+              <Image
+                src="/assets/images/section-shape.png"
+                alt="Abstract 3D shape"
+                width={590}
+                height={590} // Use dimensions for a 1:1 aspect ratio
+                className="h-auto w-full max-w-md lg:max-w-none"
+              />
+            </div>
+
+            {/* Text Content Column */}
+            <div className="w-full lg:w-4/6 p-5 sm:p-8 md:p-12 lg:p-16">
+              <span className="font-medium color-primary-dark fs-26 md:text-xl">
+                [Our Services]
+              </span>
+
+              <h2 className="mt-2 mb-4 font-bold leading-tight ">
+                Scalable Design & Development — Without the Hiring Headache
+              </h2>
+
+              <p className="mb-4 md:text-lg">
+                Prismolix is your plug-and-play production team — quietly
+                powering your agency’s growth through fast, reliable, and
+                high-quality execution. We work under your brand, inside your
+                tools, and on your timelines. Whether you’re shipping landing
+                pages at scale or building full-stack apps, we’ve got your back
+                — no sourcing, no training, no micro-managing.
+              </p>
+              <p className="mb-6 text-base md:text-lg">
+                Whether you’re shipping landing pages at scale or building
+                full-stack apps, we’ve got your back — no sourcing, no training,
+                no micro-managing.
+              </p>
+
+              <button className="btn btn-primary mt-2 w-full sm:w-auto sm:self-start">
+                Let's Talk Scalability
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* --- This section now uses the dynamically fetched data --- */}
       <section className="my-12 px-3 md:px-4 lg:my-24 lg:px-5">
         <div className="container mx-auto">
           <div className="service-content flex flex-col items-center gap-5 max-w-2xl mx-auto">
             <span className="fs-26 color-primary-dark">[Services]</span>
             <h2 className=" text-center leading-10 tracking-tight lg:leading-20">
-              What We Build
+              What We Do
             </h2>
             <p className=" text-center color-dark-cards-bg">
               Whether it’s a landing page sprint, a headless eCommerce build, or
