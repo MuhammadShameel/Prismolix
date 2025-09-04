@@ -26,7 +26,7 @@ const About = () => {
 
   return (
     <>
-      <section className="relative pt-[295px]">
+      <section className="relative hero-section">
         <Image
           className="absolute w-full h-auto top-0 right-0 z-0"
           src={"/assets/images/Shade.png"}

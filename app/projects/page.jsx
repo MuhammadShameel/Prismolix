@@ -30,7 +30,7 @@ const page = async () => {
 
   return (
     <>
-      <section className="relative  pt-[295px] lg:px-5 md:px-4 px-3">
+      <section className="relative  hero-section lg:px-5 md:px-4 px-3">
         <Image
           className="absolute w-full h-auto top-0 left-0 z-[-1]"
           src={"/assets/images/Shade.png"}

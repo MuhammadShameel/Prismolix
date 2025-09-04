@@ -33,7 +33,7 @@ const BlogsPage = async () => {
         alt="Abstract 3D hero image"
         className="absolute right-0 top-0"
       />
-      <section className="relative lg:pt-[295px] pt-[350px] overflow-hidden">
+      <section className="relative lg:hero-section pt-[350px] overflow-hidden">
         <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
             <span className="fs-26 color-primary-dark">[Our Blog]</span>

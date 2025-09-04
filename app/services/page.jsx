@@ -28,7 +28,7 @@ const ServicesPage = async () => {
     <>
       {/* --- This top section remains static as it's the introduction to the page --- */}
 
-      <section className="relative pt-[295px]">
+      <section className="relative hero-section">
         <Image
           className="absolute top-0 right-0 z-0 h-auto w-full"
           src={"/assets/images/Shade.png"}

@@ -5,7 +5,7 @@ import Shape from "../../public/assets/images/hero-shape.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative pb-[100px] pt-[295px] lg:px-5 md:px-4 px-3">
+    <section className="relative pb-[100px] hero-section lg:px-5 md:px-4 px-3">
       <Image
         className="absolute w-full h-auto top-0 right-0 z-0"
         src={"/assets/images/Shade.png"}
