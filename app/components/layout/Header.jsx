@@ -112,11 +112,11 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed top-24 left-0 w-full z-40 px-3 md:hidden" // Adjusted z-index
+            className="fixed top-20 left-0 w-full z-40 px-3 md:hidden" // Adjusted z-index
           >
             <div className="[background:linear-gradient(0deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0.2)_100%),rgba(0,0,0,0.05)] backdrop-blur-[15px] p-6 rounded-[10px]">
               <nav>
-                <ul className="flex flex-col items-center gap-6">
+                <ul className="flex flex-col items-start gap-6">
                   {navLinks.map((link) => (
                     <li key={link.name}>
                       <Link
