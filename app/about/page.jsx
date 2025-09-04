@@ -186,7 +186,7 @@ const About = () => {
                 <div className="flex flex-col mt-36">
                   {/* Price section pushed to the bottom */}
                   <div>
-                    <h4>{service.title}</h4>
+                    <h4 className="leading-[45px]">{service.title}</h4>
                   </div>
                 </div>
               </div>
