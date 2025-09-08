@@ -29,7 +29,7 @@ const ServiceDetailPage = async ({ params }) => {
   return (
     <>
       {/* --- Hero Section --- */}
-      <section className="lg:px-5 md:px-4 px-3 my-lg">
+      <section className="lg:px-5 md:px-4 px-3 my-lg !mb-0">
         <div className="container mx-auto">
           <div className="testimonial-bg relative flex flex-col md:flex-row justify-center">
             <div className="absolute inset-0 z-[-1]">
@@ -42,24 +42,26 @@ const ServiceDetailPage = async ({ params }) => {
               />
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-5 max-w-6xl my-lg">
-              <span className="fs-26  color-primary-dark">[Service]</span>
-              <div className="max-w-3xl">
-                <h1
-                  className="text-center leading-[95%]"
-                  dangerouslySetInnerHTML={{ __html: serviceData.title }}
-                />
+            <div className="flex flex-col items-center justify-center gap-5 max-w-3xl my-lg">
+              <span className="fs-26 color-primary-dark">[Service]</span>
+              <h1
+                className="text-center leading-[95%]"
+                dangerouslySetInnerHTML={{ __html: serviceData.title }}
+              />
 
-                <p
-                  className="text-center mt-5"
-                  dangerouslySetInnerHTML={{
-                    __html: serviceData.content, // Use the content property
-                  }}
-                />
-              </div>
+              <div
+                className="text-center mt-5"
+                dangerouslySetInnerHTML={{
+                  __html: serviceData.content, // Use the content property
+                }}
+              />
             </div>
           </div>
+        </div>
+      </section>
 
+      <section className="lg:px-5 md:px-4 px-3 ">
+        <div className="container mx-auto">
           <div className="overflow-hidden rounded-3xl bg-light-purple">
             <div className="flex flex-col items-center gap-0 lg:flex-row lg:gap-12">
               <div className="w-full lg:w-2/6 lg:flex-shrink-0">
@@ -93,12 +95,12 @@ const ServiceDetailPage = async ({ params }) => {
           </div>
         </div>
       </section>
-
       {/* --- "Why Choose Us" Section --- */}
       <section className="my-12 px-3 md:px-4 lg:my-24 lg:px-5">
         <div className="container mx-auto">
           <div className="mb-12 text-center max-w-3xl mx-auto">
-            <h2 className="font-bold tracking-tight">
+            <span className="fs-26 color-primary-dark">[The Difference]</span>
+            <h2 className="font-bold tracking-tight mt-4">
               {serviceData.whyChooseUs.title}
             </h2>
           </div>
@@ -108,15 +110,13 @@ const ServiceDetailPage = async ({ params }) => {
                 key={index}
                 className="relative flex flex-col overflow-hidden rounded-[30px] bg-light-purple p-8"
               >
-                <p className="absolute top-0 right-8 !lg:text-[150px] !md:text-[140px] !sm:text-[130px] !text-[120px] font-black text-white z-0 select-none leading-tight">
-                  {String(index + 1).padStart(2, "0")}{" "}
+                <p className="self-end big-number font-black text-white z-0 select-none leading-tight">
+                  {String(index + 1).padStart(2, "0")}
                   <span className="color-primary-light">.</span>
                 </p>
-                <div className="relative z-10 mt-36 flex h-full flex-col">
-                  <div className="mt-auto">
-                    <h4 className="max-w-xs font-bold">{card.title}</h4>
-                    <p className="max-w-xs text-sm">{card.paragraph}</p>
-                  </div>
+                <div className="relative flex h-full flex-col justify-end max-w-xs z-10">
+                  <h4 className=" font-bold">{card.title}</h4>
+                  <p className="mt-2.5">{card.paragraph}</p>
                 </div>
               </div>
             ))}
@@ -128,7 +128,8 @@ const ServiceDetailPage = async ({ params }) => {
       <section className="my-12 px-3 md:px-4 lg:my-24 lg:px-5">
         <div className="container mx-auto">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            <span className="fs-26 color-primary-dark">[The Difference]</span>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mt-4">
               What We Deliver
             </h2>
           </div>

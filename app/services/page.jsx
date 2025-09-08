@@ -130,45 +130,47 @@ const ServicesPage = async () => {
                 key={service.id}
                 className="relative flex flex-col overflow-hidden rounded-[30px] bg-light-purple p-8"
               >
-                <p className="absolute top-0 right-8 z-0 select-none font-black leading-tight text-white !text-[120px] !sm:text-[130px] !md:text-[140px] !lg:text-[150px]">
+                <p className="self-end z-0 select-none font-black leading-tight text-white !text-[120px] !sm:text-[130px] !md:text-[140px] !lg:text-[150px]">
                   {String(index + 1).padStart(2, "0")}
                   <span className="color-primary-light">.</span>
                 </p>
-                <div className="relative z-10 mt-36 flex h-full flex-col">
-                  <div className="mt-auto">
-                    <div className="gradient-line pb-5">
-                      <p>
-                        <span className="rounded-full bg-white px-2.5 py-[7px]">
-                          {service.duration}
-                        </span>
-                      </p>
-                      <h4
-                        className="mt-2"
-                        dangerouslySetInnerHTML={{ __html: service.title }}
-                      />
+                <div className="relative z-10 flex h-full flex-col">
+                  <div className="flex flex-col justify-between">
+                    <div>
+                      <div className="gradient-line pb-[30px]">
+                        <p>
+                          <span className="rounded-full bg-white px-2.5 py-[7px]">
+                            {service.duration}
+                          </span>
+                        </p>
+                        <h4
+                          className="mt-2.5"
+                          dangerouslySetInnerHTML={{ __html: service.title }}
+                        />
+                      </div>
+                      <ul className="mt-[30px] flex flex-col">
+                        {service.keyPoints.map((point, idx) => (
+                          <React.Fragment key={idx}>
+                            <li className="flex gap-2.5 font-medium items-center text-gray-700 fs-26">
+                              <svg
+                                className="w-3 h-3"
+                                width="10"
+                                height="10"
+                                viewBox="0 0 10 11"
+                                fill="none"
+                              >
+                                <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                              </svg>
+                              {point}
+                            </li>
+                            {idx < service.keyPoints.length - 1 && (
+                              <hr className="my-5 w-full border-gray-300" />
+                            )}
+                          </React.Fragment>
+                        ))}
+                      </ul>
                     </div>
-                    <ul className="mt-5 flex flex-col">
-                      {service.keyPoints.map((point, idx) => (
-                        <React.Fragment key={idx}>
-                          <li className="flex gap-2.5 font-medium text-gray-700 fs-26">
-                            <svg
-                              className="mt-2.5 w-3 h-3"
-                              width="10"
-                              height="10"
-                              viewBox="0 0 10 11"
-                              fill="none"
-                            >
-                              <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                            </svg>
-                            {point}
-                          </li>
-                          {idx < service.keyPoints.length - 1 && (
-                            <hr className="my-4 w-full border-gray-300" />
-                          )}
-                        </React.Fragment>
-                      ))}
-                    </ul>
-                    <div className="pt-5">
+                    <div className="pt-[50px]">
                       <p className="text-sm text-gray-500">Starting from:</p>
                       <h4 className="service-price color-primary-dark">
                         {service.startingPrice}

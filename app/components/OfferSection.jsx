@@ -14,10 +14,10 @@ const OfferSection = () => {
   return (
     <section className="relative lg:px-5 md:px-4 px-3 my-lg ">
       <Image
-        src={"/assets/images/shape-offer.png"}
+        src={"/assets/images/service-shape-resize.png"}
         width={100}
         height={100}
-        className="absolute lg:block hidden right-0 top-0 z-[-1] lg:w-[1149.531px] lg:h-[1149.531px] w-full h-auto"
+        className="absolute lg:block hidden right-0 top-48 z-[-1] lg:w-[25%] w-full h-auto"
         unoptimized="true"
         alt=""
       />
@@ -35,11 +35,11 @@ const OfferSection = () => {
               {listItems.map((item, index) => (
                 <li
                   key={index}
-                  className="flex lg:items-center gap-2.5 py-5 font-medium text-gray-700 fs-26 border-b border-b-gray-300 last:border-b-0"
+                  className="flex items-center gap-2.5 py-5 font-medium text-gray-700 fs-26 border-b border-b-gray-300 last:border-b-0"
                 >
                   <div>
                     <svg
-                      className="mt-2 w-2.5"
+                      className="w-2.5"
                       xmlns="http://www.w3.org/2000/svg"
                       width="10"
                       height="11"
