@@ -282,15 +282,18 @@ const Page = () => {
               ).map((tech, idx) => (
                 <li
                   key={idx}
-                  className="border-black/25 border p-4 rounded-full"
+                  className="border-black/25 border p-3 rounded-full"
                 >
                   {tech.imageUrl ? (
-                    <Image
-                      src={tech.imageUrl}
-                      alt={tech.name || "Tech"}
-                      width={20}
-                      height={20}
-                    />
+                    <div className="img-wrapper w-6 h-6">
+                      <Image
+                        src={tech.imageUrl}
+                        alt={tech.name || "Tech"}
+                        className="h-full w-full object-contain"
+                        width={20}
+                        height={20}
+                      />
+                    </div>
                   ) : (
                     <span className="block w-5 h-5 bg-black/40 rounded" />
                   )}
@@ -320,11 +323,11 @@ const Page = () => {
               <p className="font-medium">
                 {loading ? "" : data?.description || "—"}
               </p>
-              <ul className="flex flex-col mt-5">
+              <ul className="flex flex-col">
                 {(data?.keyPoints || []).map((kp, idx) => (
                   <li
                     key={idx}
-                    className="flex lg:items-center gap-2.5 font-medium fs-26 "
+                    className="flex lg:items-center gap-2.5 font-medium fs-26  border-b border-gray-400 last:border-none  py-5"
                   >
                     <div>
                       <svg
@@ -348,11 +351,11 @@ const Page = () => {
               <p className="font-medium">
                 {loading ? "" : data?.description || "—"}
               </p>
-              <ul className="flex flex-col mt-5">
+              <ul className="flex flex-col">
                 {(data?.keyPoints || []).map((kp, idx) => (
                   <li
                     key={idx}
-                    className="flex lg:items-center gap-2.5 font-medium fs-26 "
+                    className="flex lg:items-center gap-2.5 font-medium fs-26 border-b border-gray-400 last:border-none py-5"
                   >
                     <div>
                       <svg
