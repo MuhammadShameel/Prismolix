@@ -130,7 +130,7 @@ const ServicesPage = async () => {
                 key={service.id}
                 className="relative flex flex-col overflow-hidden rounded-[30px] bg-light-purple p-8"
               >
-                <p className="self-end z-0 select-none font-black leading-tight text-white !text-[120px] !sm:text-[130px] !md:text-[140px] !lg:text-[150px]">
+                <p className="self-end select-none font-black leading-tight big-number">
                   {String(index + 1).padStart(2, "0")}
                   <span className="color-primary-light">.</span>
                 </p>
@@ -138,11 +138,9 @@ const ServicesPage = async () => {
                   <div className="flex flex-col justify-between">
                     <div>
                       <div className="gradient-line pb-[30px]">
-                        <p>
-                          <span className="rounded-full bg-white px-2.5 py-[7px]">
-                            {service.duration}
-                          </span>
-                        </p>
+                        <span className="rounded-full bg-white px-2.5 py-[7px]">
+                          {service.duration}
+                        </span>
                         <h4
                           className="mt-2.5"
                           dangerouslySetInnerHTML={{ __html: service.title }}
