@@ -42,7 +42,7 @@ const ContactSection = () => {
     budget: Yup.string(),
     message: Yup.string()
       .min(10, "Message must be at least 10 characters")
-      .max(500, "Message must be less than 500 characters"),
+      .max(500, "Message must be less than 500 characters")
   });
 
   const handleInputChange = (e) => {
@@ -149,9 +149,8 @@ const ContactSection = () => {
                     onChange={handleInputChange}
                   />
                   {errors.firstName && (
-                    <p className="text-[16px]! text-red-600 mt-1">
-                      {errors.firstName}
-                    </p>
+                    <p className="text-[16px]! text-red-600 mt-1">{errors.firstName}</p>
+
                   )}
                 </div>
                 <div>
@@ -165,9 +164,7 @@ const ContactSection = () => {
                     onChange={handleInputChange}
                   />
                   {errors.lastName && (
-                    <p className="text-[16px]! text-red-600 mt-1">
-                      {errors.lastName}
-                    </p>
+                    <p className="text-[16px]! text-red-600 mt-1">{errors.lastName}</p>
                   )}
                 </div>
               </div>
@@ -184,9 +181,7 @@ const ContactSection = () => {
                   onChange={handleInputChange}
                 />
                 {errors.email && (
-                  <p className="text-[16px]! text-red-600 mt-1">
-                    {errors.email}
-                  </p>
+                  <p className="text-[16px]! text-red-600 mt-1">{errors.email}</p>
                 )}
               </div>
 
@@ -202,9 +197,7 @@ const ContactSection = () => {
                   onChange={handleInputChange}
                 />
                 {errors.phone && (
-                  <p className="text-[16px]! text-red-600 mt-1">
-                    {errors.phone}
-                  </p>
+                  <p className="text-[16px]! text-red-600 mt-1">{errors.phone}</p>
                 )}
               </div>
 
@@ -214,9 +207,7 @@ const ContactSection = () => {
                   <select
                     id="service"
                     name="service"
-                    className={`${
-                      errors.service ? errorInputStyle : inputStyle
-                    }`}
+                    className={`${errors.service ? errorInputStyle : inputStyle}`}
                     value={formData.service}
                     onChange={handleInputChange}
                   >
@@ -230,9 +221,8 @@ const ContactSection = () => {
                   <select
                     id="budget"
                     name="budget"
-                    className={`${
-                      errors.budget ? errorInputStyle : inputStyle
-                    }`}
+                    className={`${errors.budget ? errorInputStyle : inputStyle}`}
+
                     value={formData.budget}
                     onChange={handleInputChange}
                   >
@@ -251,16 +241,14 @@ const ContactSection = () => {
                   name="message"
                   placeholder="Your message here *"
                   rows={5}
-                  className={`${
-                    errors.message ? errorInputStyle : inputStyle
-                  } resize-none`}
+                  className={`${errors.message ? errorInputStyle : inputStyle} resize-none`}
+
                   value={formData.message}
                   onChange={handleInputChange}
                 />
                 {errors.message && (
-                  <p className="text-[16px]! text-red-600 mt-1">
-                    {errors.message}
-                  </p>
+                  <p className="text-[16px]! text-red-600 mt-1">{errors.message}</p>
+
                 )}
               </div>
 
