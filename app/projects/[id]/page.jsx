@@ -17,6 +17,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import FooterMarquee from "../../components/FooterMarquee.jsx";
+import ToolsMarquee from "../../components/ToolsMarquee.jsx";
+import CallSchedule from "../../components/CallSchedule.jsx";
 
 const formatMonthYear = (input) => {
   if (!input) return "—";
@@ -308,7 +310,7 @@ const Page = () => {
               {(data?.methodsUsed?.length ? data.methodsUsed : ["—"]).map(
                 (method, idx) => (
                   <div key={idx} className="lg:w-4/12 w-12/12">
-                    <p className="font-medium w-full text-center py-2.5 scroll-px-24 rounded-full bg-[#C4B5FD] ">
+                    <p className="font-medium w-full text-center py-2.5 scroll-px-24 rounded-full bg-[#C4B5FD] borer-r-2 border-gray-300 last:border-none">
                       {method}
                     </p>
                   </div>
@@ -389,31 +391,31 @@ const Page = () => {
           {(data?.process?.length ? data.process : []).map((step) => (
             <div
               key={step.number + step.title}
-              className="relative flex flex-col bg-light-purple rounded-[30px] lg:p-8  p-5 overflow-hidden"
+              className="relative justify-end flex flex-col bg-light-purple rounded-[30px] lg:p-8  p-5 overflow-hidden"
             >
-              <p className="absolute top-0 right-8 !lg:text-[150px] !md:text-[140px] !sm:text-[130px] !text-[120px] font-black text-white z-0 select-none leading-tight">
+              <p className="self-end big-number font-black z-0 select-none leading-tight">
                 {step.number}
                 <span className="color-primary-light">.</span>
               </p>
-              <div className="relative z-10 flex flex-col h-full mt-36">
-                <div className="mt-auto">
-                  <h4 className="mt-2">{step.title}</h4>
-                  <p className="text-sm ">{step.description}</p>
-                </div>
+              <div className="flex flex-col h-full">
+                <h4 className="mt-2">{step.title}</h4>
+                <p className="text-sm ">{step.description}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="container mx-auto my-lg">
+      {/* <div className="container mx-auto my-lg">
         <div className="service-content flex flex-col items-center gap-5">
           <span className="fs-26 color-primary-dark">[Tools]</span>
           <h2 className="lg:leading-20 leading-10 tracking-tight max-w-2xl text-center">
             Tools & Platforms We Use
           </h2>
         </div>
-      </div>
+      </div> */}
+      <ToolsMarquee />
+      <CallSchedule />
       <FooterMarquee />
     </section>
   );

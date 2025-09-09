@@ -755,4 +755,5 @@ h6 {
 
 .big-number {
   @apply text-[120px] sm:text-[130px] md:text-[140px] lg:text-[150px];
+  color: #ffff;
 }
