@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import Image from "next/image";
 
@@ -89,9 +89,7 @@ const ToolsMarquee = () => {
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
           <div className="service-content flex flex-col items-center gap-5">
-            <span className="font-medium text-[26px] color-primary-dark">
-              [Tools]
-            </span>
+            <span className="fs-26 color-primary-dark">[Tools]</span>
             <h2 className="lg:leading-20 leading-10 tracking-tight text-center max-w-2xl">
               Tools & Platforms We Use
             </h2>

@@ -11,12 +11,13 @@ import ToolsMarquee from "../components/ToolsMarquee";
 import OfferSection from "../components/OfferSection";
 import ContactSection from "../components/ContactSection";
 import CallSchedule from "../components/CallSchedule";
+import FooterMarquee from "../components/FooterMarquee";
 
 const HowItWorks = () => {
   return (
     <div className="relative">
       <Image
-        className="absolute w-full h-auto top-0 right-0 z-0"
+        className="absolute w-full h-auto top-0 right-0 -z-1"
         src={"/assets/images/Shade.png"}
         width={100}
         height={100}
@@ -29,14 +30,12 @@ const HowItWorks = () => {
         className="absolute top-0 right-0"
       />
 
-      <section className="relative pt-[295px] overflow-hidden">
+      <section className="relative hero-section overflow-hidden">
         {/* Container for the text content */}
         <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
             {/* Pre-heading */}
-            <span className="font-medium text-[26px] color-primary-dark">
-              [How it Works]
-            </span>
+            <span className="fs-26 color-primary-dark">[How it Works]</span>
 
             {/* Main Heading with Highlighted Text */}
             <h1 className="font-bold tracking-tighter leading-[100%]">
@@ -62,7 +61,7 @@ const HowItWorks = () => {
       </section>
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
-          <div className="rounded-[30px] bg-light-purple px-[30px] py-[50px]">
+          <div className="rounded-[30px] bg-light-purple lg:px-[30px] lg:py-[50px] md:px-[25px] md:py-[40px]  px-[20px] py-[20px]">
             <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 items-center">
               <div className="lg:w-2/10 w-10/10">
                 <div className="img-wrapper flex lg:justify-center">
@@ -77,7 +76,7 @@ const HowItWorks = () => {
               </div>
               <div className="lg:w-8/10 w-10/10 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
                 {/* Pre-heading */}
-                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] color-primary-dark">
+                <span className="font-medium fs-26 color-primary-dark">
                   [Step 01]
                 </span>
 
@@ -103,7 +102,7 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
-          <div className="mt-5 rounded-[30px] bg-light-purple px-[30px] py-[50px]">
+          <div className="mt-5 rounded-[30px] bg-light-purple lg:px-[30px] lg:py-[50px] md:px-[25px] md:py-[40px] px-[20px] py-[20px]">
             <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 items-center">
               <div className="lg:w-2/10 w-10/10">
                 <div className="img-wrapper flex lg:justify-center">
@@ -118,7 +117,7 @@ const HowItWorks = () => {
               </div>
               <div className="lg:w-8/10 w-10/10 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
                 {/* Pre-heading */}
-                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] color-primary-dark">
+                <span className="font-medium fs-26 color-primary-dark">
                   [Step 02]
                 </span>
 
@@ -137,7 +136,7 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
-          <div className="mt-5 rounded-[30px] bg-light-purple px-[30px] py-[50px]">
+          <div className="mt-5 rounded-[30px] bg-light-purple lg:px-[30px] lg:py-[50px] md:px-[25px] md:py-[40px] px-[20px] py-[20px]">
             <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 items-center">
               <div className="lg:w-2/10 w-10/10">
                 <div className="img-wrapper flex lg:justify-center">
@@ -152,7 +151,7 @@ const HowItWorks = () => {
               </div>
               <div className="lg:w-8/10 w-10/10 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
                 {/* Pre-heading */}
-                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] color-primary-dark">
+                <span className="font-medium fs-26 color-primary-dark">
                   [Step 03]
                 </span>
 
@@ -171,7 +170,7 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
-          <div className="mt-5 rounded-[30px] bg-light-purple px-[30px] py-[50px]">
+          <div className="mt-5 rounded-[30px] bg-light-purple lg:px-[30px] lg:py-[50px] md:px-[25px] md:py-[40px] px-[20px] py-[20px]">
             <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 items-center">
               <div className="lg:w-2/10 w-10/10">
                 <div className="img-wrapper flex lg:justify-center">
@@ -186,7 +185,7 @@ const HowItWorks = () => {
               </div>
               <div className="lg:w-8/10 w-10/10 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
                 {/* Pre-heading */}
-                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] color-primary-dark">
+                <span className="font-medium fs-26 color-primary-dark">
                   [Step 04]
                 </span>
 
@@ -212,6 +211,7 @@ const HowItWorks = () => {
       <OfferSection />
       <ContactSection />
       <CallSchedule />
+      <FooterMarquee />
     </div>
   );
 };

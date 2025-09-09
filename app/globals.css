@@ -17,6 +17,8 @@ body {
   background: var(--background);
   color: var(--color-dark-cards-bg);
   font-family: var(--font-satoshi);
+  font-size: 22px;
+  font-weight: 500;
 }
 
 h1,
@@ -47,6 +49,7 @@ h3 {
 
 h4 {
   font-size: 45px;
+  line-height: 45px !important;
 }
 
 h5 {
@@ -140,6 +143,15 @@ h6 {
   transition: all 0.3s ease-in-out;
 }
 
+.nav-link {
+  font-size: 20px;
+  font-weight: 500 !important;
+}
+
+.nav-link:hover {
+  color: #000000;
+}
+
 .text-overlay {
   position: relative;
   display: inline-block;
@@ -171,6 +183,10 @@ h6 {
   margin-bottom: 70px;
 }
 
+.fs-26 {
+  font-size: 26px;
+}
+
 @media (max-width: 1023px) {
   .my-lg {
     margin-top: 80px;
@@ -181,6 +197,10 @@ h6 {
   }
   .mb-md {
     margin-bottom: 60px;
+  }
+  .nav-link {
+    font-size: 16px !important;
+    font-weight: 500 !important;
   }
 }
 
@@ -533,6 +553,9 @@ h6 {
   h5 {
     font-size: 26px;
   }
+  .fs-26 {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -552,6 +575,9 @@ h6 {
   h4 {
     font-size: 40px;
   }
+  .fs-26 {
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 767.97px) {
@@ -570,6 +596,9 @@ h6 {
   }
   h4 {
     font-size: 30px;
+  }
+  .fs-26 {
+    font-size: 20px;
   }
 }
 
@@ -597,6 +626,10 @@ h6 {
     border-radius: 5px;
     cursor: pointer;
   }
+
+  .fs-26 {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 343px) {
@@ -621,6 +654,10 @@ h6 {
     font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .fs-26 {
+    font-size: 16px;
   }
 }
 
@@ -703,4 +740,20 @@ h6 {
   background-color: #374151; /* Dark Gray */
   border-radius: 5px; /* Give it rounded ends like a pill */
   opacity: 1;
+}
+
+/* This makes the Swiper animation perfectly linear for a smooth marquee effect */
+.swiper-wrapper-linear {
+  transition-timing-function: linear !important;
+}
+
+.hero-section {
+  padding-top: 295px;
+}
+
+/* globals.css */
+
+.big-number {
+  @apply text-[120px] sm:text-[130px] md:text-[140px] lg:text-[150px];
+  color: #ffff;
 }

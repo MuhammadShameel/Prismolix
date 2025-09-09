@@ -16,6 +16,9 @@ import bgImg from "../../../public/assets/images/blog-detail-bg.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import FooterMarquee from "../../components/FooterMarquee.jsx";
+import ToolsMarquee from "../../components/ToolsMarquee.jsx";
+import CallSchedule from "../../components/CallSchedule.jsx";
 
 const formatMonthYear = (input) => {
   if (!input) return "—";
@@ -104,9 +107,7 @@ const Page = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center gap-5 max-w-6xl my-lg">
-            <span className="font-medium text-[26px]  color-primary-dark">
-              [Case Study]
-            </span>
+            <span className="fs-26  color-primary-dark">[Case Study]</span>
             <h1 className="text-center leading-[95%]">
               {loading ? "Loading..." : data?.title || "—"}
             </h1>
@@ -250,42 +251,32 @@ const Page = () => {
 
           <div className="bg-light-purple flex lg:flex-row flex-col lg:gap-7 gap-4 lg:px-10 md:px-7 px-5 py-6 rounded-[20px]">
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                Category
-              </span>
+              <span className="font-medium fs-26">Category</span>
               <p>
                 {loading ? "—" : data?.industry || data?.categories?.[0] || "—"}
               </p>
             </div>
             <div className="border-r-1 bg-black opacity-20"></div>
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                Time Taken
-              </span>
+              <span className="font-medium fs-26">Time Taken</span>
               <p>
                 {loading ? "—" : diffInMonths(data?.startDate, data?.endDate)}
               </p>
             </div>
             <div className="border-r-1 bg-black opacity-20"></div>
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                Start Date
-              </span>
+              <span className="font-medium fs-26">Start Date</span>
               <p>{loading ? "—" : formatMonthYear(data?.startDate)}</p>
             </div>
             <div className="border-r-1 bg-black opacity-20"></div>
             <div className="lg:w-3/12 w-12/12">
-              <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                Completed Date
-              </span>
+              <span className="font-medium fs-26">Completed Date</span>
               <p>{loading ? "—" : formatMonthYear(data?.endDate)}</p>
             </div>
           </div>
 
           <div className="bg-light-purple flex lg:flex-row flex-col lg:items-center lg:px-10 md:px-7 px-5 py-6 rounded-[20px] lg:gap-10 gap-3">
-            <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-              Technologies Used
-            </span>
+            <span className="font-medium fs-26 ">Technologies Used</span>
             <ul className="flex lg:gap-10 gap-2.5">
               {(data?.technologiesUsed && data.technologiesUsed.length > 0
                 ? data.technologiesUsed
@@ -293,15 +284,18 @@ const Page = () => {
               ).map((tech, idx) => (
                 <li
                   key={idx}
-                  className="border-black/25 border p-4 rounded-full"
+                  className="border-black/25 border p-3 rounded-full"
                 >
                   {tech.imageUrl ? (
-                    <Image
-                      src={tech.imageUrl}
-                      alt={tech.name || "Tech"}
-                      width={20}
-                      height={20}
-                    />
+                    <div className="img-wrapper w-6 h-6">
+                      <Image
+                        src={tech.imageUrl}
+                        alt={tech.name || "Tech"}
+                        className="h-full w-full object-contain"
+                        width={20}
+                        height={20}
+                      />
+                    </div>
                   ) : (
                     <span className="block w-5 h-5 bg-black/40 rounded" />
                   )}
@@ -311,14 +305,12 @@ const Page = () => {
           </div>
 
           <div className="bg-light-purple flex flex-col lg:px-10 md:px-7 px-5 py-6 rounded-[20px] gap-12">
-            <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] ">
-              Methods Used
-            </span>
+            <span className="font-medium fs-26 ">Methods Used</span>
             <div className="flex lg:flex-row flex-col lg:gap-[30px] gap-[20px]">
               {(data?.methodsUsed?.length ? data.methodsUsed : ["—"]).map(
                 (method, idx) => (
                   <div key={idx} className="lg:w-4/12 w-12/12">
-                    <p className="font-medium w-full text-center py-2.5 scroll-px-24 rounded-full bg-[#C4B5FD] ">
+                    <p className="font-medium w-full text-center py-2.5 scroll-px-24 rounded-full bg-[#C4B5FD] borer-r-2 border-gray-300 last:border-none">
                       {method}
                     </p>
                   </div>
@@ -333,21 +325,24 @@ const Page = () => {
               <p className="font-medium">
                 {loading ? "" : data?.description || "—"}
               </p>
-              <ul className="flex flex-col mt-5">
+              <ul className="flex flex-col">
                 {(data?.keyPoints || []).map((kp, idx) => (
                   <li
                     key={idx}
-                    className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[16px] "
+                    className="flex lg:items-center gap-2.5 font-medium fs-26  border-b border-gray-400 last:border-none  py-5"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="10"
-                      height="11"
-                      viewBox="0 0 10 11"
-                      fill="none"
-                    >
-                      <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                    </svg>
+                    <div>
+                      <svg
+                        className="mt-1.5 w-2.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="11"
+                        viewBox="0 0 10 11"
+                        fill="none"
+                      >
+                        <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                      </svg>
+                    </div>
                     {kp}
                   </li>
                 ))}
@@ -358,21 +353,24 @@ const Page = () => {
               <p className="font-medium">
                 {loading ? "" : data?.description || "—"}
               </p>
-              <ul className="flex flex-col mt-5">
+              <ul className="flex flex-col">
                 {(data?.keyPoints || []).map((kp, idx) => (
                   <li
                     key={idx}
-                    className="flex items-center gap-2.5 font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[16px] "
+                    className="flex lg:items-center gap-2.5 font-medium fs-26 border-b border-gray-400 last:border-none py-5"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="10"
-                      height="11"
-                      viewBox="0 0 10 11"
-                      fill="none"
-                    >
-                      <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
-                    </svg>
+                    <div>
+                      <svg
+                        className="mt-1.5 w-2.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="11"
+                        viewBox="0 0 10 11"
+                        fill="none"
+                      >
+                        <circle cx="5" cy="5.5" r="5" fill="#4A008C" />
+                      </svg>
+                    </div>
                     {kp}
                   </li>
                 ))}
@@ -384,10 +382,8 @@ const Page = () => {
 
       <div className="container mx-auto my-lg">
         <div className="service-content flex flex-col items-center gap-5">
-          <span className="font-medium text-[26px] color-primary-dark">
-            [The Process]
-          </span>
-          <h2 className="lg:leading-20 leading-10 tracking-tight max-w-4xl">
+          <span className="fs-26 color-primary-dark">[The Process]</span>
+          <h2 className="lg:leading-20 leading-10 tracking-tight max-w-2xl">
             What We Did
           </h2>
         </div>
@@ -395,33 +391,32 @@ const Page = () => {
           {(data?.process?.length ? data.process : []).map((step) => (
             <div
               key={step.number + step.title}
-              className="relative flex flex-col bg-light-purple rounded-[30px] lg:p-8  p-5 overflow-hidden"
+              className="relative justify-end flex flex-col bg-light-purple rounded-[30px] lg:p-8  p-5 overflow-hidden"
             >
-              <p className="absolute top-0 right-8 !lg:text-[150px] !md:text-[140px] !sm:text-[130px] !text-[120px] font-black text-white z-0 select-none leading-tight">
+              <p className="self-end big-number font-black z-0 select-none leading-tight">
                 {step.number}
                 <span className="color-primary-light">.</span>
               </p>
-              <div className="relative z-10 flex flex-col h-full mt-36">
-                <div className="mt-auto">
-                  <h4 className="mt-2">{step.title}</h4>
-                  <p className="text-sm ">{step.description}</p>
-                </div>
+              <div className="flex flex-col h-full">
+                <h4 className="mt-2">{step.title}</h4>
+                <p className="text-sm ">{step.description}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="container mx-auto my-lg">
+      {/* <div className="container mx-auto my-lg">
         <div className="service-content flex flex-col items-center gap-5">
-          <span className="font-medium text-[26px] color-primary-dark">
-            [Tools]
-          </span>
+          <span className="fs-26 color-primary-dark">[Tools]</span>
           <h2 className="lg:leading-20 leading-10 tracking-tight max-w-2xl text-center">
             Tools & Platforms We Use
           </h2>
         </div>
-      </div>
+      </div> */}
+      <ToolsMarquee />
+      <CallSchedule />
+      <FooterMarquee />
     </section>
   );
 };

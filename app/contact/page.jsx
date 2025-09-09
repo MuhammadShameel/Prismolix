@@ -3,33 +3,70 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import Shape from "../../public/assets/images/contactShape.png";
+import FooterMarquee from "../components/FooterMarquee";
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    service: "",
-    budget: "",
-    message: "",
-  });
+  // 2. Add state for all form inputs and submission status
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [service, setService] = useState("");
+  const [budget, setBudget] = useState("");
+  const [message, setMessage] = useState("");
 
-  // Handler for input changes
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+  const [status, setStatus] = useState("idle"); // 'idle', 'submitting', 'success', 'error'
+  const [responseMessage, setResponseMessage] = useState("");
 
-  // Handler for form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // You can handle form submission logic here, like sending data to an API
-    console.log("Form submitted:", formData);
-    alert("Form submitted! Check the console for the data.");
+  // 3. The form submission handler
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus("submitting");
+    setResponseMessage("");
+
+    // --- IMPORTANT: UPDATE THESE VALUES ---
+
+    const formData = new FormData();
+    // These keys must match the names in your Contact Form 7 shortcodes
+    formData.append("firstName", firstName);
+    formData.append("lastName", lastName);
+    formData.append("email", email);
+    formData.append("phone", phone);
+    formData.append("service", service);
+    formData.append("budget", budget);
+    formData.append("message", message);
+    formData.append("_wpcf7_unit_tag", "d507871");
+
+    try {
+      const response = await fetch(
+        `https://prismolix.wasmer.app/wp-json/contact-form-7/v1/contact-forms/88/feedback`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.status === "mail_sent") {
+        setStatus("success");
+        setResponseMessage(data.message);
+        // Reset form fields on success
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhone("");
+        setService("");
+        setBudget("");
+        setMessage("");
+      } else {
+        setStatus("error");
+        setResponseMessage(data.message || "An error occurred.");
+      }
+    } catch (error) {
+      setStatus("error");
+      setResponseMessage("An error occurred while submitting the form.");
+    }
   };
 
   // Custom styles for reuse
@@ -39,7 +76,7 @@ const ContactUs = () => {
   return (
     <div>
       <Image
-        className="absolute w-full h-auto top-0 right-0 z-0"
+        className="absolute w-full h-auto top-0 right-0 -z-1"
         src={"/assets/images/Shade.png"}
         width={100}
         height={100}
@@ -51,14 +88,12 @@ const ContactUs = () => {
         // objectFit="contain"
         className="absolute top-0 right-0"
       />
-      <section className="relative pt-[295px] overflow-hidden">
+      <section className="relative hero-section overflow-hidden">
         {/* Container for the text content */}
         <div className="container mx-auto lg:px-5 md:px-4 px-3 relative z-10">
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
             {/* Pre-heading */}
-            <span className="font-medium text-[26px] color-primary-dark">
-              [Contact Us]
-            </span>
+            <span className="fs-26 color-primary-dark">[Contact Us]</span>
 
             {/* Main Heading with Highlighted Text */}
             <h1 className="font-bold tracking-tighter leading-[100%]">
@@ -100,7 +135,7 @@ const ContactUs = () => {
           ></iframe>
           <div className="flex justify-between mt-5 items-center">
             <div>
-              <p className="lg:text-[26px] md:text-[22px] sm:text-[18px] text-[16px] lg:max-w-sm max-w-4xl font-medium">
+              <p className="fs-26 lg:max-w-sm max-w-4xl font-medium">
                 ABC building, ABC - Street, Bahria Town, Phase 8, Rawalpindi
               </p>
             </div>
@@ -117,25 +152,25 @@ const ContactUs = () => {
                   <path
                     d="M18.0098 14.5741L18.0098 5.98982L9.42549 5.98982"
                     stroke="white"
-                    stroke-width="1.5"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M5.99023 18.0104L17.8908 6.10977"
                     stroke="white"
-                    stroke-width="1.5"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </button>
             </div>
           </div>
           <div className="my-lg ">
-            <div className="bg-light-purple flex lg:flex-row flex-col lg:gap-7 gap-4 px-10 py-6 rounded-[20px]">
+            <div className="bg-light-purple flex lg:flex-row flex-col lg:gap-7 gap-4 lg:px-10 lg:py-6 md:px-8 md:py-5 p-5 rounded-[20px]">
               <div className="lg:w-4/12 w-12/12">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -154,9 +189,7 @@ const ContactUs = () => {
                     fill="#4A008C"
                   />
                 </svg>
-                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                  Phone Number:{" "}
-                </span>
+                <span className="font-medium fs-26">Phone Number: </span>
                 <p>+123 1234 1234 1234</p>
               </div>
               <div className="lg:w-4/12 w-12/12 border-l-[#8C8C8C] border-r-[#8C8C8C] border-t-[#8C8C8C] border-b-[#8C8C8C] lg:border-l lg:border-r lg:border-t-0 lg:border-b-0 border-t border-b lg:pl-5 lg:py-0 py-5 ">
@@ -177,9 +210,7 @@ const ContactUs = () => {
                     fill="#4A008C"
                   />
                 </svg>
-                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                  Location:
-                </span>
+                <span className="font-medium fs-26">Location:</span>
                 <p>Bahria Town, Phase 8, Rawalpindi</p>
               </div>
               <div className="lg:w-4/12 w-12/12">
@@ -200,18 +231,16 @@ const ContactUs = () => {
                     fill="#4A008C"
                   />
                 </svg>
-                <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                  Email:
-                </span>
+                <span className="font-medium fs-26">Email:</span>
                 <p>username@example.com</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section clas sName="lg:px-5 md:px-4 px-3 my-lg">
+      <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto my-lg lg:px-5 md:px-4 px-3">
-          <span className="font-medium text-[26px] color-primary-dark">
+          <span className="fs-26 color-primary-dark">
             [Let's Work Together]
           </span>
           <div className="flex flex-col  mt-2.5">
@@ -234,8 +263,8 @@ const ContactUs = () => {
                     id="firstName"
                     name="firstName"
                     placeholder="First name *"
-                    value={formData.firstName}
-                    onChange={handleChange}
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
                     className={inputStyle}
                     required
                   />
@@ -249,8 +278,8 @@ const ContactUs = () => {
                     id="lastName"
                     name="lastName"
                     placeholder="Last Name *"
-                    value={formData.lastName}
-                    onChange={handleChange}
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
                     className={inputStyle}
                     required
                   />
@@ -268,8 +297,8 @@ const ContactUs = () => {
                     id="email"
                     name="email"
                     placeholder="Enter your email *"
-                    value={formData.email}
-                    onChange={handleChange}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className={inputStyle}
                     required
                   />
@@ -283,8 +312,8 @@ const ContactUs = () => {
                     id="phone"
                     name="phone"
                     placeholder="Enter your Phone Number *"
-                    value={formData.phone}
-                    onChange={handleChange}
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     className={inputStyle}
                     required
                   />
@@ -293,51 +322,71 @@ const ContactUs = () => {
 
               {/* Service and Budget */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
+                <div className="relative">
                   <label htmlFor="service" className="sr-only">
                     Service you're looking for
                   </label>
                   <select
                     id="service"
                     name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className={inputStyle}
+                    value={service}
+                    onChange={(e) => setService(e.target.value)}
+                    className={`${inputStyle} appearance-none pr-12`}
                   >
                     <option value="">Service You're looking for</option>
                     <option value="ui-ux-design">UI/UX Design</option>
                     <option value="web-development">Web Development</option>
                     <option value="app-development">App Development</option>
-                    <option value="seo">SEO</option>
                   </select>
+                  {/* Your Custom SVG Icon */}
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="11"
+                      viewBox="0 0 18 11"
+                      fill="none"
+                    >
+                      <path
+                        d="M9.01472 6.75734L15.8029 0.302944L17.5 2L9.01472 10.4853L0.529434 2L2.22649 0.302945L9.01472 6.75734Z"
+                        fill="#364153"
+                      />
+                    </svg>
+                  </div>
                 </div>
                 <div>
-                  <div className="flex">
+                  <div className="relative">
                     <label htmlFor="budget" className="sr-only">
                       Your Budget
                     </label>
-                    <input
-                      type="number"
+                    <select
                       id="budget"
                       name="budget"
-                      placeholder="Your Budget"
-                      value={formData.budget}
-                      onChange={handleChange}
-                      className={`${inputStyle} rounded-r-none`}
-                    />
-                    <div className="flex items-center bg-gray-100  rounded-r-[6px] px-4 text-gray-600">
-                      USD
+                      // Add appearance-none to hide the default arrow and pr-12 to make space for our icon
+                      className={`${inputStyle} appearance-none pr-12`}
+                      value={budget}
+                      onChange={(e) => setBudget(e.target.value)}
+                    >
+                      <option value="">Your Budget</option>
+                      <option value="2000 USD">2000 USD</option>
+                      <option value="3000 USD">3000 USD</option>
+                      <option value="5000 USD">5000 USD</option>
+                    </select>
+
+                    {/* Your Custom SVG Icon */}
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                      <span className="font-semibold text-gray-700">USD</span>
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
                         className="ml-2"
-                        width="17"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
                         height="11"
-                        viewBox="0 0 17 11"
+                        viewBox="0 0 18 11"
                         fill="none"
                       >
                         <path
-                          d="M8.51472 6.75734L15.3029 0.302944L17 2L8.51472 10.4853L0.0294342 2L1.72649 0.302945L8.51472 6.75734Z"
-                          fill="#8F8F8F"
+                          d="M9.01472 6.75734L15.8029 0.302944L17.5 2L9.01472 10.4853L0.529434 2L2.22649 0.302945L9.01472 6.75734Z"
+                          fill="#364153"
                         />
                       </svg>
                     </div>
@@ -355,23 +404,41 @@ const ContactUs = () => {
                   name="message"
                   placeholder="Your Message *"
                   rows="5"
-                  value={formData.message}
-                  onChange={handleChange}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   className={inputStyle + " resize-none"}
                   required
                 ></textarea>
               </div>
 
               {/* Submit Button */}
-              <div className="text-end">
-                <button type="submit" className="btn btn-primary">
-                  Submit now
+              <div className="flex justify-end">
+                <button
+                  onClick={handleSubmit}
+                  type="submit"
+                  className="btn btn-primary"
+                  disabled={status === "submitting"}
+                >
+                  {status === "submitting" ? "Submitting..." : "Submit now"}
                 </button>
               </div>
+              {/* Submission Status Message */}
+              {responseMessage && (
+                <div
+                  className={`mt-4 rounded-md p-3 text-center ${
+                    status === "success"
+                      ? "bg-green-100 text-green-800"
+                      : "bg-red-100 text-red-800"
+                  }`}
+                >
+                  {responseMessage}
+                </div>
+              )}
             </form>
           </div>
         </div>
       </section>
+      <FooterMarquee />
     </div>
   );
 };

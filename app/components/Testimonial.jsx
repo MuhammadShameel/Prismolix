@@ -63,9 +63,7 @@ const Testimonial = () => {
           {/* MODIFICATION HERE: This section is now hidden on mobile */}
           <div className="lg:flex  hidden md:w-1/4 p-10">
             <Image src={Line} alt="" />
-            <span className="font-medium text-[26px] color-primary-dark">
-              [Testimonial]
-            </span>
+            <span className="fs-26 color-primary-dark">[Testimonial]</span>
           </div>
 
           {/* Right Column: Swiper */}
@@ -104,11 +102,13 @@ const Testimonial = () => {
                     </div>
 
                     <div className="flex items-center gap-4 lg:mt-10">
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="h-16 w-16 rounded-full object-cover sm:h-20 sm:w-20"
-                      />
+                      <div className="img-wrapper h-[104px] w-[104px]">
+                        <Image
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="h-full w-full rounded-full object-cover"
+                        />
+                      </div>
                       <div className="flex flex-col justify-center">
                         <h3 className="font-bold text-dark-cards-bg text-lg sm:text-xl">
                           {testimonial.name}
@@ -124,11 +124,11 @@ const Testimonial = () => {
             </Swiper>
 
             {/* Custom Navigation Buttons */}
-            <div className="mt-8 flex items-end justify-end gap-4 md:absolute md:bottom-8 md:right-8 md:mt-0">
+            <div className="mt-8 flex items-end justify-end gap-4 md:absolute md:bottom-8 md:right-8 md:mt-0 z-1">
               <button
                 onClick={handlePrev}
                 aria-label="Previous testimonial"
-                className="flex h-12 w-12 p-2.5 items-center justify-center rounded-full bg-light-purple text-gray-800 transition hover:bg-gray-200"
+                className="flex h-12 w-12 p-2.5 items-center justify-center rounded-full bg-light-purple text-gray-800  hover:bg-gray-200  cursor-pointer transition-colors duration-200  ease-in-out  focus:outline-none focus:ring-2 focus:ring-[#f2ebff] focus:ring-offset-2"
               >
                 {/* SVG Icon for Left Arrow */}
                 <svg
@@ -159,7 +159,7 @@ const Testimonial = () => {
               <button
                 onClick={handleNext}
                 aria-label="Next testimonial"
-                className="flex h-12 w-12  p-2.5 items-center justify-center rounded-full bg-violet-600 text-white transition-colors duration-200 ease-in-out hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2"
+                className="flex h-12 w-12  p-2.5 items-center justify-center rounded-full bg-violet-600 text-white transition-colors duration-200  ease-in-out hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2"
               >
                 {/* SVG Icon for Right Arrow */}
                 <svg

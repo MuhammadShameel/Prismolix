@@ -6,9 +6,7 @@ const WhyPrismolix = () => {
     <div>
       <section className="lg:px-5 md:px-4 px-3 my-lg">
         <div className="container mx-auto">
-          <span className="font-medium text-[26px] color-primary-dark">
-            [Why Prismolix]
-          </span>
+          <span className="fs-26 color-primary-dark">[Why Prismolix]</span>
           <div className="flex xl:flex-row flex-col justify-between lg:items-center item-start mt-5 lg:gap-0 gap-2.5">
             <h2 className="xl:max-w-2xl lg:max-w-3xl lg:leading-20 leading-10">
               Why Agencies Trust Prismolix

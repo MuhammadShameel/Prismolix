@@ -150,6 +150,7 @@ const ContactSection = () => {
                   />
                   {errors.firstName && (
                     <p className="text-[16px]! text-red-600 mt-1">{errors.firstName}</p>
+
                   )}
                 </div>
                 <div>
@@ -221,6 +222,7 @@ const ContactSection = () => {
                     id="budget"
                     name="budget"
                     className={`${errors.budget ? errorInputStyle : inputStyle}`}
+
                     value={formData.budget}
                     onChange={handleInputChange}
                   >
@@ -240,11 +242,13 @@ const ContactSection = () => {
                   placeholder="Your message here *"
                   rows={5}
                   className={`${errors.message ? errorInputStyle : inputStyle} resize-none`}
+
                   value={formData.message}
                   onChange={handleInputChange}
                 />
                 {errors.message && (
                   <p className="text-[16px]! text-red-600 mt-1">{errors.message}</p>
+
                 )}
               </div>
 

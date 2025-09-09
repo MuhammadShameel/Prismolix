@@ -6,31 +6,21 @@ import Services from "./Services";
 import Testimonial from "./Testimonial";
 import ContactSection from "./ContactSection";
 import CallSchedule from "./CallSchedule";
+import FooterMarquee from "../components/FooterMarquee";
 
 import Shape from "../../public/assets/images/hero-shape.png";
 
 const Home = () => {
   return (
-    <div className="relative">
-      <Image
-        className="absolute w-full h-auto top-0 right-0 z-0"
-        src={"/assets/images/Shade.png"}
-        width={100}
-        height={100}
-        alt=""
-      />
-      <Image
-        src={Shape}
-        alt="Abstract 3D hero image"
-        className="absolute right-0"
-      />
+    <>
       <HeroSection />
       <ProblemSolution />
       <Services />
       <Testimonial />
       <ContactSection />
       <CallSchedule />
-    </div>
+      <FooterMarquee />
+    </>
   );
 };
 

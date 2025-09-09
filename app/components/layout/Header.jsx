@@ -48,39 +48,40 @@ const Header = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         // Conditionally apply classes for the sticky/floating header
-        className={`navbar  ${isScrolled ? "scrolled" : " "}`}
+        className={`navbar lg:px-5 md:px-4 px-3  ${
+          isScrolled ? "scrolled" : " "
+        }`}
       >
         <div className="container mx-auto">
           <div className="flex items-center justify-between pl-[30px] pr-2.5 py-[10px]  ">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0">
+            <Link
+              href="/"
+              className="flex-shrink-0 logo-wrapper lg:h-[60px] md:h-[50px] h-[40px] w-auto"
+            >
               <Image
                 src={Logo}
                 alt="Prismolix Logo"
-                className="lg:w-full md:w-[75%] sm:w-[75%] w-[75%] !h-[50%]"
+                className="w-full h-full object-contain"
               />
             </Link>
-
+            <nav className="hidden lg:flex md:flex items-center lg:gap-10 md:gap-5">
+              <ul className="flex items-center xl:gap-10 lg:gap-8 md:gap-5">
+                {navLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="nav-link transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center lg:gap-10 md:gap-5">
-              <nav>
-                <ul className="flex items-center lg:gap-10 md:gap-5">
-                  {navLinks.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="nav-link font-medium hover:text-black transition-colors lg:text-xl md:text-md"
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-              <Link
-                href={"/contact"}
-                className="btn btn-primary bg-purple-600 text-white px-6 py-2 rounded-lg text-lg font-medium"
-              >
+              <Link href={"/contact"} className="btn btn-primary">
                 Contact Us
               </Link>
             </div>
@@ -111,11 +112,11 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed top-24 left-0 w-full z-40 px-3 md:hidden" // Adjusted z-index
+            className="fixed top-20 left-0 w-full z-40 px-3 md:hidden" // Adjusted z-index
           >
             <div className="[background:linear-gradient(0deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0.2)_100%),rgba(0,0,0,0.05)] backdrop-blur-[15px] p-6 rounded-[10px]">
               <nav>
-                <ul className="flex flex-col items-center gap-6">
+                <ul className="flex flex-col items-start gap-6">
                   {navLinks.map((link) => (
                     <li key={link.name}>
                       <Link

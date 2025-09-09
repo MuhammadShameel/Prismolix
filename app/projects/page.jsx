@@ -11,6 +11,7 @@ import {
 import Testimonial from "../components/Testimonial.jsx";
 import ContactSection from "../components/ContactSection.jsx";
 import CallSchedule from "../components/CallSchedule.jsx";
+import FooterMarquee from "../components/FooterMarquee";
 
 // Helper function to get image URL
 const getImageUrl = (portfolio) => {
@@ -28,28 +29,26 @@ const page = async () => {
   const portfolioItems = await fetchAllBlogs();
 
   return (
-    <div className="relative">
-      <Image
-        className="absolute w-full h-auto top-0 left-0 z-[-1]"
-        src={"/assets/images/Shade.png"}
-        width={100}
-        height={100}
-        alt=""
-      />
-      <Image
-        src={Shape}
-        alt="Abstract 3D hero image"
-        // objectFit="contain"
-        className="absolute top-0 right-0"
-      />
-      <section className="relative  pt-[295px] overflow-hidden lg:px-5 md:px-4 px-3">
+    <>
+      <section className="relative  hero-section lg:px-5 md:px-4 px-3">
+        <Image
+          className="absolute w-full h-auto top-0 left-0 z-[-1]"
+          src={"/assets/images/Shade.png"}
+          width={100}
+          height={100}
+          alt=""
+        />
+        <Image
+          src={Shape}
+          alt="Abstract 3D hero image"
+          // objectFit="contain"
+          className="absolute top-0 right-0"
+        />
         {/* Container for the text content */}
         <div className="container mx-auto relative z-10">
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
             {/* Pre-heading */}
-            <p className="font-medium text-[26px] color-primary-dark">
-              [Case Studies]
-            </p>
+            <span className="fs-26 color-primary-dark">[Case Studies]</span>
 
             {/* Main Heading with Highlighted Text */}
             <h1 className="font-bold tracking-tighter leading-[100%]">
@@ -83,7 +82,7 @@ const page = async () => {
         return (
           <section key={portfolio.id} className="lg:px-5 md:px-4 px-3 my-lg">
             <div className="container mx-auto">
-              <div className="rounded-[30px] bg-light-purple px-[30px] py-[50px]">
+              <div className="lg:rounded-[30px]  rounded-[20px] bg-light-purple lg:px-[30px] lg:py-[50px] md:px-[25px] md:py-[40px] px-[15px] py-[15px]">
                 <div className="flex lg:flex-row flex-col gap-10">
                   <div className="lg:w-3/8 w-8/8">
                     <div className="img-wrapper">
@@ -97,7 +96,7 @@ const page = async () => {
                       />
                     </div>
                     <div className="lg:block hidden mt-14">
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+                      <span className="font-medium fs-26">
                         Services Provided:
                       </span>
 
@@ -125,7 +124,7 @@ const page = async () => {
                   </div>
                   <div className="lg:w-5/8 w-8/8 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
                     {/* Pre-heading */}
-                    <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px] color-primary-dark">
+                    <span className="font-medium fs-26 color-primary-dark">
                       [Case Study - {String(index + 1).padStart(2, "0")}]
                     </span>
 
@@ -136,16 +135,14 @@ const page = async () => {
 
                     {/* Subheading */}
                     <div>
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                        Client Type:
-                      </span>
+                      <span className="font-medium fs-26">Client Type:</span>
 
                       <p className="text-base max-w-3xl">
                         {portfolioData.clientType}
                       </p>
                     </div>
                     <div>
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+                      <span className="font-medium fs-26">
                         Services Provided:
                       </span>
 
@@ -154,16 +151,14 @@ const page = async () => {
                       </p>
                     </div>
                     <div>
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
-                        Challenge:
-                      </span>
+                      <span className="font-medium fs-26">Challenge:</span>
 
                       <p className="text-base max-w-3xl">
                         {portfolioData.challenge}
                       </p>
                     </div>
                     <div className="lg:hidden block ">
-                      <span className="font-medium lg:text-[26px] md:text-[24px] sm:text-[20px] text-[18px]">
+                      <span className="font-medium fs-26">
                         Services Provided:
                       </span>
 
@@ -208,52 +203,8 @@ const page = async () => {
       <Testimonial />
       <ContactSection />
       <CallSchedule />
-
-      {/* <section className="w-full my-lg lg:px-5 md:px-4 px-3 my-lg">
-        <div className="container mx-auto">
-          <div className="bg-light-purple rounded-3xl p-8 md:p-12 lg:p-16">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              <div className="w-full lg:w-1/2">
-                <Image
-                  src="/assets/images/section-shape.png"
-                  alt="Abstract 3D shape"
-                  width={500}
-                  height={500}
-                  className="w-full h-auto object-contain rounded-2xl"
-                />
-              </div>
-
-              <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
-                <span className="text-brand-purple font-semibold uppercase tracking-wider text-sm mb-4">
-                  Service Detail
-                </span>
-
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                  Scalable, Systematic, and Pixel-Perfect - Designed for
-                  Agencies
-                </h2>
-
-                <p className="text-gray-700 text-lg mb-4">
-                  Vlmea yuac dfnreie napset viorld slsan daisgn. Stixnotir
-                  qutuig eitibiea. Visae oltir vetip- lrted tihdllt
-                  slkognrvjlcono titae nottes acth pon sgonay — uitlo nigra
-                  roaliy te aox eni imedaisd oopects.
-                </p>
-
-                <p className="text-gray-600 text-base mb-8">
-                  Emen paotuer qiotrin ta tuk-seda doign vofume, vei tvop yau
-                  thip issiur vritoa saeshtimg ogtdy.
-                </p>
-
-                <button className="bg-brand-purple text-white font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 focus:ring-offset-light-purple">
-                  Let's Talk Design
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-    </div>
+      <FooterMarquee />
+    </>
   );
 };
 
