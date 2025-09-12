@@ -2,7 +2,7 @@
 export const fetchAllPosts = async () => {
   try {
     const response = await fetch(
-      "https://api.prismolix.com/wp-json/wp/v2/posts?_embed&per_page=10",
+      "https://prismolix.wasmer.app/wp-json/wp/v2/posts?_embed&per_page=10",
       {
         next: { revalidate: 3600 }, // Cache for 1 hour
       }
@@ -23,7 +23,7 @@ export const fetchAllPosts = async () => {
 export const fetchPostById = async (id) => {
   try {
     const response = await fetch(
-      `https://api.prismolix.com/wp-json/wp/v2/posts?id=${id}&_embed`,
+      `https://prismolix.wasmer.app/wp-json/wp/v2/posts?id=${id}&_embed`,
       {
         next: { revalidate: 3600 }, // Cache for 1 hour
       }

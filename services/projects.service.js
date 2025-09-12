@@ -2,7 +2,7 @@
 export const fetchAllBlogs = async () => {
   try {
     const response = await fetch(
-      "https://api.prismolix.com/wp-json/wp/v2/portfolio?_embed&per_page=10",
+      "https://prismolix.wasmer.app/wp-json/wp/v2/portfolio?_embed&per_page=10",
       {
         next: { revalidate: 3600 }, // Cache for 1 hour
       }
@@ -25,7 +25,7 @@ export const fetchAllBlogs = async () => {
 export const fetchBlogBySlug = async (slug) => {
   try {
     const response = await fetch(
-      `https://api.prismolix.com/wp-json/wp/v2/portfolio?slug=${slug}&_embed`,
+      `https://prismolix.wasmer.app/wp-json/wp/v2/portfolio?slug=${slug}&_embed`,
       {
         next: { revalidate: 3600 }, // Cache for 1 hour
       }

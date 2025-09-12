@@ -40,7 +40,7 @@ const ContactSection = () => {
 
     try {
       const response = await fetch(
-        `https://api.prismolix.com/wp-json/contact-form-7/v1/contact-forms/88/feedback`,
+        `https://prismolix.wasmer.app/wp-json/contact-form-7/v1/contact-forms/88/feedback`,
         {
           method: "POST",
           body: formData,
