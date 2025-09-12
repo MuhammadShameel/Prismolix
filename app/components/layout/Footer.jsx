@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import FooterShape from "../../../public/assets/images/footer-shape.png";
 import FooterMobileShape from "../../../public/assets/images/abstract-mobile.png";
-import LogoIcon from "../../../public/assets/images/logo-icon.svg";
+import LogoIcon from "../../../public/assets/images/logo.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -120,7 +120,7 @@ const Footer = () => {
             <div className="relative z-10 flex flex-col lg:flex-row justify-between lg:pb-[50px] md:pb-[40px] pb-[30px]">
               {/* Left Section */}
               <div className="flex flex-col gap-6 lg:col-span-4">
-                <div className="logo-wrapper lg:w-[153.561px] lg:h-[60px] w-[77px] h-[30px] flex flex-col items-start">
+                <div className="logo-wrapper lg:w-[153.561px] lg:h-[60px] w-[107px] h-[30px] flex flex-col items-start">
                   <Image
                     src={LogoIcon}
                     alt="Prismolix Icon"

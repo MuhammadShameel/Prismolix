@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
-import Logo from "../../../public/assets/images/logo.svg"; // Adjust the path as necessary
+import Logo from "../../../public/assets/images/logo.png"; // Adjust the path as necessary
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -53,11 +53,11 @@ const Header = () => {
         }`}
       >
         <div className="container mx-auto">
-          <div className="flex items-center justify-between pl-[30px] pr-2.5 py-[10px]  ">
+          <div className="flex items-center justify-between px-2.5 py-[10px]  ">
             {/* Logo */}
             <Link
               href="/"
-              className="flex-shrink-0 logo-wrapper lg:h-[60px] md:h-[50px] h-[40px] w-auto"
+              className="flex-shrink-0 logo-wrapper lg:h-[40px] md:h-[30px] h-[30px] w-auto"
             >
               <Image
                 src={Logo}
