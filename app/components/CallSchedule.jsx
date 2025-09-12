@@ -25,10 +25,11 @@ const CallSchedule = () => {
               </button>
             </div>
             <Image
-              className="absolute -bottom-16 left-0 w-[440px] h-[440px] z-0"
-              src={"/assets/images/callScheduleIcon.svg"}
+              className="absolute -bottom-16 lg:left-0 -left-30 lg:w-[590px] lg:h-[440px] w-[500px] h-[380px] z-0"
+              src={"/assets/images/callScheduleIcon.png"}
               width={100}
               height={100}
+              unoptimized={true}
               alt=""
             />
           </div>
