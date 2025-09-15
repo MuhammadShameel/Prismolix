@@ -160,70 +160,72 @@ const Page = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="absolute top-1/2 z-10 hidden w-full -translate-y-1/2 items-center justify-between px-4 md:flex">
-            {/* Previous Button */}
-            <button
-              onClick={handlePrev}
-              aria-label="Previous slide"
-              className="flex h-14 w-14 p-3 items-center justify-center rounded-full bg-white/80 text-gray-800 shadow-md backdrop-blur-sm transition hover:bg-white"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
+          {galleryItems.length > 1 && (
+            <div className="absolute top-1/2 z-10 hidden w-full -translate-y-1/2 items-center justify-between px-4 md:flex">
+              {/* Previous Button */}
+              <button
+                onClick={handlePrev}
+                aria-label="Previous slide"
+                className="flex h-14 w-14 p-3 items-center justify-center cursor-pointer rounded-full bg-white/80 text-gray-800 shadow-md backdrop-blur-sm transition hover:bg-white"
               >
-                <path
-                  d="M19.9375 12.354L7.29167 24.9998L19.9375 37.6457"
-                  stroke="#292929"
-                  strokeWidth="2.5"
-                  strokeMiterlimit="10"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M42.7084 25H7.64588"
-                  stroke="#292929"
-                  strokeWidth="2.5"
-                  strokeMiterlimit="10"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-            {/* Next Button */}
-            <button
-              onClick={handleNext}
-              aria-label="Next slide"
-              className="flex h-14 w-14 p-3 items-center justify-center rounded-full bg-violet-600 text-white shadow-md transition hover:bg-violet-700"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 50 50"
+                  fill="none"
+                >
+                  <path
+                    d="M19.9375 12.354L7.29167 24.9998L19.9375 37.6457"
+                    stroke="#292929"
+                    strokeWidth="2.5"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M42.7084 25H7.64588"
+                    stroke="#292929"
+                    strokeWidth="2.5"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+              {/* Next Button */}
+              <button
+                onClick={handleNext}
+                aria-label="Next slide"
+                className="flex h-14 w-14 p-3 items-center justify-center cursor-pointer rounded-full bg-violet-600 text-white shadow-md transition hover:bg-violet-700"
               >
-                <path
-                  d="M30.0625 12.354L42.7083 24.9998L30.0625 37.6457"
-                  stroke="white"
-                  strokeWidth="2.5"
-                  strokeMiterlimit="10"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M7.29163 25H42.3541"
-                  stroke="white"
-                  strokeWidth="2.5"
-                  strokeMiterlimit="10"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 50 50"
+                  fill="none"
+                >
+                  <path
+                    d="M30.0625 12.354L42.7083 24.9998L30.0625 37.6457"
+                    stroke="white"
+                    strokeWidth="2.5"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M7.29163 25H42.3541"
+                    stroke="white"
+                    strokeWidth="2.5"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          )}
           <div className="swiper-pagination"></div>
         </div>
 
