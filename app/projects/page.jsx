@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import Shape from "../../public/assets/images/image-7.png";
 import featureImg from "../../public/assets/images/blog-img.png";
-import sectionShape from "../../public/assets/images/section-shape.png";
 import {
   fetchAllBlogs,
   extractBlogData,
@@ -22,6 +21,32 @@ const getImageUrl = (portfolio) => {
     return featuredImageUrl.replace("http://", "https://");
   }
   return featureImg;
+};
+
+export const metadata = {
+  title: "Case Studies by Prismolix • Real Projects, Real Results",
+  description:
+    "See how we’ve helped agencies scale and deliver exceptional results. Explore projects in web, apps, Shopify & UX/UI that showcase our transparent process and impact.",
+  alternates: {
+    canonical: "https://www.prismolix.com/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://prismolix.com",
+    title: "Case Studies by Prismolix • Real Projects, Real Results",
+    description:
+      "See how we’ve helped agencies scale and deliver exceptional results. Explore projects in web, apps, Shopify & UX/UI that showcase our transparent process and impact.",
+    images:
+      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Studies by Prismolix • Real Projects, Real Results",
+    description:
+      "See how we’ve helped agencies scale and deliver exceptional results. Explore projects in web, apps, Shopify & UX/UI that showcase our transparent process and impact.",
+    images:
+      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+  },
 };
 
 const page = async () => {

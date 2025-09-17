@@ -1,5 +1,4 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Shape from "../../public/assets/images/blogShape.png";
 import Marquee from "../components/Marquee";
@@ -21,9 +20,33 @@ const services = [
   },
 ];
 
-const About = () => {
-  // const [data, setData] = useState(null);
+export const metadata = {
+  title: "About Prismolix — Your White-Label Partner in Design & Development",
+  description:
+    "Learn how Prismolix empowers agencies by seamlessly providing design, development & creative support. We plug in as your behind-the-scenes team so you can stay client-focused.",
+  alternates: {
+    canonical: "https://www.prismolix.com/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://prismolix.com",
+    title: "About Prismolix — Your White-Label Partner in Design & Development",
+    description:
+      "Learn how Prismolix empowers agencies by seamlessly providing design, development & creative support. We plug in as your behind-the-scenes team so you can stay client-focused.",
+    images:
+      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Prismolix — Your White-Label Partner in Design & Development",
+    description:
+      "Learn how Prismolix empowers agencies by seamlessly providing design, development & creative support. We plug in as your behind-the-scenes team so you can stay client-focused.",
+    images:
+      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+  },
+};
 
+const About = () => {
   return (
     <>
       <section className="relative hero-section">

@@ -1,5 +1,3 @@
-// "use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link"; // It's good practice to import Link for navigation
@@ -13,6 +11,32 @@ import OfferSection from "../components/OfferSection";
 import ContactSection from "../components/ContactSection";
 import CallSchedule from "../components/CallSchedule";
 import FooterMarquee from "../components/FooterMarquee";
+
+export const metadata = {
+  title: "Prismolix Services • UI/UX, Web & App Development, Shopify Builds",
+  description:
+    "Explore our core services: UI/UX systems, custom web & app builds, Shopify & WordPress, and ongoing graphic design. High-quality, scalable solutions to support agency growth.",
+  alternates: {
+    canonical: "https://www.prismolix.com/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://prismolix.com",
+    title: "Prismolix Services • UI/UX, Web & App Development, Shopify Builds",
+    description:
+      "Explore our core services: UI/UX systems, custom web & app builds, Shopify & WordPress, and ongoing graphic design. High-quality, scalable solutions to support agency growth.",
+    images:
+      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prismolix Services • UI/UX, Web & App Development, Shopify Builds",
+    description:
+      "Explore our core services: UI/UX systems, custom web & app builds, Shopify & WordPress, and ongoing graphic design. High-quality, scalable solutions to support agency growth.",
+    images:
+      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+  },
+};
 
 // Convert the component to an async Server Component
 const ServicesPage = async () => {

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 
@@ -12,6 +11,32 @@ import OfferSection from "../components/OfferSection";
 import ContactSection from "../components/ContactSection";
 import CallSchedule from "../components/CallSchedule";
 import FooterMarquee from "../components/FooterMarquee";
+
+export const metadata = {
+  title: "How Prismolix Works • Our Process & Partnership Model",
+  description:
+    "Our streamlined process: onboarding, sprint-based milestones, shared tracking & dedicated communication. Learn how we deliver seamlessly for agencies.",
+  alternates: {
+    canonical: "https://www.prismolix.com/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://prismolix.com",
+    title: "How Prismolix Works • Our Process & Partnership Model",
+    description:
+      "Our streamlined process: onboarding, sprint-based milestones, shared tracking & dedicated communication. Learn how we deliver seamlessly for agencies.",
+    images:
+      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How Prismolix Works • Our Process & Partnership Model",
+    description:
+      "Our streamlined process: onboarding, sprint-based milestones, shared tracking & dedicated communication. Learn how we deliver seamlessly for agencies.",
+    images:
+      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+  },
+};
 
 const HowItWorks = () => {
   return (

@@ -13,6 +13,32 @@ const formatDate = (dateString) => {
   return new Date(dateString).toLocaleDateString(undefined, options);
 };
 
+export const metadata = {
+  title: "Prismolix Blog • Agency Growth, Design Tips, Dev Trends",
+  description:
+    "Read insights, best practices & trends for agency growth—from design & development to project management & UX strategy. Stay ahead with expert tips from Prismolix.",
+  alternates: {
+    canonical: "https://www.prismolix.com/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://prismolix.com",
+    title: "Prismolix Blog • Agency Growth, Design Tips, Dev Trends",
+    description:
+      "Read insights, best practices & trends for agency growth—from design & development to project management & UX strategy. Stay ahead with expert tips from Prismolix.",
+    images:
+      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prismolix Blog • Agency Growth, Design Tips, Dev Trends",
+    description:
+      "Read insights, best practices & trends for agency growth—from design & development to project management & UX strategy. Stay ahead with expert tips from Prismolix.",
+    images:
+      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+  },
+};
+
 // Convert the component to an async Server Component
 const BlogsPage = async () => {
   // Fetch the blog posts from your new service
