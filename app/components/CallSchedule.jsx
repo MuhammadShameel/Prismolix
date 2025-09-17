@@ -20,7 +20,7 @@ const CallSchedule = () => {
                 next 10 projects — while you keep focusing on client
                 relationships and growth.
               </p>
-              <button className="btn btn-secondary btn-shine mt-7">
+              <button className="btn btn-secondary  mt-7">
                 Schedule My Call
               </button>
             </div>

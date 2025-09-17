@@ -129,6 +129,11 @@ h6 {
   transition: all 0.3s ease-in-out;
 }
 
+.btn-secondary:hover {
+  background-color: var(--color-primary-dark);
+  color: white !important;
+}
+
 .btn-outline {
   color: var(--color-dark-cards-bg, #292929);
   border: 2px solid var(--color-dark-cards-bg, #292929);
