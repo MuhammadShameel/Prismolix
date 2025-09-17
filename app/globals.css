@@ -130,10 +130,23 @@ h6 {
 }
 
 .btn-outline {
-  background-color: transparent;
+  color: var(--color-dark-cards-bg, #292929);
   border: 2px solid var(--color-dark-cards-bg, #292929);
-  color: var(--color-dark-cards-bg);
-  transition: all 0.3s ease-in-out;
+
+  /* --- Animation Setup --- */
+  background-image: linear-gradient(
+    to right,
+    var(--color-dark-cards-bg, #292929) 50%,
+    transparent 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-outline:hover {
+  background-position: 0%; /* Slide the background in */
+  color: white; /* Change text to white */
 }
 
 .btn-dark {
@@ -757,3 +770,37 @@ h6 {
   @apply text-[120px] sm:text-[130px] md:text-[140px] lg:text-[150px];
   color: #ffff;
 }
+
+/* Animation utility class */
+.btn-shine {
+  position: relative; /* Necessary for positioning the shine element */
+  overflow: hidden; /* Hides the shine element when it's outside the button */
+}
+
+/* The shine element */
+.btn-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start off-screen to the left */
+  width: 75%;
+  height: 100%;
+
+  /* The angled gleam look */
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.616) 50%,
+    /* Brighter in the middle */ rgba(255, 255, 255, 0) 80%
+  );
+
+  transform: skewX(-25deg); /* Skew the shine element */
+  transition: left 0.6s ease; /* Animation speed */
+}
+
+/* On hover, move the shine element across the button */
+.btn-shine:hover::before {
+  left: 125%; /* End off-screen to the right */
+}
+
+/* Ensure the button text stays on top of the shine effect */

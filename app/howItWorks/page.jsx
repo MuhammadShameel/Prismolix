@@ -76,7 +76,7 @@ const HowItWorks = () => {
 
             {/* Button Group */}
             <div className="flex items-center gap-4 mt-4">
-              <button className="btn btn-primary">Book a Call</button>
+              <button className="btn btn-primary btn-shine">Book a Call</button>
               <button className="btn btn-outline">How it Works</button>
             </div>
           </div>
@@ -120,7 +120,7 @@ const HowItWorks = () => {
 
                 {/* Button Group */}
                 <div className="flex items-center gap-4 mt-4">
-                  <a href={`#`} className="btn btn-primary">
+                  <a href={`#`} className="btn btn-primary btn-shine">
                     View Full Case Study
                   </a>
                 </div>

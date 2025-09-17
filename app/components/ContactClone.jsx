@@ -312,7 +312,7 @@ const ContactSection = () => {
               <button
                 onClick={handleSubmit}
                 type="submit"
-                className="btn btn-primary"
+                className="btn btn-primary btn-shine"
                 disabled={status === "submitting"}
               >
                 {status === "submitting" ? "Submitting..." : "Submit now"}

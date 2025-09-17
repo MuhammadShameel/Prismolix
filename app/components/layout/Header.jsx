@@ -81,7 +81,7 @@ const Header = () => {
             </nav>
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center lg:gap-10 md:gap-5">
-              <Link href={"/contact"} className="btn btn-primary">
+              <Link href={"/contact"} className="btn btn-primary btn-shine">
                 Contact Us
               </Link>
             </div>
@@ -131,7 +131,7 @@ const Header = () => {
                   <li>
                     <Link
                       href="/contact"
-                      className="btn btn-primary w-full bg-purple-600 text-white px-8 py-3 rounded-lg text-lg font-medium"
+                      className="btn btn-primary btn-shine w-full bg-purple-600 text-white px-8 py-3 rounded-lg text-lg font-medium"
                     >
                       Contact Us
                     </Link>

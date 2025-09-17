@@ -78,7 +78,7 @@ const ServicesPage = async () => {
               handle execution so you can focus on growth.
             </p>
             <div className="mt-4 flex items-center gap-4">
-              <button className="btn btn-primary">Book a Call</button>
+              <button className="btn btn-primary btn-shine">Book a Call</button>
               <button className="btn btn-outline">How it Works</button>
             </div>
           </div>
@@ -124,7 +124,7 @@ const ServicesPage = async () => {
                 no micro-managing.
               </p>
 
-              <button className="btn btn-primary mt-2 w-full sm:w-auto sm:self-start">
+              <button className="btn btn-primary btn-shine mt-2 w-full sm:w-auto sm:self-start">
                 Let's Talk Scalability
               </button>
             </div>

@@ -92,7 +92,7 @@ const Services = () => {
               <li>Shared boards for progress tracking</li>
               <li>Unlimited revisions within scope</li>
             </ul>
-            <button className="w-full btn btn-secondary hover:bg-violet-100 transition-colors mt-6">
+            <button className="w-full btn btn-secondary btn-shine hover:bg-violet-100 transition-colors mt-6">
               Build Your Stack
             </button>
           </div>

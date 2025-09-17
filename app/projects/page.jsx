@@ -91,7 +91,7 @@ const page = async () => {
 
             {/* Button Group */}
             <div className="flex items-center gap-4 mt-4">
-              <button className="btn btn-primary">Book a Call</button>
+              <button className="btn btn-primary btn-shine">Book a Call</button>
               <button className="btn btn-outline">How it Works</button>
             </div>
           </div>
@@ -212,7 +212,7 @@ const page = async () => {
                     <div className="flex items-center gap-4 mt-4">
                       <a
                         href={`/projects/${portfolioData.slug}`}
-                        className="btn btn-primary"
+                        className="btn btn-primary btn-shine"
                       >
                         View Full Case Study
                       </a>

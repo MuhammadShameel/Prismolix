@@ -52,7 +52,7 @@ const ProblemSolution = () => {
                   managing freelancers. You stay client-facing. We quietly
                   deliver.
                 </p>
-                <button className="mt-7 btn btn-primary">
+                <button className="mt-7 btn btn-primary btn-shine">
                   Let's Talk Scalability
                 </button>
               </div>

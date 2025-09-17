@@ -38,7 +38,7 @@ const HeroSection = () => {
 
           {/* Button Group */}
           <div className="flex items-center gap-4 lg:mt-9 mt-8">
-            <button className="btn btn-primary">Book a Call</button>
+            <button className="btn btn-primary btn-shine">Book a Call</button>
             <button className="btn btn-outline">How it Works</button>
           </div>
         </div>

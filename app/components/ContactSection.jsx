@@ -399,7 +399,7 @@ const ContactSection = () => {
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  className="btn btn-primary"
+                  className="btn btn-primary btn-shine"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Submitting..." : "Submit now"}

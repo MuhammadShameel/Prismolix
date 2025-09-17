@@ -83,7 +83,7 @@ const About = () => {
 
             {/* Button Group */}
             <div className="flex items-center gap-4 mt-4">
-              <button className="btn btn-primary">Book a Call</button>
+              <button className="btn btn-primary btn-shine">Book a Call</button>
               <button className="btn btn-outline">How it Works</button>
             </div>
           </div>
@@ -131,7 +131,7 @@ const About = () => {
                 works in your tools, and moves at your speed.
               </p>
 
-              <button className="btn btn-primary mt-2 w-full sm:w-auto sm:self-start">
+              <button className="btn btn-primary btn-shine mt-2 w-full sm:w-auto sm:self-start">
                 Let's Talk Scalability
               </button>
             </div>

@@ -87,7 +87,7 @@ const ServiceDetailPage = async ({ params }) => {
                   {serviceData.secondParagraph}
                 </p>
 
-                <button className="btn btn-primary w-60 bg-brand-purple text-white font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 focus:ring-offset-light-purple">
+                <button className="btn btn-primary btn-shine w-60 bg-brand-purple text-white font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 focus:ring-offset-light-purple">
                   Let's Talk Scalability
                 </button>
               </div>

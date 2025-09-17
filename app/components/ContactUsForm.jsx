@@ -232,7 +232,7 @@ const ContactUsForm = () => {
       <div className="flex justify-end">
         <button
           type="submit"
-          className="btn btn-primary"
+          className="btn btn-primary btn-shine"
           disabled={status === "submitting"}
         >
           {status === "submitting" ? "Submitting..." : "Submit now"}

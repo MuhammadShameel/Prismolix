@@ -110,7 +110,7 @@ const BlogsPage = async () => {
                 handle the heavy lifting.
               </p>
 
-              <button className="btn btn-primary mt-2 w-full sm:w-auto sm:self-start">
+              <button className="btn btn-primary btn-shine mt-2 w-full sm:w-auto sm:self-start">
                 Let's Talk Scalability
               </button>
             </div>
