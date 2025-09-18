@@ -11,7 +11,7 @@ const CallSchedule = () => {
           <div className="relative overflow-hidden lg:w-7/10 w-full bg-primary lg:p-8 md:p-7 p-5 rounded-2xl text-white">
             <div className="relative max-w-xl z-1">
               <h2 className="leading-[87%] tracking-[-1px]">
-                Ready to Scale Without Hiring?
+                Ready to Grow Without the Overload?
               </h2>
             </div>
             <div className="relative mt-3.5 max-w-lg ms-auto text-right z-1">

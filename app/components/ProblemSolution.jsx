@@ -34,23 +34,24 @@ const ProblemSolution = () => {
                 </p>
 
                 <h2 className="lg:leading-20 leading-10 md:leading-18 sm:leading-16 tracking-tight lg:mt-4 md:mt-3 mt-2">
-                  Agency Growth Shouldn't Mean Burnout
+                  Growing Your Agency Shouldn’t Cost You Sanity
                 </h2>
               </div>
 
               <div className="space-y-4 text-[#A5A5AF] xl:mt-80 lg:mt-70 md:mt-60 sm:mt-40 mt-36  max-w-6xl">
                 <p>
-                  As your agency wins more clients, expectations pile up. Design
-                  timelines stretch. Dev work gets complex. Quality starts
-                  slipping. And hiring takes too long — or worse, you hire the
-                  wrong fit.
+                  As your agency wins more clients, deadlines tighten, workloads
+                  balloon, and quality threatens to slip. Hiring freelancers can
+                  be risky; building a team takes time. You need reliable design
+                  and dev support—fast.
                 </p>
                 <p>
-                  Prismolix was built for this moment. We're a white-label team
-                  that plugs into your agency, delivering high-quality design
-                  and development without the headache of sourcing, training, or
-                  managing freelancers. You stay client-facing. We quietly
-                  deliver.
+                  We plug into your agency as an embedded team—no extra hiring,
+                  no oversight headaches. With Prismolix, you maintain the
+                  client-facing role, while we deliver high-quality UI/UX
+                  design, WordPress or Shopify sites, full-stack apps, and
+                  graphic design. Transparent process. Deadline-driven sprints.
+                  Reliable results.
                 </p>
                 <button className="mt-7 btn btn-primary btn-shine">
                   Let's Talk Scalability

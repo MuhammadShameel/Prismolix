@@ -32,8 +32,8 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p className="text-base max-w-3xl">
-            Your time should be spent closing deals — not designing pages. We
-            handle execution so you can focus on growth.
+            Focus on closing deals — we handle the execution. From UI/UX to full
+            stack, we’re the extension of your agency.
           </p>
 
           {/* Button Group */}

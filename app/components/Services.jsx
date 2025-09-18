@@ -40,11 +40,12 @@ const Services = () => {
         <div className="service-content flex flex-col items-center mx-auto gap-5 max-w-2xl">
           <span className="fs-26 color-primary-dark">[Services]</span>
           <h2 className="lg:leading-20 leading-10 tracking-tight">
-            What We Build
+            Services Designed for Agency Growth
           </h2>
           <p className="color-dark-cards-bg text-center">
-            Whether it’s a landing page sprint, a headless eCommerce build, or
-            full-stack app design — we’ve got you covered.
+            From landing page sprints to headless eCommerce sites and full-stack
+            apps, we craft high-quality, scalable digital solutions for growing
+            agencies.
           </p>
         </div>
         <div className="service-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
@@ -84,13 +85,13 @@ const Services = () => {
 
           {/* "Each Service Includes" Card */}
           <div className="flex flex-col bg-primary rounded-3xl lg:p-8 md:p-7 p-5 text-white">
-            <h4 className="text-3xl font-bold">Each Service includes:</h4>
+            <h4 className="text-3xl font-bold">Additional Benefits Include:</h4>
             {/* MODIFICATION HERE: Changed list-inside to list-outside and added padding */}
             <ul className="list-disc list-outside space-y-3 mt-6 text-base text-purple-100 flex-grow sm:text-lg md:text-xl lg:text-[22px] pl-5">
-              <li>1 dedicated point of contact</li>
-              <li>Weekly sprints with milestones</li>
+              <li>Dedicated point of contact</li>
+              <li>Weekly sprint planning & milestone reviews</li>
               <li>Shared boards for progress tracking</li>
-              <li>Unlimited revisions within scope</li>
+              <li>Unlimited revisions (within scope)</li>
             </ul>
             <button className="w-full btn btn-secondary  hover:bg-violet-100 transition-colors mt-6">
               Build Your Stack
