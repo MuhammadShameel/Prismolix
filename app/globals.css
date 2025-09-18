@@ -186,6 +186,20 @@ h6 {
   width: 100%;
   height: 100%;
   z-index: -1;
+
+  /* --- Animation --- */
+  transform-origin: left; /* Animate from the left side */
+  animation: reveal-background 0.9s ease-out forwards;
+}
+
+/* Define the animation steps */
+@keyframes reveal-background {
+  from {
+    transform: scaleX(0); /* Start with zero width */
+  }
+  to {
+    transform: scaleX(1); /* End at full width */
+  }
 }
 
 .my-lg {
@@ -808,4 +822,4 @@ h6 {
   left: 125%; /* End off-screen to the right */
 }
 
-/* Ensure the button text stays on top of the shine effect */
+
