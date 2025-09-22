@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import Shape from "../../public/assets/images/hero-shape.png";
+import ModelViewer from "../components/ModelViewer";
 
 const HeroSection = () => {
   return (
@@ -13,11 +14,14 @@ const HeroSection = () => {
         height={100}
         alt=""
       />
-      <Image
+      {/* <Image
         src={Shape}
         alt="Abstract 3D hero image"
         className="absolute right-0 top-0"
-      />
+      /> */}
+
+      <ModelViewer />
+
       {/* Container for the text content */}
       <div className="container mx-auto relative z-10">
         <div className="lg:w-4/6">

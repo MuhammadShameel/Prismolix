@@ -39,7 +39,7 @@ const Services = () => {
       <div className="container mx-auto">
         <div className="service-content flex flex-col items-center mx-auto gap-5 max-w-2xl">
           <span className="fs-26 color-primary-dark">[Services]</span>
-          <h2 className="lg:leading-20 leading-10 tracking-tight">
+          <h2 className="lg:leading-20 leading-10 tracking-tight text-center">
             Services Designed for Agency Growth
           </h2>
           <p className="color-dark-cards-bg text-center">

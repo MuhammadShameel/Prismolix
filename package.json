@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
+    "@react-three/drei": "^10.7.6",
+    "@react-three/fiber": "^9.3.0",
     "cheerio": "^1.1.2",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.534.0",
@@ -19,6 +21,7 @@
     "react-fast-marquee": "^1.6.5",
     "react-hook-form": "^7.62.0",
     "swiper": "^11.2.10",
+    "three": "^0.180.0",
     "yup": "^1.7.0"
   },
   "devDependencies": {
