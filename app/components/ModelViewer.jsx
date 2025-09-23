@@ -11,10 +11,10 @@ const ModelViewer = () => {
   return (
     <Canvas
       camera={{ position: [2, 0, 12.25], fov: 15 }}
-      //   style={{
-      //     height: "1130px",
-      //     width: "1130px",
-      //   }}
+      style={{
+        height: "100%",
+        width: "100%",
+      }}
       className="absolute right-0 top-0"
     >
       <ambientLight intensity={1.25} />

@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-
-import Shape from "../../public/assets/images/hero-shape.png";
 import ModelViewer from "../components/ModelViewer";
 
 const HeroSection = () => {
   return (
-    <section className="relative pb-[100px] hero-section lg:px-5 md:px-4 px-3">
+    // ✅ THIS IS THE LINE TO CHANGE
+    <section className="relative h-screen flex items-center pb-[100px] hero-section lg:px-5 md:px-4 px-3 overflow-x-clip">
+      {/* This background image is fine */}
       <Image
         className="absolute w-full h-auto top-0 right-0 -z-1"
         src={"/assets/images/Shade.png"}
@@ -14,13 +14,15 @@ const HeroSection = () => {
         height={100}
         alt=""
       />
-      {/* <Image
-        src={Shape}
-        alt="Abstract 3D hero image"
-        className="absolute right-0 top-0"
-      /> */}
 
-      <ModelViewer />
+      {/* This container for the 3D model is also fine */}
+      <div className="absolute top-0 right-0 h-screen w-3/4 z-1 0">
+        <div className="!h-[100%] !w-[100%]">
+          <div className="shape-wrapper !h-full !w-full">
+            <ModelViewer />
+          </div>
+        </div>
+      </div>
 
       {/* Container for the text content */}
       <div className="container mx-auto relative z-10">
@@ -47,17 +49,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-
-      {/* The Image (positioned absolutely) */}
-      {/* <div className="absolute top-[45%] right-0 -translate-y-1/2 w-1/2 lg:w-2/5 h-full z-0 hidden lg:block ">
-        <Image
-          src={Shape}
-          alt="Abstract 3D hero image"
-          layout="fill"
-          // objectFit="contain"
-          className="object-right w-full h-auto "
-        />
-      </div> */}
     </section>
   );
 };
