@@ -16,7 +16,7 @@ const HeroSection = () => {
       />
 
       {/* This container for the 3D model is also fine */}
-      <div className="absolute top-0 right-0  w-2/5 z-1 0">
+      <div className="absolute top-0 right-0  lg:w-2/5 md:w-3/5 lg:h-full md:h-[50%] h-[60%] lg:z-20 z-10 0">
         <div className="!h-[100%] !w-[100%]">
           <div className="shape-wrapper !h-full !w-full">
             <ModelViewer />

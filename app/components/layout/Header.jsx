@@ -65,7 +65,7 @@ const Header = () => {
                 className="w-full h-full object-contain"
               />
             </Link>
-            <nav className="hidden lg:flex md:flex items-center lg:gap-10 md:gap-5">
+            <nav className="hidden xl:flex lg:flex items-center xl:gap-10 lg:gap-5">
               <ul className="flex items-center xl:gap-10 lg:gap-8 md:gap-5">
                 {navLinks.map((link) => (
                   <li key={link.name}>
@@ -80,14 +80,14 @@ const Header = () => {
               </ul>
             </nav>
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center lg:gap-10 md:gap-5">
+            <div className="hidden lg:flex items-center lg:gap-10 ">
               <Link href={"/contact"} className="btn btn-primary btn-shine">
                 Contact Us
               </Link>
             </div>
 
             {/* Mobile Menu Toggle Button */}
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="focus:outline-none p-2"
@@ -112,7 +112,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed top-20 left-0 w-full z-40 px-3 md:hidden" // Adjusted z-index
+            className="fixed top-20 left-0 w-full z-40 px-3 lg:hidden" // Adjusted z-index
           >
             <div className="[background:linear-gradient(0deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0.2)_100%),rgba(0,0,0,0.05)] backdrop-blur-[15px] p-6 rounded-[10px]">
               <nav>
