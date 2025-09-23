@@ -5,7 +5,7 @@ import ModelViewer from "../components/ModelViewer";
 const HeroSection = () => {
   return (
     // ✅ THIS IS THE LINE TO CHANGE
-    <section className="relative h-screen flex items-center pb-[100px] hero-section lg:px-5 md:px-4 px-3 overflow-x-clip">
+    <section className="relative flex items-center pb-[100px] hero-section lg:px-5 md:px-4 px-3 overflow-x-clip">
       {/* This background image is fine */}
       <Image
         className="absolute w-full h-auto top-0 right-0 -z-1"
@@ -16,7 +16,7 @@ const HeroSection = () => {
       />
 
       {/* This container for the 3D model is also fine */}
-      <div className="absolute top-0 right-0 h-screen w-3/4 z-1 0">
+      <div className="absolute top-0 right-0  w-2/5 z-1 0">
         <div className="!h-[100%] !w-[100%]">
           <div className="shape-wrapper !h-full !w-full">
             <ModelViewer />
