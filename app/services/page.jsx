@@ -71,7 +71,7 @@ const ServicesPage = async () => {
             <p className="fs-26 color-primary-dark">[Services]</p>
             <h1 className="font-bold leading-[100%] tracking-tighter">
               <span className="text-overlay px-2 text-white">Scalable</span>{" "}
-              Design & Development
+              Design & Development That Powers Agency Growth
             </h1>
             <p className="max-w-3xl text-base">
               Your time should be spent closing deals — not designing pages. We

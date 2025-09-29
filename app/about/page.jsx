@@ -71,14 +71,15 @@ const About = () => {
 
             {/* Main Heading with Highlighted Text */}
             <h1 className="font-bold tracking-tighter leading-[100%]">
-              The Silent Engine Powering Top {""}
-              <span className="text-overlay text-white px-2">Agencies</span>
+              The Silent Engine Behind Your{""}
+              <span className="text-overlay text-white px-2">Success</span>
             </h1>
 
             {/* Subheading */}
             <p className="text-base max-w-3xl">
-              Your time should be spent closing deals — not designing pages. We
-              handle execution so you can focus on growth.
+              Your agency’s real value is in strategy, sales, and client
+              relationships — not in chasing deadlines or managing unreliable
+              freelancers. That’s where <strong>Prismolix</strong> comes in.
             </p>
 
             {/* Button Group */}
@@ -113,22 +114,25 @@ const About = () => {
               </span>
 
               <h2 className="mt-2 mb-4 font-bold leading-tight ">
-                Agency Growth Shouldn't Mean Burnout
+                Agency Growth Without Burnout
               </h2>
 
               <p className="mb-4">
-                At Prismolix, we don’t chase the spotlight — we power those who
-                do. We’re the behind-the-scenes partner helping agencies scale
-                effortlessly by delivering world-class design and development —
-                under your brand, inside your workflow, and with zero management
-                overhead.
+                Growing your agency shouldn’t mean endless stress, late nights,
+                and bottlenecks. At Prismolix, we don’t take the spotlight — we
+                power those who do.
               </p>
               <p className="mb-6 text-base">
-                We were built for agencies who are growing fast but tired of
-                bottlenecks — sourcing freelancers, managing inconsistent
-                delivery, or sacrificing quality under pressure. Prismolix gives
-                you a full-stack execution team that integrates seamlessly,
-                works in your tools, and moves at your speed.
+                We help creative and digital agencies scale effortlessly by
+                delivering world-class UI/UX design, web, app, and Shopify
+                development — all white-labeled, fully integrated into your
+                workflow, and with zero management overhead.
+              </p>
+              <p className="mb-6 text-base">
+                No more freelancer headaches. No more inconsistent delivery.
+                With Prismolix, you get a dedicated execution team that adapts
+                to your speed, works in your tools, and delivers with quality
+                and consistency.
               </p>
 
               <button className="btn btn-primary btn-shine mt-2 w-full sm:w-auto sm:self-start">
