@@ -121,6 +121,7 @@ h6 {
   color: white;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
+  border: 1px solid var(--primary);
 }
 
 .btn-secondary {
@@ -821,5 +822,3 @@ h6 {
 .btn-shine:hover::before {
   left: 125%; /* End off-screen to the right */
 }
-
-
