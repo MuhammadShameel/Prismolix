@@ -79,14 +79,14 @@ const page = async () => {
             <h1 className="font-bold tracking-tighter leading-[100%]">
               Quietly Powering
               <span className="text-overlay  text-white px-2">Agency</span>{" "}
-              Success
+              Growth
             </h1>
 
             {/* Subheading */}
             <p className="text-base max-w-3xl">
-              Prismolix works behind the scenes to help top agencies ship
-              faster, scale smarter, and deliver beautiful results — without
-              adding headcount.
+              At Prismolix, we partner seamlessly with agencies behind the
+              scenes — helping them deliver faster, scale smarter, and produce
+              beautiful results, all without ballooning their headcount.
             </p>
 
             {/* Button Group */}

@@ -18,7 +18,7 @@ import Person from "../../public/assets/images/ali-rehman.png";
 const testimonialsData = [
   {
     quote:
-      "Prismolix let us scale our delivery without adding any full-time hires. Clients never noticed. That's the dream.",
+      "“Prismolix let us scale our delivery without adding any full-time hires. Clients never noticed. That’s the dream",
     name: "Ali Rehman",
     title: "Creative Director at Clutch Media",
     image: Person,
