@@ -54,8 +54,7 @@ const ServicesPage = async () => {
 
       <section className="relative hero-section">
         <Image
-          className="absolute top-0 right-0 h-auto w-full -z-1
-"
+          className="absolute top-0 right-0 h-auto w-full -z-1"
           src={"/assets/images/Shade.png"}
           width={100}
           height={100}

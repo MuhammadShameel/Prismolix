@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import ModelViewer from "../components/ModelViewer";
 import Shape from "../../public/assets/images/hero-shape.png";
 
 const HeroSection = () => {

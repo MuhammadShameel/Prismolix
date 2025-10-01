@@ -306,8 +306,8 @@ const ContactSection = () => {
                     className={`${
                       errors.service ? errorInputStyle : inputStyle
                     }  appearance-none pr-12`}
-                    value={formData.service}
                     onChange={handleInputChange}
+                    value={formData.service}
                   >
                     <option value="">Service You're looking for</option>
                     <option value="UI/UX Design">UI/UX Design</option>
