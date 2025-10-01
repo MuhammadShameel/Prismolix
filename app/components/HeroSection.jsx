@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import ModelViewer from "../components/ModelViewer";
+import Shape from "../../public/assets/images/hero-shape.png";
 
 const HeroSection = () => {
   return (
     // ✅ THIS IS THE LINE TO CHANGE
-    <section className="relative flex items-center pb-[100px] hero-section lg:px-5 md:px-4 px-3 overflow-x-clip">
+    <section className="relative pb-[100px] hero-section lg:px-5 md:px-4 px-3">
       {/* This background image is fine */}
       <Image
         className="absolute w-full h-auto top-0 right-0 -z-1"
@@ -15,14 +16,11 @@ const HeroSection = () => {
         alt=""
       />
 
-      {/* This container for the 3D model is also fine */}
-      <div className="absolute top-0 right-0  lg:w-2/5 md:w-3/5 lg:h-full md:h-[50%] h-[60%] lg:z-20 z-10 0">
-        <div className="!h-[100%] !w-[100%]">
-          <div className="shape-wrapper !h-full !w-full">
-            <ModelViewer />
-          </div>
-        </div>
-      </div>
+      <Image
+        src={Shape}
+        alt="Abstract 3D hero image"
+        className="absolute right-0 top-0"
+      />
 
       {/* Container for the text content */}
       <div className="container mx-auto relative z-10">
