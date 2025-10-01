@@ -3,11 +3,12 @@ import Image from "next/image";
 import SideShape from "../../public/assets/images/offer.svg";
 
 const listItems = [
-  "Dedicated project manager",
-  "Weekly sprints with clear milestones",
-  "Shared Notion or Trello board for tracking",
-  "Slack communication with your team",
-  "Delivery under your brand name",
+  "A dedicated project manager for smooth communicationr",
+  "Weekly sprints with clear milestones and progress tracking",
+  "Transparent reporting and project dashboards",
+  "Collaborative tools (Notion, Trello, Slack, or your system)",
+  "Rigorous QA, testing, and documentation",
+  "Delivery under your branding with full confidentiality",
 ];
 
 const OfferSection = () => {

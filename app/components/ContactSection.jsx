@@ -345,9 +345,9 @@ const ContactSection = () => {
                     onChange={handleInputChange}
                   >
                     <option value="">Your Budget</option>
-                    <option value="2000 USD">2000 USD</option>
-                    <option value="3000 USD">3000 USD</option>
-                    <option value="5000 USD">5000 USD</option>
+                    <option value="2000 USD">2000</option>
+                    <option value="3000 USD">3000</option>
+                    <option value="5000 USD">5000</option>
                   </select>
 
                   {/* Your Custom SVG Icon */}

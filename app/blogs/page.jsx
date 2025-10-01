@@ -64,12 +64,13 @@ const BlogsPage = async () => {
           <div className="lg:w-4/6 flex flex-col items-start lg:gap-5 md:gap-4 sm:gap-3 gap-2">
             <span className="fs-26 color-primary-dark">[Our Blog]</span>
             <h1 className="font-bold tracking-tighter leading-[100%]">
-              Insights That Power{" "}
+              Ideas, Trends & Strategies for Modern{" "}
               <span className="text-overlay text-white px-2">Agencies</span>
             </h1>
             <p className="text-base max-w-3xl">
-              We don’t just build for agencies — we share what we learn along
-              the way.
+              Stay ahead with expert insights on design, development, and
+              digital growth. Explore practical tips and industry updates that
+              help your agency scale smarter.
             </p>
           </div>
         </div>
@@ -97,17 +98,15 @@ const BlogsPage = async () => {
               </span>
 
               <h2 className="mt-2 mb-4 font-bold leading-tight ">
-                Ideas, Systems, and Stories That Drive Growth Agency Growth
-                Shouldn't Mean Burnout
+                Smart Insights for Agencies That Want to Scale Without the
+                Stress
               </h2>
 
               <p className="mb-4 md:text-lg">
-                The Prismolix Blog is where agency owners, creative directors,
-                and growth teams find practical advice on scaling design and
-                development. We cover white-label execution strategies, UX/UI
-                best practices, tech stack deep-dives, and leadership lessons —
-                all written with one goal: to help you focus on growth while we
-                handle the heavy lifting.
+                The Prismolix Blog is your go-to space for growth strategies,
+                design systems, and tech know-how. From white-label execution
+                tips to UX/UI best practices, we share practical lessons to help
+                your agency scale smarter, faster, and without burnout.
               </p>
 
               <button className="btn btn-primary btn-shine mt-2 w-full sm:w-auto sm:self-start">

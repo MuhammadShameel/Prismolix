@@ -64,14 +64,15 @@ const HowItWorks = () => {
 
             {/* Main Heading with Highlighted Text */}
             <h1 className="font-bold tracking-tighter leading-[100%]">
-              <span className="text-overlay text-white px-2">Seamless</span>{" "}
-              Execution, Zero Headaches
+              Our <span className="text-overlay text-white px-2">Process,</span>
+              Your Competitive Edge
             </h1>
 
             {/* Subheading */}
             <p className="text-base max-w-[700px]">
-              Your time should be spent closing deals — not designing pages. We
-              handle execution so you can focus on growth.
+              We simplify complex projects into clear steps — giving your agency
+              the power to scale faster, deliver better, and impress clients
+              every time.
             </p>
 
             {/* Button Group */}

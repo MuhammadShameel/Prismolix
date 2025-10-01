@@ -70,8 +70,11 @@ const ServicesPage = async () => {
           <div className="flex flex-col items-start gap-2 sm:gap-3 md:gap-4 lg:w-4/6 lg:gap-5">
             <p className="fs-26 color-primary-dark">[Services]</p>
             <h1 className="font-bold leading-[100%] tracking-tighter">
-              <span className="text-overlay px-2 text-white">Scalable</span>{" "}
-              Design & Development That Powers Agency Growth
+              Your Growth, Our
+              <span className="text-overlay px-2 text-white">
+                Scalable
+              </span>{" "}
+              Execution
             </h1>
             <p className="max-w-3xl text-base">
               Your time should be spent closing deals — not designing pages. We
@@ -107,21 +110,26 @@ const ServicesPage = async () => {
               </span>
 
               <h2 className="mt-2 mb-4 font-bold leading-tight ">
-                Scalable Design & Development — Without the Hiring Headache
+                What We Do — End-to-End Agency Execution
               </h2>
 
               <p className="mb-4 md:text-lg">
-                Prismolix is your plug-and-play production team — quietly
-                powering your agency’s growth through fast, reliable, and
-                high-quality execution. We work under your brand, inside your
-                tools, and on your timelines. Whether you’re shipping landing
-                pages at scale or building full-stack apps, we’ve got your back
-                — no sourcing, no training, no micro-managing.
+                We specialize in delivering{" "}
+                <strong>end-to-end digital solutions</strong>
+                designed to help agencies grow without limits. From intuitive
+                UI/UX design to powerful full-stack development, our services
+                give you the flexibility to take on more clients while ensuring
+                every project runs smoothly. With a scalable model, you can
+                expand your capacity without the stress of hiring or managing
+                extra teams.
               </p>
               <p className="mb-6 text-base md:text-lg">
-                Whether you’re shipping landing pages at scale or building
-                full-stack apps, we’ve got your back — no sourcing, no training,
-                no micro-managing.
+                Every solution we deliver is tailored to align with your
+                clients’ unique goals. We focus on quality, consistency, and
+                results — so your agency can stand out with work that speaks for
+                itself. Whether it’s websites, apps, or eCommerce platforms, our
+                team ensures each project not only looks great but also performs
+                flawlessly.
               </p>
 
               <button className="btn btn-primary btn-shine mt-2 w-full sm:w-auto sm:self-start">
@@ -138,11 +146,11 @@ const ServicesPage = async () => {
           <div className="service-content flex flex-col items-center gap-5 max-w-2xl mx-auto">
             <span className="fs-26 color-primary-dark">[Services]</span>
             <h2 className=" text-center leading-10 tracking-tight lg:leading-20">
-              What We Do
+              Our Services
             </h2>
             <p className=" text-center color-dark-cards-bg">
-              Whether it’s a landing page sprint, a headless eCommerce build, or
-              full-stack app design — we’ve got you covered.
+              Here are the core services we offer to help your agency scale with
+              confidence and efficiency:
             </p>
           </div>
 

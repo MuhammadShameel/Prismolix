@@ -32,8 +32,9 @@ const HeroSection = () => {
 
           {/* Main Heading with Highlighted Text */}
           <h1 className="font-bold tracking-tighter leading-[100%] lg:my-5 md:my-4 sm:my-3 my-2">
-            The <span className="text-overlay text-white px-2">Agency</span>{" "}
-            Behind Top Agencies
+            White-Label Design & Development{" "}
+            <span className="text-overlay text-white px-2">Made</span>
+            Simple
           </h1>
 
           {/* Subheading */}

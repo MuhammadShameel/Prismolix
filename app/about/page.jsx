@@ -71,15 +71,15 @@ const About = () => {
 
             {/* Main Heading with Highlighted Text */}
             <h1 className="font-bold tracking-tighter leading-[100%]">
-              The Silent Engine Behind Your{""}
+              The Silent Engine Behind Your{" "}
               <span className="text-overlay text-white px-2">Success</span>
             </h1>
 
             {/* Subheading */}
             <p className="text-base max-w-3xl">
-              Your agency’s real value is in strategy, sales, and client
-              relationships — not in chasing deadlines or managing unreliable
-              freelancers. That’s where <strong>Prismolix</strong> comes in.
+              Your agency’s strength lies in strategy, sales, and client trust —
+              not chasing deadlines or patching gaps left by freelancers.
+              Prismolix becomes your silent execution partner.
             </p>
 
             {/* Button Group */}
@@ -123,16 +123,21 @@ const About = () => {
                 power those who do.
               </p>
               <p className="mb-6 text-base">
-                We help creative and digital agencies scale effortlessly by
-                delivering world-class UI/UX design, web, app, and Shopify
-                development — all white-labeled, fully integrated into your
-                workflow, and with zero management overhead.
+                We help <strong>creative and digital agencies</strong> scale
+                effortlessly by delivering{" "}
+                <strong>
+                  {" "}
+                  world-class UI/UX design, web, app, and Shopify development
+                </strong>{" "}
+                — all white-labeled, fully integrated into your workflow, and
+                with <strong>zero management overhead</strong>.
               </p>
               <p className="mb-6 text-base">
                 No more freelancer headaches. No more inconsistent delivery.
-                With Prismolix, you get a dedicated execution team that adapts
-                to your speed, works in your tools, and delivers with quality
-                and consistency.
+                With Prismolix, you get a{" "}
+                <strong>dedicated execution team</strong> that adapts to your
+                speed, works in your tools, and delivers with quality and
+                consistency.
               </p>
 
               <button className="btn btn-primary btn-shine mt-2 w-full sm:w-auto sm:self-start">
@@ -162,13 +167,11 @@ const About = () => {
             <div className="lg:w-8/10 w-10/10 ">
               <h2>Founder’s Note</h2>
               <h5 className="!font-normal mt-2.5">
-                I built Prismolix for the agency owner I once was — overwhelmed
-                by unreliable freelancers, missed deadlines, and the constant
-                fear of projects falling through the cracks. I know how it feels
-                to juggle client expectations while handling execution alone.
-                Prismolix was born to solve that problem — to be the dependable
-                delivery partner I wish I had back then. Today, we make sure no
-                agency has to go through that chaos again.
+                I built Prismolix because I lived the struggles of missed
+                deadlines and inconsistent delivery. I wanted agencies to have
+                the partner I once wished for — reliable, scalable, and
+                invisible to the client. Today, Prismolix ensures no agency has
+                to fight those battles alone
               </h5>
               <div className="flex items-center mt-2.5">
                 <div className="image-wrapper w-[70px] h-[70px] lg:hidden block">

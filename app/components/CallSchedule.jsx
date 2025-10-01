@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-import backgroundImage from "../../public/assets/images/schedule-bg.png";
 const CallSchedule = () => {
   return (
     <section className="lg:px-5 md:px-4 px-3 my-lg">
@@ -16,12 +15,12 @@ const CallSchedule = () => {
             </div>
             <div className="relative mt-3.5 max-w-lg ms-auto text-right z-1">
               <p>
-                Book your onboarding call and let Prismolix quietly deliver your
-                next 10 projects — while you keep focusing on client
-                relationships and growth.
+                Focus on client relationships while we quietly handle delivery.
+                Let Prismolix power your next 10 projects with reliability,
+                speed, and consistency.
               </p>
               <button className="btn btn-secondary  mt-7">
-                Schedule My Call
+                Book Your Call Today
               </button>
             </div>
             <Image
