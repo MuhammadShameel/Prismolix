@@ -9,14 +9,14 @@ const services = [
   },
   {
     number: "02",
-    timeframe: "2–3 weeks",
-    title: "WordPress",
+    timeframe: "4–8 weeks",
+    title: "Web Development",
     price: "$3,000/mo",
   },
   {
     number: "03",
-    timeframe: "2–4 weeks",
-    title: "Shopify",
+    timeframe: "4-6 weeks",
+    title: "CMS",
     price: "$3,000/mo",
   },
   {
