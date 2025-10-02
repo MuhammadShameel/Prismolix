@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import SvgShade from "../components/SvgShade";
 
 import Shape from "../../public/assets/images/howItWorks.svg";
 import CallIcon from "../../public/assets/images/call-icon.svg";
@@ -41,13 +42,8 @@ export const metadata = {
 const HowItWorks = () => {
   return (
     <div className="relative">
-      <Image
-        className="absolute w-full h-auto top-0 right-0 -z-1"
-        src={"/assets/images/Shade.png"}
-        width={100}
-        height={100}
-        alt=""
-      />
+      <SvgShade />
+
       <Image
         src={Shape}
         alt="Abstract 3D hero image"

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Shape from "../../public/assets/images/contactShape.png";
 import FooterMarquee from "../components/FooterMarquee";
 import ContactUsForm from "../components/ContactUsForm";
+import SvgShade from "../components/SvgShade";
 
 export const metadata = {
   title: "Contact Prismolix • Let’s Talk White-Label Design & Development",
@@ -36,13 +37,8 @@ const ContactUs = () => {
 
   return (
     <div>
-      <Image
-        className="absolute w-full h-auto top-0 right-0 -z-1"
-        src={"/assets/images/Shade.png"}
-        width={100}
-        height={100}
-        alt=""
-      />
+      <SvgShade />
+
       <Image
         src={Shape}
         alt="Abstract 3D hero image"

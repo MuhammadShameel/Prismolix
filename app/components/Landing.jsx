@@ -7,6 +7,7 @@ import Testimonial from "./Testimonial";
 import ContactSection from "./ContactSection";
 import CallSchedule from "./CallSchedule";
 import FooterMarquee from "../components/FooterMarquee";
+import AnimationWrapper from "./AnimationWrapper";
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -69,6 +70,7 @@ const schemaData = {
 const Home = () => {
   return (
     <>
+      <AnimationWrapper />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

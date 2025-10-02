@@ -4,6 +4,7 @@ import Shape from "../../public/assets/images/blogShape.png";
 import Marquee from "../components/Marquee";
 import CallSchedule from "../components/CallSchedule";
 import FooterMarquee from "../components/FooterMarquee";
+import SvgShade from "../components/SvgShade";
 
 const services = [
   {
@@ -50,13 +51,8 @@ const About = () => {
   return (
     <>
       <section className="relative hero-section">
-        <Image
-          className="absolute w-full h-auto top-0 right-0 -z-1"
-          src={"/assets/images/Shade.png"}
-          width={100}
-          height={100}
-          alt=""
-        />
+        <SvgShade />
+
         <Image
           src={Shape}
           alt="Abstract 3D hero image"

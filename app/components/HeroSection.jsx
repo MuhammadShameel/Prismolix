@@ -1,20 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Shape from "../../public/assets/images/hero-shape.png";
+import SvgShade from "./SvgShade";
 
 const HeroSection = () => {
   return (
-    // ✅ THIS IS THE LINE TO CHANGE
     <section className="relative pb-[100px] hero-section lg:px-5 md:px-4 px-3">
       {/* This background image is fine */}
-      <Image
-        className="absolute w-full h-auto top-0 right-0 -z-1"
-        src={"/assets/images/Shade.png"}
-        width={100}
-        height={100}
-        alt=""
-      />
-
+      <SvgShade />
       <Image
         src={Shape}
         alt="Abstract 3D hero image"
