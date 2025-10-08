@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import Shape from "../../public/assets/images/blogShape.png";
-import Marquee from "../components/Marquee";
-import CallSchedule from "../components/CallSchedule";
-import FooterMarquee from "../components/FooterMarquee";
-import SvgShade from "../components/SvgShade";
+import Shape from "../../../public/assets/images/blogShape.png";
+import Marquee from "../../components/Marquee";
+import CallSchedule from "../../components/CallSchedule";
+import FooterMarquee from "../../components/FooterMarquee";
+import SvgShade from "../../components/SvgShade";
 
 const services = [
   {

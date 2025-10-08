@@ -1,20 +1,19 @@
 // "use client";
-
 import React from "react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import {
   fetchServiceBySlug,
   extractServiceData,
-} from "../../../services/service.service";
+} from "../../../../services/service.service";
 
-import bgImg from "../../../public/assets/images/blog-detail-bg.png";
-import ContactSection from "../../components/ContactSection";
-import Testimonial from "../../components/Testimonial";
-import CallSchedule from "../../components/CallSchedule";
-import OfferSection from "../../components/OfferSection";
-import ToolsMarquee from "../../components/ToolsMarquee";
-import FooterMarquee from "../../components/FooterMarquee";
+import bgImg from "../../../../public/assets/images/blog-detail-bg.png";
+import ContactSection from "../../../components/ContactSection";
+import Testimonial from "../../../components/Testimonial";
+import CallSchedule from "../../../components/CallSchedule";
+import OfferSection from "../../../components/OfferSection";
+import ToolsMarquee from "../../../components/ToolsMarquee";
+import FooterMarquee from "../../../components/FooterMarquee";
 
 const ServiceDetailPage = async ({ params }) => {
   const slug = params.slug;

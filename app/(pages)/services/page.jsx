@@ -4,13 +4,13 @@ import Link from "next/link"; // It's good practice to import Link for navigatio
 import {
   fetchAllServices,
   extractServiceData,
-} from "../../services/service.service"; // Import your service functions
+} from "../../../services/service.service"; // Import your service functions
 
-import Shape from "../../public/assets/images/circleShape.svg";
-import OfferSection from "../components/OfferSection";
-import ContactSection from "../components/ContactSection";
-import CallSchedule from "../components/CallSchedule";
-import FooterMarquee from "../components/FooterMarquee";
+import Shape from "../../../public/assets/images/circleShape.svg";
+import OfferSection from "../../components/OfferSection";
+import ContactSection from "../../components/ContactSection";
+import CallSchedule from "../../components/CallSchedule";
+import FooterMarquee from "../../components/FooterMarquee";
 
 export const metadata = {
   title: "Prismolix Services • UI/UX, Web & App Development, Shopify Builds",

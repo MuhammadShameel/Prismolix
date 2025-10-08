@@ -3,20 +3,20 @@ import Image from "next/image";
 import {
   fetchBlogBySlug,
   extractBlogData,
-} from "../../../services/projects.service.js";
+} from "../../../../services/projects.service.js";
 import {
   formatStringEncoding,
   replaceHTMLtags,
-} from "../../../helper/helper.js";
+} from "../../../../helper/helper.js";
 
 // Import components
-import CaseStudySlider from "../../components/CaseStudySlider"; // Import the new client component
-import FooterMarquee from "../../components/FooterMarquee.jsx";
-import ToolsMarquee from "../../components/ToolsMarquee.jsx";
-import CallSchedule from "../../components/CallSchedule.jsx";
+import CaseStudySlider from "../../../components/CaseStudySlider"; // Import the new client component
+import FooterMarquee from "../../../components/FooterMarquee.jsx";
+import ToolsMarquee from "../../../components/ToolsMarquee.jsx";
+import CallSchedule from "../../../components/CallSchedule.jsx";
 
 // Import static assets
-import bgImg from "../../../public/assets/images/blog-detail-bg.png";
+import bgImg from "../../../../public/assets/images/blog-detail-bg.png";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;

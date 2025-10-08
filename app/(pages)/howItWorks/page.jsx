@@ -1,17 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import SvgShade from "../components/SvgShade";
+import SvgShade from "../../components/SvgShade";
 
-import Shape from "../../public/assets/images/howItWorks.svg";
-import CallIcon from "../../public/assets/images/call-icon.svg";
-import PlugIcon from "../../public/assets/images/plug-icon.svg";
-import CodeIcon from "../../public/assets/images/code-icon.png";
-import GraphlIcon from "../../public/assets/images/graph-icon.png";
-import ToolsMarquee from "../components/ToolsMarquee";
-import OfferSection from "../components/OfferSection";
-import ContactSection from "../components/ContactSection";
-import CallSchedule from "../components/CallSchedule";
-import FooterMarquee from "../components/FooterMarquee";
+import Shape from "../../../public/assets/images/howItWorks.svg";
+import CallIcon from "../../../public/assets/images/call-icon.svg";
+import PlugIcon from "../../../public/assets/images/plug-icon.svg";
+import CodeIcon from "../../../public/assets/images/code-icon.png";
+import GraphlIcon from "../../../public/assets/images/graph-icon.png";
+import ToolsMarquee from "../../components/ToolsMarquee";
+import OfferSection from "../../components/OfferSection";
+import ContactSection from "../../components/ContactSection";
+import CallSchedule from "../../components/CallSchedule";
+import FooterMarquee from "../../components/FooterMarquee";
 
 export const metadata = {
   title: "How Prismolix Works • Our Process & Partnership Model",

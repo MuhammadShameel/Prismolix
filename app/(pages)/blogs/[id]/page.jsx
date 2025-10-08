@@ -1,12 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import bgImg from "../../../public/assets/images/blog-detail-bg.png";
-import CallSchedule from "../../../app/components/CallSchedule";
-import { fetchPostById, extractPostData } from "../../../services/blog.service"; // // <-- UPDATED IMPORT
+import bgImg from "../../../../public/assets/images/blog-detail-bg.png";
+import CallSchedule from "../../../../app/components/CallSchedule";
+import {
+  fetchPostById,
+  extractPostData,
+} from "../../../../services/blog.service"; // // <-- UPDATED IMPORT
 import * as cheerio from "cheerio";
-import "../../styles/content.css";
-import FooterMarquee from "../../components/FooterMarquee";
+import "../../../styles/content.css";
+import FooterMarquee from "../../../components/FooterMarquee";
 
 const generateTOCAndContent = (htmlContent) => {
   if (!htmlContent) {
@@ -70,7 +73,7 @@ const page = async ({ params }) => {
                 dangerouslySetInnerHTML={{ __html: blogData.title }}
               />
 
-              <p
+              <div
                 className="text-center max-w-4xl"
                 dangerouslySetInnerHTML={{ __html: blogData.excerpt }}
               />
@@ -98,9 +101,9 @@ const page = async ({ params }) => {
             <h4 className="text-xl font-bold  mb-4">Table of Content</h4>
             <nav>
               <ul className="space-y-2 lg:border-r border-gray-300 pr-4 lg:h-100">
-                {toc.map((item) => (
+                {toc.map((item, index) => (
                   <li
-                    key={item.id}
+                    key={`${item.id}-${index}`} // Key is now guaranteed to be unique
                     className="border-b last:border-b-0 border-gray-300 pb-2"
                   >
                     <Link

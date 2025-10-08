@@ -1,16 +1,16 @@
 import React from "react";
 import Image from "next/image";
-import Shape from "../../public/assets/images/image-7.png";
-import featureImg from "../../public/assets/images/blog-img.png";
+import Shape from "../../../public/assets/images/image-7.png";
+import featureImg from "../../../public/assets/images/blog-img.png";
 import {
   fetchAllBlogs,
   extractBlogData,
-} from "../../services/projects.service.js";
+} from "../../../services/projects.service.js";
 
-import Testimonial from "../components/Testimonial.jsx";
-import ContactSection from "../components/ContactSection.jsx";
-import CallSchedule from "../components/CallSchedule.jsx";
-import FooterMarquee from "../components/FooterMarquee";
+import Testimonial from "../../components/Testimonial.jsx";
+import ContactSection from "../../components/ContactSection.jsx";
+import CallSchedule from "../../components/CallSchedule.jsx";
+import FooterMarquee from "../../components/FooterMarquee";
 
 // Helper function to get image URL
 const getImageUrl = (portfolio) => {

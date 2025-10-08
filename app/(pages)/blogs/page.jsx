@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import Shape from "../../public/assets/images/blogShape.png";
-import CallSchedule from "../components/CallSchedule";
-import { fetchAllPosts } from "../../services/blog.service"; // <-- UPDATED IMPORT
-import FooterMarquee from "../components/FooterMarquee";
-import SvgShade from "../components/SvgShade";
+import Shape from "../../../public/assets/images/blogShape.png";
+import CallSchedule from "../../components/CallSchedule";
+import { fetchAllPosts } from "../../../services/blog.service"; // <-- UPDATED IMPORT
+import FooterMarquee from "../../components/FooterMarquee";
+import SvgShade from "../../components/SvgShade";
 
 // Helper function to format the date
 const formatDate = (dateString) => {
