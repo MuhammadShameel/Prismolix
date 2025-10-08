@@ -1,11 +1,12 @@
 // components/Header.jsx
 "use client";
 
-import React, { useState, useEffect } from "react"; // Import useEffect
+import React, { useState, useEffect, useContext } from "react"; // Import useEffect
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { AnimationContext } from "../../context/AnimationContext";
 
 import Logo from "../../../public/assets/images/logo.png"; // Adjust the path as necessary
 
@@ -21,6 +22,7 @@ const navLinks = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false); // State for scroll tracking
+  const { isIntroComplete } = useContext(AnimationContext);
 
   // Effect to handle scroll event
   useEffect(() => {
@@ -46,7 +48,11 @@ const Header = () => {
       <motion.header
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
+        transition={{
+          duration: 0.8,
+          ease: "easeInOut",
+          delay: isIntroComplete ? 0 : 3.5,
+        }}
         // Conditionally apply classes for the sticky/floating header
         className={`navbar lg:px-5 md:px-4 px-3  ${
           isScrolled ? "scrolled" : " "

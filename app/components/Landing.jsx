@@ -70,7 +70,6 @@ const schemaData = {
 const Home = () => {
   return (
     <>
-      <AnimationWrapper />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
