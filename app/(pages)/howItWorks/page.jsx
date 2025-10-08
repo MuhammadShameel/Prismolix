@@ -88,7 +88,7 @@ const HowItWorks = () => {
               <div className="lg:w-2/10 w-10/10">
                 <div className="img-wrapper flex lg:justify-center">
                   <Image
-                    className="lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] sm:w-[120px] sm:h-[120px] w-[100px] h-[100px]"
+                    className="lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] sm:w-[120px] sm:h-[120px] w-[100px] h-[100px] grayscale"
                     src={CallIcon}
                     alt={"Portfolio Image"}
                     width={200}
@@ -129,7 +129,7 @@ const HowItWorks = () => {
               <div className="lg:w-2/10 w-10/10">
                 <div className="img-wrapper flex lg:justify-center">
                   <Image
-                    className="lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] sm:w-[120px] sm:h-[120px] w-[100px] h-[100px]"
+                    className="lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] sm:w-[120px] sm:h-[120px] w-[100px] h-[100px] grayscale"
                     src={PlugIcon}
                     alt={"Portfolio Image"}
                     width={200}
@@ -163,7 +163,7 @@ const HowItWorks = () => {
               <div className="lg:w-2/10 w-10/10">
                 <div className="img-wrapper flex lg:justify-center">
                   <Image
-                    className="lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] sm:w-[120px] sm:h-[120px] w-[100px] h-[100px]"
+                    className="lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] sm:w-[120px] sm:h-[120px] w-[100px] h-[100px] grayscale"
                     src={CodeIcon}
                     alt={"Portfolio Image"}
                     width={200}
@@ -197,7 +197,7 @@ const HowItWorks = () => {
               <div className="lg:w-2/10 w-10/10">
                 <div className="img-wrapper flex lg:justify-center">
                   <Image
-                    className="lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] sm:w-[120px] sm:h-[120px] w-[100px] h-[100px]"
+                    className="lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] sm:w-[120px] sm:h-[120px] w-[100px] h-[100px] grayscale"
                     src={GraphlIcon}
                     alt={"Portfolio Image"}
                     width={200}
