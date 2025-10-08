@@ -14,7 +14,7 @@ const AnimationWrapper = ({ children }) => {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-gradient-to-br from-gray-900 to-[#4a008c] flex flex-col items-center justify-center z-50">
+      <div className="fixed inset-0 bg-gradient-to-br from-gray-900 to-[#4a008c] flex flex-col items-center justify-center z-100">
         {/* Logo Container */}
         <div className="relative w-64 h-64">
           {/* Prism Layers */}

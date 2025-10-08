@@ -2,8 +2,6 @@
 
 import localFont from "next/font/local";
 import "./globals.css";
-import Footer from "./components/layout/Footer";
-import Header from "./components/layout/Header";
 
 // import { useState, useEffect } from "react";
 // import IntroAnimation from "../app/components/IntroAnimation";
@@ -94,25 +92,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  // const [showIntro, setShowIntro] = useState(true);
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => setShowIntro(false), 2200); // match logo animation duration
-  //   return () => clearTimeout(timer);
-  // }, []);
-
   return (
     <html lang="en">
       <body className={`${satoshi.variable} ${birkenNue.variable}`}>
-        {/* {showIntro ? (
-          <IntroAnimation />
-        ) : (
-          <main className="fade-in">{children}</main>
-        )} */}
-
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

@@ -1,9 +1,19 @@
-import React from "react";
+"use client";
+
+import React, { useContext, useEffect } from "react";
+import { AnimationContext } from "../context/AnimationContext";
 import Image from "next/image";
 import Shape from "../../public/assets/images/hero-shape.png";
 import SvgShade from "./SvgShade";
 
 const HeroSection = () => {
+  const { isIntroComplete } = useContext(AnimationContext);
+
+  useEffect(() => {
+    if (!isIntroComplete || !headingRef.current) {
+      return;
+    }
+  }, [isIntroComplete]);
   return (
     <section className="relative pb-[100px] hero-section lg:px-5 md:px-4 px-3">
       {/* This background image is fine */}

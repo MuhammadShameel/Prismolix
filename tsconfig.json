@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/components/AnimationWrapper.jsx"  ],
+, "app/components/IntroAnimation.jsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-import Shape from "../../public/assets/images/contactShape.png";
-import FooterMarquee from "../components/FooterMarquee";
-import ContactUsForm from "../components/ContactUsForm";
-import SvgShade from "../components/SvgShade";
+import Shape from "../../../public/assets/images/contactShape.png";
+import FooterMarquee from "../../components/FooterMarquee";
+import ContactUsForm from "../../components/ContactUsForm";
+import SvgShade from "../../components/SvgShade";
 
 export const metadata = {
   title: "Contact Prismolix • Let’s Talk White-Label Design & Development",
