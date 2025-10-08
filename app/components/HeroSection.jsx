@@ -10,10 +10,12 @@ const HeroSection = () => {
   const { isIntroComplete } = useContext(AnimationContext);
 
   useEffect(() => {
-    if (!isIntroComplete || !headingRef.current) {
+    if (!isIntroComplete) {
       return;
     }
+    console.log("Intro complete, triggering animations");
   }, [isIntroComplete]);
+
   return (
     <section className="relative pb-[100px] hero-section lg:px-5 md:px-4 px-3">
       {/* This background image is fine */}
