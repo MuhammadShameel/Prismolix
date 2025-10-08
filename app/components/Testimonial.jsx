@@ -128,7 +128,7 @@ const Testimonial = () => {
               <button
                 onClick={handlePrev}
                 aria-label="Previous testimonial"
-                className="flex h-12 w-12 p-2.5 items-center justify-center rounded-full bg-light-purple text-gray-800  hover:bg-gray-200  cursor-pointer transition-colors duration-200  ease-in-out  focus:outline-none focus:ring-2 focus:ring-[#f2ebff] focus:ring-offset-2"
+                className="flex h-12 w-12 p-2.5 items-center justify-center rounded-full bg-light-purple cursor-pointer transition-colors duration-200 ease-in-out hover:bg-violet-600! hover:text-white "
               >
                 {/* SVG Icon for Left Arrow */}
                 <svg
@@ -140,7 +140,7 @@ const Testimonial = () => {
                 >
                   <path
                     d="M19.9375 12.354L7.29167 24.9998L19.9375 37.6457"
-                    stroke="#292929"
+                    stroke="currentColor" // Changed to currentColor
                     strokeWidth="2.5"
                     strokeMiterlimit="10"
                     strokeLinecap="round"
@@ -148,7 +148,7 @@ const Testimonial = () => {
                   />
                   <path
                     d="M42.7084 25H7.64588"
-                    stroke="#292929"
+                    stroke="currentColor" // Changed to currentColor
                     strokeWidth="2.5"
                     strokeMiterlimit="10"
                     strokeLinecap="round"
@@ -159,10 +159,11 @@ const Testimonial = () => {
               <button
                 onClick={handleNext}
                 aria-label="Next testimonial"
-                className="flex h-12 w-12  p-2.5 items-center justify-center rounded-full bg-violet-600 text-white transition-colors duration-200  ease-in-out hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2"
+                className="flex h-12 w-12 p-2.5 items-center justify-center rounded-full bg-light-purple cursor-pointer transition-colors duration-200 ease-in-out hover:bg-violet-600! hover:text-white" // Added hover:text-white
               >
                 {/* SVG Icon for Right Arrow */}
                 <svg
+                  className="rotate-180"
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
                   height="50"
@@ -170,16 +171,16 @@ const Testimonial = () => {
                   fill="none"
                 >
                   <path
-                    d="M30.0625 12.354L42.7083 24.9998L30.0625 37.6457"
-                    stroke="white"
+                    d="M19.9375 12.354L7.29167 24.9998L19.9375 37.6457"
+                    stroke="currentColor" // Changed to currentColor
                     strokeWidth="2.5"
                     strokeMiterlimit="10"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                   <path
-                    d="M7.29163 25H42.3541"
-                    stroke="white"
+                    d="M42.7084 25H7.64588"
+                    stroke="currentColor" // Changed to currentColor
                     strokeWidth="2.5"
                     strokeMiterlimit="10"
                     strokeLinecap="round"
