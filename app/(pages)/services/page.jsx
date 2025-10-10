@@ -26,7 +26,7 @@ export const metadata = {
     description:
       "Explore our core services: UI/UX systems, custom web & app builds, Shopify & WordPress, and ongoing graphic design. High-quality, scalable solutions to support agency growth.",
     images:
-      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+      "https://api.prismolix.com/wp-content/uploads/2025/08/blogDetail.png",
   },
   twitter: {
     card: "summary_large_image",
@@ -34,7 +34,7 @@ export const metadata = {
     description:
       "Explore our core services: UI/UX systems, custom web & app builds, Shopify & WordPress, and ongoing graphic design. High-quality, scalable solutions to support agency growth.",
     images:
-      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+      "https://api.prismolix.com/wp-content/uploads/2025/08/blogDetail.png",
   },
 };
 

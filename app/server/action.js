@@ -4,7 +4,7 @@ export async function sendFormData(formData) {
   formData.append("_wpcf7_unit_tag", "d507871");
   try {
     const response = await fetch(
-      `https://prismolix.wasmer.app/wp-json/contact-form-7/v1/contact-forms/88/feedback`,
+      `https://api.prismolix.com/wp-json/contact-form-7/v1/contact-forms/88/feedback`,
       {
         method: "POST",
         headers: {

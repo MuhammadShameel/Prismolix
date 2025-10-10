@@ -37,7 +37,7 @@ export const metadata = {
     description:
       "See how we’ve helped agencies scale and deliver exceptional results. Explore projects in web, apps, Shopify & UX/UI that showcase our transparent process and impact.",
     images:
-      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+      "https://api.prismolix.com/wp-content/uploads/2025/08/blogDetail.png",
   },
   twitter: {
     card: "summary_large_image",
@@ -45,7 +45,7 @@ export const metadata = {
     description:
       "See how we’ve helped agencies scale and deliver exceptional results. Explore projects in web, apps, Shopify & UX/UI that showcase our transparent process and impact.",
     images:
-      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+      "https://api.prismolix.com/wp-content/uploads/2025/08/blogDetail.png",
   },
 };
 

@@ -27,7 +27,7 @@ export const metadata = {
     description:
       "Our streamlined process: onboarding, sprint-based milestones, shared tracking & dedicated communication. Learn how we deliver seamlessly for agencies.",
     images:
-      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+      "https://api.prismolix.com/wp-content/uploads/2025/08/blogDetail.png",
   },
   twitter: {
     card: "summary_large_image",
@@ -35,7 +35,7 @@ export const metadata = {
     description:
       "Our streamlined process: onboarding, sprint-based milestones, shared tracking & dedicated communication. Learn how we deliver seamlessly for agencies.",
     images:
-      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+      "https://api.prismolix.com/wp-content/uploads/2025/08/blogDetail.png",
   },
 };
 

@@ -35,7 +35,7 @@ export const metadata = {
     description:
       "Learn how Prismolix empowers agencies by seamlessly providing design, development & creative support. We plug in as your behind-the-scenes team so you can stay client-focused.",
     images:
-      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+      "https://api.prismolix.com/wp-content/uploads/2025/08/blogDetail.png",
   },
   twitter: {
     card: "summary_large_image",
@@ -43,7 +43,7 @@ export const metadata = {
     description:
       "Learn how Prismolix empowers agencies by seamlessly providing design, development & creative support. We plug in as your behind-the-scenes team so you can stay client-focused.",
     images:
-      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+      "https://api.prismolix.com/wp-content/uploads/2025/08/blogDetail.png",
   },
 };
 

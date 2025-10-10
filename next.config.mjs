@@ -4,13 +4,13 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "http",
-        hostname: "prismolix.wasmer.app",
+        hostname: "api.prismolix.com",
         port: "",
         pathname: "/wp-content/**",
       },
       {
         protocol: "https",
-        hostname: "prismolix.wasmer.app",
+        hostname: "api.prismolix.com",
         port: "",
         pathname: "/wp-content/**",
       },

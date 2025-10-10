@@ -20,7 +20,7 @@ export const metadata = {
     description:
       "Get in touch to explore how Prismolix can support your agency’s growth. Book a call, ask questions or start a project today. We’re ready to scale with you.",
     images:
-      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+      "https://api.prismolix.com/wp-content/uploads/2025/08/blogDetail.png",
   },
   twitter: {
     card: "summary_large_image",
@@ -28,7 +28,7 @@ export const metadata = {
     description:
       "Get in touch to explore how Prismolix can support your agency’s growth. Book a call, ask questions or start a project today. We’re ready to scale with you.",
     images:
-      "https://prismolix.wasmer.app/wp-content/uploads/2025/08/blogDetail.png",
+      "https://api.prismolix.com/wp-content/uploads/2025/08/blogDetail.png",
   },
 };
 
