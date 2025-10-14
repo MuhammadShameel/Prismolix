@@ -169,9 +169,9 @@ const ServicesPage = async () => {
                   <div className="flex flex-col justify-between">
                     <div>
                       <div className="gradient-line pb-[30px]">
-                        <span className="rounded-full bg-white px-2.5 py-[7px]">
+                        {/* <span className="rounded-full bg-white px-2.5 py-[7px]">
                           {service.duration}
-                        </span>
+                        </span> */}
                         <h4
                           className="mt-2.5"
                           dangerouslySetInnerHTML={{ __html: service.title }}
