@@ -6,6 +6,7 @@ import Testimonial from "./Testimonial";
 import ContactSection from "./ContactSection";
 import CallSchedule from "./CallSchedule";
 import FooterMarquee from "../components/FooterMarquee";
+import WhyPrismolix from "./WhyPrismolix";
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -80,6 +81,7 @@ const Home = () => {
       <ContactSection />
       <CallSchedule />
       <FooterMarquee />
+      {/* <WhyPrismolix /> */}
     </>
   );
 };

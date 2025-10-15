@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Shape from "../../../public/assets/images/image-7.png";
 import featureImg from "../../../public/assets/images/blog-img.png";
+import PortfolioFilter from "../../../app/components/PortfolioFilter";
 import {
   fetchAllBlogs,
   extractBlogData,
@@ -11,6 +12,16 @@ import Testimonial from "../../components/Testimonial.jsx";
 import ContactSection from "../../components/ContactSection.jsx";
 import CallSchedule from "../../components/CallSchedule.jsx";
 import FooterMarquee from "../../components/FooterMarquee";
+
+const categories = [
+  "All",
+  "Web Development",
+  "Mobile App Development",
+  "Graphics Designing",
+  "UI/UX Designing",
+  "Email Marketing",
+  "SEO/Search Engine Optimization",
+];
 
 // Helper function to get image URL
 const getImageUrl = (portfolio) => {
@@ -99,6 +110,7 @@ const page = async () => {
 
         {/* The Image (positioned absolutely) */}
       </section>
+      {/* <PortfolioFilter initialItems={portfolioItems} /> */}
 
       {/* Dynamic Portfolio Sections */}
       {portfolioItems.map((portfolio, index) => {

@@ -48,6 +48,8 @@ const ServicesPage = async () => {
     extractServiceData(service)
   );
 
+  console.log("Fetched Services:", services); // Debugging log
+
   return (
     <>
       {/* --- This top section remains static as it's the introduction to the page --- */}
