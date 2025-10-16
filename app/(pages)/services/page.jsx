@@ -168,8 +168,8 @@ const ServicesPage = async () => {
                   <span className="color-primary-light">.</span>
                 </p>
                 <div className="relative z-10 flex h-full flex-col">
-                  <div className="flex flex-col justify-between">
-                    <div>
+                  <div className="flex flex-col justify-between h-full">
+                    <div className="">
                       <div className="gradient-line pb-[30px]">
                         {/* <span className="rounded-full bg-white px-2.5 py-[7px]">
                           {service.duration}
@@ -201,7 +201,7 @@ const ServicesPage = async () => {
                         ))}
                       </ul>
                     </div>
-                    <div className="pt-[50px]">
+                    <div className="">
                       <p className="text-sm text-gray-500">Starting from:</p>
                       <h4 className="service-price color-primary-dark">
                         {service.startingPrice}

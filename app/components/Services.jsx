@@ -3,32 +3,38 @@ import React from "react";
 const services = [
   {
     number: "01",
+    timeframe: "Ongoing",
+    title: "Graphic Design",
+    price: "$1,500/mo",
+  },
+  {
+    number: "02",
     timeframe: "1–2 weeks",
     title: "UI/UX Systems",
     price: "$2,000/mo",
   },
   {
-    number: "02",
-    timeframe: "4–8 weeks",
-    title: "Web Development",
-    price: "$3,000/mo",
-  },
-  {
     number: "03",
     timeframe: "4-6 weeks",
-    title: "CMS",
+    title: "SEO Optimization",
     price: "$3,000/mo",
   },
   {
     number: "04",
     timeframe: "4–8 weeks",
-    title: "App Development",
-    price: "Custom",
+    title: "Web Development",
+    price: "$3,000/mo",
   },
   {
     number: "05",
-    timeframe: "Ongoing",
-    title: "Graphic Design",
+    timeframe: "4–8 weeks",
+    title: "App Development",
+    price: "$3,000/mo",
+  },
+  {
+    number: "06",
+    timeframe: "4–8 weeks",
+    title: "Email Marketing",
     price: "$1,500/mo",
   },
 ];
@@ -66,9 +72,9 @@ const Services = () => {
                 {/* Price section pushed to the bottom */}
                 <div className="mt-auto">
                   <div className="gradient-line pb-5">
-                    <span className="bg-white px-2.5 py-[7px] rounded-full inline-block">
+                    {/* <span className="bg-white px-2.5 py-[7px] rounded-full inline-block">
                       {service.timeframe}
-                    </span>
+                    </span> */}
                     <h4 className="mt-2.5 leading-[45px]">{service.title}</h4>
                   </div>
 
@@ -82,21 +88,6 @@ const Services = () => {
               </div>
             </div>
           ))}
-
-          {/* "Each Service Includes" Card */}
-          <div className="flex flex-col bg-primary rounded-3xl lg:p-8 md:p-7 p-5 text-white">
-            <h4 className="text-3xl font-bold">Additional Benefits Include:</h4>
-            {/* MODIFICATION HERE: Changed list-inside to list-outside and added padding */}
-            <ul className="list-disc list-outside space-y-3 mt-6 text-base text-purple-100 flex-grow sm:text-lg md:text-xl lg:text-[22px] pl-5">
-              <li>Dedicated point of contact</li>
-              <li>Weekly sprint planning & milestone reviews</li>
-              <li>Shared boards for progress tracking</li>
-              <li>Unlimited revisions (within scope)</li>
-            </ul>
-            <button className="w-full btn btn-secondary  hover:bg-violet-100 transition-colors mt-6">
-              Build Your Stack
-            </button>
-          </div>
         </div>
       </div>
     </section>
