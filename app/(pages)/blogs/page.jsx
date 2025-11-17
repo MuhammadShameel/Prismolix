@@ -15,7 +15,7 @@ const formatDate = (dateString) => {
 };
 
 export const metadata = {
-  title: "Prismolix Blog • Agency Growth, Design Tips, Dev Trends",
+  title: "Prismolix Blog • Agency Growth, Design Tips, Dev Trends ",
   description:
     "Read insights, best practices & trends for agency growth—from design & development to project management & UX strategy. Stay ahead with expert tips from Prismolix.",
   alternates: {
