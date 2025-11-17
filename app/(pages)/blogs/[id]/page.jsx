@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import bgImg from "../../../../public/assets/images/blog-detail-bg.png";
-import CallSchedule from "../../../../app/components/CallSchedule";
+import CallSchedule from "../../../components/CallSchedule";
 import {
   fetchPostById,
   extractPostData,
