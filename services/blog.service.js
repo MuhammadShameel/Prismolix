@@ -28,6 +28,7 @@ export const fetchPostById = async (slug) => {
         next: { revalidate: 3600 },
       }
     );
+    console.log("Fetching post with slug:", slug);
 
     if (!response.ok) {
       console.error("Failed to fetch post:", response.status);
