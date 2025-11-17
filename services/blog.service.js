@@ -20,12 +20,12 @@ export const fetchAllPosts = async () => {
 };
 
 // Fetch a single blog post by its slug
-export const fetchPostById = async (id) => {
+export const fetchPostById = async (slug) => {
   try {
     const response = await fetch(
-      `https://api.prismolix.com/wp-json/wp/v2/posts?id=${id}&_embed`,
+      `https://api.prismolix.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
       {
-        next: { revalidate: 3600 }, // Cache for 1 hour
+        next: { revalidate: 3600 },
       }
     );
 
@@ -33,6 +33,7 @@ export const fetchPostById = async (id) => {
       console.error("Failed to fetch post:", response.status);
       return null;
     }
+
     const posts = await response.json();
     return posts.length > 0 ? posts[0] : null;
   } catch (error) {
