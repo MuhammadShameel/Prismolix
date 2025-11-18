@@ -6,10 +6,11 @@ import CallSchedule from "../../../components/CallSchedule";
 import {
   fetchPostById,
   extractPostData,
-} from "../../../../services/blog.service"; // // <-- UPDATED IMPORT
+} from "../../../../services/blog.service";
 import * as cheerio from "cheerio";
 import "../../../styles/content.css";
 import FooterMarquee from "../../../components/FooterMarquee";
+import { notFound } from "next/navigation";
 
 const generateTOCAndContent = (htmlContent) => {
   if (!htmlContent) {
@@ -36,15 +37,16 @@ const generateTOCAndContent = (htmlContent) => {
 };
 
 const page = async ({ params }) => {
-  const id = params.id || params.slug; // Get slug from URL
-  if (!id) notFound();
+  const { id } = await params;
 
-  // Fetch the specific post by its slug
-  const post = await fetchPostById(id);
-  if (!post) {
-    notFound(); // Show 404 page if post doesn't exist
+  if (!id) {
+    notFound();
   }
 
+  const post = await fetchPostById(id);
+  if (!post) {
+    notFound();
+  }
   // Extract the data
   const blogData = extractPostData(post);
 
@@ -60,9 +62,10 @@ const page = async ({ params }) => {
               <Image
                 src={bgImg}
                 alt="A modern turntable playing a record"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
                 quality={90}
+                priority
               />
             </div>
 
@@ -90,6 +93,7 @@ const page = async ({ params }) => {
             width={1200}
             height={600}
             unoptimized={true}
+            priority
             className="w-full max-h-[800px] h-auto object-cover rounded-xl shadow-lg"
           />
         </div>

@@ -19,7 +19,7 @@ import CallSchedule from "../../../components/CallSchedule.jsx";
 import bgImg from "../../../../public/assets/images/blog-detail-bg.png";
 
 export async function generateMetadata({ params }) {
-  const { slug } = await params;
+  const { id: slug } = await params;
   const portfolioData = await fetchBlogBySlug(slug);
   const project = portfolioData;
 
@@ -70,9 +70,9 @@ const diffInMonths = (start, end) => {
 
 // The page is now an async Server Component
 const Page = async ({ params }) => {
-  const slug = Array.isArray(params?.id) ? params.id[0] : params?.id;
+  const { id } = await params;
+  const slug = id;
   let data = null;
-  let error = null;
 
   try {
     const portfolio = await fetchBlogBySlug(slug);
@@ -83,14 +83,14 @@ const Page = async ({ params }) => {
     console.error(err);
   }
 
-  if (error) {
-    return (
-      <section className="text-center my-lg">
-        <h1>Error</h1>
-        <p>{error}</p>
-      </section>
-    );
-  }
+  // if (error) {
+  //   return (
+  //     <section className="text-center my-lg">
+  //       <h1>Error</h1>
+  //       <p>{error}</p>
+  //     </section>
+  //   );
+  // }
 
   if (!data) {
     return (
@@ -108,8 +108,8 @@ const Page = async ({ params }) => {
             <Image
               src={bgImg}
               alt="A modern turntable playing a record"
-              layout="fill"
-              objectFit="cover"
+              fill 
+              style={{ objectFit: "cover" }}
               quality={90}
             />
           </div>

@@ -16,7 +16,7 @@ import ToolsMarquee from "../../../components/ToolsMarquee";
 import FooterMarquee from "../../../components/FooterMarquee";
 
 const ServiceDetailPage = async ({ params }) => {
-  const slug = params.slug;
+  const { slug } = await params;
   const service = await fetchServiceBySlug(slug);
 
   if (!service) {
@@ -35,8 +35,8 @@ const ServiceDetailPage = async ({ params }) => {
               <Image
                 src={bgImg}
                 alt="A modern turntable playing a record"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
                 quality={90}
               />
             </div>
