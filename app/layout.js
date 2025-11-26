@@ -1,10 +1,7 @@
-// "use client";
 
 import localFont from "next/font/local";
-import "./globals.css";
+import "./styles/globals.css";
 
-// import { useState, useEffect } from "react";
-// import IntroAnimation from "../app/components/IntroAnimation";
 
 const satoshi = localFont({
   src: [

@@ -9,14 +9,13 @@ import {
   replaceHTMLtags,
 } from "../../../../helper/helper.js";
 
-// Import components
-import CaseStudySlider from "../../../components/CaseStudySlider"; // Import the new client component
+import CaseStudySlider from "../../../components/CaseStudySlider"; 
 import FooterMarquee from "../../../components/FooterMarquee.jsx";
 import ToolsMarquee from "../../../components/ToolsMarquee.jsx";
 import CallSchedule from "../../../components/CallSchedule.jsx";
 
-// Import static assets
 import bgImg from "../../../../public/assets/images/blog-detail-bg.png";
+
 
 export async function generateMetadata({ params }) {
   const { id: slug } = await params;
@@ -42,7 +41,6 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// Helper functions (can remain in this file)
 const formatMonthYear = (input) => {
   if (!input) return "—";
   const normalized = input.includes("/")

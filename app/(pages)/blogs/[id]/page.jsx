@@ -12,6 +12,7 @@ import "../../../styles/content.css";
 import FooterMarquee from "../../../components/FooterMarquee";
 import { notFound } from "next/navigation";
 
+
 const generateTOCAndContent = (htmlContent) => {
   if (!htmlContent) {
     return { toc: [], content: "" };
